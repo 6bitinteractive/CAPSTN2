@@ -574,7 +574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434d6175dba3465459e10b6ce5c831b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneDataToLoad: {fileID: 11400000, guid: 709d91f13871acb499759cd2e293ed51, type: 2}
+  sceneDataToLoad: {fileID: 11400000, guid: bf241c4893910c24986fb5556da1b6b7, type: 2}
   playerSaveData: {fileID: 11400000, guid: 84da42aa95f5c274eb68ef3d7afc6196, type: 2}
   faderCanvasGroup: {fileID: 9468316}
   fadeDuration: 1

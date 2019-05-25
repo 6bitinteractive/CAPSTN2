@@ -54,7 +54,7 @@ public class SceneController : MonoBehaviour
 
     private IEnumerator FadeAndSwitchScenes(string sceneName)
     {
-        Debug.Log("Loading " + sceneName);
+        Debug.Log("Loading scene " + sceneName);
 
         // Don't load the scene again if it has been loaded in the editor
         if (Application.isEditor)
