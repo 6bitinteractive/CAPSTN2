@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 2127413873}
   - component: {fileID: 2127413872}
   m_Layer: 0
-  m_Name: Food
+  m_Name: Serving
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -330,7 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a8647c30bbaa7468cee2dcce62f258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BaseRecipe: {fileID: 11400000, guid: 281376f370b0a8a4e96a4afd801aa07a, type: 2}
+  OnRecipeDoneEvent: {fileID: 11400000, guid: 85b41d436e98f1841bd4c2b7909b6b21, type: 2}
 --- !u!4 &2127413873
 Transform:
   m_ObjectHideFlags: 0

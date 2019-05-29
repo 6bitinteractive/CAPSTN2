@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Food/Create Boiling Procedure", fileName = "BoilingProcedure")]
+[CreateAssetMenu(menuName = "Food/Boiling Procedure", fileName = "BoilingProcedure")]
 public class BoilingProcedure : Procedure
 {
     public override void Apply(Serving serving)

@@ -555,6 +555,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2010472975}
   - component: {fileID: 2010472974}
+  - component: {fileID: 2010472976}
+  - component: {fileID: 2010472977}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -574,7 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434d6175dba3465459e10b6ce5c831b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneDataToLoad: {fileID: 11400000, guid: 709d91f13871acb499759cd2e293ed51, type: 2}
+  sceneDataToLoad: {fileID: 11400000, guid: bf241c4893910c24986fb5556da1b6b7, type: 2}
   playerSaveData: {fileID: 11400000, guid: 84da42aa95f5c274eb68ef3d7afc6196, type: 2}
   faderCanvasGroup: {fileID: 9468316}
   fadeDuration: 1
@@ -592,3 +594,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2010472976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010472973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9f08a5dd216ed49a8608c9cb516682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stages:
+  - {fileID: 11400000, guid: 3493bd47e8e1c2544a6883edbbf4303b, type: 2}
+--- !u!114 &2010472977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010472973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aaa63beac18c914aba19859e6fb134c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventAndResponses:
+  - name: On Recipe Done
+    gameEvent: {fileID: 11400000, guid: 85b41d436e98f1841bd4c2b7909b6b21, type: 2}
+    response:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    responseForSentString:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: ResponseWithString, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    responseForSentInt:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: ResponseWithInt, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    responseForSentFloat:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: ResponseWithFloat, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+    responseForSentBool:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: ResponseWithBool, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
