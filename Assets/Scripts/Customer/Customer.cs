@@ -2,11 +2,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Customer : MonoBehaviour
 {
     [SerializeField] float PatienceTimer;
+    [SerializeField] float Speed = 0.02f;
+
+    public int myQueue;
+    public Vector3 destination;
+
     private Timer timer;
+    private Vector3 startingPosition;
+    private bool isInQueue = false;
+
+    public UnityEvent OnEnterQueue = new UnityEvent();
 
     public enum FSMState
     {
@@ -24,6 +34,9 @@ public class Customer : MonoBehaviour
     {
         timer = GetComponent<Timer>();
         timer.TimerValue = PatienceTimer; // Set the timer
+        timer.enabled = false; // Disable timer
+
+        startingPosition = transform.position;
 
         curState = FSMState.Queuing;
     }
@@ -31,7 +44,7 @@ public class Customer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch(curState)
+        switch (curState)
         {
             case FSMState.Idle: IdleState(); break;
             case FSMState.Queuing: QueuingState(); break;
@@ -44,12 +57,12 @@ public class Customer : MonoBehaviour
 
     private void IdleState()
     {
-        throw new NotImplementedException();
+    //    throw new NotImplementedException();
     }
 
     private void QueuingState()
     {
-        throw new NotImplementedException();
+        StartCoroutine(goToQueue());
     }
 
     private void OrderingState()
@@ -70,5 +83,24 @@ public class Customer : MonoBehaviour
     private void LeavingState()
     {
         throw new NotImplementedException();
+    }
+
+    IEnumerator goToQueue()
+    {
+        while (!isInQueue)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, destination, Speed * Time.deltaTime);
+            transform.right = destination - transform.position; // Rotate Towards destination
+
+            if (transform.position.x >= destination.x)
+            {
+                isInQueue = true;
+                timer.enabled = true;
+                OnEnterQueue.Invoke();
+                curState = FSMState.Idle;
+                yield break;
+            }
+            yield return 0;
+        }
     }
 }
