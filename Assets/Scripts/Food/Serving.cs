@@ -14,10 +14,12 @@ public class Serving : MonoBehaviour
     private void Start()
     {
         BaseRecipe = SingletonManager.GetInstance<StageManager>().CurrentStage.Recipe;
+        Debug.Log("Current recipe: " + BaseRecipe.DisplayName);
+
         BaseRecipe.Procedures[currentProcedure].Apply(this); // test
 
         // broadcast score
-        //OnRecipeDoneEvent.sentInt = 100;
+        //OnRecipeDoneEvent.sentInt = 100; // can be any value
         //OnRecipeDoneEvent.Raise();
     }
 
