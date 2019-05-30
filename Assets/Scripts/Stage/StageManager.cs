@@ -5,18 +5,14 @@ using UnityEngine;
 
 public class StageManager : MonoBehaviour
 {
-    public StageData CurrentStage { get; set; }
+    //[SerializeField] private StageData[] stages;
 
-    private Dictionary<StageData, StageData.Grade> StageProgress;
+    public StageData CurrentStage { get; set; }
+    public Dictionary<StageData, StageResult> StageProgress = new Dictionary<StageData, StageResult>();
 
     public void Awake()
     {
         SingletonManager.Register<StageManager>(this);
     }
-
-    public void UpdateGrade(StageData stage, int score)
-    {
-        // calculate grade
-        //StageProgress[stage] = grade;
-    }
 }
+

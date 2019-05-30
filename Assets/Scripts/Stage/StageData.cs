@@ -13,9 +13,4 @@ public class StageData : ScriptableObject
     {
         Manila
     }
-
-    public enum Grade
-    {
-        S, A, B, C, D, E, F
-    }
 }

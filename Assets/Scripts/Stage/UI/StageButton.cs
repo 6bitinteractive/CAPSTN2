@@ -14,12 +14,14 @@ public class StageButton : MonoBehaviour
 
     private void Start()
     {
-        stageManager = SingletonManager.GetInstance<StageManager>();
+        if (stageManager == null)
+            stageManager = SingletonManager.GetInstance<StageManager>();
+
         stageData = GetComponent<Stage>().StageData;
         stageButtonText.text = stageData.DisplayName;
     }
 
-    public void SelectStage()
+    public void SelectAsCurrentStage()
     {
         stageManager.CurrentStage = stageData;
     }

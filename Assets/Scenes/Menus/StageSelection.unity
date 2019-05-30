@@ -249,6 +249,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4541218589548659700, guid: 461992233a331644f975eed6a1ac18bb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SelectAsCurrentStage
+      objectReference: {fileID: 0}
     - target: {fileID: 2195859532004003047, guid: 461992233a331644f975eed6a1ac18bb,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -500,6 +505,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541218589548659700, guid: 461992233a331644f975eed6a1ac18bb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SelectAsCurrentStage
       objectReference: {fileID: 0}
     - target: {fileID: 2195859532004003047, guid: 461992233a331644f975eed6a1ac18bb,
         type: 3}

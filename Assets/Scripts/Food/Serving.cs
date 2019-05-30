@@ -5,28 +5,34 @@ using UnityEngine.Events;
 
 public class Serving : MonoBehaviour
 {
-    public GameEvent OnRecipeDoneEvent;
     public Recipe BaseRecipe { get; set; }
-    public Quality FoodQuality { get; set; }
 
+    private StageManager stageManager;
     private int currentProcedure;
+    private int currentScore;
 
     private void Start()
     {
-        BaseRecipe = SingletonManager.GetInstance<StageManager>().CurrentStage.Recipe;
+        stageManager = SingletonManager.GetInstance<StageManager>();
+        BaseRecipe = stageManager.CurrentStage.Recipe;
         Debug.Log("Current recipe: " + BaseRecipe.DisplayName);
 
-        BaseRecipe.Procedures[currentProcedure].Apply(this); // test
+        // test running a procedure
+        if (BaseRecipe.Procedures.Length > 0)
+        {
+            BaseRecipe.Procedures[currentProcedure].Apply(this);
+        }
 
-        // broadcast score
-        //OnRecipeDoneEvent.sentInt = 100; // can be any value
-        //OnRecipeDoneEvent.Raise();
+        // test setting a result
+        StageResult result = new StageResult(Grade.C, 50);
+        stageManager.StageProgress[stageManager.CurrentStage] = result;
+
+        // test loading result in StageSelection scene
+        Invoke("test", 3f);
     }
 
-    public enum Quality
+    private void test()
     {
-        Perfect,
-        Normal,
-        Crude
+        SingletonManager.GetInstance<SceneController>().FadeAndLoadScene("StageSelection");
     }
 }
