@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Serving : MonoBehaviour
 {
+    [Header("UI")]
+    public Processes ProcessesPanel;
+
     public Recipe BaseRecipe { get; set; }
 
     private StageManager stageManager;
@@ -17,6 +21,8 @@ public class Serving : MonoBehaviour
         BaseRecipe = stageManager.CurrentStage.Recipe;
         Debug.Log("Current recipe: " + BaseRecipe.DisplayName);
 
+        ResetUI();
+
         // test running a procedure
         if (BaseRecipe.Procedures.Length > 0)
         {
@@ -28,11 +34,16 @@ public class Serving : MonoBehaviour
         stageManager.StageProgress[stageManager.CurrentStage] = result;
 
         // test loading result in StageSelection scene
-        Invoke("test", 3f);
+        //Invoke("test", 3f);
     }
 
     private void test()
     {
         SingletonManager.GetInstance<SceneController>().FadeAndLoadScene("StageSelection");
+    }
+
+    public void ResetUI()
+    {
+        ProcessesPanel.gameObject.SetActive(false);
     }
 }

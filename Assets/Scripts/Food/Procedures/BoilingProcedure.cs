@@ -7,8 +7,10 @@ public class BoilingProcedure : Procedure
 {
     public override void Apply(Serving serving)
     {
-        if (Done) { return; }
-
         Debug.Log("Boiling... " + serving.BaseRecipe.DisplayName);
+        serving.ProcessesPanel.OnAllProcessesDone.AddListener(() => Debug.Log("Boiling... End."));
+
+        // Show process boxes
+        serving.ProcessesPanel.gameObject.SetActive(true);
     }
 }

@@ -17,7 +17,6 @@ public class Stage : MonoBehaviour
         // Load results if available
         if (stageManager.StageProgress.TryGetValue(StageData, out StageResult))
         {
-            StageResult = stageManager.StageProgress[StageData];
             Debug.Log("Grade: " + StageResult.Grade.ToString() + " | Score: " + StageResult.Score.ToString());
         }
     }

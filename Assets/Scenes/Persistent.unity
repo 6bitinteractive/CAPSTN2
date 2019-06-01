@@ -486,7 +486,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneDataToLoad: {fileID: 11400000, guid: 319a3c2c775173c43adac5c5eb95e9e8, type: 2}
-  playerSaveData: {fileID: 11400000, guid: 84da42aa95f5c274eb68ef3d7afc6196, type: 2}
   faderCanvasGroup: {fileID: 9468316}
   fadeDuration: 1
 --- !u!4 &2010472975

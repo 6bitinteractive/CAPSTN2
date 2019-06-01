@@ -7,8 +7,8 @@ public class StageManager : MonoBehaviour
 {
     //[SerializeField] private StageData[] stages;
 
-    public StageData CurrentStage { get; set; }
     public Dictionary<StageData, StageResult> StageProgress = new Dictionary<StageData, StageResult>();
+    public StageData CurrentStage { get; set; }
 
     public void Awake()
     {
