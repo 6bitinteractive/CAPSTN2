@@ -11,9 +11,9 @@ public class SceneController : MonoBehaviour
 
     [Header("Data")]
     [SerializeField] private SceneData sceneDataToLoad;
-    [SerializeField] private SaveData playerSaveData;
+    //[SerializeField] private SaveData playerSaveData;
 
-    public SaveData PlayerSaveData { get { return playerSaveData; } }
+    //public SaveData PlayerSaveData { get { return playerSaveData; } }
 
     [Header("Fading")]
     [SerializeField] private CanvasGroup faderCanvasGroup;
