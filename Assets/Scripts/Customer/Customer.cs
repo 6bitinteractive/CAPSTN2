@@ -12,6 +12,7 @@ public class Customer : MonoBehaviour
 {
     [SerializeField] float PatienceTimer;
     [SerializeField] float Speed = 0.02f;
+    [SerializeField] float OrderingDuration = 3;
 
     public int myQueue;
     public Vector3 Destination;
@@ -72,6 +73,7 @@ public class Customer : MonoBehaviour
     {
         timer.ResetTimer();
         Destroy(gameObject.GetComponent<DroppableToChair>(),1);
+        StartCoroutine(ordering());
         // Order for a set duration
         // Select an order
         // Wait for player click to advance to waiting state
@@ -118,6 +120,13 @@ public class Customer : MonoBehaviour
             }
             yield return 0;
         }
+    }
+
+    IEnumerator ordering()
+    {
+        yield return new WaitForSeconds(OrderingDuration);
+        // Select an order here
+        curState = FSMState.Waiting;
     }
 
     public void ResetObject()
