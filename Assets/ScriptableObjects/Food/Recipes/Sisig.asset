@@ -15,4 +15,5 @@ MonoBehaviour:
   ingredients: []
   Procedures:
   - {fileID: 11400000, guid: e9c9e21056391694990b35ebc4e37868, type: 2}
+  - {fileID: 11400000, guid: 0a46418ce9f95f74c9dc04c20858d693, type: 2}
   DisplayName: Sisig

@@ -14,12 +14,19 @@ public class BoilingProcedure : Procedure
         processes = prepStation.ProcessesPanel;
 
         // Listen to events
-        processes.OnAllProcessesDone.AddListener(() => Debug.Log("Boiling... End."));
+        processes.OnAllProcessesDone.AddListener(() =>
+        {
+            Debug.Log("Boiling... End.");
+
+            // Test; manually switch to next step/procedure
+            OnProcedureDone.Invoke();
+        });
 
         foreach (var process in processes.ProcessBoxes)
             process.OnProcessDone.AddListener(() => prepStation.UpdateScoreUI(process.Success ? process.ScoreAddition : process.ScoreDeduction));
 
-        // Show process boxes
+        // Show relevant UI
         prepStation.ProcessesPanel.gameObject.SetActive(true);
+        prepStation.BoilingPanel.gameObject.SetActive(true);
     }
 }

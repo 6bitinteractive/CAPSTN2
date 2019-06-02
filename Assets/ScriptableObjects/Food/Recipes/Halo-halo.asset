@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Halo-halo
   m_EditorClassIdentifier: 
   ingredients: []
-  Procedures: []
+  Procedures:
+  - {fileID: 11400000, guid: 0a46418ce9f95f74c9dc04c20858d693, type: 2}
   DisplayName: Halo-halo
