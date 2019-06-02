@@ -290,96 +290,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &607280548
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 607280550}
-  - component: {fileID: 607280549}
-  m_Layer: 0
-  m_Name: Savers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &607280549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 607280548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 137ebe573bcfee8458cf02c17ab1d302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueIdentifier: PlayerMoney
-  saveData: {fileID: 11400000, guid: 84da42aa95f5c274eb68ef3d7afc6196, type: 2}
-  resourceToSave: {fileID: 677319212}
---- !u!4 &607280550
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 607280548}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &677319211
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 677319213}
-  - component: {fileID: 677319212}
-  m_Layer: 0
-  m_Name: Resources
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &677319212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677319211}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43a91126e426ee04ea6b438879f7f894, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DisplayName: Money
---- !u!4 &677319213
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677319211}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &694766804
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,6 +465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2010472975}
   - component: {fileID: 2010472974}
+  - component: {fileID: 2010472976}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -574,8 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434d6175dba3465459e10b6ce5c831b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneDataToLoad: {fileID: 11400000, guid: 709d91f13871acb499759cd2e293ed51, type: 2}
-  playerSaveData: {fileID: 11400000, guid: 84da42aa95f5c274eb68ef3d7afc6196, type: 2}
+  sceneDataToLoad: {fileID: 11400000, guid: 319a3c2c775173c43adac5c5eb95e9e8, type: 2}
   faderCanvasGroup: {fileID: 9468316}
   fadeDuration: 1
 --- !u!4 &2010472975
@@ -592,3 +502,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2010472976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010472973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9f08a5dd216ed49a8608c9cb516682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

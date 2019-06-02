@@ -4,7 +4,5 @@ using UnityEngine;
 
 public abstract class Procedure : ScriptableObject
 {
-    public bool Done;
-
-    public abstract void Apply(Serving serving);
+    public abstract void Apply(PrepStation prepStation);
 }

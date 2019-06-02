@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Food/Create Recipe", fileName = "Recipe00")]
+[CreateAssetMenu(menuName = "Food/Recipe", fileName = "Recipe")]
 public class Recipe : ScriptableObject
 {
     [SerializeField] private Ingredient[] ingredients;
