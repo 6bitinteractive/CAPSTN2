@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using TMPro;
 
-public class Serving : MonoBehaviour
+public class PrepStation : MonoBehaviour
 {
     [Header("UI")]
+    public TextMeshProUGUI ScoreText;
     public Processes ProcessesPanel;
 
     public Recipe BaseRecipe { get; set; }
@@ -45,5 +47,11 @@ public class Serving : MonoBehaviour
     public void ResetUI()
     {
         ProcessesPanel.gameObject.SetActive(false);
+    }
+
+    public void UpdateScoreUI(int additionalScore)
+    {
+        currentScore += additionalScore;
+        ScoreText.text = string.Format("Score: {0}", currentScore.ToString());
     }
 }

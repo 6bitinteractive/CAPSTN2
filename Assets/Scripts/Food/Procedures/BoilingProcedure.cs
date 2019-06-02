@@ -1,16 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [CreateAssetMenu(menuName = "Food/Boiling Procedure", fileName = "BoilingProcedure")]
 public class BoilingProcedure : Procedure
 {
-    public override void Apply(Serving serving)
+    private Processes processes;
+
+    public override void Apply(PrepStation prepStation)
     {
-        Debug.Log("Boiling... " + serving.BaseRecipe.DisplayName);
-        serving.ProcessesPanel.OnAllProcessesDone.AddListener(() => Debug.Log("Boiling... End."));
+        Debug.Log("Boiling... " + prepStation.BaseRecipe.DisplayName);
+        processes = prepStation.ProcessesPanel;
+
+        // Listen to events
+        processes.OnAllProcessesDone.AddListener(() => Debug.Log("Boiling... End."));
+
+        foreach (var process in processes.ProcessBoxes)
+            process.OnProcessDone.AddListener(() => prepStation.UpdateScoreUI(process.Success ? process.ScoreAddition : process.ScoreDeduction));
 
         // Show process boxes
-        serving.ProcessesPanel.gameObject.SetActive(true);
+        prepStation.ProcessesPanel.gameObject.SetActive(true);
     }
 }

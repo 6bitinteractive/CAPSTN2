@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class ProcessBox : MonoBehaviour
 {
     public int ScoreAddition = 10;
-    public int ScoreDeduction = 3;
+    public int ScoreDeduction = -3;
     public bool Success { get; private set; }
 
     [HideInInspector] public UnityEvent OnProcessDone = new UnityEvent();
@@ -24,6 +24,7 @@ public class ProcessBox : MonoBehaviour
     private CanvasGroup canvasGroup;
     private RectTransform rectTransform;
     private ProcessBox.Timer timer;
+    private UnityAction setSuccess;
 
     private void Awake()
     {
@@ -37,12 +38,13 @@ public class ProcessBox : MonoBehaviour
 
     private void OnEnable()
     {
-        timer.OnTimerEnd.AddListener(() => SetSuccess(false));
+        setSuccess = new UnityAction(() => SetSuccess(false));
+        timer.OnTimerEnd.AddListener(setSuccess);
     }
 
     private void OnDisable()
     {
-        timer.OnTimerEnd.RemoveListener(() => SetSuccess(false));
+        timer.OnTimerEnd.RemoveListener(setSuccess);
         timer = null;
     }
 
@@ -67,6 +69,13 @@ public class ProcessBox : MonoBehaviour
             canvasGroup.alpha = 0.5f;
             rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x - inset, rectTransform.anchoredPosition.y);
         }
+
+        // Fill the bar again
+        image.fillAmount = 1f;
+        // NOTE: Failed process boxes don't refill the bar.
+        // Might be a bug in Unity? The UI/Image doesn't update when fillAmount has been set to 0; amount is correct in console though.
+        // Seems like an old bug that should've been fixed:
+        // https://issuetracker.unity3d.com/issues/ui-image-fill-amount-breaks-when-value-is-set-to-0-through-script
     }
 
     public void SetSuccess(bool successful)
@@ -110,14 +119,7 @@ public class ProcessBox : MonoBehaviour
             OnTimerEnd = new UnityEvent();
 
             if (Countdown)
-            {
                 CurrentTime = MaxDuration;
-                image.fillOrigin = 0; // Left
-            }
-            else
-            {
-                image.fillOrigin = 1; // Right
-            }
         }
 
         public IEnumerator Start()
@@ -148,8 +150,11 @@ public class ProcessBox : MonoBehaviour
 
                 }
 
+                // Image fill
+                if (MaxDuration > 0)
+                    Image.fillAmount = Mathf.Clamp01(CurrentTime / MaxDuration);
 
-                Debug.Log("Process current time: " + CurrentTime);
+                //Debug.Log("Process current time: " + CurrentTime);
                 yield return null;
             }
         }

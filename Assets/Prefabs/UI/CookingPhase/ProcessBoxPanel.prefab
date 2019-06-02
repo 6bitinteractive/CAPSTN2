@@ -89,10 +89,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861c591e45baa094fbbe1ad37d33330c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Success: {r: 0.2815607, g: 1, b: 0, a: 0.3921569}
-  Fail: {r: 1, g: 0, b: 0, a: 0.3921569}
-  Active: {r: 1, g: 0.7664064, b: 0, a: 0.3921569}
-  Inactive: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0.3921569}
+  ScoreAddition: 10
+  ScoreDeduction: -3
+  OnProcessDone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  timerDuration: 3
+  inset: 50
+  success: {r: 0.2815607, g: 1, b: 0, a: 0.3921569}
+  fail: {r: 1, g: 0, b: 0, a: 0.3921569}
+  active: {r: 1, g: 0.7664064, b: 0, a: 0.3921569}
+  inactive: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 0.3921569}
 --- !u!225 &3802438331409863701
 CanvasGroup:
   m_ObjectHideFlags: 0
