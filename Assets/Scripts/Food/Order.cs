@@ -6,5 +6,6 @@ using UnityEngine;
 public class Order : ScriptableObject
 {
     public string Name;
+    public int ScoreValue;
     public Sprite Icon;
 }
