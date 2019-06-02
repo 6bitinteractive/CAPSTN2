@@ -30,9 +30,10 @@ public class Customer : MonoBehaviour
         Idle,
         Queuing,
         Ordering,
-        Waiting,
+        ReadyToOrder,
         Eating,
-        Leaving
+        Leaving,
+        WaitingForOrder
     }
 
     public FSMState curState; // current state
@@ -52,11 +53,14 @@ public class Customer : MonoBehaviour
             case FSMState.Idle: IdleState(); break;
             case FSMState.Queuing: QueuingState(); break;
             case FSMState.Ordering: OrderingState(); break;
-            case FSMState.Waiting: WaitingState(); break;
+            case FSMState.ReadyToOrder: ReadyToOrder(); break;
+            case FSMState.WaitingForOrder: WaitingForOrder(); break;
             case FSMState.Eating: EatingState(); break;
             case FSMState.Leaving: LeavingState(); break;
         }
     }
+
+    
 
     private void IdleState()
     {
@@ -71,6 +75,7 @@ public class Customer : MonoBehaviour
 
     private void OrderingState()
     {
+        timer.enabled = false;
         timer.ResetTimer();
         Destroy(gameObject.GetComponent<DroppableToChair>(),1);
         StartCoroutine(ordering());
@@ -80,12 +85,19 @@ public class Customer : MonoBehaviour
         //Debug.Log("Im ordering");
     }
 
-    private void WaitingState()
+    private void ReadyToOrder()
+    {
+        // Wait for player to click on customer
+        timer.enabled = true;
+        Debug.Log("Ready to Order");
+    }
+
+    private void WaitingForOrder()
     {
         // Reset Patience Timer
-        // Able to accept order
+        // Able to accept order from player
         // Upon accepting order go to eating state
-        throw new NotImplementedException();
+        Debug.Log("Waiting for Order");
     }
 
     private void EatingState()
@@ -99,6 +111,7 @@ public class Customer : MonoBehaviour
     {
         // Earn Score
         // Set the isOccupied for MyChair to false
+        MyChair1.isOccupied = false;
         // Customer dissappears through an effect or walks out?
         throw new NotImplementedException();
     }
@@ -126,7 +139,7 @@ public class Customer : MonoBehaviour
     {
         yield return new WaitForSeconds(OrderingDuration);
         // Select an order here
-        curState = FSMState.Waiting;
+        curState = FSMState.ReadyToOrder;
     }
 
     public void ResetObject()
