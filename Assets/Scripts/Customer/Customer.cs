@@ -10,6 +10,7 @@ using UnityEngine.Events;
 
 public class Customer : MonoBehaviour
 {
+    public Menu Menu;
     [SerializeField] float PatienceTimer;
     [SerializeField] float Speed = 0.02f;
     [SerializeField] float OrderingDuration = 3;
@@ -17,13 +18,19 @@ public class Customer : MonoBehaviour
     public int myQueue;
     public Vector3 Destination;
 
-    private Chair MyChair;
+    private Chair myChair;
+    private Order myOrder;
     private Timer timer;
     private DroppableToChair droppableToChair;
     private Vector3 startingPosition;
     private bool isInQueue = false;
 
     public UnityEvent OnEnterQueue = new UnityEvent();
+    public UnityEvent OnStartOrdering = new UnityEvent();
+    public UnityEvent OnOrderingEnd = new UnityEvent();
+    public UnityEvent OnOrderTaken = new UnityEvent();
+    public UnityEvent OnStartEating = new UnityEvent();
+    public UnityEvent OnEatingEnd = new UnityEvent();
 
     public enum FSMState
     {
@@ -38,7 +45,7 @@ public class Customer : MonoBehaviour
 
     public FSMState curState; // current state
 
-    public Chair MyChair1 { get => MyChair; set => MyChair = value; }
+    public Chair MyChair { get => myChair; set => myChair = value; }
 
     private void Awake()
     {
@@ -60,8 +67,6 @@ public class Customer : MonoBehaviour
         }
     }
 
-    
-
     private void IdleState()
     {
         // Play an idling animation
@@ -75,26 +80,29 @@ public class Customer : MonoBehaviour
 
     private void OrderingState()
     {
+        OnStartOrdering.Invoke();
         timer.enabled = false;
         timer.ResetTimer();
         Destroy(gameObject.GetComponent<DroppableToChair>(),1);
         StartCoroutine(ordering());
         // Order for a set duration
         // Select an order
-        // Wait for player click to advance to waiting state
         //Debug.Log("Im ordering");
     }
 
     private void ReadyToOrder()
     {
-        // Wait for player to click on customer
-        timer.enabled = true;
-        Debug.Log("Ready to Order");
+        OnOrderingEnd.Invoke();
+        // Wait for player click to advance to waiting state
+        timer.enabled = true; 
+      //  Debug.Log("Ready to Order");
     }
 
     private void WaitingForOrder()
     {
-        // Reset Patience Timer
+        OnOrderTaken.Invoke();
+        timer.enabled = true;
+        timer.ResetTimer();
         // Able to accept order from player
         // Upon accepting order go to eating state
         Debug.Log("Waiting for Order");
@@ -102,6 +110,8 @@ public class Customer : MonoBehaviour
 
     private void EatingState()
     {
+        OnStartEating.Invoke();
+        timer.enabled = false;
         // Eat for a set duration
         // Upon finished eating move to leaving state
         throw new NotImplementedException();
@@ -111,7 +121,7 @@ public class Customer : MonoBehaviour
     {
         // Earn Score
         // Set the isOccupied for MyChair to false
-        MyChair1.isOccupied = false;
+        MyChair.isOccupied = false;
         // Customer dissappears through an effect or walks out?
         throw new NotImplementedException();
     }
@@ -138,13 +148,16 @@ public class Customer : MonoBehaviour
     IEnumerator ordering()
     {
         yield return new WaitForSeconds(OrderingDuration);
-        // Select an order here
+        int randomOrder = UnityEngine.Random.Range(0, Menu.MenuList.Count);
+        myOrder = Menu.MenuList[randomOrder];
+        Debug.Log("I Ordered:" + myOrder.Name);
         curState = FSMState.ReadyToOrder;
     }
 
     public void ResetObject()
     {
-        MyChair1 = null;
+        MyChair = null;
+        myOrder = null;
     }
 
     public void MoveUpInQueue()

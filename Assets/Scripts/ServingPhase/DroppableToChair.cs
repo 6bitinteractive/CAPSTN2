@@ -63,7 +63,8 @@ public class DroppableToChair : MonoBehaviour
             Customer customer = gameObject.GetComponent<Customer>();
             if (customer)
             {
-                customer.MyChair1 = chair; // Set the customer's chair
+                customer.transform.right = chair.transform.right;
+                customer.MyChair = chair; // Set the customer's chair
                 customer.curState = Customer.FSMState.Ordering;
             }
         }
