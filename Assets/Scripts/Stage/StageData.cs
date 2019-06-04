@@ -6,11 +6,5 @@ using UnityEngine;
 public class StageData : ScriptableObject
 {
     public string DisplayName;
-    public Location Area;
     public Recipe Recipe;
-
-    public enum Location
-    {
-        Manila
-    }
 }
