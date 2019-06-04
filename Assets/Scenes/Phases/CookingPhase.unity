@@ -1478,10 +1478,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2127413874}
         m_MethodName: LoadScene
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 319a3c2c775173c43adac5c5eb95e9e8,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SceneData, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1515,7 +1516,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4200591d70075f748abff0d6f4f8e2b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneDataToLoad: {fileID: 11400000, guid: 319a3c2c775173c43adac5c5eb95e9e8, type: 2}
 --- !u!1001 &972718064239700501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1563,15 +1563,15 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 110
       objectReference: {fileID: 0}
-    - target: {fileID: 972718063278994483, guid: 1af23728d5c0f4b4481fd16d26c097c4,
-        type: 3}
-      propertyPath: timerDuration
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 972718063278994481, guid: 1af23728d5c0f4b4481fd16d26c097c4,
         type: 3}
       propertyPath: m_FillOrigin
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 972718063278994483, guid: 1af23728d5c0f4b4481fd16d26c097c4,
+        type: 3}
+      propertyPath: timerDuration
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1af23728d5c0f4b4481fd16d26c097c4, type: 3}

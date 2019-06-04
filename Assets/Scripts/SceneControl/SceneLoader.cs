@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] private SceneData sceneDataToLoad;
-
     private static SceneController sceneController;
 
     private void Start()
@@ -14,7 +12,7 @@ public class SceneLoader : MonoBehaviour
             sceneController = SingletonManager.GetInstance<SceneController>();
     }
 
-    public void LoadScene()
+    public void LoadScene(SceneData sceneDataToLoad)
     {
         sceneController.FadeAndLoadScene(sceneDataToLoad.SceneName);
     }
