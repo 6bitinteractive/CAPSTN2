@@ -87,6 +87,7 @@ public class PrepStation : MonoBehaviour
             // Test setting a result
             StageResult result = new StageResult(Grade.C, currentScore);
             stageManager.StageProgress[stageManager.CurrentStage] = result;
+            stageManager.MoveToNextStage();
 
             OnCookingPhaseEnd.Invoke();
         }
