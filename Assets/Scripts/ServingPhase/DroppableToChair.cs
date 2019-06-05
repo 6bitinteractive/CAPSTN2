@@ -63,16 +63,19 @@ public class DroppableToChair : MonoBehaviour
             Customer customer = gameObject.GetComponent<Customer>();
             if (customer)
             {
+                customer.transform.position = chair.transform.position;
                 customer.transform.right = chair.transform.right;
                 customer.MyChair = chair; // Set the customer's chair
                 customer.curState = Customer.FSMState.Ordering;
             }
+
         }
 
         else
         {
-           transform.position = originalPos; // Return to original position
+            transform.position = originalPos; // Return to original position
         }
+
     }
    
     private void OnTriggerStay2D(Collider2D collision)
