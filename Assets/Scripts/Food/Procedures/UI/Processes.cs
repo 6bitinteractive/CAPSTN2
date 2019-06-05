@@ -31,7 +31,7 @@ public class Processes : MonoBehaviour
     private void Update()
     {
         // Test success
-        if (Input.GetMouseButtonDown(0) && (currentProcessIndex < ProcessBoxes.Length))
+        if (Input.GetMouseButtonDown(1) && (currentProcessIndex < ProcessBoxes.Length))
             ProcessBoxes[currentProcessIndex].SetSuccess(true);
     }
 

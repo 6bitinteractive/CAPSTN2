@@ -25,4 +25,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ed7358179d4050a428488233555ce2f0, type: 3}
   - {fileID: 21300000, guid: 62e5bdccbb1cfe740b6ef3da7b69ccc0, type: 3}
   - {fileID: 21300000, guid: 179f62ed6798e4d4a8cc58bedab289f6, type: 3}
-  CurrentSlice: 0
+  SliceCount: 0

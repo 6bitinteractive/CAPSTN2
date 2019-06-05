@@ -34,10 +34,16 @@ public class PrepStation : MonoBehaviour
         BaseRecipe = stageManager.CurrentStage.Recipe;
         Debug.Log("Current recipe: " + BaseRecipe.DisplayName);
 
-        foreach (var procedure in BaseRecipe.Procedures)
-            procedure.OnProcedureDone.AddListener(() => procedure.Reset()); // Reset ScriptableObject; hack-ish
-
         // TODO: clean these up
+        foreach (var procedure in BaseRecipe.Procedures)
+        {
+            procedure.OnProcedureDone.AddListener(() =>
+            {
+                ProcessesPanel.ProcessBoxes[currentProcedure].SetSuccess(true); // When player finishes a procedure, set process box as successful
+                MoveToNextProcedure();
+            });
+        }
+
         foreach (var process in ProcessesPanel.ProcessBoxes)
         {
             process.OnProcessDone.AddListener(() =>
@@ -72,9 +78,6 @@ public class PrepStation : MonoBehaviour
 
     public void MoveToNextProcedure()
     {
-        // Broadcast that the procedure has been done
-        BaseRecipe.Procedures[currentProcedure].OnProcedureDone.Invoke();
-
         // Move to the next
         currentProcedure++;
 

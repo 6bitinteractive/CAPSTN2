@@ -12,6 +12,6 @@ public abstract class Procedure : ScriptableObject
         Reset();
     }
 
-    public abstract IEnumerator Apply(PrepStation prepStation);
+    public abstract IEnumerator Apply(PrepStation prepStation); // TODO: Move behavior to Monobehaviour scripts
     public abstract void Reset();
 }

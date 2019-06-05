@@ -54,7 +54,7 @@ public class ProcessBox : MonoBehaviour
     {
         if (active)
         {
-            Debug.Log("Process Active: " + gameObject.name);
+            //Debug.Log("Process Active: " + gameObject.name);
 
             image.color = this.active;
             canvasGroup.alpha = 1f;
@@ -65,7 +65,7 @@ public class ProcessBox : MonoBehaviour
         }
         else
         {
-            Debug.Log("Process Inactive: " + gameObject.name);
+            //Debug.Log("Process Inactive: " + gameObject.name);
 
             image.color = inactive;
             canvasGroup.alpha = 0.5f;
