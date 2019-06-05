@@ -138,6 +138,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StageButton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1702545741810065560, guid: 461992233a331644f975eed6a1ac18bb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2702968028275430465, guid: 461992233a331644f975eed6a1ac18bb,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -5,16 +5,13 @@ using UnityEngine.Events;
 
 public abstract class Procedure : ScriptableObject
 {
-    [HideInInspector] public UnityEvent OnProcedureDone = new UnityEvent();
+    [HideInInspector] public UnityEvent OnProcedureDone = new UnityEvent(); // not necessary? process box should handle when a procedure would end
 
-    public abstract void Apply(PrepStation prepStation);
-
-    // Test; force end
-    public IEnumerator End()
+    private void OnEnable()
     {
-        Debug.Log("Procedure... Done. Wait for 3s.");
-
-        yield return new WaitForSeconds(3f);
-        OnProcedureDone.Invoke();
+        Reset();
     }
+
+    public abstract IEnumerator Apply(PrepStation prepStation);
+    public abstract void Reset();
 }
