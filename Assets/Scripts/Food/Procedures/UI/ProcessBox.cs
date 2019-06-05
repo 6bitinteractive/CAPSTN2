@@ -7,18 +7,21 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image), typeof(CanvasGroup))]
 public class ProcessBox : MonoBehaviour
 {
+    [Header("Setup")]
     public int ScoreAddition = 10;
     public int ScoreDeduction = -3;
     public bool Success { get; private set; }
 
-    [HideInInspector] public UnityEvent OnProcessDone = new UnityEvent();
+    [SerializeField] private float timerDuration = 30f;
 
-    [SerializeField] private float timerDuration = 3f;
+    [Header("UI")]
     [SerializeField] private float inset = 50f;
-    [SerializeField] private Color success = new Color(0.2815607f, 1f, 0, 0.3921569f);
-    [SerializeField] private Color fail = new Color(1f, 0, 0, 0.3921569f);
-    [SerializeField] private Color active = new Color(1f, 0.7664064f, 0f, 0.3921569f);
-    [SerializeField] private Color inactive = new Color(0.6509434f, 0.6509434f, 0.6509434f, 0.3921569f);
+    [SerializeField] private Color success = new Color(0.2815607f, 1f, 0, 0.7490196f);
+    [SerializeField] private Color fail = new Color(1f, 0, 0, 0.7490196f);
+    [SerializeField] private Color active = new Color(1f, 0.7664064f, 0f, 0.7490196f);
+    [SerializeField] private Color inactive = new Color(0.6509434f, 0.6509434f, 0.6509434f, 0.7490196f);
+
+    [HideInInspector] public UnityEvent OnProcessDone = new UnityEvent();
 
     private Image image;
     private CanvasGroup canvasGroup;
@@ -45,7 +48,6 @@ public class ProcessBox : MonoBehaviour
     private void OnDisable()
     {
         timer.OnTimerEnd.RemoveListener(setSuccess);
-        timer = null;
     }
 
     public void SetActive(bool active = true)
@@ -72,7 +74,7 @@ public class ProcessBox : MonoBehaviour
 
         // Fill the bar again
         image.fillAmount = 1f;
-        // NOTE: Failed process boxes don't refill the bar.
+        // NOTE: Failed process boxes don't refill the bar. In any case, this is just a placeholder.
         // Might be a bug in Unity? The UI/Image doesn't update when fillAmount has been set to 0; amount is correct in console though.
         // Seems like an old bug that should've been fixed:
         // https://issuetracker.unity3d.com/issues/ui-image-fill-amount-breaks-when-value-is-set-to-0-through-script
@@ -147,7 +149,6 @@ public class ProcessBox : MonoBehaviour
                         End = true;
                         OnTimerEnd.Invoke();
                     }
-
                 }
 
                 // Image fill

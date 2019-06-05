@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 564897027}
   - component: {fileID: 564897026}
   m_Layer: 5
-  m_Name: Meat
+  m_Name: Ingredient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -604,14 +604,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776269026}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -896,6 +896,7 @@ GameObject:
   - component: {fileID: 1425303754}
   - component: {fileID: 1425303756}
   - component: {fileID: 1425303755}
+  - component: {fileID: 1425303757}
   m_Layer: 5
   m_Name: Knife
   m_TagString: Untagged
@@ -959,6 +960,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425303753}
   m_CullTransparentMesh: 0
+--- !u!95 &1425303757
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425303753}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 94bda96c0b7ad49479b8169cd774c9a9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1562741389
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,15 +1493,18 @@ MonoBehaviour:
   ProcessesPanel: {fileID: 776269030}
   BoilingPanel: {fileID: 927314101}
   ChoppingPanel: {fileID: 1956555371}
+  ChoppingKnife: {fileID: 1425303753}
+  ChoppingIngredient: {fileID: 564897024}
   OnCookingPhaseEnd:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2127413874}
         m_MethodName: LoadScene
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 11400000, guid: 709d91f13871acb499759cd2e293ed51,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: SceneData, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1515,7 +1538,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4200591d70075f748abff0d6f4f8e2b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneDataToLoad: {fileID: 11400000, guid: 319a3c2c775173c43adac5c5eb95e9e8, type: 2}
 --- !u!1001 &972718064239700501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1562,11 +1584,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 110
-      objectReference: {fileID: 0}
-    - target: {fileID: 972718063278994483, guid: 1af23728d5c0f4b4481fd16d26c097c4,
-        type: 3}
-      propertyPath: timerDuration
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 972718063278994481, guid: 1af23728d5c0f4b4481fd16d26c097c4,
         type: 3}

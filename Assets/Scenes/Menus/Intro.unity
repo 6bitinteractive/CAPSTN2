@@ -127,16 +127,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1690145997}
     m_Modifications:
-    - target: {fileID: 4822976235015438806, guid: 2f254f250361bc34ba3b0e61006c4600,
-        type: 3}
-      propertyPath: sceneDataToLoad
-      value: 
-      objectReference: {fileID: 11400000, guid: 319a3c2c775173c43adac5c5eb95e9e8,
-        type: 2}
     - target: {fileID: 3608580218142415661, guid: 2f254f250361bc34ba3b0e61006c4600,
         type: 3}
       propertyPath: m_Name
       value: SkipButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309287739205957458, guid: 2f254f250361bc34ba3b0e61006c4600,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309287739205957458, guid: 2f254f250361bc34ba3b0e61006c4600,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309287739205957458, guid: 2f254f250361bc34ba3b0e61006c4600,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309287739205957458, guid: 2f254f250361bc34ba3b0e61006c4600,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309287739205957458, guid: 2f254f250361bc34ba3b0e61006c4600,
+        type: 3}
+      propertyPath: m_text
+      value: Skip Intro
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309287739205957458, guid: 2f254f250361bc34ba3b0e61006c4600,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 15261066691375092, guid: 2f254f250361bc34ba3b0e61006c4600,
         type: 3}
@@ -243,41 +267,33 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1923405364848687169, guid: 2f254f250361bc34ba3b0e61006c4600,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923405364848687169, guid: 2f254f250361bc34ba3b0e61006c4600,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: SceneData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923405364848687169, guid: 2f254f250361bc34ba3b0e61006c4600,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: bf241c4893910c24986fb5556da1b6b7,
+        type: 2}
     - target: {fileID: 6951115808783523258, guid: 2f254f250361bc34ba3b0e61006c4600,
         type: 3}
       propertyPath: m_Name
       value: SkipText (TMP)
       objectReference: {fileID: 0}
-    - target: {fileID: 4309287739205957458, guid: 2f254f250361bc34ba3b0e61006c4600,
+    - target: {fileID: 4822976235015438806, guid: 2f254f250361bc34ba3b0e61006c4600,
         type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309287739205957458, guid: 2f254f250361bc34ba3b0e61006c4600,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309287739205957458, guid: 2f254f250361bc34ba3b0e61006c4600,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309287739205957458, guid: 2f254f250361bc34ba3b0e61006c4600,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309287739205957458, guid: 2f254f250361bc34ba3b0e61006c4600,
-        type: 3}
-      propertyPath: m_text
-      value: Skip Intro
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309287739205957458, guid: 2f254f250361bc34ba3b0e61006c4600,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: sceneDataToLoad
+      value: 
+      objectReference: {fileID: 11400000, guid: 319a3c2c775173c43adac5c5eb95e9e8,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f254f250361bc34ba3b0e61006c4600, type: 3}
 --- !u!224 &689785292 stripped
