@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Order3
   m_EditorClassIdentifier: 
   Name: Nep
-  Icon: {fileID: 0}
+  PrepTime: 3
+  ScoreValue: 30
+  Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
