@@ -10,6 +10,7 @@ public class PrepStation : MonoBehaviour
     [Header("UI")]
     public TextMeshProUGUI ScoreText;
     public Processes ProcessesPanel;
+    public ResultsPanel ResultsPanel;
 
     [Header("Boiling Panel")]
     public GameObject BoilingPanel;
@@ -32,6 +33,8 @@ public class PrepStation : MonoBehaviour
     {
         InputHandler = SingletonManager.GetInstance<InputHandler>();
         stageManager = SingletonManager.GetInstance<StageManager>();
+
+        // Set the recipe
         BaseRecipe = stageManager.CurrentStage.Recipe;
         Debug.Log("Current recipe: " + BaseRecipe.DisplayName);
 
@@ -40,8 +43,11 @@ public class PrepStation : MonoBehaviour
         {
             procedure.OnProcedureSuccess.AddListener(() =>
             {
-                ProcessesPanel.ProcessBoxes[currentProcedure].SetSuccess(true); // When player finishes a procedure, set process box as successful
-                //MoveToNextProcedure(); // TODO: Show result feedback first instead of moving to the next procedure right away; panel should prompt to move to next procedure?
+                // When player finishes a procedure, set process box as successful
+                ProcessesPanel.ProcessBoxes[currentProcedure].SetSuccess(true);
+
+                // Show the results panel
+                ResultsPanel.ShowPanel(ProcessesPanel.ProcessBoxes[currentProcedure].Success);
             });
         }
 
@@ -49,9 +55,11 @@ public class PrepStation : MonoBehaviour
         {
             process.OnProcessDone.AddListener(() =>
             {
+                // Update the score
                 UpdateScoreUI(process.Success ? process.ScoreAddition : process.ScoreDeduction);
-                // TODO: Show results (success or fail) before switching
-                MoveToNextProcedure();
+
+                // Show the results panel
+                ResultsPanel.ShowPanel(ProcessesPanel.ProcessBoxes[currentProcedure].Success);
             });
         }
 
@@ -79,6 +87,9 @@ public class PrepStation : MonoBehaviour
 
     public void MoveToNextProcedure()
     {
+        // Reset currentProcedure's ScriptableObject before moving to the next
+        BaseRecipe.Procedures[currentProcedure].Reset();
+
         // Move to the next
         currentProcedure++;
 
@@ -99,6 +110,7 @@ public class PrepStation : MonoBehaviour
         {
             Debug.Log("Moving on to next procedure...");
             ResetUI();
+            ProcessesPanel.MoveToNextProcess();
             RunProcedure(BaseRecipe.Procedures[currentProcedure]);
         }
     }
@@ -114,6 +126,7 @@ public class PrepStation : MonoBehaviour
     {
         BoilingPanel.gameObject.SetActive(false);
         ChoppingPanel.gameObject.SetActive(false);
+        ResultsPanel.gameObject.SetActive(false);
     }
 
     private void RunProcedure(Procedure procedure)

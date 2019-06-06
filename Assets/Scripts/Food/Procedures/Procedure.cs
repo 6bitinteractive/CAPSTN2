@@ -7,7 +7,7 @@ public abstract class Procedure : ScriptableObject
 {
     [HideInInspector] public UnityEvent OnProcedureSuccess = new UnityEvent();
     [HideInInspector] public UnityEvent OnProcedureFail = new UnityEvent();
-
+    [HideInInspector] public bool Done;
 
     private void OnEnable()
     {

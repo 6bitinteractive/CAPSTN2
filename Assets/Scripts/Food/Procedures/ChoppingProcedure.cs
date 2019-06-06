@@ -48,8 +48,8 @@ public class ChoppingProcedure : Procedure
                 prepStation.InputHandler.SwipeInput.Clear();
                 prepStation.InputHandler.SwipeDetector.enabled = false;
 
-                yield return new WaitForSeconds(3f); // TODO: remove this once result feedback is in place
                 OnProcedureSuccess.Invoke();
+                Done = true;
             }
         }
     }
@@ -57,5 +57,6 @@ public class ChoppingProcedure : Procedure
     public override void Reset()
     {
         SliceCount = 0;
+        Done = false;
     }
 }

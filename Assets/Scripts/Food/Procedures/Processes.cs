@@ -11,18 +11,6 @@ public class Processes : MonoBehaviour
 
     private int currentProcessIndex;
 
-    private void OnEnable()
-    {
-        foreach (var processBox in ProcessBoxes)
-            processBox.OnProcessDone.AddListener(MoveToNextProcess);
-    }
-
-    private void OnDisable()
-    {
-        foreach (var processBox in ProcessBoxes)
-            processBox.OnProcessDone.RemoveListener(MoveToNextProcess);
-    }
-
     private void Start()
     {
         RunProcess(currentProcessIndex);
@@ -41,7 +29,7 @@ public class Processes : MonoBehaviour
         ProcessBoxes[processIndex].SetActive(true);
     }
 
-    private void MoveToNextProcess()
+    public void MoveToNextProcess()
     {
         // Move to next index
         currentProcessIndex++;

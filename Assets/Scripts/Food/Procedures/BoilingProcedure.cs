@@ -15,20 +15,18 @@ public class BoilingProcedure : Procedure
         // Show the boiling station
         prepStation.BoilingPanel.gameObject.SetActive(true);
 
-        while (true)
+        while (!Done)
         {
-            if (prepStation.StoveController.CurrentTemperature == RequiredTemperature)
-            {
-                yield return new WaitForSeconds(2f); // Show a success panel prompt?
-                OnProcedureSuccess.Invoke();
-            }
+            yield return new WaitUntil(() => prepStation.StoveController.CurrentTemperature == RequiredTemperature);
 
-            yield return null;
+            OnProcedureSuccess.Invoke();
+            Done = true;
         }
     }
 
     public override void Reset()
     {
-        //throw new System.NotImplementedException();
+        Done = false;
     }
+
 }
