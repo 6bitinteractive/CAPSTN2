@@ -5,14 +5,15 @@ using UnityEngine;
 public class ServingPhaseController : MonoBehaviour
 {
     [SerializeField] private Order servingDishHeld;
-    [SerializeField] private float speed;
     private GameObject player;
     private Vector2 target;
     private bool isAtTargetPosition;
+    private PathManager pathManager;
 
     void Awake()
     {
         player = gameObject;
+        pathManager = GetComponent<PathManager>();
     }
 
     // Update is called once per frame
@@ -37,10 +38,11 @@ public class ServingPhaseController : MonoBehaviour
 
             ServingDish servingDish = hit.collider.gameObject.GetComponent<ServingDish>();
             Customer customer = hit.collider.gameObject.GetComponent<Customer>();
+            Waypoint waypoint = hit.collider.gameObject.GetComponent<Waypoint>();
 
             // If Serving Dish
             if (servingDish)
-            {         
+            {
                 StartCoroutine(preppingDish(servingDish, servingDish.OrderType.PrepTime));
                 Debug.Log("Prepping: " + servingDish.OrderType.Name);
                 Debug.Log("PrepTime: " + servingDish.OrderType.PrepTime);
@@ -49,10 +51,10 @@ public class ServingPhaseController : MonoBehaviour
             // If Customer and is ready to order
             if (customer && customer.IsReadyToOrder)
             {
-                 customer.curState = Customer.FSMState.WaitingForOrder;
-                 customer.OnOrderTaken.Invoke();
-                 customer.IsReadyToOrder = false;
-                 Debug.Log("Order Taken");
+                customer.curState = Customer.FSMState.WaitingForOrder;
+                customer.OnOrderTaken.Invoke();
+                customer.IsReadyToOrder = false;
+                Debug.Log("Order Taken");
             }
 
             // If player has a dish held and target is a Customer waiting for order
@@ -61,17 +63,22 @@ public class ServingPhaseController : MonoBehaviour
                 if (customer.MyOrder.Name == servingDishHeld.Name)
                 {
                     customer.curState = Customer.FSMState.Eating;
-            
+
                     customer.OnStartEating.Invoke();
                     Debug.Log("Correct Order");
                 }
 
                 else
                 {
-                    customer.curState = Customer.FSMState.Leaving;                   
+                    customer.curState = Customer.FSMState.Leaving;
                     Debug.Log("Wrong Order");
                 }
                 servingDishHeld = null;
+            }
+
+            if (waypoint)
+            {
+                pathManager.NavigateTo(waypoint.transform.position);
             }
         }
 

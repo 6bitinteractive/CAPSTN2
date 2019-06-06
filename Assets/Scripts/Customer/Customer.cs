@@ -23,6 +23,7 @@ public class Customer : MonoBehaviour
     private Order myOrder;
     private Timer timer;
     private DroppableToChair droppableToChair;
+    private SpriteOutline spriteOutline;
     private Vector3 startingPosition;
     private bool isInQueue = false;
     private bool isReadyToOrder = false;
@@ -58,6 +59,7 @@ public class Customer : MonoBehaviour
     public bool IsReadyToOrder { get => isReadyToOrder; set => isReadyToOrder = value; }
     public bool IsWaitingForOrder { get => isWaitingForOrder; set => isWaitingForOrder = value; }
     public Order MyOrder { get => myOrder; set => myOrder = value; }
+    public SpriteOutline SpriteOutline { get => spriteOutline; set => spriteOutline = value; }
 
     private void Awake()
     {
@@ -182,6 +184,7 @@ public class Customer : MonoBehaviour
         isWaitingForOrder = false;
         isOrdering = true;
         isWaiting = true;
+        spriteOutline.enabled = false;
         OnEnterQueue.Invoke();
         curState = FSMState.Idle;
         timer.ResetTimer();
@@ -199,6 +202,8 @@ public class Customer : MonoBehaviour
         timer = GetComponent<Timer>();
         timer.TimerValue = PatienceTimer; // Set the timer
         startingPosition = transform.position;
+        spriteOutline = GetComponent<SpriteOutline>();
+        spriteOutline.enabled = false;
 
         curState = FSMState.Idle;
     }

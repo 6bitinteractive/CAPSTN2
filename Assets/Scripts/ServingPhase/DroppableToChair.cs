@@ -48,43 +48,53 @@ public class DroppableToChair : MonoBehaviour
     {
         grabbed = true;
         originalPos = transform.position; // Store original position
+
+        // Highlight the target when grabbed
+        Customer customer = gameObject.GetComponent<Customer>();
+        if (customer)
+            customer.SpriteOutline.enabled = true;
     }
 
     private void OnMouseUp()
     {
         grabbed = false;
+        Customer customer = gameObject.GetComponent<Customer>();
 
         // Drop to chair
         if (chair != null && !chair.isOccupied)
         {
             Debug.Log("Dropped " + gameObject.name + " to " + chair.name);
             chair.isOccupied = true;
-
-            Customer customer = gameObject.GetComponent<Customer>();
+        
             if (customer)
             {
                 customer.transform.position = chair.transform.position;
                 customer.transform.right = chair.transform.right;
                 customer.MyChair = chair; // Set the customer's chair
+                customer.SpriteOutline.enabled = false;
+                chair.SpriteOutline.enabled = false;
                 customer.curState = Customer.FSMState.Ordering;
             }
-
         }
 
         else
         {
             transform.position = originalPos; // Return to original position
+            customer.SpriteOutline.enabled = false;
         }
-
     }
    
     private void OnTriggerStay2D(Collider2D collision)
     {
-        chair = collision.GetComponent<Chair>();         
+        chair = collision.GetComponent<Chair>();
+
+        if (!chair.isOccupied)
+            chair.SpriteOutline.enabled = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        chair.SpriteOutline.enabled = false;
         chair = null;
     }  
 }

@@ -8,5 +8,14 @@ using UnityEngine.Events;
 public class Chair : MonoBehaviour
 {
     public bool isOccupied;
+    private SpriteOutline spriteOutline;
+
+    public SpriteOutline SpriteOutline { get => spriteOutline; set => spriteOutline = value; }
+
+    public void Start()
+    {
+        spriteOutline = GetComponent<SpriteOutline>();
+        spriteOutline.enabled = false;
+    }
 }
 
