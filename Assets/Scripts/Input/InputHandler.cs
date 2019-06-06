@@ -5,7 +5,7 @@ using UnityEngine;
 public class InputHandler : MonoBehaviour
 {
     public Dictionary<SwipeDirection, SwipeData> SwipeInput = new Dictionary<SwipeDirection, SwipeData>();
-    public SwipeDetector SwipeDetector;
+    [HideInInspector] public SwipeDetector SwipeDetector;
 
     private void Awake()
     {

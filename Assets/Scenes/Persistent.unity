@@ -487,7 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434d6175dba3465459e10b6ce5c831b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneDataToLoad: {fileID: 11400000, guid: 709d91f13871acb499759cd2e293ed51, type: 2}
+  sceneDataToLoad: {fileID: 11400000, guid: 7ed235e3e715bd64e812ed38181962ca, type: 2}
   faderCanvasGroup: {fileID: 9468316}
   fadeDuration: 1
 --- !u!4 &2010472975
@@ -518,7 +518,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stages:
   - {fileID: 11400000, guid: 3493bd47e8e1c2544a6883edbbf4303b, type: 2}
-  - {fileID: 11400000, guid: 158d61a52600eee449677e7671e0a76f, type: 2}
   stageSelectionAvailable: 0
 --- !u!114 &2010472977
 MonoBehaviour:
@@ -532,6 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cf72ad0d0da05442adfe3972bbdc6ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SwipeDetector: {fileID: 0}
 --- !u!114 &2010472978
 MonoBehaviour:
   m_ObjectHideFlags: 0

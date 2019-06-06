@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class ChoppingProcedure : Procedure
 {
     public Sprite[] ChoppedIngredientSequence;
-    public int SliceCount = 1;
+    public int SliceCount;
 
     public override IEnumerator Apply(PrepStation prepStation)
     {
@@ -22,25 +22,34 @@ public class ChoppingProcedure : Procedure
         // Slice the ingredient whenever player swipes down
         while (SliceCount < ChoppedIngredientSequence.Length)
         {
+            // If the player swiped down
             if (prepStation.InputHandler.SwipeInput.ContainsKey(SwipeDirection.Down))
             {
+                // Show the ingredient as sliced
                 SliceCount++;
                 prepStation.ChoppingIngredient.GetComponent<Image>().sprite = ChoppedIngredientSequence[SliceCount];
+
+                // Clear the swipe input container
                 prepStation.InputHandler.SwipeInput.Clear();
             }
 
+            // TODO: Sync knife animation with player input
+
             yield return null;
 
+            // If we've fully sliced the ingredient
             if (SliceCount >= ChoppedIngredientSequence.Length - 1)
             {
                 Debug.Log("Procedure done.");
-                // Make sure to reset this scriptable object, clear Input then disable it
+                // Make sure to reset this scriptable object
                 Reset();
+
+                // Clear Input then disable it so that no swipe detection will be done
                 prepStation.InputHandler.SwipeInput.Clear();
                 prepStation.InputHandler.SwipeDetector.enabled = false;
 
-                yield return new WaitForSeconds(3f);
-                OnProcedureDone.Invoke();
+                yield return new WaitForSeconds(3f); // TODO: remove this once result feedback is in place
+                OnProcedureSuccess.Invoke();
             }
         }
     }
