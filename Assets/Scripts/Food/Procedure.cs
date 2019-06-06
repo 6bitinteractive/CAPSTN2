@@ -5,7 +5,9 @@ using UnityEngine.Events;
 
 public abstract class Procedure : ScriptableObject
 {
-    [HideInInspector] public UnityEvent OnProcedureDone = new UnityEvent(); // not necessary? process box should handle when a procedure would end
+    [HideInInspector] public UnityEvent OnProcedureSuccess = new UnityEvent();
+    [HideInInspector] public UnityEvent OnProcedureFail = new UnityEvent();
+
 
     private void OnEnable()
     {

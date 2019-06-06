@@ -19,7 +19,7 @@ public class StageManager : MonoBehaviour
     {
         SingletonManager.Register<StageManager>(this);
 
-        if (!stageSelectionAvailable)
+        if (!stageSelectionAvailable) // If player can't choose the stage, automatically choose the nextPlayableStage at start
         {
             CurrentStage = stages[nextPlayableStage];
         }

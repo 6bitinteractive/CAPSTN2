@@ -13,6 +13,7 @@ public class PrepStation : MonoBehaviour
 
     [Header("Boiling Panel")]
     public GameObject BoilingPanel;
+    public StoveController StoveController;
 
     [Header("Chopping Panel")]
     public GameObject ChoppingPanel;
@@ -37,10 +38,10 @@ public class PrepStation : MonoBehaviour
         // TODO: clean these up
         foreach (var procedure in BaseRecipe.Procedures)
         {
-            procedure.OnProcedureDone.AddListener(() =>
+            procedure.OnProcedureSuccess.AddListener(() =>
             {
                 ProcessesPanel.ProcessBoxes[currentProcedure].SetSuccess(true); // When player finishes a procedure, set process box as successful
-                MoveToNextProcedure();
+                //MoveToNextProcedure(); // TODO: Show result feedback first instead of moving to the next procedure right away; panel should prompt to move to next procedure?
             });
         }
 

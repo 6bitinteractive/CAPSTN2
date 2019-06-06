@@ -50,6 +50,8 @@ public class ProcessBox : MonoBehaviour
         timer.OnTimerEnd.RemoveListener(setSuccess);
     }
 
+    // NOTE: This has nothing to do with setting the gameObject as active
+    // Set the process box as the active "timer"/step
     public void SetActive(bool active = true)
     {
         if (active)
@@ -86,8 +88,7 @@ public class ProcessBox : MonoBehaviour
 
         if (successful)
         {
-            Debug.Log("Process succeeded.");
-            Debug.Log("Succeeded: " + gameObject.name);
+            Debug.Log("Process succeeded: " + gameObject.name);
             Success = true;
             timer.End = true;
             image.color = success;
@@ -99,6 +100,7 @@ public class ProcessBox : MonoBehaviour
             image.color = fail;
         }
 
+        // Process is now done
         OnProcessDone.Invoke();
     }
 

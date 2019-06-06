@@ -21,9 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Phases/CookingPhase.unity
     guid: ae4430341c4b54d4396d80822d97a0fb
   - enabled: 1
-    path: Assets/Scenes/Tests/Microphone.unity
-    guid: 1d21389c10dcc9c458e12b057f41e83f
+    path: Assets/Scenes/Tests/ServingPhase.unity
+    guid: 53d9d1a0052b3914da4d648219c00025
   - enabled: 1
     path: Assets/Scenes/Menus/Ending.unity
     guid: 27f5b8cf1456c3f45bd02e9164d2bc1b
+  - enabled: 1
+    path: Assets/Scenes/Tests/Microphone.unity
+    guid: 1d21389c10dcc9c458e12b057f41e83f
   m_configObjects: {}
