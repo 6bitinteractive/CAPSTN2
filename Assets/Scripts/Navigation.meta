@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d746fdd254bcd3842b64d6064c30b5f3
+=======
+guid: f6757578892b59e40a3c3d11fbd37255
+>>>>>>> parent of 5bf3973... Remove waypoint, pathmanager scripts
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
