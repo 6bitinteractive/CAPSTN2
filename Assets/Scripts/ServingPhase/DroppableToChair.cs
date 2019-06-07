@@ -88,13 +88,17 @@ public class DroppableToChair : MonoBehaviour
     {
         chair = collision.GetComponent<Chair>();
 
-        if (!chair.isOccupied)
+
+        if (chair != null && chair.isOccupied)
             chair.SpriteOutline.enabled = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
-    {
-        chair.SpriteOutline.enabled = false;
-        chair = null;
+    {          
+        if (chair != null)
+        {
+            chair.SpriteOutline.enabled = false;
+            chair = null;
+        }        
     }  
 }
