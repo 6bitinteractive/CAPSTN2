@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b7a576f6f7278418feb08095656b01, type: 3}
   m_Name: Order4
   m_EditorClassIdentifier: 
-  Name: Tasty
+  Name: Fish Sauce
   PrepTime: 3.5
   ScoreValue: 40
-  Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  Sprite: {fileID: 21300000, guid: a766350b96e349748b4b75c54d024996, type: 3}

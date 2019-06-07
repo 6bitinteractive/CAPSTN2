@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b7a576f6f7278418feb08095656b01, type: 3}
   m_Name: Order1
   m_EditorClassIdentifier: 
-  Name: Something Salty
+  Name: Pork
   PrepTime: 1.5
   ScoreValue: 10
-  Sprite: {fileID: 21300000, guid: 69a43cff15e552649ae13d1e953fed3e, type: 3}
+  Sprite: {fileID: 21300000, guid: e2f4b7e734c3161449484f95b090af28, type: 3}
