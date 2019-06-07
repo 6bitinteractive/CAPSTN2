@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Timer : MonoBehaviour
 {
     public float TimerValue = 10;
+    public Canvas TimerCanvas;
     public UnityEvent OnCountdownEnd;
 
     private float currentTimerValue;
@@ -59,5 +60,17 @@ public class Timer : MonoBehaviour
     {
         CurrentTimerValue = TimerValue;
         StartCoroutine(StartCountdown());
+    }
+
+    public void DisableTimer()
+    {
+        TimerCanvas.enabled = false;
+        this.enabled = false;
+    }
+
+    public void EnableTimer()
+    {
+        TimerCanvas.enabled = true;
+        this.enabled = true;
     }
 }
