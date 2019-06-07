@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CircleCollider2D))]
@@ -15,8 +16,9 @@ public class Customer : MonoBehaviour
     [SerializeField] float Speed = 0.02f;
     [SerializeField] float OrderingDuration = 3;
     [SerializeField] float EatingDuration = 3.5f;
+    [SerializeField] Image OrderPrompt;
 
- //   public int myQueue;
+    //   public int myQueue;
     public Vector3 Destination;
 
     private Chair myChair;
@@ -96,8 +98,7 @@ public class Customer : MonoBehaviour
         if (isOrdering)
         {
             OnStartOrdering.Invoke();
-            timer.enabled = false;
-            timer.ResetTimer();
+            timer.DisableTimer();        
             Destroy(gameObject.GetComponent<DroppableToChair>(), 1);
             StartCoroutine(ordering());
             isOrdering = false;
@@ -108,9 +109,11 @@ public class Customer : MonoBehaviour
     {
         if (isWaiting)
         {
+            OrderPrompt.gameObject.SetActive(true); // Display the order's sprite
+            OrderPrompt.sprite = myOrder.Sprite;
             OnOrderTaken.Invoke();
             isWaitingForOrder = true;
-            timer.enabled = true;
+            timer.EnableTimer();
             timer.ResetTimer();
             isWaiting = false;
         }
@@ -120,9 +123,11 @@ public class Customer : MonoBehaviour
     {
         if (isEating)
         {
+            OrderPrompt.gameObject.SetActive(false);
             StartCoroutine(eating());
             OnStartEating.Invoke();
-            timer.enabled = false;
+            timer.DisableTimer();
+
         }
     }
 
@@ -145,7 +150,7 @@ public class Customer : MonoBehaviour
             if (transform.position.x >= Destination.x)
             {
                 isInQueue = true;
-                timer.enabled = true;
+                 timer.EnableTimer();
                 gameObject.AddComponent<DroppableToChair>(); // Hack for some reason even when the script is disabled player can still drag the object
                 OnEnterQueue.Invoke();
                 curState = FSMState.Idle;
@@ -160,11 +165,11 @@ public class Customer : MonoBehaviour
     {
         yield return new WaitForSeconds(OrderingDuration);
         int randomOrder = UnityEngine.Random.Range(0, Menu.MenuList.Count); // Get a random order from the menu
-        MyOrder = Menu.MenuList[randomOrder];
+        MyOrder = Menu.MenuList[randomOrder];   
         isReadyToOrder = true;
         OnOrderingEnd.Invoke();
-        timer.enabled = true;
-        myChair.isOccupied = false;
+        timer.EnableTimer();
+        timer.ResetTimer();    
         Debug.Log("I Ordered:" + MyOrder.Name);
     }
 
@@ -187,6 +192,7 @@ public class Customer : MonoBehaviour
         spriteOutline.enabled = false;
         OnEnterQueue.Invoke();
         curState = FSMState.Idle;
+        OrderPrompt.gameObject.SetActive(false);
         timer.ResetTimer();
         gameObject.AddComponent<DroppableToChair>();
     }
@@ -204,7 +210,6 @@ public class Customer : MonoBehaviour
         startingPosition = transform.position;
         spriteOutline = GetComponent<SpriteOutline>();
         spriteOutline.enabled = false;
-
         curState = FSMState.Idle;
     }
 }

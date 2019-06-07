@@ -1,19 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ServingPhaseController : MonoBehaviour
 {
     [SerializeField] private Order servingDishHeld;
+    [SerializeField] Image servingDishHeldImage;
     private GameObject player;
     private Vector2 target;
     private bool isAtTargetPosition;
     private PathManager pathManager;
+    private Timer timer;
 
     void Awake()
     {
         player = gameObject;
         pathManager = GetComponent<PathManager>();
+        timer = GetComponent<Timer>();
     }
 
     // Update is called once per frame
@@ -43,7 +47,12 @@ public class ServingPhaseController : MonoBehaviour
             // If Serving Dish
             if (servingDish)
             {
-                StartCoroutine(preppingDish(servingDish, servingDish.OrderType.PrepTime));
+                servingDishHeldImage.gameObject.SetActive(false);
+                StartCoroutine(preppingDish(servingDish, servingDish.OrderType.PrepTime));     
+                timer.TimerValue = servingDish.OrderType.PrepTime;
+                timer.ResetTimer();
+                timer.EnableTimer();
+
                 Debug.Log("Prepping: " + servingDish.OrderType.Name);
                 Debug.Log("PrepTime: " + servingDish.OrderType.PrepTime);
             }
@@ -74,6 +83,7 @@ public class ServingPhaseController : MonoBehaviour
                     Debug.Log("Wrong Order");
                 }
                 servingDishHeld = null;
+                servingDishHeldImage.gameObject.SetActive(false);
             }
 
             if (waypoint)
@@ -85,7 +95,10 @@ public class ServingPhaseController : MonoBehaviour
         IEnumerator preppingDish(ServingDish servingDish, float prepTime)
         {
             yield return new WaitForSeconds(prepTime);
+            timer.DisableTimer();
             servingDishHeld = servingDish.OrderType;
+            servingDishHeldImage.sprite = servingDishHeld.Sprite;
+            servingDishHeldImage.gameObject.SetActive(true);
             Debug.Log("Finished prepping" + servingDish.OrderType.Name);
         }
 
