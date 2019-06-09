@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b7a576f6f7278418feb08095656b01, type: 3}
   m_Name: Order2
   m_EditorClassIdentifier: 
-  Name: Onion
+  Name: Sisig Mayo
   PrepTime: 2
   ScoreValue: 20
-  Sprite: {fileID: 21300000, guid: ba64356617af498499431edf40fb5214, type: 3}
+  Sprite: {fileID: 21300000, guid: 50113d91346aa054e9c614617b1ab35c, type: 3}

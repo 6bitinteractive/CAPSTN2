@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b7a576f6f7278418feb08095656b01, type: 3}
   m_Name: Order3
   m_EditorClassIdentifier: 
-  Name: String Bean
+  Name: Sisig Egg
   PrepTime: 3
   ScoreValue: 30
-  Sprite: {fileID: 21300000, guid: ba6f56b3d7382d94bbae4276b73afcd9, type: 3}
+  Sprite: {fileID: 21300000, guid: 3137614a5c479ea44aebd14e833ffc7b, type: 3}
