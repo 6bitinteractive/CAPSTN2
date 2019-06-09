@@ -131,7 +131,7 @@ public class Customer : MonoBehaviour
         }
     }
 
-    private void LeavingState()
+    public void LeavingState()
     {
         // Earn Score
         MyChair.isOccupied = false;

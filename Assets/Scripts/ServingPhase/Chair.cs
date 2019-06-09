@@ -17,5 +17,19 @@ public class Chair : MonoBehaviour
         spriteOutline = GetComponent<SpriteOutline>();
         spriteOutline.enabled = false;
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Customer customer = collision.GetComponent<Customer>();
+        if (customer && !isOccupied)
+            SpriteOutline.enabled = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Customer customer = collision.GetComponent<Customer>();
+        if (customer)
+            SpriteOutline.enabled = false;
+    }
 }
 
