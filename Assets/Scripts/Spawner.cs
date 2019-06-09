@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public LineManager LineManager;
+    //public LineManager LineManager;
     [SerializeField] private Transform[] SpawnLocations;
     [SerializeField] private float Intervals;
     [SerializeField] private int NumberOfObjects = 1;
@@ -61,7 +61,7 @@ public class Spawner : MonoBehaviour
                 if (customer)
                 {
                     customer.ResetObject();
-                    LineManager.AddToQueue(customer);
+               //     LineManager.AddToQueue(customer);
                    // customer.destination = SpawnLocations[spawnLocationIndex].position;
                 }
             }

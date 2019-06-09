@@ -133,8 +133,9 @@ public class Customer : MonoBehaviour
 
     public void LeavingState()
     {
-        // Earn Score
-        MyChair.isOccupied = false;
+        if (myChair != null)
+            MyChair.isOccupied = false;
+
         gameObject.SetActive(false);
         // Customer dissappears through an effect or walks out?
 
