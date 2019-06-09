@@ -129,6 +129,12 @@ public class PrepStation : MonoBehaviour
         ResultsPanel.gameObject.SetActive(false);
     }
 
+    //debug
+    public void EndProcedure()
+    {
+        BaseRecipe.Procedures[currentProcedure].OnProcedureSuccess.Invoke();
+    }
+
     private void RunProcedure(Procedure procedure)
     {
         StopAllCoroutines();

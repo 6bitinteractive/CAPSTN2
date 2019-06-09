@@ -8,6 +8,7 @@ public class StoveController : MonoBehaviour
 {
     [Range(0, 1)]
     [SerializeField] private float maxLow, maxMedium;
+    [SerializeField] private float addLowHeat = 0.05f, addMediumHeat = 0.07f, addHighHeat = 0.1f;
 
     [SerializeField] private TextMeshProUGUI temperatureText;
     private Slider slider;
@@ -32,6 +33,29 @@ public class StoveController : MonoBehaviour
             CurrentTemperature = Temperature.High;
 
         temperatureText.text = CurrentTemperature.ToString();
+    }
+
+    public void ApplyHeat(Slider heatableObject)
+    {
+        // TODO: Apply heat over time
+        float heat = 0;
+        switch (CurrentTemperature)
+        {
+            case Temperature.Low:
+                heat = addLowHeat;
+                break;
+            case Temperature.Medium:
+                heat = addMediumHeat;
+                break;
+            case Temperature.High:
+                heat = addHighHeat;
+                break;
+            default:
+                heat = 0;
+                break;
+        }
+
+        heatableObject.value += heat;
     }
 
     public enum Temperature
