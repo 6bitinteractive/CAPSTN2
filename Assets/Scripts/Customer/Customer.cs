@@ -169,8 +169,9 @@ public class Customer : MonoBehaviour
         MyOrder = Menu.MenuList[randomOrder];   
         isReadyToOrder = true;
         OnOrderingEnd.Invoke();
-        timer.EnableTimer();
-        timer.ResetTimer();    
+       // timer.EnableTimer();
+       // timer.ResetTimer();
+        curState = FSMState.WaitingForOrder;
         Debug.Log("I Ordered:" + MyOrder.Name);
     }
 
