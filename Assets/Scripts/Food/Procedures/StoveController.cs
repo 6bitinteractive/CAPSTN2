@@ -11,28 +11,39 @@ public class StoveController : MonoBehaviour
     [SerializeField] private float addLowHeat = 0.05f, addMediumHeat = 0.07f, addHighHeat = 0.1f;
 
     [SerializeField] private TextMeshProUGUI temperatureText;
-    private Slider slider;
 
     public Temperature CurrentTemperature { get; private set; }
 
+    private Slider stoveTemperatureSlider;
+    private List<Slider> heatableObjects = new List<Slider>();
+
     private void Start()
     {
-        slider = GetComponent<Slider>();
+        stoveTemperatureSlider = GetComponent<Slider>();
         UpdateTemperatureText();
     }
 
     public void UpdateTemperatureText()
     {
-        if (slider.value == 0f)
+        if (stoveTemperatureSlider.value == 0f)
             CurrentTemperature = Temperature.Off;
-        else if (slider.value > 0 && slider.value <= maxLow)
+        else if (stoveTemperatureSlider.value > 0 && stoveTemperatureSlider.value <= maxLow)
             CurrentTemperature = Temperature.Low;
-        else if (slider.value <= maxMedium && slider.value > maxLow)
+        else if (stoveTemperatureSlider.value <= maxMedium && stoveTemperatureSlider.value > maxLow)
             CurrentTemperature = Temperature.Medium;
         else
             CurrentTemperature = Temperature.High;
 
         temperatureText.text = CurrentTemperature.ToString();
+    }
+
+    private void FixedUpdate()
+    {
+        if (heatableObjects.Count > 0)
+        {
+            foreach (var item in heatableObjects)
+                ApplyHeat(item);
+        }
     }
 
     public void ApplyHeat(Slider heatableObject)
@@ -56,6 +67,9 @@ public class StoveController : MonoBehaviour
         }
 
         heatableObject.value += heat;
+
+        if (!heatableObjects.Contains(heatableObject)) // FIX? This will be called every loop
+            heatableObjects.Add(heatableObject);
     }
 
     public enum Temperature
