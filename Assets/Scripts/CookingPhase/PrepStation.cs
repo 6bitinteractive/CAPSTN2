@@ -7,8 +7,9 @@ using TMPro;
 
 public class PrepStation : MonoBehaviour
 {
-    [Header("Recipe Prefabs")]
+    [Header("Prefabs")]
     [SerializeField] private List<GameObject> recipes = new List<GameObject>();
+    [SerializeField] private GameObject step;
 
     //[Header("UI")]
     //public TextMeshProUGUI ScoreText;

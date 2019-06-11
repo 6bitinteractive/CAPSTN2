@@ -38,12 +38,6 @@ public class Pot : MonoBehaviour
         }
     }
 
-    public void AddToBoilingIngredients(Boilable ingredient)
-    {
-        BoilingIngredients.Add(ingredient);
-        Debug.Log("Added to pot: " + ingredient.gameObject.name);
-    }
-
     public void ApplyHeat(Slider boilingIngredientTemp)
     {
         // TODO: Apply heat over time
@@ -65,8 +59,12 @@ public class Pot : MonoBehaviour
         }
 
         boilingIngredientTemp.value += heat;
+    }
 
-        Debug.Log("Boiling: " + boilingIngredientTemp.gameObject.name);
+    public void AddToBoilingIngredients(Boilable ingredient)
+    {
+        BoilingIngredients.Add(ingredient);
+        Debug.Log("Added to pot: " + ingredient.gameObject.name);
     }
 
     private void AddToBoilingIngredients(DraggableItem item)

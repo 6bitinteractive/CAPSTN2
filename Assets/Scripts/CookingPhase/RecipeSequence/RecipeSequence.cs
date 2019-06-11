@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SisigSequence : MonoBehaviour
+public class RecipeSequence : MonoBehaviour
 {
     [SerializeField] private Recipe recipe;
 }

@@ -28,9 +28,9 @@ public class InputHandler : MonoBehaviour
     {
         Debug.Log("Swipe: " + swipeData.Direction);
 
-        if (!SwipeInput.ContainsKey(swipeData.Direction))
+        if (!SwipeInput.ContainsKey(swipeData.Direction) || SwipeInput.Count < 1)
         {
             SwipeInput.Add(swipeData.Direction, swipeData);
-        }
     }
+}
 }

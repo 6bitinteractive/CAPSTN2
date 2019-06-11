@@ -11,7 +11,7 @@ using UnityEngine.EventSystems;
 public class DraggableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public bool Grabbed { get; private set; }
-    [HideInInspector] public OnItemDrop OnDropItem = new OnItemDrop();
+    public OnItemDrop OnDropItem = new OnItemDrop();
 
     private RectTransform rectTransform;
 
@@ -81,6 +81,7 @@ public class DraggableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        Debug.Log("Grabbed item: " + gameObject.name);
         Grabbed = true;
     }
 
