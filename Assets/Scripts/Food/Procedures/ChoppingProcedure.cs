@@ -23,7 +23,9 @@ public class ChoppingProcedure : Procedure
         while (SliceCount < ChoppedIngredientSequence.Length)
         {
             // If the player swiped down
-            if (prepStation.InputHandler.SwipeInput.ContainsKey(SwipeDirection.Down))
+            if (prepStation.InputHandler.SwipeInput.ContainsKey(SwipeDirection.Down)
+                || prepStation.InputHandler.SwipeInput.ContainsKey(SwipeDirection.LeftDown)
+                || prepStation.InputHandler.SwipeInput.ContainsKey(SwipeDirection.RightDown))
             {
                 // Show the ingredient as sliced
                 SliceCount++;

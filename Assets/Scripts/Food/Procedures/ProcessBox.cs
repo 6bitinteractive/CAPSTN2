@@ -60,7 +60,7 @@ public class ProcessBox : MonoBehaviour
 
             image.color = this.active;
             canvasGroup.alpha = 1f;
-            rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x + inset, rectTransform.anchoredPosition.y);
+            //rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x + inset, rectTransform.anchoredPosition.y);
 
             // Start the timer
             StartCoroutine(timer.Start());
@@ -71,7 +71,7 @@ public class ProcessBox : MonoBehaviour
 
             image.color = inactive;
             canvasGroup.alpha = 0.5f;
-            rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x - inset, rectTransform.anchoredPosition.y);
+            //rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x - inset, rectTransform.anchoredPosition.y);
         }
 
         // Fill the bar again
