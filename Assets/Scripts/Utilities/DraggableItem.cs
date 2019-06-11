@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 [SerializeField] public class OnItemDrop : UnityEvent<DraggableItem> { }
 
+[RequireComponent(typeof(Collider2D))]
+
 public class DraggableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public bool Grabbed { get; private set; }
@@ -74,7 +76,6 @@ public class DraggableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     private void OnMouseUp()
     {
         Grabbed = false;
-        Debug.Log("Item dropped: " + gameObject.name);
         OnDropItem.Invoke(this);
     }
 
@@ -86,7 +87,6 @@ public class DraggableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     public void OnPointerUp(PointerEventData eventData)
     {
         Grabbed = false;
-        Debug.Log("Item dropped: " + gameObject.name);
         OnDropItem.Invoke(this);
     }
 }

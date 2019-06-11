@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class BoilingWater : MonoBehaviour
 {
     [Range(0, 1)]
-    [SerializeField] private static float cooling = 0.003f;
+    [SerializeField] private float cooling = 0.003f;
     [SerializeField] private float minBoil = 0.7f;
     [SerializeField] private float maxBoil = 0.8f;
 

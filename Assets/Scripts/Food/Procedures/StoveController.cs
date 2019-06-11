@@ -10,8 +10,6 @@ public class StoveController : MonoBehaviour
     [SerializeField] private float maxLow, maxMedium;
     [SerializeField] private float addLowHeat = 0.05f, addMediumHeat = 0.07f, addHighHeat = 0.1f;
 
-    [SerializeField] private TextMeshProUGUI temperatureText;
-
     public Temperature CurrentTemperature { get; private set; }
 
     private Slider stoveTemperatureSlider;
@@ -33,8 +31,6 @@ public class StoveController : MonoBehaviour
             CurrentTemperature = Temperature.Medium;
         else
             CurrentTemperature = Temperature.High;
-
-        temperatureText.text = CurrentTemperature.ToString();
     }
 
     private void FixedUpdate()

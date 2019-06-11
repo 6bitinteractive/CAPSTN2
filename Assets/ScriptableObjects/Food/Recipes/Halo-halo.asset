@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef0b42a4273cb0479aa6d428f05f3da, type: 3}
   m_Name: Halo-halo
   m_EditorClassIdentifier: 
-  ingredients: []
-  Procedures:
-  - {fileID: 11400000, guid: 0a46418ce9f95f74c9dc04c20858d693, type: 2}
   DisplayName: Halo-halo
+  Area: 1
+  Procedures: []
