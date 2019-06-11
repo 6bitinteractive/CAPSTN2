@@ -15,17 +15,20 @@ public class Pot : MonoBehaviour
 
     private void OnEnable()
     {
-        dropArea.OnItemDroppedOnArea.AddListener(HideItem);
+        dropArea.OnItemDroppedOnArea.AddListener(ShowItemInPot);
     }
 
     private void OnDisable()
     {
-        dropArea.OnItemDroppedOnArea.RemoveListener(HideItem);
+        dropArea.OnItemDroppedOnArea.RemoveListener(ShowItemInPot);
     }
 
-    private void HideItem(DraggableItem item)
+    private void ShowItemInPot(DraggableItem item)
     {
         if (item != null)
+        {
+            item.GetComponent<PotIngredient>().IngredientInPot.SetActive(true);
             item.gameObject.SetActive(false);
+        }
     }
 }
