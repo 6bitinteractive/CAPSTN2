@@ -6,14 +6,14 @@ using UnityEngine.Events;
 [CreateAssetMenu(menuName = "Food/Boiling Procedure", fileName = "BoilingProcedure")]
 public class BoilingProcedure : Procedure
 {
-    public StoveController.Temperature RequiredTemperature;
+    //public StoveController.Temperature RequiredTemperature;
 
     public override IEnumerator Apply(PrepStation prepStation)
     {
         Debug.Log("Boiling... " + prepStation.BaseRecipe.DisplayName);
 
         // Show the boiling station
-        prepStation.BoilingPanel.gameObject.SetActive(true);
+        //prepStation.BoilingPanel.gameObject.SetActive(true);
 
         //while (!Done)
         //{

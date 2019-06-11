@@ -14,7 +14,7 @@ public class ChoppingProcedure : Procedure
         Debug.Log("Chopping... " + prepStation.BaseRecipe.DisplayName);
 
         // Show the chopping station
-        prepStation.ChoppingPanel.gameObject.SetActive(true);
+        //prepStation.ChoppingPanel.gameObject.SetActive(true);
 
         // Enable swipe detection
         prepStation.InputHandler.SwipeDetector.enabled = true;
@@ -29,7 +29,7 @@ public class ChoppingProcedure : Procedure
             {
                 // Show the ingredient as sliced
                 SliceCount++;
-                prepStation.ChoppingIngredient.GetComponent<Image>().sprite = ChoppedIngredientSequence[SliceCount];
+                //prepStation.ChoppingIngredient.GetComponent<Image>().sprite = ChoppedIngredientSequence[SliceCount];
 
                 // Clear the swipe input container
                 prepStation.InputHandler.SwipeInput.Clear();
