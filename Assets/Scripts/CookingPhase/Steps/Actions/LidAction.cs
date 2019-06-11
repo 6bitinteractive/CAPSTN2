@@ -38,14 +38,12 @@ public class LidAction : Action
     public override void ResetAction()
     {
         lid.SetActive(false);
-        inputHandler.enabled = false;
         inputHandler.SwipeDetector.enabled = false;
     }
 
     public override void Begin()
     {
         Active = true;
-        inputHandler.enabled = true;
         inputHandler.SwipeDetector.enabled = true;
         lid.SetActive(true);
     }
