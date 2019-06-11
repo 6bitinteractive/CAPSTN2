@@ -97,9 +97,9 @@ public class Customer : MonoBehaviour
     {     
         if (isOrdering)
         {
+            Destroy(gameObject.GetComponent<DroppableToChair>(), 0);
             OnStartOrdering.Invoke();
             timer.DisableTimer();        
-            Destroy(gameObject.GetComponent<DroppableToChair>(), 1);
             StartCoroutine(ordering());
             isOrdering = false;
         }
@@ -169,8 +169,9 @@ public class Customer : MonoBehaviour
         MyOrder = Menu.MenuList[randomOrder];   
         isReadyToOrder = true;
         OnOrderingEnd.Invoke();
-        timer.EnableTimer();
-        timer.ResetTimer();    
+       // timer.EnableTimer();
+       // timer.ResetTimer();
+        curState = FSMState.WaitingForOrder;
         Debug.Log("I Ordered:" + MyOrder.Name);
     }
 
@@ -178,7 +179,6 @@ public class Customer : MonoBehaviour
     {
         yield return new WaitForSeconds(EatingDuration);
         OnEatingEnd.Invoke();
-        curState = FSMState.Leaving;
     }
 
     public void ResetObject()
@@ -195,6 +195,7 @@ public class Customer : MonoBehaviour
         curState = FSMState.Idle;
         OrderPrompt.gameObject.SetActive(false);
         timer.ResetTimer();
+        Destroy(gameObject.GetComponent<DroppableToChair>(), 0);
         gameObject.AddComponent<DroppableToChair>();
     }
 

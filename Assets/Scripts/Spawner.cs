@@ -10,7 +10,6 @@ public class Spawner : MonoBehaviour
     [SerializeField] private int NumberOfObjects = 1;
     [SerializeField] private GameObject[] PooledObject;
     [SerializeField] private List<GameObject> PooledObjectList;
-    [SerializeField] private bool active = true;
     [SerializeField] private int index;
     [SerializeField] private int spawnLocationIndex;
 
@@ -42,30 +41,27 @@ public class Spawner : MonoBehaviour
     }
 
     IEnumerator SpawnRandomObjects()
-    {
-        while (active)
+    {      
+        yield return new WaitForSeconds(Intervals);
+
+        int i = Random.Range(0, PooledObjectList.Count); // Spawn a random prefab from pooled object list
+        spawnLocationIndex = Random.Range(0, SpawnLocations.Length);
+
+        // Checks if pooled object is not active
+        if (!PooledObjectList[i].activeInHierarchy)
         {
-            yield return new WaitForSeconds(Intervals);
-
-            int i = Random.Range(0, PooledObjectList.Count); // Spawn a random prefab from pooled object list
-            spawnLocationIndex = Random.Range(0, SpawnLocations.Length);
-
-            // Checks if pooled object is not active
-            if (!PooledObjectList[i].activeInHierarchy)
+            PooledObjectList[i].transform.position = SpawnLocations[spawnLocationIndex].position; // Sets spawn location back to originanl position
+            PooledObjectList[i].SetActive(true); // Activate the pooled object
+           
+            // If this object is a customer
+            Customer customer = PooledObjectList[i].GetComponent<Customer>();
+            if (customer)
             {
-                PooledObjectList[i].transform.position = SpawnLocations[spawnLocationIndex].position; // Sets spawn location back to originanl position
-                PooledObjectList[i].SetActive(true); // Activate the pooled object
-
-                // If this object is a customer
-                Customer customer = PooledObjectList[i].GetComponent<Customer>();
-                if (customer)
-                {
-                    customer.ResetObject();
-               //     LineManager.AddToQueue(customer);
-                   // customer.destination = SpawnLocations[spawnLocationIndex].position;
-                }
+                customer.ResetObject();
+            //     LineManager.AddToQueue(customer);
+                // customer.destination = SpawnLocations[spawnLocationIndex].position;
             }
-            StartCoroutine(SpawnRandomObjects()); // Restart the process
         }
-    }
+        StartCoroutine(SpawnRandomObjects()); // Restart the process
+    }   
 }

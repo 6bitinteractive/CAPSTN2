@@ -7,11 +7,12 @@ public class ServingPhaseController : MonoBehaviour
 {
     [SerializeField] private Order servingDishHeld;
     [SerializeField] Image servingDishHeldImage;
+    [SerializeField] private LayerMask LayerMask;
     private GameObject player;
     private Vector2 target;
-    private bool isAtTargetPosition;
     private PathManager pathManager;
     private Timer timer;
+    private bool isMoving = false;
 
     void Awake()
     {
@@ -34,7 +35,7 @@ public class ServingPhaseController : MonoBehaviour
         // Create ray cast from mouse input
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Vector2 mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 20f);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 20f, LayerMask);
 
         if (hit)
         {
@@ -44,83 +45,120 @@ public class ServingPhaseController : MonoBehaviour
             Customer customer = hit.collider.gameObject.GetComponent<Customer>();
             Waypoint waypoint = hit.collider.gameObject.GetComponent<Waypoint>();
 
-            // If Serving Dish
-            if (servingDish)
-            {
-                servingDishHeldImage.gameObject.SetActive(false);
-                StartCoroutine(preppingDish(servingDish, servingDish.OrderType.PrepTime));     
-                timer.TimerValue = servingDish.OrderType.PrepTime;
-                timer.ResetTimer();
-                timer.EnableTimer();
+            // Actions unavailable when moving
+            if (!isMoving)
+            {         
+                // If player has a dish held and target is a Customer waiting for order
+                if (servingDishHeld != null && customer && customer.IsWaitingForOrder)
+                {
+                    pathManager.NavigateTo(customer.transform.position); // Move to customer
+                    StartCoroutine(serveDish(customer)); // Serve customer
+                    isMoving = true;
+                }
 
-                Debug.Log("Prepping: " + servingDish.OrderType.Name);
-                Debug.Log("PrepTime: " + servingDish.OrderType.PrepTime);
+                // If Serving Dish
+                if (servingDish)
+                {
+                    pathManager.NavigateTo(pathManager.StartNode.transform.position); // Move to serving dish
+                    servingDishHeldImage.gameObject.SetActive(false);               
+                    timer.TimerValue = servingDish.OrderType.PrepTime;
+                    timer.ResetTimer();
+                    timer.EnableTimer();
+                    StartCoroutine(preppingDish(servingDish, servingDish.OrderType.PrepTime));
+                    isMoving = true;
+
+                    Debug.Log("Prepping: " + servingDish.OrderType.Name);
+                    Debug.Log("PrepTime: " + servingDish.OrderType.PrepTime);
+                }
             }
 
+            /*
             // If Customer and is ready to order
             if (customer && customer.IsReadyToOrder)
             {
                 customer.curState = Customer.FSMState.WaitingForOrder;
                 customer.OnOrderTaken.Invoke();
                 customer.IsReadyToOrder = false;
-                Debug.Log("Order Taken");
+                
+
+               // StartCoroutine(goToTarget(customer.gameObject));
+               
+
+
+                // Debug.Log("Order Taken");
             }
+            */
 
-            // If player has a dish held and target is a Customer waiting for order
-            if (servingDishHeld != null && customer && customer.IsWaitingForOrder)
-            {
-                if (customer.MyOrder.Name == servingDishHeld.Name)
-                {
-                    customer.curState = Customer.FSMState.Eating;
-
-                    customer.OnStartEating.Invoke();
-                    Debug.Log("Correct Order");
-                }
-
-                else
-                {
-                    customer.curState = Customer.FSMState.Leaving;
-                    Debug.Log("Wrong Order");
-                }
-                servingDishHeld = null;
-                servingDishHeldImage.gameObject.SetActive(false);
-            }
-
+            /*
             if (waypoint)
             {
                 pathManager.NavigateTo(waypoint.transform.position);
             }
+            */
         }
 
         IEnumerator preppingDish(ServingDish servingDish, float prepTime)
         {
-            yield return new WaitForSeconds(prepTime);
-            timer.DisableTimer();
-            servingDishHeld = servingDish.OrderType;
-            servingDishHeldImage.sprite = servingDishHeld.Sprite;
-            servingDishHeldImage.gameObject.SetActive(true);
-            Debug.Log("Finished prepping" + servingDish.OrderType.Name);
+            bool isAtTargetPosition = false;
+            while (!isAtTargetPosition)
+            {
+                float currentDistance = Vector3.Distance(transform.position, pathManager.StartNode.transform.position);
+                Debug.Log(currentDistance);
+
+                //Checks distance
+                if (currentDistance <= 3f)
+                {
+                    yield return new WaitForSeconds(prepTime);
+                    
+                    timer.DisableTimer();
+                    servingDishHeld = servingDish.OrderType;
+                    servingDishHeldImage.sprite = servingDishHeld.Sprite;
+                    servingDishHeldImage.gameObject.SetActive(true);
+                    isMoving = false;
+                    isAtTargetPosition = true;
+                    Debug.Log("Finished prepping" + servingDish.OrderType.Name);        
+                    yield break;
+                }
+                yield return 0;
+            }
+         
         }
 
-
-        /*
-        IEnumerator goToTarget()
+        IEnumerator serveDish(Customer customer)
         {
-            while (isAtTargetPosition)
+            bool isAtTargetPosition = false;
+            while (!isAtTargetPosition)
             {
-                transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-                transform.right = target - transform.position; // Rotate Towards destination
+                float currentDistance = Vector3.Distance(transform.position, customer.transform.position);
+               // Debug.Log(currentDistance);
 
-                if (transform.position.x >= target.x)
+                //Checks distance
+                if (currentDistance <= 2.9f && servingDishHeld != null)
                 {
-                    
-                    isAtTargetPosition = false;
+                    // If correct order
+                    if (customer.MyOrder.Name == servingDishHeld.Name)
+                    {
+                        customer.curState = Customer.FSMState.Eating;
+                        customer.OnStartEating.Invoke();
+                        Debug.Log("Correct Order");
+                    }
+
+                    // If wrong order
+                    else
+                    {
+                        customer.curState = Customer.FSMState.Leaving;
+                        Debug.Log("Wrong Order");
+                    }
+
+                    servingDishHeld = null;
+                    servingDishHeldImage.gameObject.SetActive(false);
+                    isMoving = false;
+                    isAtTargetPosition = true;
                     yield break;
                 }
                 yield return 0;
             }
         }
-        */
     }
 }
 

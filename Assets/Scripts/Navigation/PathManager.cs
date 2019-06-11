@@ -5,11 +5,13 @@ using UnityEngine;
 public class PathManager : MonoBehaviour
 {
     public float MoveSpeed = 5.0f;
-
+    [SerializeField] private GameObject startNode;
     private Stack<Vector3> currentPath;
     private Vector3 currentWaypointPosition;
     private float moveTimeTotal;
     private float moveTimeCurrent;
+
+    public GameObject StartNode { get => startNode; set => startNode = value; }
 
     void Update()
     {
