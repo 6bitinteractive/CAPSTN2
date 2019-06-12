@@ -13,12 +13,14 @@ public class ServingPhaseController : MonoBehaviour
     private PathManager pathManager;
     private Timer timer;
     private bool isMoving = false;
+    private Animator animator;
 
     void Awake()
     {
         player = gameObject;
         pathManager = GetComponent<PathManager>();
         timer = GetComponent<Timer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -52,21 +54,22 @@ public class ServingPhaseController : MonoBehaviour
                 if (servingDishHeld != null && customer && customer.IsWaitingForOrder)
                 {
                     pathManager.NavigateTo(customer.transform.position); // Move to customer
+                    //Debug.Log("Last Node: " + pathManager.LastNode.gameObject.name); // check last node
                     StartCoroutine(serveDish(customer)); // Serve customer
                     isMoving = true;
+                    animator.SetBool("isMoving", true);
                 }
 
                 // If Serving Dish
-                if (servingDish)
+                if (servingDish && servingDishHeld == null)
                 {
-                    pathManager.NavigateTo(pathManager.StartNode.transform.position); // Move to serving dish
+                    pathManager.NavigateTo(pathManager.StartNode.transform.position); // Move to serving dish           
                     servingDishHeldImage.gameObject.SetActive(false);               
-                    timer.TimerValue = servingDish.OrderType.PrepTime;
-                    timer.ResetTimer();
-                    timer.EnableTimer();
+                    timer.TimerValue = servingDish.OrderType.PrepTime;  
                     StartCoroutine(preppingDish(servingDish, servingDish.OrderType.PrepTime));
                     isMoving = true;
-
+                    animator.SetBool("isMoving", true);
+                    
                     Debug.Log("Prepping: " + servingDish.OrderType.Name);
                     Debug.Log("PrepTime: " + servingDish.OrderType.PrepTime);
                 }
@@ -98,30 +101,26 @@ public class ServingPhaseController : MonoBehaviour
         }
 
         IEnumerator preppingDish(ServingDish servingDish, float prepTime)
-        {
+        {             
             bool isAtTargetPosition = false;
             while (!isAtTargetPosition)
             {
-                float currentDistance = Vector3.Distance(transform.position, pathManager.StartNode.transform.position);
-                Debug.Log(currentDistance);
-
-                //Checks distance
-                if (currentDistance <= 3f)
+                if (gameObject.transform.position == pathManager.LastNode.transform.position)
                 {
+                    timer.ResetTimer();
+                    timer.EnableTimer();
                     yield return new WaitForSeconds(prepTime);
-                    
                     timer.DisableTimer();
                     servingDishHeld = servingDish.OrderType;
                     servingDishHeldImage.sprite = servingDishHeld.Sprite;
                     servingDishHeldImage.gameObject.SetActive(true);
                     isMoving = false;
                     isAtTargetPosition = true;
-                    Debug.Log("Finished prepping" + servingDish.OrderType.Name);        
+                    Debug.Log("Finished prepping" + servingDish.OrderType.Name);
                     yield break;
                 }
                 yield return 0;
-            }
-         
+            }       
         }
 
         IEnumerator serveDish(Customer customer)
@@ -129,11 +128,9 @@ public class ServingPhaseController : MonoBehaviour
             bool isAtTargetPosition = false;
             while (!isAtTargetPosition)
             {
-                float currentDistance = Vector3.Distance(transform.position, customer.transform.position);
+               // float currentDistance = Vector3.Distance(transform.position, customer.transform.position);
                // Debug.Log(currentDistance);
-
-                //Checks distance
-                if (currentDistance <= 2.9f && servingDishHeld != null)
+                if (gameObject.transform.position == pathManager.LastNode.transform.position)
                 {
                     // If correct order
                     if (customer.MyOrder.Name == servingDishHeld.Name)
@@ -161,4 +158,3 @@ public class ServingPhaseController : MonoBehaviour
         }
     }
 }
-
