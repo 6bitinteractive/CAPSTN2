@@ -19,6 +19,7 @@ public class ServingPhaseController : MonoBehaviour
     private Timer timer;
     private bool isMoving = false;
     private Animator animator;
+    private Score score;
 
     void Awake()
     {
@@ -26,6 +27,7 @@ public class ServingPhaseController : MonoBehaviour
         pathManager = GetComponent<PathManager>();
         timer = GetComponent<Timer>();
         animator = GetComponent<Animator>();
+        score = GetComponent<Score>();
     }
 
     // Update is called once per frame
@@ -123,6 +125,7 @@ public class ServingPhaseController : MonoBehaviour
                     servingDishHeldImage.gameObject.SetActive(true);
                     isMoving = false;
                     isAtTargetPosition = true;
+                    animator.SetLayerWeight(1, 1); // Set animation with holding dish to visible
                     Debug.Log("Finished prepping" + servingDish.OrderType.Name);
                     yield break;
                 }
@@ -144,6 +147,7 @@ public class ServingPhaseController : MonoBehaviour
                     {
                         customer.curState = Customer.FSMState.Eating;
                         customer.OnStartEating.Invoke();
+                        score.EarnScore(servingDishHeld.ScoreValue);
                         Debug.Log("Correct Order");
                     }
 
@@ -151,6 +155,7 @@ public class ServingPhaseController : MonoBehaviour
                     else
                     {
                         customer.curState = Customer.FSMState.Leaving;
+                        score.EarnScore(25);
                         Debug.Log("Wrong Order");
                     }
 
@@ -158,6 +163,7 @@ public class ServingPhaseController : MonoBehaviour
                     servingDishHeldImage.gameObject.SetActive(false);
                     isMoving = false;
                     isAtTargetPosition = true;
+                    animator.SetLayerWeight(1, 0); // Set animation with holding dish to visible
                     yield break;
                 }
                 yield return 0;
