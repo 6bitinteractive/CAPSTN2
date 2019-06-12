@@ -30,6 +30,7 @@ public class Customer : MonoBehaviour
     private bool isInQueue = false;
     private bool isReadyToOrder = false;
     private bool isWaitingForOrder = false;
+    private bool isSatisfied = false;
 
     // Events
     public UnityEvent OnEnterQueue = new UnityEvent();
@@ -38,12 +39,14 @@ public class Customer : MonoBehaviour
     public UnityEvent OnOrderTaken = new UnityEvent();
     public UnityEvent OnStartEating = new UnityEvent();
     public UnityEvent OnEatingEnd = new UnityEvent();
+    public UnityEvent OnLeavingSatisfied = new UnityEvent();
+    public UnityEvent OnLeavingDissatisfied = new UnityEvent();
 
     // FSM Boolean Control
     private bool isOrdering = true;
     private bool isWaiting = true;
     private bool isEating = true;
-
+  
     public enum FSMState
     {
         Idle,
@@ -123,11 +126,10 @@ public class Customer : MonoBehaviour
     {
         if (isEating)
         {
-            OrderPrompt.gameObject.SetActive(false);
+            isSatisfied = true;
             StartCoroutine(eating());
             OnStartEating.Invoke();
             timer.DisableTimer();
-
         }
     }
 
@@ -136,10 +138,19 @@ public class Customer : MonoBehaviour
         if (myChair != null)
             MyChair.isOccupied = false;
 
-        gameObject.SetActive(false);
-        // Customer dissappears through an effect or walks out?
+        if (isSatisfied)
+        {
+            OnLeavingSatisfied.Invoke();
+            Debug.Log("I am happy nepu");
+        }
 
-    }
+        else
+        {
+            OnLeavingDissatisfied.Invoke();
+            StartCoroutine(leaving());
+            Debug.Log("I am angery nepu");
+        }
+  }
 
     /* Incase we add movement to the AI
     IEnumerator goToQueue()
@@ -162,6 +173,12 @@ public class Customer : MonoBehaviour
     }
     */
 
+    IEnumerator leaving()
+    {
+        yield return new WaitForSeconds(2);
+        gameObject.SetActive(false);
+    }
+
     IEnumerator ordering()
     {
         yield return new WaitForSeconds(OrderingDuration);
@@ -179,6 +196,7 @@ public class Customer : MonoBehaviour
     {
         yield return new WaitForSeconds(EatingDuration);
         OnEatingEnd.Invoke();
+        curState = FSMState.Leaving;
     }
 
     public void ResetObject()
@@ -190,6 +208,7 @@ public class Customer : MonoBehaviour
         isWaitingForOrder = false;
         isOrdering = true;
         isWaiting = true;
+        isSatisfied = false;
         spriteOutline.enabled = false;
         OnEnterQueue.Invoke();
         curState = FSMState.Idle;
