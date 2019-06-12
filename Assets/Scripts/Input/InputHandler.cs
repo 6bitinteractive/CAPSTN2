@@ -34,3 +34,11 @@ public class InputHandler : MonoBehaviour
         }
     }
 }
+
+public enum InputType
+{
+    None,
+    SwipeDown,
+    SwipeRight,
+    Tap
+}
