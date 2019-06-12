@@ -19,14 +19,14 @@ public class AddIngredientAction : Action
         if (!Active) { return; }
 
         timer += Time.deltaTime;
-        Debug.Log("Timer: " + timer);
+        //Debug.Log("Timer: " + timer);
 
         instructionTimer.fillAmount = Mathf.Clamp(timer / ActionDuration, 0, 1);
 
         if (timer >= ActionDuration)
         {
             bool success = SuccessConditionMet();
-            Debug.Log("Added all ingredients: " + success);
+            //Debug.Log("Added all ingredients: " + success);
 
             if (success)
                 OnSuccess.Invoke(this);

@@ -8,10 +8,10 @@ public class LidAction : Action
 {
     [SerializeField] private GameObject lid;
     [SerializeField] private State targetState;
+    [SerializeField] private float waitDuration = 3f;
 
-    [Header("Animator")]
-    [SerializeField] private string takeOff = "TakeOff";
-    [SerializeField] private string putOn = "PutOn";
+    private static string takeOff = "TakeOff";
+    private static string putOn = "PutOn";
 
     public UnityEvent OnLidOn = new UnityEvent();
     public UnityEvent OnLidOff = new UnityEvent();
@@ -19,8 +19,6 @@ public class LidAction : Action
     private InputHandler inputHandler;
     private Animator animator;
     private State currentState;
-
-    private float timer;
 
     private void Awake()
     {
@@ -48,6 +46,7 @@ public class LidAction : Action
     {
         OnBegin.Invoke(this);
         Active = true;
+        inputHandler.SwipeInput.Clear();
         inputHandler.SwipeDetector.enabled = true;
         lid.SetActive(true);
     }
@@ -65,10 +64,7 @@ public class LidAction : Action
                 {
                     animator.SetTrigger(putOn);
                     currentState = State.PutOn;
-                    inputHandler.SwipeInput.Clear();
-                    inputHandler.SwipeDetector.enabled = false;
                     OnLidOn.Invoke();
-                    OnEnd.Invoke(this);
                 }
                 break;
             case State.TakeOff:
@@ -78,21 +74,31 @@ public class LidAction : Action
                 {
                     animator.SetTrigger(takeOff);
                     currentState = State.TakeOff;
-                    inputHandler.SwipeInput.Clear();
-                    inputHandler.SwipeDetector.enabled = false;
                     OnLidOff.Invoke();
-                    OnEnd.Invoke(this);
                 }
                 break;
             default:
                 Debug.Log("Can't put on or take off the lid");
                 break;
         }
+
+        inputHandler.SwipeDetector.enabled = false;
+        SuccessConditionMet();
+        Active = false;
+        StopAllCoroutines();
+        StartCoroutine(End());
+    }
+
+    private IEnumerator End()
+    {
+        yield return new WaitForSeconds(waitDuration);
+        OnEnd.Invoke(this);
     }
 
     public override bool SuccessConditionMet()
     {
-        Successful = targetState != currentState;
+        Successful = currentState == targetState;
+        Debug.Log(gameObject.name + " sucessful: " + Successful);
 
         // TODO: rewrite; take this out of here
         if (Successful)

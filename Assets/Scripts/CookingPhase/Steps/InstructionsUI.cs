@@ -14,7 +14,7 @@ public class InstructionsUI : MonoBehaviour
     {
         foreach (var step in recipeSequence.Steps)
         {
-            foreach (var action in step.actions)
+            foreach (var action in step.Actions)
                 action.OnBegin.AddListener(UpdateInstructionText);
         }
     }
@@ -23,7 +23,7 @@ public class InstructionsUI : MonoBehaviour
     {
         foreach (var step in recipeSequence.Steps)
         {
-            foreach (var action in step.actions)
+            foreach (var action in step.Actions)
                 action.OnBegin.RemoveListener(UpdateInstructionText);
         }
     }
