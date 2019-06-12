@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ServingPhaseController : MonoBehaviour
@@ -8,6 +9,10 @@ public class ServingPhaseController : MonoBehaviour
     [SerializeField] private Order servingDishHeld;
     [SerializeField] Image servingDishHeldImage;
     [SerializeField] private LayerMask LayerMask;
+
+    public UnityEvent OnPreppingStart = new UnityEvent();
+    public UnityEvent OnPreppingEnd = new UnityEvent();
+
     private GameObject player;
     private Vector2 target;
     private PathManager pathManager;
@@ -107,9 +112,11 @@ public class ServingPhaseController : MonoBehaviour
             {
                 if (gameObject.transform.position == pathManager.LastNode.transform.position)
                 {
+                    OnPreppingStart.Invoke();
                     timer.ResetTimer();
                     timer.EnableTimer();
                     yield return new WaitForSeconds(prepTime);
+                    OnPreppingEnd.Invoke();
                     timer.DisableTimer();
                     servingDishHeld = servingDish.OrderType;
                     servingDishHeldImage.sprite = servingDishHeld.Sprite;
