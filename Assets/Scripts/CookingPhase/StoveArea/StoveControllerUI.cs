@@ -10,7 +10,7 @@ public class StoveControllerUI : MonoBehaviour
     [SerializeField] private float maxLow = 0.3f, maxMedium = 0.7f;
 
     [Range(0, 1)]
-    public float AddLowHeat = 0.05f, AddMediumHeat = 0.07f, AddHighHeat = 0.1f;
+    public float AddLowHeat = 0.0003f, AddMediumHeat = 0.0006f, AddHighHeat = 0.001f;
 
     public TemperatureSetting CurrentTemperatureSetting { get; private set; }
 

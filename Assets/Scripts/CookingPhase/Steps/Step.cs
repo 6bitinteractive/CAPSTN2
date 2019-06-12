@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Step : MonoBehaviour
 {
-    [SerializeField] private List<Action> actions;
+    public List<Action> actions;
+
+    public UnityEvent OnEnd = new UnityEvent();
 
     private int currentAction = -1;
 
@@ -13,6 +16,7 @@ public class Step : MonoBehaviour
         foreach (var action in actions)
         {
             action.ResetAction();
+            action.OnEnd.AddListener(MoveToNextAction);
         }
     }
 
@@ -26,13 +30,17 @@ public class Step : MonoBehaviour
         currentAction = 0;
     }
 
-    public void MoveToNextAction()
+    public void MoveToNextAction(Action action = null)
     {
         currentAction++;
 
         if (currentAction < actions.Count)
         {
-            actions[2].Begin();
+            actions[currentAction].Begin();
+        }
+        else
+        {
+            OnEnd.Invoke();
         }
     }
 }

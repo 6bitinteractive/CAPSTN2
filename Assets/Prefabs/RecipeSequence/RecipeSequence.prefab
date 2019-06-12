@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6945063623337451313}
   - component: {fileID: 6945063623337451312}
   m_Layer: 0
-  m_Name: Sisig
+  m_Name: RecipeSequence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,3 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recipe: {fileID: 11400000, guid: 281376f370b0a8a4e96a4afd801aa07a, type: 2}
+  Steps:
+  - {fileID: 0}
