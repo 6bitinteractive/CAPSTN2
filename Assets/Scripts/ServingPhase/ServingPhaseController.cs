@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ServingPhaseController : MonoBehaviour
@@ -39,6 +41,49 @@ public class ServingPhaseController : MonoBehaviour
         }
     }
 
+    public void PrepareDish(Order servingDish)
+    {
+        if (servingDishHeld == null)
+        {
+            //servingDish = gameObject.GetComponent<Order>();
+            pathManager.NavigateTo(pathManager.StartNode.transform.position); // Move to serving dish           
+            servingDishHeldImage.gameObject.SetActive(false);
+            timer.TimerValue = servingDish.PrepTime;
+            StartCoroutine(preppingDish(servingDish, servingDish.PrepTime));
+            isMoving = true;
+            animator.SetBool("isMoving", true);
+
+            Debug.Log("Prepping: " + servingDish.Name);
+            Debug.Log("PrepTime: " + servingDish.PrepTime);
+        }
+    }
+
+    IEnumerator preppingDish(Order servingDish, float prepTime)
+    {
+        bool isAtTargetPosition = false;
+        while (!isAtTargetPosition)
+        {
+            if (gameObject.transform.position == pathManager.LastNode.transform.position)
+            {
+                OnPreppingStart.Invoke();
+                timer.ResetTimer();
+                timer.EnableTimer();
+                yield return new WaitForSeconds(prepTime);
+                OnPreppingEnd.Invoke();
+                timer.DisableTimer();
+                servingDishHeld = servingDish;
+                servingDishHeldImage.sprite = servingDishHeld.Sprite;
+                servingDishHeldImage.gameObject.SetActive(true);
+                isMoving = false;
+                isAtTargetPosition = true;
+                animator.SetLayerWeight(1, 1); // Set animation with holding dish to visible
+                Debug.Log("Finished prepping" + servingDish.Name);
+                yield break;
+            }
+            yield return 0;
+        }
+    }
+
     void CastRay()
     {
         // Create ray cast from mouse input
@@ -67,6 +112,7 @@ public class ServingPhaseController : MonoBehaviour
                     animator.SetBool("isMoving", true);
                 }
 
+                /*
                 // If Serving Dish
                 if (servingDish && servingDishHeld == null)
                 {
@@ -80,6 +126,7 @@ public class ServingPhaseController : MonoBehaviour
                     Debug.Log("Prepping: " + servingDish.OrderType.Name);
                     Debug.Log("PrepTime: " + servingDish.OrderType.PrepTime);
                 }
+                */
             }
 
             /*
@@ -105,33 +152,12 @@ public class ServingPhaseController : MonoBehaviour
                 pathManager.NavigateTo(waypoint.transform.position);
             }
             */
+
         }
 
-        IEnumerator preppingDish(ServingDish servingDish, float prepTime)
-        {             
-            bool isAtTargetPosition = false;
-            while (!isAtTargetPosition)
-            {
-                if (gameObject.transform.position == pathManager.LastNode.transform.position)
-                {
-                    OnPreppingStart.Invoke();
-                    timer.ResetTimer();
-                    timer.EnableTimer();
-                    yield return new WaitForSeconds(prepTime);
-                    OnPreppingEnd.Invoke();
-                    timer.DisableTimer();
-                    servingDishHeld = servingDish.OrderType;
-                    servingDishHeldImage.sprite = servingDishHeld.Sprite;
-                    servingDishHeldImage.gameObject.SetActive(true);
-                    isMoving = false;
-                    isAtTargetPosition = true;
-                    animator.SetLayerWeight(1, 1); // Set animation with holding dish to visible
-                    Debug.Log("Finished prepping" + servingDish.OrderType.Name);
-                    yield break;
-                }
-                yield return 0;
-            }       
-        }
+       
+
+       
 
         IEnumerator serveDish(Customer customer)
         {
