@@ -182,7 +182,6 @@ public class FancySliceAndDiceAction : Action
 
     public override void ResetAction()
     {
-        inputHandler.SwipeDetector.enabled = false;
         Active = false;
     }
 

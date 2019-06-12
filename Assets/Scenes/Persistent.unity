@@ -487,7 +487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434d6175dba3465459e10b6ce5c831b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneDataToLoad: {fileID: 11400000, guid: 709d91f13871acb499759cd2e293ed51, type: 2}
+  sceneDataToLoad: {fileID: 11400000, guid: e563a06447ef6d74a917691d24b2d2dd, type: 2}
   faderCanvasGroup: {fileID: 9468316}
   fadeDuration: 1
 --- !u!4 &2010472975
