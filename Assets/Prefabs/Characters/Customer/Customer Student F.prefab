@@ -12,11 +12,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Customer Student F
       objectReference: {fileID: 0}
-    - target: {fileID: 2353704185406712138, guid: fbcad4a287f787f41a6aaf33aafaae7b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2353704184705141223, guid: fbcad4a287f787f41a6aaf33aafaae7b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -77,10 +72,37 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2353704185406712138, guid: fbcad4a287f787f41a6aaf33aafaae7b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2353704183783195726, guid: fbcad4a287f787f41a6aaf33aafaae7b,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 786643703479556826, guid: fbcad4a287f787f41a6aaf33aafaae7b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108562432533506709, guid: fbcad4a287f787f41a6aaf33aafaae7b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 54a2c926d115b8e4fb2909696ef8f7fb,
+        type: 3}
+    - target: {fileID: 5636742985593630084, guid: fbcad4a287f787f41a6aaf33aafaae7b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451246573134371697, guid: fbcad4a287f787f41a6aaf33aafaae7b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9edf1a48acb96e24da300cf7f0942db9,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbcad4a287f787f41a6aaf33aafaae7b, type: 3}
