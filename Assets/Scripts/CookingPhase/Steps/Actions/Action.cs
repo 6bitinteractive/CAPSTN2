@@ -16,7 +16,7 @@ public abstract class Action : MonoBehaviour
     public ActionEvent OnSuccess = new ActionEvent();
     public ActionEvent OnFail = new ActionEvent();
 
-    public abstract void Begin();
-    public abstract void ResetAction();
-    public abstract bool SuccessConditionMet();
+    public abstract void Begin(); // What gets called to start the Action
+    public abstract void ResetAction(); // Reset to default values
+    public abstract bool SuccessConditionMet(); // Define how the Action can be flagged as successful
 }

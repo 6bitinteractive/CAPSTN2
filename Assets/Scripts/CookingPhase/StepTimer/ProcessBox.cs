@@ -7,15 +7,15 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image), typeof(CanvasGroup))]
 public class ProcessBox : MonoBehaviour
 {
-    [Header("Setup")]
-    public int ScoreAddition = 10;
-    public int ScoreDeduction = -3;
+    //[Header("Setup")]
+    //public int ScoreAddition = 10;
+    //public int ScoreDeduction = -3;
     public bool Success { get; private set; }
 
     [SerializeField] private float timerDuration = 30f;
 
     [Header("UI")]
-    [SerializeField] private float inset = 50f;
+    //[SerializeField] private float inset = 50f;
     [SerializeField] private Color success = new Color(0.2815607f, 1f, 0, 0.7490196f);
     [SerializeField] private Color fail = new Color(1f, 0, 0, 0.7490196f);
     [SerializeField] private Color active = new Color(1f, 0.7664064f, 0f, 0.7490196f);

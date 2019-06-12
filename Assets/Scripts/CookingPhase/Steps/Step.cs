@@ -13,6 +13,8 @@ public class Step : MonoBehaviour
 
     public StepEvent OnBegin = new StepEvent();
     public StepEvent OnEnd = new StepEvent();
+    public StepEvent OnSuccess= new StepEvent();
+    public StepEvent OnFail = new StepEvent();
 
     private int currentAction = -1;
     private bool timeRanOut;
@@ -69,6 +71,11 @@ public class Step : MonoBehaviour
         }
         else
         {
+            if (Successful)
+                OnSuccess.Invoke(this);
+            else
+                OnFail.Invoke(this);
+
             OnEnd.Invoke(this);
         }
     }

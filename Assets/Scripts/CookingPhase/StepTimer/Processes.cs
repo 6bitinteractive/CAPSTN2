@@ -7,7 +7,7 @@ public class Processes : MonoBehaviour
 {
     public ProcessBox[] ProcessBoxes;
     [HideInInspector] public UnityEvent OnAllProcessesDone = new UnityEvent();
-    public int Score { get; private set; }
+    //public int Score { get; private set; }
 
     private int currentProcessIndex;
 
@@ -16,12 +16,12 @@ public class Processes : MonoBehaviour
         RunProcess(currentProcessIndex);
     }
 
-    private void Update()
-    {
-        // Test success
-        if (Input.GetMouseButtonDown(1) && (currentProcessIndex < ProcessBoxes.Length))
-            ProcessBoxes[currentProcessIndex].SetSuccess(true);
-    }
+    //private void Update()
+    //{
+    //    // Test success
+    //    if (Input.GetMouseButtonDown(1) && (currentProcessIndex < ProcessBoxes.Length))
+    //        ProcessBoxes[currentProcessIndex].SetSuccess(true);
+    //}
 
     public void RunProcess(int processIndex)
     {
@@ -29,19 +29,24 @@ public class Processes : MonoBehaviour
         ProcessBoxes[processIndex].SetActive(true);
     }
 
-    public void MoveToNextProcess()
-    {
-        // Move to next index
-        currentProcessIndex++;
+    //public void MoveToNextProcess()
+    //{
+    //    // Move to next index
+    //    currentProcessIndex++;
 
-        if (currentProcessIndex >= ProcessBoxes.Length)
-        {
-            OnAllProcessesDone.Invoke();
-            return;
-        }
-        else
-        {
-            RunProcess(currentProcessIndex);
-        }
+    //    if (currentProcessIndex >= ProcessBoxes.Length)
+    //    {
+    //        OnAllProcessesDone.Invoke();
+    //        return;
+    //    }
+    //    else
+    //    {
+    //        RunProcess(currentProcessIndex);
+    //    }
+    //}
+
+    public void EndProcess(int processIndex)
+    {
+        ProcessBoxes[processIndex].SetSuccess(true);
     }
 }
