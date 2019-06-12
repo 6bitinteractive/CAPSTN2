@@ -5110,7 +5110,7 @@ GameObject:
   - component: {fileID: 1372996578}
   - component: {fileID: 1372996579}
   m_Layer: 0
-  m_Name: SlicingAction
+  m_Name: SliceDownAction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

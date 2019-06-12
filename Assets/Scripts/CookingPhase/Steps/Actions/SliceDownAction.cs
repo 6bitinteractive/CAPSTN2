@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SlicingAction : Action
+public class SliceDownAction : Action
 {
     [SerializeField] private Sprite[] sliceIngredientSequence;
     [SerializeField] private Image ingredient;
