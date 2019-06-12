@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class SliceDownAction : Action
 {
-    [SerializeField] private Sprite[] sliceIngredientSequence;
+    [SerializeField] private Sprite[] ingredientSliceSequence;
     [SerializeField] private Image ingredient;
     private InputHandler inputHandler;
 
@@ -14,6 +14,7 @@ public class SliceDownAction : Action
     public override void Begin()
     {
         inputHandler.SwipeDetector.enabled = true;
+        Active = true;
         OnBegin.Invoke(this);
     }
 
@@ -44,7 +45,9 @@ public class SliceDownAction : Action
 
     private void CheckInput(SwipeData swipeData)
     {
-        if (sliceCount < sliceIngredientSequence.Length)
+        if (!Active) { return; }
+
+        if (sliceCount < ingredientSliceSequence.Length)
         {
             // If the player swiped down
             if (inputHandler.SwipeInput.ContainsKey(SwipeDirection.Down)
@@ -55,11 +58,12 @@ public class SliceDownAction : Action
                 sliceCount++;
 
                 // Show the ingredient as sliced
-                ingredient.sprite = sliceIngredientSequence[sliceCount];
+                ingredient.sprite = ingredientSliceSequence[sliceCount];
 
                 // Check if it's done
-                if (sliceCount == sliceIngredientSequence.Length - 1)
+                if (sliceCount == ingredientSliceSequence.Length - 1)
                 {
+                    Active = false;
                     inputHandler.SwipeInput.Clear();
                     inputHandler.SwipeDetector.enabled = false;
                     Successful = true;
