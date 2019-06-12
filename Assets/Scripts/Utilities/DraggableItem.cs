@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-[SerializeField] public class OnItemDrop : UnityEvent<DraggableItem> { }
+[System.Serializable] public class OnItemDrop : UnityEvent<DraggableItem> { }
 
 [RequireComponent(typeof(Collider2D))]
 
