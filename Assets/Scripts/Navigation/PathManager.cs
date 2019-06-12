@@ -10,8 +10,16 @@ public class PathManager : MonoBehaviour
     private Vector3 currentWaypointPosition;
     private float moveTimeTotal;
     private float moveTimeCurrent;
+    private Animator animator;
+    private Waypoint lastNode;
 
     public GameObject StartNode { get => startNode; set => startNode = value; }
+    public Waypoint LastNode { get => lastNode; set => lastNode = value; }
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -26,6 +34,14 @@ public class PathManager : MonoBehaviour
                 }
 
                 transform.position = Vector3.Lerp(currentWaypointPosition, currentPath.Peek(), moveTimeCurrent / moveTimeTotal);
+
+                // Animation           
+                Vector3 direction = (currentPath.Peek() - transform.position).normalized;
+                if (direction.x <= 0)
+                    animator.SetBool("towardsRight", false);
+                else
+                    animator.SetBool("towardsRight", true);
+                    
             }
             else
             {
@@ -51,7 +67,7 @@ public class PathManager : MonoBehaviour
         currentPath = new Stack<Vector3>();
         var currentNode = FindClosestWaypoint(transform.position);
         var endNode = FindClosestWaypoint(destination);
-
+        LastNode = endNode;
         // 2 - Check to make sure that node for both end points can be found and that they're different
         if (currentNode == null || endNode == null || currentNode == endNode)
         {
@@ -148,6 +164,7 @@ public class PathManager : MonoBehaviour
         currentPath = null;
         moveTimeTotal = 0;
         moveTimeCurrent = 0;
+        animator.SetBool("isMoving", false);
     }
 
     // TODO: Possible optimizations
@@ -177,6 +194,8 @@ public class PathManager : MonoBehaviour
         return null;
     }
 }
+
+
 
 // Reference: Waypoint Pathing System
 // https://www.trickyfast.com/2017/09/21/building-a-waypoint-pathing-system-in-unity/
