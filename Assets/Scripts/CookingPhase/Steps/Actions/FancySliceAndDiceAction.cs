@@ -182,12 +182,11 @@ public class FancySliceAndDiceAction : Action
 
     public override void ResetAction()
     {
-        inputHandler.SwipeDetector.enabled = false;
         Active = false;
     }
 
     public override bool SuccessConditionMet()
     {
-        throw new System.NotImplementedException();
+        return true;
     }
 }
