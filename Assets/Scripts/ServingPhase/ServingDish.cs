@@ -9,5 +9,5 @@ public class ServingDish : MonoBehaviour
    void Awake()
    {
       gameObject.GetComponent<SpriteRenderer>().sprite = OrderType.Sprite;
-    }
+   }
 }
