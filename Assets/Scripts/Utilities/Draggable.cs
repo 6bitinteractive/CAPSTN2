@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-[System.Serializable] public class OnItemDrop : UnityEvent<DraggableItem> { }
+[System.Serializable] public class OnItemDrop : UnityEvent<Draggable> { }
 
 [RequireComponent(typeof(Collider2D))]
 
-public class DraggableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public bool Grabbed { get; private set; }
-    public OnItemDrop OnDropItem = new OnItemDrop();
+    [HideInInspector] public OnItemDrop OnDropItem = new OnItemDrop();
 
     private RectTransform rectTransform;
 

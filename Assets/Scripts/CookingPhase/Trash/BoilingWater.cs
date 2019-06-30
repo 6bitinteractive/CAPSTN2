@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Boilable))]
+[RequireComponent(typeof(Cookable))]
 
 public class BoilingWater : MonoBehaviour
 {
-    [SerializeField] private Pot pot;
+    [SerializeField] private Cookware pot;
 
-    private Boilable boilable;
+    private Cookable boilable;
 
     private void Start()
     {
-        boilable = GetComponent<Boilable>();
+        boilable = GetComponent<Cookable>();
         pot.AddToBoilingIngredients(boilable);
     }
 }

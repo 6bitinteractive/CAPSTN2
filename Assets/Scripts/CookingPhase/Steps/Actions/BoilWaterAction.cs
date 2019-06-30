@@ -13,11 +13,11 @@ public class BoilWaterAction : Action
     public float ActionDuration = 10f;
 
     private float timer;
-    private Boilable boilingWater;
+    private Cookable boilingWater;
 
     private void Awake()
     {
-        boilingWater = boilingWaterObj.GetComponent<Boilable>();
+        boilingWater = boilingWaterObj.GetComponent<Cookable>();
     }
 
     private void Update()
@@ -55,7 +55,7 @@ public class BoilWaterAction : Action
 
     public override bool SuccessConditionMet()
     {
-        Successful = boilingWater.BoiledAtRightTemperature;
+        Successful = boilingWater.PerfectlyCooked;
 
         // TODO: rewrite; take this out of here
         if (Successful)

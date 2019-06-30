@@ -23,22 +23,9 @@ public class FlameAnimationController : MonoBehaviour
     public void UpdateFlame(HeatSetting heatSetting)
     {
         image.enabled = true;
+        animator.SetInteger("State", (int)heatSetting);
 
-        switch (heatSetting)
-        {
-            case HeatSetting.Low:
-                animator.SetInteger("State", 1);
-                break;
-            case HeatSetting.Medium:
-                animator.SetInteger("State", 2);
-                break;
-            case HeatSetting.High:
-                animator.SetInteger("State", 3);
-                break;
-            default:
-                animator.SetInteger("State", 0);
-                //image.enabled = false;
-                break;
-        }
+        //if (heatSetting == HeatSetting.Off)
+        //    image.enabled = false; // NOTE: Current art implementation has no "off" setting
     }
 }
