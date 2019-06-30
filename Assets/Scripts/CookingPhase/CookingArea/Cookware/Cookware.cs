@@ -20,7 +20,7 @@ public class Cookware : MonoBehaviour
     private void OnEnable()
     {
         dropArea.OnItemDroppedOnArea.AddListener(AddToCookableIngredients);
-        dropArea.OnItemDroppedOnArea.AddListener(ShowItemInCookware);
+        dropArea.OnItemDroppedOnArea.AddListener(ShowIngredientInCookware);
     }
 
     private void OnDisable()
@@ -80,16 +80,10 @@ public class Cookware : MonoBehaviour
         }
     }
 
-    private void ShowItemInCookware(Draggable item)
+    private void ShowIngredientInCookware(Draggable item)
     {
         if (item == null) { return; }
 
-        Cookable cookableIngredient = item.GetComponent<Cookable>();
-        // Show the ingredient in cookware
-        cookableIngredient.IngredientInCookware.SetActive(true);
-        cookableIngredient.OnIngredientDroppedToCookware.Invoke();
-
-        // Hide the ingredient being dragged to the cookware
-        item.gameObject.SetActive(false);
+        item.GetComponent<Cookable>().ShowIngredientInCookware();
     }
 }

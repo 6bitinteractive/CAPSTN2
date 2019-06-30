@@ -47,4 +47,14 @@ public class Cookable : MonoBehaviour
             Temperature.value -= cooling;
         }
     }
+
+    public void ShowIngredientInCookware()
+    {
+        // Show the ingredient
+        IngredientInCookware.SetActive(true);
+        OnIngredientDroppedToCookware.Invoke();
+
+        // Hide the ingredient being dragged to the cookware
+        gameObject.SetActive(false);
+    }
 }
