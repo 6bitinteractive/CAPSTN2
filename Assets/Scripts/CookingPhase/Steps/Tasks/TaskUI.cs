@@ -42,4 +42,12 @@ public class TaskUI : MonoBehaviour
     {
         animator.SetTrigger("Reveal");
     }
+
+    public IEnumerator Hide()
+    {
+        animator.SetTrigger("Hide");
+        yield return new WaitUntil(() => AnimatorUtils.IsInState(animator, "TaskHide"));
+        yield return new WaitUntil(() => AnimatorUtils.IsDonePlaying(animator, "TaskHide"));
+        gameObject.SetActive(false);
+    }
 }

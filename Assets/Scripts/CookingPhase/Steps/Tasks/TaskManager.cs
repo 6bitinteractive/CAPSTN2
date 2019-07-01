@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -30,15 +31,21 @@ public class TaskManager : MonoBehaviour
 
     public void RevealTask()
     {
+        StopAllCoroutines();
+        StartCoroutine(Reveal());
+    }
+
+    private IEnumerator Reveal()
+    {
         // Hide the previous task unless it's the first
         if (currentTask > 0)
-            tasks[currentTask - 1].gameObject.SetActive(false);
+            yield return StartCoroutine(tasks[currentTask - 1].Hide());
 
         // Check if all tasks are done
         if (currentTask >= tasks.Count)
         {
             OnAllTasksDone.Invoke();
-            return;
+            yield break;
         }
 
         // Reveal the task
