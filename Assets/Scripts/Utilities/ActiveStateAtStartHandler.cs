@@ -6,7 +6,7 @@ public class ActiveStateAtStartHandler : MonoBehaviour
 {
     [SerializeField] private bool activeAtStart = true;
 
-    private void Awake()
+    private void Start()
     {
         gameObject.SetActive(activeAtStart);
     }

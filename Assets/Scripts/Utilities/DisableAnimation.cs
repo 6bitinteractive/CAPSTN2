@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// This is a workaround :(
+// This is a workaround to allow dragging of objects after their animation ends (eg. sliding in to scene) :(
 // Animator conflicts with transform positions (will require to update in LateUpdate(), ...)
 public class DisableAnimation : MonoBehaviour
 {

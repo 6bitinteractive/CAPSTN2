@@ -18,7 +18,7 @@ public abstract class Task : MonoBehaviour
 
     private Duration duration;
 
-    private void Start()
+    private void Awake()
     {
         duration = GetComponent<Duration>();
     }
@@ -44,6 +44,8 @@ public abstract class Task : MonoBehaviour
 
     public void Begin()
     {
+        Debug.Log("Task begun.");
+
         Setup();
 
         Active = true;
@@ -52,17 +54,28 @@ public abstract class Task : MonoBehaviour
 
     public void End()
     {
+        Debug.Log("Task ended.");
+
         Active = false;
 
         FinalizeTask();
 
         if (SuccessConditionMet())
+        {
+            Debug.Log("Task - Succesful - " + gameObject.name);
             OnSuccess.Invoke(this);
+        }
         else
+        {
+            Debug.Log("Task - Failed - " + gameObject.name);
             OnFail.Invoke(this);
+        }
 
         OnEnd.Invoke(this);
     }
+
+    // Define how the task can be flagged as successful
+    protected abstract bool SuccessConditionMet();
 
     // Place to do things just before starting the task
     protected virtual void Setup() { }
@@ -70,9 +83,6 @@ public abstract class Task : MonoBehaviour
     // Place to do things just before ending the task, eg. calculating ratings
     protected virtual void FinalizeTask() { } // Names are hard ;o;
 
-    // Define how the task can be flagged as successful
-    protected abstract bool SuccessConditionMet();
-
     // Define the task
-    protected abstract void RunTask();
+    protected virtual void RunTask() { }
 }
