@@ -12,7 +12,7 @@ public class DropArea : MonoBehaviour
 
     private Draggable item;
     private Rigidbody2D rb;
-    private Collider2D polygonCollider;
+    private PolygonCollider2D polygonCollider;
 
     private void Start()
     {

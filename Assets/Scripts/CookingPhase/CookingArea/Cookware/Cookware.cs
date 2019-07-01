@@ -46,13 +46,13 @@ public class Cookware : MonoBehaviour
         switch (CurrentHeat)
         {
             case HeatSetting.Low:
-                heat = StoveController.AddLowHeat;
+                heat = StoveController.LowHeatValue;
                 break;
             case HeatSetting.Medium:
-                heat = StoveController.AddMediumHeat;
+                heat = StoveController.MediumHeatValue;
                 break;
             case HeatSetting.High:
-                heat = StoveController.AddHighHeat;
+                heat = StoveController.HighHeatValue;
                 break;
             default:
                 heat = 0;

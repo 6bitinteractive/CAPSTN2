@@ -9,7 +9,7 @@ public class AnimatorUtils : MonoBehaviour
         return animator.GetCurrentAnimatorStateInfo(layer).normalizedTime >= normalizedTime;
     }
 
-    private static bool IsInState(Animator animator, string state, int layer = 0)
+    public static bool IsInState(Animator animator, string state, int layer = 0)
     {
         return animator.GetCurrentAnimatorStateInfo(layer).IsName(state);
     }

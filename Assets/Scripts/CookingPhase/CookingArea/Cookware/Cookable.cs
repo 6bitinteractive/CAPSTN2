@@ -24,7 +24,7 @@ public class Cookable : MonoBehaviour
     public UnityEvent OnIngredientDroppedToCookware = new UnityEvent();
     public UnityEvent OnCookingStart = new UnityEvent();
     public UnityEvent OnCookingEnd = new UnityEvent();
-    public UnityEvent OnPerfectlyCookedReached = new UnityEvent();
+    public UnityEvent OnPerfectlyCooked = new UnityEvent();
 
     private void Awake()
     {
@@ -39,7 +39,7 @@ public class Cookable : MonoBehaviour
 
         if (PerfectlyCooked)
         {
-            OnPerfectlyCookedReached.Invoke();
+            OnPerfectlyCooked.Invoke();
         }
 
         if (canCoolDown && Temperature.value > 0)
