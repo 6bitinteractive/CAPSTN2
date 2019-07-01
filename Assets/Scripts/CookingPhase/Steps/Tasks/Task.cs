@@ -1,0 +1,78 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable] public class TaskEvent : UnityEvent<Task> { }
+
+[RequireComponent(typeof(Duration))]
+public abstract class Task : MonoBehaviour
+{
+    public bool Active { get; protected set; }
+    // TODO: Add list of flavor/effects that this task adds to the dish's flavor profile
+
+    public TaskEvent OnBegin = new TaskEvent();
+    public TaskEvent OnEnd = new TaskEvent();
+    public TaskEvent OnSuccess = new TaskEvent();
+    public TaskEvent OnFail = new TaskEvent();
+
+    private Duration duration;
+
+    private void Start()
+    {
+        duration = GetComponent<Duration>();
+    }
+
+    private void OnEnable()
+    {
+        duration.OnTimerStart.AddListener(Begin);
+        duration.OnTimerEnd.AddListener(End);
+    }
+
+    private void OnDisable()
+    {
+        duration.OnTimerStart.RemoveListener(Begin);
+        duration.OnTimerEnd.RemoveListener(End);
+    }
+
+    private void Update()
+    {
+        if (!Active) { return; }
+
+        RunTask();
+    }
+
+    public void Begin()
+    {
+        Setup();
+
+        Active = true;
+        OnBegin.Invoke(this);
+    }
+
+    public void End()
+    {
+        Active = false;
+
+        FinalizeTask();
+
+        if (SuccessConditionMet())
+            OnSuccess.Invoke(this);
+        else
+            OnFail.Invoke(this);
+
+        OnEnd.Invoke(this);
+    }
+
+    // Place to do things just before starting the task
+    protected virtual void Setup() { }
+
+    // Place to do things just before ending the task, eg. calculating ratings
+    protected virtual void FinalizeTask() { } // Names are hard ;o;
+
+    // Define how the task can be flagged as successful
+    protected abstract bool SuccessConditionMet();
+
+    // Define the task
+    protected abstract void RunTask();
+}
