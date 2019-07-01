@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Duration))]
+[RequireComponent(typeof(Animator))]
 
 public class TaskUI : MonoBehaviour
 {
@@ -13,10 +14,12 @@ public class TaskUI : MonoBehaviour
     [SerializeField] private Image timerBg;
 
     private Duration duration;
+    private Animator animator;
 
     private void Awake()
     {
         duration = GetComponent<Duration>();
+        animator = GetComponent<Animator>();
     }
 
     private void OnEnable()
@@ -33,5 +36,10 @@ public class TaskUI : MonoBehaviour
     {
         if (duration.MaxDuration > 0)
             timerBg.fillAmount = Mathf.Clamp01(duration.CurrentTime / duration.MaxDuration);
+    }
+
+    public void Reveal()
+    {
+        animator.SetTrigger("Reveal");
     }
 }
