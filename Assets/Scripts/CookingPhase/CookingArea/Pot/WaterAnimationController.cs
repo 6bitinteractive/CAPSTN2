@@ -14,12 +14,14 @@ public class WaterAnimationController : MonoBehaviour
 
     public void SwitchState(WaterState waterState)
     {
+        if (animator == null) { return; }
         animator.SetInteger("State", (int)waterState);
     }
 
     // NOTE: fuction overload since Unity doesn't support enum parameters at UnityEvent inspector :(
     public void SwitchState(int state)
     {
+        if (animator == null) { return; }
         animator.SetInteger("State", state);
     }
 

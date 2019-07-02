@@ -1,5 +1,34 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-601258712512865260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885375212799360666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a73b2f7229d3e4597b5ed1c288cc03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TaskEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TaskEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TaskEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnFail:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TaskEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  requiredHeatSetting: 1
 --- !u!1001 &7794924939894832461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -175,3 +204,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adbc2dfa2a31a6c4bb79b636c97f3800, type: 3}
+--- !u!1 &2885375212799360666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4911117776793158615, guid: adbc2dfa2a31a6c4bb79b636c97f3800,
+    type: 3}
+  m_PrefabInstance: {fileID: 7794924939894832461}
+  m_PrefabAsset: {fileID: 0}
