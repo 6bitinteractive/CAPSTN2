@@ -21,6 +21,7 @@ public class TaskUI : MonoBehaviour
     {
         Duration = GetComponent<Duration>();
         animator = GetComponent<Animator>();
+        layoutElement = GetComponent<LayoutElement>();
     }
 
     private void OnEnable()
