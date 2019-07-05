@@ -9,12 +9,15 @@ using UnityEngine.Events;
 public abstract class Task : MonoBehaviour
 {
     public bool Active { get; protected set; }
-    // TODO: Add list of flavor/effects that this task adds to the dish's flavor profile
+    public bool Successful { get; protected set; }
 
     public TaskEvent OnBegin = new TaskEvent();
     public TaskEvent OnEnd = new TaskEvent();
     public TaskEvent OnSuccess = new TaskEvent();
     public TaskEvent OnFail = new TaskEvent();
+
+    public RatingComment RatingComment;
+    // TODO: Add list of flavor/effects that this task adds to the dish's flavor profile
 
     private Duration duration;
 
@@ -63,11 +66,13 @@ public abstract class Task : MonoBehaviour
         if (SuccessConditionMet())
         {
             Debug.Log("Task - Succesful - " + gameObject.name);
+            Successful = true;
             OnSuccess.Invoke(this);
         }
         else
         {
             Debug.Log("Task - Failed - " + gameObject.name);
+            Successful = false;
             OnFail.Invoke(this);
         }
 
@@ -85,4 +90,11 @@ public abstract class Task : MonoBehaviour
 
     // Define the task
     protected virtual void RunTask() { }
+}
+
+[System.Serializable]
+public class RatingComment
+{
+    public string SuccessText;
+    public string FailText;
 }
