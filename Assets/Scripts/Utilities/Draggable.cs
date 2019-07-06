@@ -23,7 +23,9 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private void Update()
     {
         if (Grabbed)
+        {
             Drag();
+        }
     }
 
     private void Drag()
