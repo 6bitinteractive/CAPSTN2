@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 7323778876414662149}
   - component: {fileID: 7323778876414662147}
   - component: {fileID: 7323778876414662146}
+  - component: {fileID: 7307479906923095296}
   m_Layer: 5
   m_Name: RatingBGImage
   m_TagString: Untagged
@@ -232,6 +233,18 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 1
+--- !u!114 &7307479906923095296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7323778876414662148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d3dc1333032db948ac29512e8e3288e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7323778876704371738
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable] public class StepRatingEvent : UnityEvent<StepRating> { }
 
 public class StepRating : MonoBehaviour
 {
@@ -15,6 +18,8 @@ public class StepRating : MonoBehaviour
     [SerializeField] private TaskManager taskManager;
     [HideInInspector] public int Rating = RecipeRating.MAX_RATING;
     [HideInInspector] public List<string> Comments = new List<string>();
+
+    public StepRatingEvent OnFinalEvaluation = new StepRatingEvent();
 
     private void Awake()
     {
@@ -51,5 +56,6 @@ public class StepRating : MonoBehaviour
     {
         ratingText.text = string.Format("RATING: {0} / {1}", Rating.ToString(), RecipeRating.MAX_RATING);
         commentText.text = string.Format("Comments: {0}", string.Join(" ", Comments));
+        OnFinalEvaluation.Invoke(this);
     }
 }
