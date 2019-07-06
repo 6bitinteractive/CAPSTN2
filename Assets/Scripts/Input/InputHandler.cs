@@ -6,12 +6,17 @@ public class InputHandler : MonoBehaviour
 {
     public Dictionary<SwipeDirection, SwipeData> SwipeInput = new Dictionary<SwipeDirection, SwipeData>();
     [HideInInspector] public SwipeDetector SwipeDetector;
+    [HideInInspector] public CircleGestureDetector CircleGestureDetector;
 
     private void Awake()
     {
         SingletonManager.Register<InputHandler>(this);
+
         SwipeDetector = GetComponent<SwipeDetector>();
         SwipeDetector.enabled = false;
+
+        CircleGestureDetector = GetComponent<CircleGestureDetector>();
+        CircleGestureDetector.enabled = false;
     }
 
     private void OnEnable()

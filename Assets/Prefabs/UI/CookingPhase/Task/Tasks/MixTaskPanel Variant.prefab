@@ -1,5 +1,42 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5370626740306015321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3878950748297932458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c8c682ae747d44681b5a8ab6cac0d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TaskEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TaskEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TaskEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnFail:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: TaskEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  RatingComment:
+    SuccessText: 
+    FailText: 
+  stirCountRequired: 2
+  OnStir:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &8210913960524017021
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67,6 +104,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4911117778298743400, guid: adbc2dfa2a31a6c4bb79b636c97f3800,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3700330032985520844, guid: adbc2dfa2a31a6c4bb79b636c97f3800,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -112,20 +154,19 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1018799751545040722, guid: adbc2dfa2a31a6c4bb79b636c97f3800,
+    - target: {fileID: 2826916301704318558, guid: adbc2dfa2a31a6c4bb79b636c97f3800,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c22ad15db2b2dc144a6220ab5bbaa3e9,
-        type: 3}
-    - target: {fileID: 4911117778298743400, guid: adbc2dfa2a31a6c4bb79b636c97f3800,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: MaxDuration
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6746069762135088057, guid: adbc2dfa2a31a6c4bb79b636c97f3800,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911117777088899082, guid: adbc2dfa2a31a6c4bb79b636c97f3800,
+        type: 3}
+      propertyPath: m_FillAmount
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4911117777088899084, guid: adbc2dfa2a31a6c4bb79b636c97f3800,
@@ -138,15 +179,17 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4911117777088899082, guid: adbc2dfa2a31a6c4bb79b636c97f3800,
+    - target: {fileID: 1018799751545040722, guid: adbc2dfa2a31a6c4bb79b636c97f3800,
         type: 3}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2826916301704318558, guid: adbc2dfa2a31a6c4bb79b636c97f3800,
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c22ad15db2b2dc144a6220ab5bbaa3e9,
         type: 3}
-      propertyPath: MaxDuration
-      value: 30
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adbc2dfa2a31a6c4bb79b636c97f3800, type: 3}
+--- !u!1 &3878950748297932458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4911117776793158615, guid: adbc2dfa2a31a6c4bb79b636c97f3800,
+    type: 3}
+  m_PrefabInstance: {fileID: 8210913960524017021}
+  m_PrefabAsset: {fileID: 0}

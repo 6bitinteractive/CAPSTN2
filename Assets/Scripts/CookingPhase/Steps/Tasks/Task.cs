@@ -20,10 +20,12 @@ public abstract class Task : MonoBehaviour
     // TODO: Add list of flavor/effects that this task adds to the dish's flavor profile
 
     private Duration duration;
+    protected InputHandler inputHandler;
 
     private void Awake()
     {
         duration = GetComponent<Duration>();
+        inputHandler = SingletonManager.GetInstance<InputHandler>();
     }
 
     private void OnEnable()
