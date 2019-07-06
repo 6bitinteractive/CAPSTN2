@@ -26,7 +26,7 @@ public class PlayerAdventureController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             CastRay();
-        }   
+        }
     }
 
     void FixedUpdate()
