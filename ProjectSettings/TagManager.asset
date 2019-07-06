@@ -14,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - Customer
   - ServingDish
   - Waypoint
@@ -47,6 +47,9 @@ TagManager:
     locked: 0
   - name: Background1
     uniqueID: 1723891449
+    locked: 0
+  - name: NPC
+    uniqueID: 611808203
     locked: 0
   - name: Player
     uniqueID: 2295326679
