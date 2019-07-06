@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 34394973}
   - component: {fileID: 34394976}
   - component: {fileID: 34394978}
+  - component: {fileID: 34394977}
   m_Layer: 5
   m_Name: PigEarRawImage
   m_TagString: Untagged
@@ -309,6 +310,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &34394977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34394969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd36e760d43535348831ae21a691f14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSprite: {fileID: 21300000, guid: 837751a7bb10afc41ba4e417476b484b, type: 3}
+  onTapSprite: {fileID: 21300000, guid: 87071c150c2ad634282d7c803e0f6885, type: 3}
 --- !u!114 &34394978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,6 +968,7 @@ GameObject:
   - component: {fileID: 152697104}
   - component: {fileID: 152697106}
   - component: {fileID: 152697108}
+  - component: {fileID: 152697107}
   m_Layer: 5
   m_Name: WaterbowlImage
   m_TagString: Untagged
@@ -1126,6 +1142,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &152697107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152697099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd36e760d43535348831ae21a691f14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSprite: {fileID: 21300000, guid: 5554d92319fb68b45a3882657c371721, type: 3}
+  onTapSprite: {fileID: 21300000, guid: 7fd4f6787e8548a45a754cbfd016bc24, type: 3}
 --- !u!114 &152697108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3537,6 +3567,7 @@ GameObject:
   - component: {fileID: 1269829708}
   - component: {fileID: 1269829711}
   - component: {fileID: 1269829713}
+  - component: {fileID: 1269829712}
   m_Layer: 5
   m_Name: PigFaceRawImage
   m_TagString: Untagged
@@ -3699,6 +3730,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1269829712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269829704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd36e760d43535348831ae21a691f14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultSprite: {fileID: 21300000, guid: a0c9b4019b7b685468216deccea88c69, type: 3}
+  onTapSprite: {fileID: 21300000, guid: b734261b71c3025429ba626758a1b3d4, type: 3}
 --- !u!114 &1269829713
 MonoBehaviour:
   m_ObjectHideFlags: 0
