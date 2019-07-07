@@ -19,12 +19,6 @@ public class StirTask : Task
         circleGestureDetector.OnClockwiseCircleGesture.AddListener(InvokeOnStir);
     }
 
-    private void InvokeOnStir()
-    {
-        currentStirCount++;
-        OnStir.Invoke();
-    }
-
     protected override void FinalizeTask()
     {
         circleGestureDetector.enabled = false;
@@ -34,5 +28,11 @@ public class StirTask : Task
     protected override bool SuccessConditionMet()
     {
         return currentStirCount >= stirCountRequired;
+    }
+
+    private void InvokeOnStir()
+    {
+        currentStirCount++;
+        OnStir.Invoke();
     }
 }

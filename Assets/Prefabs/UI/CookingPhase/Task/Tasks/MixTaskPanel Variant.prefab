@@ -157,7 +157,7 @@ PrefabInstance:
     - target: {fileID: 2826916301704318558, guid: adbc2dfa2a31a6c4bb79b636c97f3800,
         type: 3}
       propertyPath: MaxDuration
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6746069762135088057, guid: adbc2dfa2a31a6c4bb79b636c97f3800,
         type: 3}
