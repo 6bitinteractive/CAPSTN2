@@ -6,5 +6,5 @@ using UnityEngine;
 public class StageData : ScriptableObject
 {
     public string DisplayName;
-    public Recipe Recipe;
+    //public Recipe Recipe;
 }

@@ -14,7 +14,7 @@ public class StirTask : Task
 
     protected override void Setup()
     {
-        circleGestureDetector = inputHandler.CircleGestureDetector;
+        //circleGestureDetector = inputHandler.CircleGestureDetector;
         circleGestureDetector.enabled = true;
         circleGestureDetector.OnClockwiseCircleGesture.AddListener(InvokeOnStir);
     }

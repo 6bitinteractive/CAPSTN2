@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/StageSelection.unity
     guid: 2eacc671f0e466e428dcc819aaa09979
   - enabled: 1
-    path: Assets/Scenes/Cooking/Cooking-Sisig.unity
+    path: Assets/Scenes/Cooking/Trash/Cooking-Sisig.unity
     guid: f9cbdc45e2803c14d813f8fbe61dc99e
   - enabled: 1
     path: Assets/Scenes/Tests/ServingPhase.unity
