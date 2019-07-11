@@ -548,7 +548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimumHorizontalSwipeDistance: 20
   minimumVerticalSwipeDistance: 20
-  supportDiagonalDetection: 1
+  supportDiagonalDetection: 0
 --- !u!114 &2010472979
 MonoBehaviour:
   m_ObjectHideFlags: 0

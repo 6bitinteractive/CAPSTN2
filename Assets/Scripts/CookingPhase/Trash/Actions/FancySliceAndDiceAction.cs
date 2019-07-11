@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class FancySliceAndDiceAction : Action
 {
     // For now, we do this hideous hack
-    [SerializeField] private List<InputType> listOfInput;
+    //[SerializeField] private List<InputType> listOfInput;
     [SerializeField] private List<Sprite> ingredientSliceSequence;
     [SerializeField] private Image ingredient;
     [SerializeField] private GameObject swipeDownPrompt;
@@ -21,8 +21,8 @@ public class FancySliceAndDiceAction : Action
 
     private int currentSequence;
     private InputHandler inputHandler;
-    private InputType requiredInput;
-    private InputType playerInput;
+    //private InputType requiredInput;
+    //private InputType playerInput;
     private SwipeDirection playerSwipeDirection;
 
     private void Awake()
@@ -47,60 +47,60 @@ public class FancySliceAndDiceAction : Action
     {
         if (!Active) { return; }
 
-        if (requiredInput == InputType.Tap)
-        {
-            #region Standalone Input
-#if UNITY_STANDALONE_WIN
-            //Debug.Log("Required to tap");
-            if (Input.GetMouseButtonDown(0))
-            {
-                playerInput = InputType.Tap;
-                OnTap.Invoke();
-            }
-#endif
-            #endregion
+//        if (requiredInput == InputType.Tap)
+//        {
+//            #region Standalone Input
+//#if UNITY_STANDALONE_WIN
+//            //Debug.Log("Required to tap");
+//            if (Input.GetMouseButtonDown(0))
+//            {
+//                playerInput = InputType.Tap;
+//                OnTap.Invoke();
+//            }
+//#endif
+//            #endregion
 
-            #region Mobile Input
-#if UNITY_ANDROID || UNITY_IOS
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
+//            #region Mobile Input
+//#if UNITY_ANDROID || UNITY_IOS
+//        if (Input.touchCount > 0)
+//        {
+//            Touch touch = Input.GetTouch(0);
 
-            playerInput = InputType.Tap;
-            OnTap.Invoke();
+//            playerInput = InputType.Tap;
+//            OnTap.Invoke();
 
-            //switch (touch.phase)
-            //{
-            //    case TouchPhase.Began:
-            //        SetStartPosition(touch.position);
-            //        break;
+//            //switch (touch.phase)
+//            //{
+//            //    case TouchPhase.Began:
+//            //        SetStartPosition(touch.position);
+//            //        break;
 
-            //    case TouchPhase.Ended:
-            //    case TouchPhase.Canceled:
-            //        SetEndPosition(touch.position);
-            //        BroadcastSwipe();
-            //        break;
-            //}
-        }
-#endif
-            #endregion
-        }
-        else if (requiredInput == InputType.SwipeDown || requiredInput == InputType.SwipeRight)
-        {
-            //Debug.Log("Required to swipe.");
-            inputHandler.SwipeDetector.enabled = true;
-        }
-        else
-        {
-            //Debug.Log("No input required. Wait for a few seconds");
-            StartCoroutine(Pause());
-        }
+//            //    case TouchPhase.Ended:
+//            //    case TouchPhase.Canceled:
+//            //        SetEndPosition(touch.position);
+//            //        BroadcastSwipe();
+//            //        break;
+//            //}
+//        }
+//#endif
+//            #endregion
+//        }
+//        else if (requiredInput == InputType.SwipeDown || requiredInput == InputType.SwipeRight)
+//        {
+//            //Debug.Log("Required to swipe.");
+//            inputHandler.SwipeDetector.enabled = true;
+//        }
+//        else
+//        {
+//            //Debug.Log("No input required. Wait for a few seconds");
+//            StartCoroutine(Pause());
+//        }
     }
 
     private IEnumerator Pause()
     {
         yield return new WaitForSeconds(delay);
-        playerInput = InputType.None;
+        //playerInput = InputType.None;
         MoveToNextSlice();
     }
 
@@ -110,11 +110,11 @@ public class FancySliceAndDiceAction : Action
 
         if (playerSwipeDirection == SwipeDirection.Down || playerSwipeDirection == SwipeDirection.LeftDown || playerSwipeDirection == SwipeDirection.RightDown)
         {
-            playerInput = InputType.SwipeDown;
+            //playerInput = InputType.SwipeDown;
         }
         else if (playerSwipeDirection == SwipeDirection.Right || playerSwipeDirection == SwipeDirection.RightDown || playerSwipeDirection == SwipeDirection.RightUp)
         {
-            playerInput = InputType.SwipeRight;
+            //playerInput = InputType.SwipeRight;
         }
 
         OnSwipe.Invoke();
@@ -124,25 +124,25 @@ public class FancySliceAndDiceAction : Action
     {
         inputHandler.SwipeDetector.enabled = false;
 
-        if (playerInput == requiredInput)
-        {
-            Debug.Log("Correct input");
-            currentSequence++;
+        //if (playerInput == requiredInput)
+        //{
+        //    Debug.Log("Correct input");
+        //    currentSequence++;
 
-            ingredient.sprite = ingredientSliceSequence[currentSequence];
+        //    ingredient.sprite = ingredientSliceSequence[currentSequence];
 
-            if (currentSequence >= ingredientSliceSequence.Count - 1)
-            {
-                SwipeDetector.OnSwipe -= CheckSwipe;
-                Active = false;
-                inputHandler.SwipeDetector.enabled = false;
-                Successful = true;
-                OnEnd.Invoke(this);
-                return;
-            }
+        //    if (currentSequence >= ingredientSliceSequence.Count - 1)
+        //    {
+        //        SwipeDetector.OnSwipe -= CheckSwipe;
+        //        Active = false;
+        //        inputHandler.SwipeDetector.enabled = false;
+        //        Successful = true;
+        //        OnEnd.Invoke(this);
+        //        return;
+        //    }
 
-            ShowInputPrompt();
-        }
+        //    ShowInputPrompt();
+        //}
     }
 
     private void ShowInputPrompt()
@@ -151,22 +151,22 @@ public class FancySliceAndDiceAction : Action
         swipeRightPrompt.SetActive(false);
         tapPrompt.SetActive(false);
 
-        InputType nextRequiredInput = listOfInput[currentSequence + 1];
-        requiredInput = nextRequiredInput;
-        Debug.Log("Required input: " + nextRequiredInput);
+        //InputType nextRequiredInput = listOfInput[currentSequence + 1];
+        //requiredInput = nextRequiredInput;
+        //Debug.Log("Required input: " + nextRequiredInput);
 
-        switch (nextRequiredInput)
-        {
-            case InputType.SwipeDown:
-                swipeDownPrompt.SetActive(true);
-                break;
-            case InputType.SwipeRight:
-                swipeRightPrompt.SetActive(true);
-                break;
-            case InputType.Tap:
-                tapPrompt.SetActive(true);
-                break;
-        }
+        //switch (nextRequiredInput)
+        //{
+            //case InputType.SwipeDown:
+            //    swipeDownPrompt.SetActive(true);
+            //    break;
+            //case InputType.SwipeRight:
+            //    swipeRightPrompt.SetActive(true);
+            //    break;
+            //case InputType.Tap:
+            //    tapPrompt.SetActive(true);
+            //    break;
+        //}
     }
 
     public override void Begin()
@@ -176,7 +176,7 @@ public class FancySliceAndDiceAction : Action
         inputHandler.SwipeDetector.enabled = false;
         Active = true;
         currentSequence = 0;
-        requiredInput = listOfInput[currentSequence + 1];
+        //requiredInput = listOfInput[currentSequence + 1];
         ShowInputPrompt();
     }
 
