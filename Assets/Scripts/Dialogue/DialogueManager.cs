@@ -9,6 +9,8 @@ public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
+    public Image leftSpeaker;
+    public Image rightSpeaker;
     public Animator animator;
     public Button nextButton;
     public PlayerAdventureController playerAdventureController;
@@ -46,7 +48,7 @@ public class DialogueManager : MonoBehaviour
             playerAdventureController.enabled = false;
         }
 
-        DisplayNextSentence();
+          DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
@@ -60,6 +62,7 @@ public class DialogueManager : MonoBehaviour
 
         Dialogue dialogueEntry = dialogue.Dequeue();
         // Makes sure all sentence animations are stopped before typing in new sentence
+        
         StopAllCoroutines();
         StartCoroutine(TypeSentence(dialogueEntry));
     }
@@ -68,14 +71,23 @@ public class DialogueManager : MonoBehaviour
     IEnumerator TypeSentence(Dialogue dialogueEntry)
     {
         nameText.text = dialogueEntry.name;
-        dialogueText.text = "";
 
+        // Checks the portraits if they are null
+        CheckLeftPortrait(dialogueEntry);
+        CheckRightPortrait(dialogueEntry);
+        dialogueText.text = dialogueEntry.sentence;
+
+        yield return null;
+        //dialogueText.text = "";
+
+        /*
         foreach (char letter in dialogueEntry.sentence.ToCharArray())
         {
             // Adds letter to dialogue text string every after 1 frame
             dialogueText.text += letter;
-            yield return null;
+           
         }
+        */
     }
 
     public void ChangeDialogueText(TextMeshProUGUI newText)
@@ -101,5 +113,24 @@ public class DialogueManager : MonoBehaviour
         }
 
         nextButton.image.raycastTarget = false;
+    }
+
+    public void CheckRightPortrait(Dialogue dialogueEntry)
+    {
+        // If its null take the last portrait and set it as current portrait
+        if (dialogueEntry.rightSpeaker == null)
+            dialogueEntry.rightSpeaker = rightSpeaker.sprite;
+
+        else
+            rightSpeaker.sprite = dialogueEntry.rightSpeaker;
+    }
+
+    public void CheckLeftPortrait(Dialogue dialogueEntry)
+    {
+        if (dialogueEntry.leftSpeaker == null)
+            dialogueEntry.leftSpeaker = leftSpeaker.sprite;
+
+        else
+            leftSpeaker.sprite = dialogueEntry.leftSpeaker;
     }
 }
