@@ -465,7 +465,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2010472975}
   - component: {fileID: 2010472974}
-  - component: {fileID: 2010472976}
   - component: {fileID: 2010472977}
   - component: {fileID: 2010472978}
   m_Layer: 0
@@ -504,21 +503,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2010472976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2010472973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c9f08a5dd216ed49a8608c9cb516682, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stages:
-  - {fileID: 11400000, guid: 3493bd47e8e1c2544a6883edbbf4303b, type: 2}
-  stageSelectionAvailable: 0
 --- !u!114 &2010472977
 MonoBehaviour:
   m_ObjectHideFlags: 0
