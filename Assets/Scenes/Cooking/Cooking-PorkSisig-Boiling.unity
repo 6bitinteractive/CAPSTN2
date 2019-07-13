@@ -320,6 +320,7 @@ MonoBehaviour:
   promptPrefab:
   - {fileID: 4576345756083633895, guid: 174f38f7292f46c438b2ab36cf3d8c13, type: 3}
   poolSize: 5
+  randomSpawnPoint: 1
   horizontalRange:
     Min: 0
     Max: 0
@@ -967,21 +968,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 529458053566893565, guid: b2303a87f800b594eb11cd233c13bc43,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1578522567}
-    - target: {fileID: 529458053566893564, guid: b2303a87f800b594eb11cd233c13bc43,
-        type: 3}
-      propertyPath: OnStoveSettingChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1048010150}
-    - target: {fileID: 529458053566893564, guid: b2303a87f800b594eb11cd233c13bc43,
-        type: 3}
-      propertyPath: OnStoveSettingChanged.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 1260807801}
     - target: {fileID: 529458053667279702, guid: b2303a87f800b594eb11cd233c13bc43,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -997,6 +983,21 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 529458053566893565, guid: b2303a87f800b594eb11cd233c13bc43,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1578522567}
+    - target: {fileID: 529458053566893564, guid: b2303a87f800b594eb11cd233c13bc43,
+        type: 3}
+      propertyPath: OnStoveSettingChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1048010150}
+    - target: {fileID: 529458053566893564, guid: b2303a87f800b594eb11cd233c13bc43,
+        type: 3}
+      propertyPath: OnStoveSettingChanged.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1260807801}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2303a87f800b594eb11cd233c13bc43, type: 3}
 --- !u!1001 &6961371695351280263
@@ -1130,6 +1131,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 7120480946588641120, guid: 539340f11c7fdef41a3de37540391bbe,
+        type: 3}
+      propertyPath: OnLidOn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1260807801}
     - target: {fileID: 7120480946223470718, guid: 539340f11c7fdef41a3de37540391bbe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1270,11 +1276,6 @@ PrefabInstance:
       propertyPath: OnDestinationReached.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1095555159}
-    - target: {fileID: 7120480946588641120, guid: 539340f11c7fdef41a3de37540391bbe,
-        type: 3}
-      propertyPath: OnLidOn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1260807801}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539340f11c7fdef41a3de37540391bbe, type: 3}
 --- !u!1001 &8809499751152908902
@@ -1393,6 +1394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8809499751255739207, guid: 4fd9c08c74dce2045ad949035dd74d3d,
+        type: 3}
+      propertyPath: randomSpawnPoint
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fd9c08c74dce2045ad949035dd74d3d, type: 3}

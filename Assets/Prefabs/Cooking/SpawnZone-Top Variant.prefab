@@ -106,7 +106,7 @@ PrefabInstance:
         type: 3}
       propertyPath: promptPrefab.Array.data[0]
       value: 
-      objectReference: {fileID: 4058994353405074106, guid: 11283b88849c4c948a0a6fad19231743,
+      objectReference: {fileID: 716724524919611011, guid: 11283b88849c4c948a0a6fad19231743,
         type: 3}
     - target: {fileID: 8809499751255739207, guid: 4fd9c08c74dce2045ad949035dd74d3d,
         type: 3}

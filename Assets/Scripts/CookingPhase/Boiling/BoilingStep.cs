@@ -85,8 +85,7 @@ public class BoilingStep : MonoBehaviour
         if (MaxPromptReached())
             return;
 
-        SpawnZone spawnZone = spawnZones[Random.Range(0, spawnZones.Count)];
-        spawnZone.Spawn();
+        spawnZones[Random.Range(0, spawnZones.Count)].Spawn();
         promptCount++;
         startPressureAccumulation = false;
     }
@@ -98,7 +97,7 @@ public class BoilingStep : MonoBehaviour
 
     private bool MaxPromptReached()
     {
-        return promptCount == maxPrompts;
+        return promptCount >= maxPrompts;
     }
 
     public void EndCheck(bool successful)

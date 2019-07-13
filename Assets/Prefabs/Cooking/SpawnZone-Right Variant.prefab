@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 263779811173020351, guid: 53867d454c7508448980c80960cde2f6,
         type: 3}
       propertyPath: m_Name
-      value: SpawnZone-Right
+      value: SpawnZone-Right Variant
       objectReference: {fileID: 0}
     - target: {fileID: 263779811173020288, guid: 53867d454c7508448980c80960cde2f6,
         type: 3}
