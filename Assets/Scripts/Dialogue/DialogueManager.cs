@@ -76,7 +76,7 @@ public class DialogueManager : MonoBehaviour
         CheckLeftPortrait(dialogueEntry);
         CheckRightPortrait(dialogueEntry);
         dialogueText.text = dialogueEntry.sentence;
-
+        dialogueEntry.onEndSentence.Invoke();
         yield return null;
         //dialogueText.text = "";
 
