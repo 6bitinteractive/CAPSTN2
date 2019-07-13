@@ -1,0 +1,9 @@
+Dish Presentation instructions
+
+1.) Cue Capiz window animation (no text) (refer to capiz window instructions)
+2.) Under the capiz window layer should be dish_name_reveal_1.png
+3.) After 2 seconds, dish_name_reveal_2.png should fade into the screen
+4.) After 2 seconds, dish_name_reveal_3.png should fade into the screen
+5.) After 2 seconds, dish_name_reveal_3.png should fade into the screen
+6.) After 2 seconds, dish_name_complete.png should fade into the screen
+7.) dish_name_text.png should fade into the screen
