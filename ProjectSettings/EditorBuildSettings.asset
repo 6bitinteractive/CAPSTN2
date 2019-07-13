@@ -27,6 +27,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Cooking/CookingOverview-PorkSisig.unity
     guid: d34158b1382e2c0468f159d0a157ca68
   - enabled: 1
+    path: Assets/Scenes/Cooking/Cooking-PorkSisig-Boiling.unity
+    guid: aa1aeb619f8efce4981015adaea0102b
+  - enabled: 1
+    path: Assets/Scenes/Cooking/Cooking-PorkSisig-Grilling.unity
+    guid: 651b67cf87f6f9f458185441a699f12d
+  - enabled: 1
     path: Assets/Scenes/Adventure/Pampanga 1.unity
     guid: 421e927e3f9d314459cbfe710e9e71d1
   m_configObjects: {}
