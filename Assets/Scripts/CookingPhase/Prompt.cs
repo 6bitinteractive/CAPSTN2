@@ -18,6 +18,8 @@ public class Prompt : PoolObject
     protected virtual void Start()
     {
         OnSuccessfulInput.AddListener(inputListener.InvokeOnSuccess);
+        OnSuccessfulInput.AddListener(inputListener.InvokeOnInputEnd);
         OnFailedInput.AddListener(inputListener.InvokeOnFail);
+        OnFailedInput.AddListener(inputListener.InvokeOnInputEnd);
     }
 }

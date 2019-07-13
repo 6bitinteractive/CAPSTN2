@@ -130,6 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 40292929}
   - component: {fileID: 40292930}
+  - component: {fileID: 40292931}
   m_Layer: 5
   m_Name: PanContentPanel
   m_TagString: Untagged
@@ -166,6 +167,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40292928}
   m_CullTransparentMesh: 0
+--- !u!95 &40292931
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40292928}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &153401399 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7524272385879475371, guid: 29faec68d38220246b91c6c400403d46,
@@ -414,10 +434,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e1b3f9728fb4d841aba22a7289275da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialPromptDelay: 6
+  promptDelay: 1.5
+  maxPromptsPerIngredient: 5
   ingredientsToGrill:
   - {fileID: 583822186}
   - {fileID: 985573012}
-  maxPromptsPerIngredient: 5
   spawnZones:
   - {fileID: 263779811173020289}
   - {fileID: 7807719249247527836}
@@ -459,6 +481,22 @@ MonoBehaviour:
   OnFail:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnInputEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 824969342}
+        m_MethodName: CheckGameState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &901754084
@@ -579,7 +617,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 37}
+  m_AnchoredPosition: {x: 0, y: 54}
   m_SizeDelta: {x: 400, y: 309}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &985573014
