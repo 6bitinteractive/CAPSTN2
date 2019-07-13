@@ -12,12 +12,15 @@ public class PlayerAdventureController : MonoBehaviour
     private Vector3 targetPos;
     private Direction direction;
     private Rigidbody2D rb;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         direction = GetComponent<Direction>();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -34,12 +37,14 @@ public class PlayerAdventureController : MonoBehaviour
         // Move towards target position
         if (transform.position.x != targetPos.x)
         {
+            animator.SetBool("isMoving", true);
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(targetPos.x, transform.position.y, transform.position.z), Speed * Time.deltaTime);
 
             // Reached target destination
             if (transform.position.x == targetPos.x)
             {
-                Debug.Log("Reached target destination");
+               animator.SetBool("isMoving", false);
+                //  Debug.Log("Reached target destination");
             }
         }
     }
@@ -55,7 +60,7 @@ public class PlayerAdventureController : MonoBehaviour
         {
             targetPos = hit.point; // Set target pos
             direction.CheckDirection(targetPos.x); // Face target pos
-            Debug.Log("Target Hit:" + hit.transform);
+            // Debug.Log("Target Hit:" + targetPos.x);
         }
     }
 }
