@@ -436,7 +436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialPromptDelay: 6
   promptDelay: 1.5
-  maxPromptsPerIngredient: 5
+  maxPromptsPerIngredient: 10
   ingredientsToGrill:
   - {fileID: 583822186}
   - {fileID: 985573012}

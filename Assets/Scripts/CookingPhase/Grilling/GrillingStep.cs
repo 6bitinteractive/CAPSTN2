@@ -47,9 +47,6 @@ public class GrillingStep : MonoBehaviour
 
     public void SpawnPrompt()
     {
-        if (MaxPromptReached())
-            return;
-
         spawnZones[Random.Range(0, spawnZones.Count)].Spawn();
         promptCount++;
     }
