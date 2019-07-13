@@ -307,7 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: boiling
   Locked: 1
-  Rating: 1
+  Rating: 0
 --- !u!114 &8381006136738059663
 MonoBehaviour:
   m_ObjectHideFlags: 0

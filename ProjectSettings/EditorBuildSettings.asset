@@ -15,21 +15,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/Intro.unity
     guid: 4411efdb168183543872f6eeb4150e33
   - enabled: 1
-    path: Assets/Scenes/Trash/StageSelection.unity
-    guid: 2eacc671f0e466e428dcc819aaa09979
-  - enabled: 1
-    path: Assets/Scenes/Trash/Cooking-Sisig.unity
-    guid: f9cbdc45e2803c14d813f8fbe61dc99e
-  - enabled: 1
-    path: Assets/Scenes/Tests/ServingPhase.unity
-    guid: 53d9d1a0052b3914da4d648219c00025
-  - enabled: 1
     path: Assets/Scenes/Menus/Ending.unity
     guid: 27f5b8cf1456c3f45bd02e9164d2bc1b
   - enabled: 1
     path: Assets/Scenes/Tests/Microphone.unity
     guid: 1d21389c10dcc9c458e12b057f41e83f
   - enabled: 1
+    path: Assets/Scenes/Adventure/Pampanga.unity
+    guid: 14cf3342a14e7cf4a887e1887cb5e187
+  - enabled: 1
     path: Assets/Scenes/Cooking/CookingOverview-PorkSisig.unity
     guid: d34158b1382e2c0468f159d0a157ca68
+  - enabled: 1
+    path: Assets/Scenes/Adventure/Pampanga 1.unity
+    guid: 421e927e3f9d314459cbfe710e9e71d1
   m_configObjects: {}
