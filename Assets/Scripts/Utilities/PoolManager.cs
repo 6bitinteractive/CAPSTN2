@@ -6,9 +6,14 @@ public class PoolManager : MonoBehaviour
 {
     private Dictionary<int, Queue<ObjectInstance>> poolDictionary = new Dictionary<int, Queue<ObjectInstance>>();
 
-    private void Awake()
+    private void OnEnable()
     {
         SingletonManager.Register<PoolManager>(this);
+    }
+
+    private void OnDisable()
+    {
+        SingletonManager.UnRegister<PoolManager>();
     }
 
     public void CreatePool(GameObject prefab, int poolSize, Transform source = null)

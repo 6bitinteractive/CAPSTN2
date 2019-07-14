@@ -19,6 +19,7 @@ public static class SingletonManager
 
     public static void Register<T>(MonoBehaviour obj) where T : MonoBehaviour
     {
+        Debug.Log("Singleton Registered: " + typeof(T));
         singletonInstances.Add(typeof(T), obj);
     }
 
@@ -31,15 +32,10 @@ public static class SingletonManager
     {
         Debug.Log("Scene unloaded: " + scene.name);
 
-        //var instancesToRemove = singletonInstances
-        //    .Where(x => x.Value.gameObject.scene == scene)
-        //    .Select(x => x.Key)
-        //    .ToList();
+        var instancesToRemove = new List<System.Type>(singletonInstances.Keys);
+        instancesToRemove = instancesToRemove.FindAll(x => singletonInstances[x].gameObject.scene.name == scene.name);
 
-        var keys = new List<System.Type>(singletonInstances.Keys);
-        keys.Select(x => singletonInstances[x].gameObject.scene == scene);
-
-        foreach (var key in keys)
+        foreach (var key in instancesToRemove)
         {
             singletonInstances.Remove(key);
             Debug.Log("Removed:" + key.Name);

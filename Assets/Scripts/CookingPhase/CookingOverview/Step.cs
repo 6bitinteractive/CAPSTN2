@@ -5,6 +5,7 @@ using UnityEngine;
 public class Step : MonoBehaviour
 {
     public string DisplayName;
-    public bool Locked = true;
-    public int Rating;
+    public SceneData StageScene;
+    public bool Locked { get; set; }
+    public int Rating { get; set; }
 }

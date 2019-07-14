@@ -10,9 +10,14 @@ public class InputListener : MonoBehaviour
     public UnityEvent OnFail = new UnityEvent();
     public UnityEvent OnInputEnd = new UnityEvent(); // Doesn't matter if player failed or succeeded as long as there was an attempt to do the prompt
 
-    private void Awake()
+    private void OnEnable()
     {
         SingletonManager.Register<InputListener>(this);
+    }
+
+    private void OnDisable()
+    {
+        SingletonManager.UnRegister<InputListener>();
     }
 
     public void InvokeOnSuccess()
