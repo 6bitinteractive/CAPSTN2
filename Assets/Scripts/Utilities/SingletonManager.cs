@@ -29,12 +29,20 @@ public static class SingletonManager
 
     private static void OnSceneUnloaded(Scene scene)
     {
-        var instancesToRemove = singletonInstances
-            .Where(x => x.Value.gameObject.scene == scene)
-            .Select(x => x.Key)
-            .ToList();
+        Debug.Log("Scene unloaded: " + scene.name);
 
-        foreach (var key in instancesToRemove)
+        //var instancesToRemove = singletonInstances
+        //    .Where(x => x.Value.gameObject.scene == scene)
+        //    .Select(x => x.Key)
+        //    .ToList();
+
+        var keys = new List<System.Type>(singletonInstances.Keys);
+        keys.Select(x => singletonInstances[x].gameObject.scene == scene);
+
+        foreach (var key in keys)
+        {
             singletonInstances.Remove(key);
+            Debug.Log("Removed:" + key.Name);
+        }
     }
 }

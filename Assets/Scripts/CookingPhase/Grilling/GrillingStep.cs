@@ -92,8 +92,9 @@ public class GrillingStep : MonoBehaviour
     private IEnumerator BeginNext()
     {
         // Wait for animation to finish
-        yield return new WaitUntil(() => AnimatorUtils.IsInState(currentIngredientAnim, "Flip"));
-        yield return new WaitUntil(() => AnimatorUtils.IsDonePlaying(currentIngredientAnim, "Flip"));
+        //yield return new WaitUntil(() => AnimatorUtils.IsInState(currentIngredientAnim, "Flip"));
+        //yield return new WaitUntil(() => AnimatorUtils.IsDonePlaying(currentIngredientAnim, "Flip"));
+        yield return new WaitForSeconds(2f);
 
         // Hide previous ingredient
         currentIngredient.SetActive(false);
