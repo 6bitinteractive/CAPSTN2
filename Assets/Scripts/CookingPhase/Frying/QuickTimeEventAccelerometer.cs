@@ -18,13 +18,13 @@ public class QuickTimeEventAccelerometer : Prompt
     {
         base.Awake();
         currentTime = timerDuration;
-        timerImage = GetComponent<Image>();
-        SetInitialYTilt();
+        timerImage = GetComponent<Image>();     
     }
 
     protected void OnEnable()
     {
         ResetTimer();
+        SetInitialYTilt();
     }
 
     private void Update()
@@ -90,12 +90,14 @@ public class QuickTimeEventAccelerometer : Prompt
         // Flip upwards
         if (isFlippingUpwards && Tilt.y <= InitialTilt.y)
         {
+            Debug.Log("Up");
             SuccessfulInput();
         }
 
         //Flipdownwards NOTE* This is used to counteract a bug in which if the player's phone's initial Tilt.y is at -1.0f it will automatically pass a SuccessfulInput
         else if(!isFlippingUpwards && Tilt.y >= InitialTilt.y)
         {
+            Debug.Log("Down");
             SuccessfulInput();
         }
     }
