@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Adventure/Pampanga 1.unity
     guid: 421e927e3f9d314459cbfe710e9e71d1
+  - enabled: 1
+    path: Assets/Scenes/WorldMap/WorldMap-Pampanga.unity
+    guid: 95909840347886749a4bedb2a992bd63
   m_configObjects: {}
