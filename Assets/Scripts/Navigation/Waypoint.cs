@@ -5,7 +5,9 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour
 {
     private const string tagName = "Waypoint"; // Make sure the tag has been declared in the Tags and Layers project setting
-
+    public string DisplayName;
+    public SceneData StageScene;
+    public bool Locked { get; set; }
     public List<Waypoint> Neighbors;
     public Waypoint Previous { get; set; }
     public float Distance { get; set; }

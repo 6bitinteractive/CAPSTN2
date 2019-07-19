@@ -19,6 +19,7 @@ public class PathManager : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        startNode.GetComponent<Collider2D>().enabled = false; // Quick fix for a bug where the player gets stuck if player clicks on starting location as destination
     }
 
     void Update()
@@ -68,11 +69,15 @@ public class PathManager : MonoBehaviour
         var currentNode = FindClosestWaypoint(transform.position);
         var endNode = FindClosestWaypoint(destination);
         LastNode = endNode;
+
+        /*
         // 2 - Check to make sure that node for both end points can be found and that they're different
         if (currentNode == null || endNode == null || currentNode == endNode)
         {
-            return;
+            endNode = currentNode;
+           // return;
         }
+        */
 
         // 3 - Initialize open and closed lists
         // In A*, the open list keeps track of nodes that you want to visit;
@@ -146,6 +151,7 @@ public class PathManager : MonoBehaviour
         // Since currentPath is a stack, we just start at currentNode, which is the end of the path, and follow the previous nodes,
         // pushing them onto the stack. When we’re done (i.e. the previous node is null), currentPath has all the nodes that
         // make up the shortest path starting from the start node to the end node.
+
         if (currentNode == endNode)
         {
             while (currentNode.Previous != null)
