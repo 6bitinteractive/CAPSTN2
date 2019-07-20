@@ -1,0 +1,27 @@
+cooking overview instructions
+-------------------------
+OPENING
+-------------------------
+1.) use the capiz window assets (except the anahaw)
+3.) step_locked.png will appear along the middle of the screen one by one (according to how many
+    steps there are for the dish)
+         -for the "appearing" animation:
+              1.) step_locked.png will "jump" (small upward animation), flip 
+                  (similar to the boiling step animation before), and "fall" into place.
+                   reference is similar to this: https://media.tenor.com/images/18e6bfd9f9b25a99c11761cef1815fed/tenor.gif
+4.) once all assets have finished their animation, the first step would flip (again, similar fashion as the boiling steps before) 
+    and be replaced with step_"stepname"_current.png 
+5.) Once the player clicks on the step_"stepname"_current.png, the scene underneath the capiz window will change into that of
+    the corresponding step segment (ex. the boiling segment)
+6.) all elements of the cooking overview will fade out (except for the capiz windows)
+7.) The capiz windows will "open", revealing the corresponding segment
+
+--------------------------
+CLOSING
+--------------------------
+1.) after the result screen, the capiz windows will once again "close"
+2.) repeat steps stated above until all cooking segments gave been finished
+3.) a "serve" button will appear on the bottom-right of the screen 
+4.) once the button has been pressed, the capiz windows will "open" for the dish presentation 
+    (instructions provided in the "completed dish" folder) 
+             
