@@ -10,7 +10,7 @@ public class RotatingMarkerController : MarkerController
     [SerializeField] private Button button;
     [SerializeField] private Image timer;
 
-    private float angle;
+    private float angle; // angle needed to reach one rotation with given duration
     private float currentAngle;
     private bool spinning;
 

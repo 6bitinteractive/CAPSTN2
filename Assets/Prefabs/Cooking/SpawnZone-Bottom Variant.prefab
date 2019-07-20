@@ -56,7 +56,13 @@ PrefabInstance:
         type: 3}
       propertyPath: promptPrefab.Array.data[0]
       value: 
-      objectReference: {fileID: 366434910289546296, guid: 8fa6c563be3cd4d48ade606b8f2105b1,
+      objectReference: {fileID: 400502494927864885, guid: 7265e78bb08a9084d885b40eb5765505,
+        type: 3}
+    - target: {fileID: 263779811173020289, guid: 53867d454c7508448980c80960cde2f6,
+        type: 3}
+      propertyPath: promptPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 4685568777313758650, guid: 2d616f0dd7ac60c4d9982b43026699d9,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53867d454c7508448980c80960cde2f6, type: 3}
