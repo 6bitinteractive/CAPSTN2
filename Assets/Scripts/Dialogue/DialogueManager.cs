@@ -16,7 +16,7 @@ public class DialogueManager : MonoBehaviour
     public PlayerAdventureController playerAdventureController;
 
     private Queue<Dialogue> dialogue;
-
+    private Dialogue lastSentence;
     public UnityEvent OnFullDialogueEnd; // Note: Added this to avoid creating different GameEvent triggers
 
     void Awake()
@@ -40,6 +40,7 @@ public class DialogueManager : MonoBehaviour
         foreach (Dialogue dialogueEntry in dialogueTrigger.dialogueArray)
         {
             dialogue.Enqueue(dialogueEntry);
+            lastSentence = dialogueEntry;
         }
 
         // Stop player from moving
@@ -113,6 +114,8 @@ public class DialogueManager : MonoBehaviour
         }
 
         nextButton.image.raycastTarget = false;
+
+        lastSentence.onEndSentence.Invoke();
     }
 
     public void CheckRightPortrait(Dialogue dialogueEntry)
