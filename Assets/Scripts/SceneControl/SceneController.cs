@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    [SerializeField] private bool debugMode;
     public delegate void SceneLoadEvent();
     public static event SceneLoadEvent BeforeSceneUnload, AfterSceneLoad;
 
@@ -57,7 +58,7 @@ public class SceneController : MonoBehaviour
         Debug.Log("Loading scene " + sceneName);
 
         // Don't load the scene again if it has been loaded in the editor
-        if (Application.isEditor)
+        if (Application.isEditor && debugMode)
         {
             Scene scene = SceneManager.GetSceneByName(sceneName);
             if (scene.isLoaded)

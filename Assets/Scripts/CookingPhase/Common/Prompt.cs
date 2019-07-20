@@ -22,4 +22,10 @@ public class Prompt : PoolObject
         OnFailedInput.AddListener(inputListener.InvokeOnFail);
         OnFailedInput.AddListener(inputListener.InvokeOnInputEnd);
     }
+
+    private void OnDestroy()
+    {
+        OnSuccessfulInput.RemoveAllListeners();
+        OnFailedInput.RemoveAllListeners();
+    }
 }
