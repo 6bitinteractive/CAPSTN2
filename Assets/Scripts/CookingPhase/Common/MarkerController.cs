@@ -7,6 +7,7 @@ using UnityEngine.Events;
 
 public abstract class MarkerController : MonoBehaviour
 {
+    public float Duration { get; protected set; }
     public float CurrentNormalizedPosition { get; protected set; }
     public MarkerEvent OnMarkerStop = new MarkerEvent();
 

@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class BoilingStep : MonoBehaviour
 {
     [Header("Setup")]
-    [SerializeField] private float pressureEventDelay = 5f; // Would random range be better?
+    [SerializeField] private FloatRange pressureEventDelayRange;
     [SerializeField] private int maxPrompts;
     [SerializeField] private GameObject spawnZonesContainer;
 
@@ -23,6 +23,7 @@ public class BoilingStep : MonoBehaviour
     private List<SpawnZone> spawnZones = new List<SpawnZone>();
     private bool boilingWater;
     private bool startPressureAccumulation;
+    private float pressureEventDelay;
     private float pressureTimer;
     private int promptCount;
 
@@ -74,6 +75,8 @@ public class BoilingStep : MonoBehaviour
             return;
 
         startPressureAccumulation = true;
+        pressureEventDelay = pressureEventDelayRange.RandomInRange; // Randomize when to spawn prompt
+        Debug.Log("Prompt Delay: " + pressureEventDelay);
         pressureTimer = 0f;
         OnPressureStart.Invoke();
     }
@@ -114,7 +117,7 @@ public class BoilingStep : MonoBehaviour
         }
         else if (!successful)
         {
-            SpawnPrompt();
+            Invoke("SpawnPrompt", pressureEventDelayRange.RandomInRange);
         }
     }
 }

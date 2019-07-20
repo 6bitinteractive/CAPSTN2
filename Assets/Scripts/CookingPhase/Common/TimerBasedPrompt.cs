@@ -18,6 +18,9 @@ public class TimerBasedPrompt : Prompt
     protected override void Awake()
     {
         base.Awake();
+
+        // Note to self: This is here because if I add a RemoveListener in OnDisable, the AddListener in OnEnable doesn't seem to be listening again to the event
+        // OTOH, just keeping the AddListener in OnEnable (without removing it in OnDisable) adds another listener to the event(?) and thus runs the callback(?) twice :(
         markerController.OnMarkerStop.AddListener(Evaluate);
     }
 

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// RectTransform only
+
 public class SpawnZone : MonoBehaviour
 {
     [Header("Object Pool")]

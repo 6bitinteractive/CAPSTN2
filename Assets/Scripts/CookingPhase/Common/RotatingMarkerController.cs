@@ -10,8 +10,6 @@ public class RotatingMarkerController : MarkerController
     [SerializeField] private Button button;
     [SerializeField] private Image timer;
 
-    public float Duration { get; private set; }
-
     private float angle;
     private float currentAngle;
     private bool spinning;
@@ -19,11 +17,6 @@ public class RotatingMarkerController : MarkerController
     protected override void Awake()
     {
         button.onClick.AddListener(Stop);
-    }
-
-    protected override void OnEnable()
-    {
-        base.OnEnable();
     }
 
     protected override void Update()
@@ -46,7 +39,6 @@ public class RotatingMarkerController : MarkerController
         // Player missed to press the button
         if (CurrentNormalizedPosition >= 1f)
         {
-            Debug.Log("MISS");
             Stop();
             return;
         }
