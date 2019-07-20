@@ -13,6 +13,7 @@ public class PlayerAdventureController : MonoBehaviour
     private Direction direction;
     private Rigidbody2D rb;
     private Animator animator;
+    private bool canAct = true;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class PlayerAdventureController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canAct)
         {
             CastRay();
         }
@@ -62,5 +63,15 @@ public class PlayerAdventureController : MonoBehaviour
             direction.CheckDirection(targetPos.x); // Face target pos
             // Debug.Log("Target Hit:" + targetPos.x);
         }
+    }
+
+    public void EnableAction()
+    {
+        canAct = true;
+    }
+
+    public void DisableAction()
+    {
+        canAct = false;
     }
 }
