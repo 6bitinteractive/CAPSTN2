@@ -2,14 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SwipeAreaPrompt : Prompt, IPointerEnterHandler, IPointerExitHandler
-{
+public class SwipeAreaPrompt : Prompt, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler{
     private GameObject parent;
     private SwipeDirection arrowPromptDirection = SwipeDirection.None;
     private bool inputInCorrectArea;
+
+    public UnityEvent OnCorrectSwipe = new UnityEvent();
 
     protected override void Awake()
     {
@@ -28,6 +30,7 @@ public class SwipeAreaPrompt : Prompt, IPointerEnterHandler, IPointerExitHandler
 
     private void OnDisable()
     {
+        inputInCorrectArea = false;
         SwipeDetector.OnSwipe -= VerifySwipe;
     }
 
@@ -37,11 +40,10 @@ public class SwipeAreaPrompt : Prompt, IPointerEnterHandler, IPointerExitHandler
             return;
 
         if (swipeData.Direction == arrowPromptDirection && inputInCorrectArea)
-            OnSuccessfulInput.Invoke();
-        else
-            OnFailedInput.Invoke();
-
-        parent.SetActive(false);
+        {
+            OnCorrectSwipe.Invoke();
+            parent.SetActive(false);
+        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -54,5 +56,11 @@ public class SwipeAreaPrompt : Prompt, IPointerEnterHandler, IPointerExitHandler
     {
         inputInCorrectArea = false;
         Debug.Log("Outside correct area");
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        inputInCorrectArea = true;
+        Debug.Log("Within correct area");
     }
 }

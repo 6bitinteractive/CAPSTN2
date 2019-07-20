@@ -42,11 +42,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 263779811173020288, guid: 53867d454c7508448980c80960cde2f6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 263779811173020288, guid: 53867d454c7508448980c80960cde2f6,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 263779811173020288, guid: 53867d454c7508448980c80960cde2f6,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 263779811173020288, guid: 53867d454c7508448980c80960cde2f6,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 263779811173020288, guid: 53867d454c7508448980c80960cde2f6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 722
+      objectReference: {fileID: 0}
     - target: {fileID: 263779811173020289, guid: 53867d454c7508448980c80960cde2f6,
         type: 3}
       propertyPath: promptPrefab.Array.data[0]
       value: 
-      objectReference: {fileID: 1593087254641288568, guid: 8edcb51e0c47d26468a7d88f2a816230,
+      objectReference: {fileID: 7129930341632523844, guid: cf0c3e3530c01414cab85e80dcb6799b,
+        type: 3}
+    - target: {fileID: 263779811173020289, guid: 53867d454c7508448980c80960cde2f6,
+        type: 3}
+      propertyPath: promptPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 6732292521584139948, guid: 1f51c4087b61b4a418d8da45aebc02c0,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53867d454c7508448980c80960cde2f6, type: 3}
