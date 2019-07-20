@@ -2,11 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CookingOverviewManager : MonoBehaviour
 {
     [SerializeField] private GameObject stepsPanel;
-    [Range(1, 3)][SerializeField] private int MinRating = 2;
+    [Range(1, 3)] [SerializeField] private int MinRating = 2;
+
+    public UnityEvent OnAllStagesDone = new UnityEvent();
 
     private List<Step> steps = new List<Step>();
     private List<StepUI> stepsUI = new List<StepUI>();
@@ -63,5 +66,18 @@ public class CookingOverviewManager : MonoBehaviour
 
         // Always unlock the first step
         steps[0].Locked = false;
+
+        for (int i = 0; i < steps.Count; i++)
+        {
+            // It's the most recent unlocked step if the step itself is unlocked and its right neighbor is locked
+            steps[i].Current = !steps[i].Locked && steps[i + 1 >= steps.Count ? i : i + 1].Locked;
+
+            // Are all the steps done
+            if (i == steps.Count - 1) // Is this the last step
+            {
+                if (steps[i].Rating >= MinRating) // Is it above the required minimum rating
+                    OnAllStagesDone.Invoke();
+            }
+        }
     }
 }

@@ -13,33 +13,48 @@ using System;
 
 public class StepUI : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI stepNameText;
     [SerializeField] private GameObject[] starRatingImages;
+    [SerializeField] private Sprite current, done, locked;
 
     [HideInInspector] public OnStageSelect OnStageSelect = new OnStageSelect();
 
     private Step step;
+    private Image image;
     private Button button;
 
     private void Start() // Do this at Start (instead of Awake) to make sure the step object has loaded its data (eg. rating)
     {
         step = GetComponent<Step>();
-
+        image = GetComponent<Image>();
         button = GetComponent<Button>();
-
-        if (step.Locked)
-            button.interactable = false;
-
         button.onClick.AddListener(InvokeOnStageSelect);
 
-        // [Debug] Display the name of the step
-        stepNameText.text = step.DisplayName;
+        if (step.Locked)
+        {
+            button.enabled = false;
+            image.sprite = locked;
+        }
+        else
+        {
+            button.enabled = true;
+        }
 
-        // If there's a rating for the step, show same number of stars
+        // If there's a rating for the step...
         if (step.Rating > 0)
         {
+            // ...show same number of stars
             for (int i = 0; i < step.Rating; i++)
                 starRatingImages[i].SetActive(true);
+
+            // ...change image
+            image.sprite = done;
+            image.SetNativeSize();
+        }
+
+        if (step.Current)
+        {
+            image.sprite = current;
+            image.SetNativeSize();
         }
     }
 

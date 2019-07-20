@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Step : MonoBehaviour
 {
-    public string DisplayName;
     public SceneData StageScene;
-    public bool Locked { get; set; }
     public int Rating { get; set; }
+    public bool Locked { get; set; }
+    public bool Current { get; set; } // The most recently unlocked step
 }
