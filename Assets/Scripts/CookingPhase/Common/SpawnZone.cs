@@ -8,6 +8,8 @@ public class SpawnZone : MonoBehaviour
 {
     [Header("Object Pool")]
     [SerializeField] private GameObject[] promptPrefab;
+
+    // FIX?: Can be problematic if you need each prefab in different spawners...
     [Tooltip("Per unique prefab; if another SpawnZone also contains the same set of prefabs, no new set of pool objects will be created.")]
     [SerializeField] private int poolSize = 3;
 
