@@ -184,9 +184,9 @@ RectTransform:
   - {fileID: 583822187}
   - {fileID: 985573013}
   - {fileID: 1578152646}
-  - {fileID: 1929556889}
   - {fileID: 375296471}
   - {fileID: 796798747}
+  - {fileID: 1929556889}
   - {fileID: 1208710119}
   m_Father: {fileID: 824969339}
   m_RootOrder: 2
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 375296473}
   - component: {fileID: 375296472}
   m_Layer: 5
-  m_Name: Red Chili
+  m_Name: Butter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -257,14 +257,14 @@ RectTransform:
   m_GameObject: {fileID: 375296470}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 40292929}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.199999, y: 62.199997}
+  m_AnchoredPosition: {x: -59.9, y: 67}
   m_SizeDelta: {x: 276, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &375296472
@@ -277,7 +277,7 @@ Animator:
   m_GameObject: {fileID: 375296470}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6cdf42bb6eed31240b8e7ea9f6522ef6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 00fb85d080c1bb04e920a1537d160f7b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -306,7 +306,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c05123c6ee932c04397c8834520b9c01, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9f98c7a137215ac4fb14c533c789ed1f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 796798749}
   - component: {fileID: 796798748}
   m_Layer: 5
-  m_Name: Onion
+  m_Name: Garlic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -445,14 +445,14 @@ RectTransform:
   m_GameObject: {fileID: 796798746}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 40292929}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40.30001, y: 67.399994}
+  m_AnchoredPosition: {x: 124, y: 49.7}
   m_SizeDelta: {x: 276, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &796798748
@@ -465,7 +465,7 @@ Animator:
   m_GameObject: {fileID: 796798746}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: bbefdcc730f814a4a8bc95e976c76373, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9b48c2b55de165045b3cf66a45f51ca8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -494,7 +494,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3d841e4097b97a640ac33dc71b45cea3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d7dd2a8ee0690a468955835bc295970, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -786,7 +786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4beddbaa0c33804f97dfdbbf2f1315a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stage: {fileID: 11400000, guid: 86db2e5306a573b4fb627dd98aaaf47a, type: 2}
+  stage: {fileID: 11400000, guid: a6a2938a1d28bbb43a0871d888857f91, type: 2}
 --- !u!95 &898757282 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 153401400, guid: 29faec68d38220246b91c6c400403d46,
@@ -1244,7 +1244,7 @@ GameObject:
   - component: {fileID: 1208710121}
   - component: {fileID: 1208710120}
   m_Layer: 5
-  m_Name: Green Chili
+  m_Name: Spring Onion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1259,14 +1259,14 @@ RectTransform:
   m_GameObject: {fileID: 1208710118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 40292929}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.799988, y: 50.999992}
+  m_AnchoredPosition: {x: 1, y: 93}
   m_SizeDelta: {x: 276, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1208710120
@@ -1279,7 +1279,7 @@ Animator:
   m_GameObject: {fileID: 1208710118}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 256239a0d8984ef4daac9b9d56d30707, type: 2}
+  m_Controller: {fileID: 9100000, guid: b3490b9a1e214424696c5d12280eb95c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1308,7 +1308,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6f2a87b8126d7b44dbdbe98c0d5a345c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ce76c2d2ff493f4093dbe4c339d2987, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1788,7 +1788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -61.653015, y: 34.448486}
+  m_AnchoredPosition: {x: -65, y: 34.448486}
   m_SizeDelta: {x: 375, y: 238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1884020088
@@ -1863,7 +1863,7 @@ GameObject:
   - component: {fileID: 1929556894}
   - component: {fileID: 1929556893}
   m_Layer: 5
-  m_Name: Porkmeat
+  m_Name: Aligue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1878,14 +1878,14 @@ RectTransform:
   m_GameObject: {fileID: 1929556888}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children: []
   m_Father: {fileID: 40292929}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22, y: 73.6}
+  m_AnchoredPosition: {x: 22, y: 69}
   m_SizeDelta: {x: 276, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1929556890
@@ -1898,7 +1898,7 @@ Animator:
   m_GameObject: {fileID: 1929556888}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 8d215390fb514eb4d8b53fdcaff9ac74, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4edd0b9dfef1ac04aa4e881dc2a299bc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1927,7 +1927,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a182b310053ab0e418fd1977e91902b0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7f0518a6e72d0d4e8f16773287b34d0, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2476,62 +2476,62 @@ PrefabInstance:
     - target: {fileID: 6712775320271122690, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320271122690, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320271122690, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 383.09802
+      value: 384.5
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320271122690, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -143.99503
+      value: -125.79501
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320477394498, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320477394498, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320477394498, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 641.098
+      value: 642.5
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320477394498, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -143.99503
+      value: -125.79501
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320554127303, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320554127303, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320554127303, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 899.098
+      value: 900.5
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320554127303, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -143.99503
+      value: -125.79501
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320588704820, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
@@ -2546,12 +2546,12 @@ PrefabInstance:
     - target: {fileID: 6712775320588704820, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 253.59802
+      value: 448.5
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320588704820, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -108.509964
+      value: -101.509995
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320231078572, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
@@ -2586,18 +2586,18 @@ PrefabInstance:
     - target: {fileID: 6712775321180900410, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1027.598
+      value: 835.5
       objectReference: {fileID: 0}
     - target: {fileID: 6712775321180900410, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -108.509964
+      value: -101.509995
       objectReference: {fileID: 0}
     - target: {fileID: 6712775321180900411, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 67b721aee3b8db644a795fafa9794e01,
+      objectReference: {fileID: 11400000, guid: e3d5dc63895ce1b41bbca172232e006d,
         type: 2}
     - target: {fileID: 6712775321989098093, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
