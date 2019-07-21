@@ -804,72 +804,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueArray:
   - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: How does it taste Lola.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: Not bad... not bad at all.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
     rightSpeaker: {fileID: 0}
-    sentence: Hehehe I told you I'm all grown up now.
+    sentence: Lola here you go, my own version of Fried Rice!
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
-    leftSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
     rightSpeaker: {fileID: 0}
-    sentence: Maricela...
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: Yes, Lola?
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: I have been feeling weaker and weaker everyday.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: I fear, I might not be able to cook anymore.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: At this rate we might end up having to close up shop.
+    sentence: "Hmm, you\u2019re quite there but there\u2019s something missing in
+      your dish."
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
@@ -878,161 +825,37 @@ MonoBehaviour:
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
     rightSpeaker: {fileID: 0}
-    sentence: Are you okay!? What should we do Lola?
+    sentence: "Hmm, I\u2019m pretty sure I\u2019ve used the ingredients well And based
+      it on our own recipe."
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: I am fine dearie.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
+  - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858, type: 3}
     rightSpeaker: {fileID: 0}
-    sentence: ' Here take this recipe book.'
+    sentence: What did I do wrong, Lola?
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: I want you to take it, so that you may save our store from closing.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: This book contains all the recipes I have learnt from my travels around
-      the Philippines.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: You must learn the way of the cooking to save our store.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: I'll do my best!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: Hahahaha... That's my Ri Ri.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: 4d0949a3f9ee3ac49a5cbc287a809b33, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: I told you to stop calling me that.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: You will always be my sweet little Ri Ri no matter how much you've grown.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Ri Ri
     leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
     rightSpeaker: {fileID: 0}
-    sentence: '*Sigh* Alright Lola... I''ll be off now!'
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: I love you Lola!
+    sentence: "It\u2019s not that your food tastes bad RiRi, what I meant was, your
+      connection to the dish."
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
-    leftSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
     rightSpeaker: {fileID: 0}
-    sentence: I love you too. Take care my sweet Ri Ri.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: I also left some lunch in your backpack.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: It's your favorite!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: Adobo!?!?
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: You guessed it!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: Yay!
+    sentence: You followed the recipe which is not a bad thing, but I need to feel
+      your uniqueness.
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
@@ -1041,25 +864,94 @@ MonoBehaviour:
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858, type: 3}
     rightSpeaker: {fileID: 0}
-    sentence: (... I have to follow Lola's footsteps)
+    sentence: "So\u2026 how do I do that?"
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Lola
+    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: You need to learn about the food RiRi, connect with the food, the people,
+      and the culture.
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: You mean, travelling?
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Lola
+    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: Because you are right, there will be a time that I'll have to close
+      my shop since I am getting old.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Lola
     leftSpeaker: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322, type: 3}
     rightSpeaker: {fileID: 0}
-    sentence: (I'll head to Pampanga first!)
+    sentence: And I hope when the time comes, you are ready to take over me as the
+      new chef of the eatery.
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322, type: 3}
+    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
     rightSpeaker: {fileID: 0}
-    sentence: (I'll head to Pampanga first!)
+    sentence: "Travelling sounds fun! Cooking with other people, learning new things,
+      and exploring the Philippines? I\u2019m all in for that."
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: "\u2026But are you sure you\u2019ll be alright Lola?"
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Lola
+    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: I'm fine RiRi. I just need a day's rest and I'll be up and okay like
+      nothing happened.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Lola
+    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: "Don\u2019t worry about me dear, I\u2019ll be able to manage on my own,
+      I\u2019ll rest so you can show me your learnings when you come back!"
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Lola
+    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: I will Lola! See you later!
     onEndSentence:
       m_PersistentCalls:
         m_Calls:
@@ -1946,12 +1838,12 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.size
-      value: 29
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[15].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2015,6 +1907,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
+      propertyPath: dialogueArray.Array.data[28].onEndSentence.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[29].onEndSentence.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
       propertyPath: dialogueArray.Array.data[1].OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EndDialogue
       objectReference: {fileID: 0}
@@ -2061,12 +1963,12 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[3].name
-      value: Lola
+      value: Maricela
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[4].name
-      value: Maricela
+      value: Lola
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2106,7 +2008,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[0].sentence
-      value: How does it taste Lola.
+      value: Lola here you go, my own version of Fried Rice!
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2121,12 +2023,14 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[1].sentence
-      value: Not bad... not bad at all.
+      value: "Hmm, you\u2019re quite there but there\u2019s something missing in your
+        dish."
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[2].sentence
-      value: Hehehe I told you I'm all grown up now.
+      value: "Hmm, I\u2019m pretty sure I\u2019ve used the ingredients well And based
+        it on our own recipe."
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2136,42 +2040,46 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[3].sentence
-      value: Maricela...
+      value: What did I do wrong, Lola?
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[4].sentence
-      value: Yes, Lola?
+      value: "It\u2019s not that your food tastes bad RiRi, what I meant was, your
+        connection to the dish."
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[5].sentence
-      value: I have been feeling weaker and weaker everyday.
+      value: You followed the recipe which is not a bad thing, but I need to feel
+        your uniqueness.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[6].name
-      value: Lola
+      value: Maricela
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[6].sentence
-      value: I fear, I might not be able to cook anymore.
+      value: "So\u2026 how do I do that?"
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[7].sentence
-      value: At this rate we might end up having to close up shop.
+      value: You need to learn about the food RiRi, connect with the food, the people,
+        and the culture.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[8].sentence
-      value: Are you okay!? What should we do Lola?
+      value: You mean, travelling?
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[9].sentence
-      value: I am fine dearie.
+      value: Because you are right, there will be a time that I'll have to close my
+        shop since I am getting old.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2181,28 +2089,29 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[10].name
-      value: Lola
+      value: Maricela
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[10].sentence
-      value: ' Here take this recipe book.'
+      value: And I hope when the time comes, you are ready to take over me as the
+        new chef of the eatery.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[11].sentence
-      value: I want you to take it, so that you may save our store from closing.
+      value: "Travelling sounds fun! Cooking with other people, learning new things,
+        and exploring the Philippines? I\u2019m all in for that."
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[11].name
-      value: Lola
+      value: Maricela
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[12].sentence
-      value: This book contains all the recipes I have learnt from my travels around
-        the Philippines.
+      value: "\u2026But are you sure you\u2019ll be alright Lola?"
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2212,12 +2121,14 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[13].sentence
-      value: You must learn the way of the cooking to save our store.
+      value: I'm fine RiRi. I just need a day's rest and I'll be up and okay like
+        nothing happened.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[14].sentence
-      value: I'll do my best!
+      value: "Don\u2019t worry about me dear, I\u2019ll be able to manage on my own,
+        I\u2019ll rest so you can show me your learnings when you come back!"
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2227,17 +2138,17 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[15].sentence
-      value: Hahahaha... That's my Ri Ri.
+      value: I will Lola! See you later!
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[15].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FadeCurrentScene
+      value: LoadScene
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[15].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: SceneData, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2272,57 +2183,57 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[16].sentence
-      value: I told you to stop calling me that.
+      value: I'll do my best!
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[17].sentence
-      value: You will always be my sweet little Ri Ri no matter how much you've grown.
+      value: Hahahaha... That's my Ri Ri.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[18].name
-      value: Ri Ri
+      value: Maricela
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[18].sentence
-      value: '*Sigh* Alright Lola... I''ll be off now!'
+      value: I told you to stop calling me that.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[19].name
-      value: Maricela
+      value: Lola
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[19].sentence
-      value: I love you Lola!
+      value: You will always be my sweet little Ri Ri no matter how much you've grown.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[20].sentence
-      value: I love you too. Take care my sweet Ri Ri.
+      value: '*Sigh* Alright Lola... I''ll be off now!'
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[21].sentence
-      value: I also left some lunch in your backpack.
+      value: I love you Lola!
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[22].sentence
-      value: It's your favorite!
+      value: I love you too. Take care my sweet Ri Ri.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[23].name
-      value: Maricela
+      value: Lola
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[23].sentence
-      value: Adobo!?!?
+      value: I also left some lunch in your backpack.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2332,22 +2243,22 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[24].sentence
-      value: You guessed it!
+      value: It's your favorite!
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[25].sentence
-      value: Yay!
+      value: Adobo!?!?
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[26].sentence
-      value: (... I have to follow Lola's footsteps)
+      value: You guessed it!
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[27].sentence
-      value: (I'll head to Pampanga first!)
+      value: Yay!
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2363,6 +2274,51 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueArray.Array.data[28].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: SceneData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[8].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].name
+      value: Lola
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[17].name
+      value: Lola
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[20].name
+      value: Ri Ri
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[25].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[21].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[26].name
+      value: Lola
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[28].sentence
+      value: (... I have to follow Lola's footsteps)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[15].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3400490635153947922, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
