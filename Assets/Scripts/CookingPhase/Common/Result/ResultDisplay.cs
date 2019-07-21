@@ -14,7 +14,7 @@ public class ResultDisplay : MonoBehaviour
         starRatings.AddRange(starRatingsPanel.GetComponentsInChildren<StarRating>());
     }
 
-    public void DisplayResult(int rating)
+    public void DisplayResult(int rating = 3)
     {
         for (int i = 0; i < rating; i++)
             starRatings[i].SwitchOn();

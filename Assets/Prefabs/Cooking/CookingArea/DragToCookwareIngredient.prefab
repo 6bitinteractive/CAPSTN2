@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 7547646913142646751}
   - component: {fileID: 7547646913142646750}
   - component: {fileID: 7547646913142646749}
-  - component: {fileID: 7547646913142646748}
   - component: {fileID: 7547646913142646747}
   - component: {fileID: 7547646913142646746}
   - component: {fileID: 6908243936152648687}
@@ -181,22 +180,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7547646913142646748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7547646913142646566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1548823b194e97d40ac2aac1b2195f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnDropItem:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: OnItemDrop, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &7547646913142646747
 MonoBehaviour:
   m_ObjectHideFlags: 0
