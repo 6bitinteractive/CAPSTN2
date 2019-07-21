@@ -212,7 +212,7 @@ MonoBehaviour:
           m_MethodName: LoadScene
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: e3d5dc63895ce1b41bbca172232e006d,
+            m_ObjectArgument: {fileID: 11400000, guid: a6a2938a1d28bbb43a0871d888857f91,
               type: 2}
             m_ObjectArgumentAssemblyTypeName: SceneData, Assembly-CSharp
             m_IntArgument: 0
