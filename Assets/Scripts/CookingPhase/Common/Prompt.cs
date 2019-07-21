@@ -8,7 +8,7 @@ public class Prompt : PoolObject
     [HideInInspector] public UnityEvent OnSuccessfulInput = new UnityEvent();
     [HideInInspector] public UnityEvent OnFailedInput = new UnityEvent();
 
-    private static InputListener inputListener;
+    protected static InputListener inputListener;
 
     protected virtual void Awake()
     {
@@ -23,7 +23,7 @@ public class Prompt : PoolObject
         OnFailedInput.AddListener(inputListener.InvokeOnInputEnd);
     }
 
-    private void OnDestroy()
+    protected virtual void OnDestroy()
     {
         OnSuccessfulInput.RemoveAllListeners();
         OnFailedInput.RemoveAllListeners();

@@ -24,19 +24,31 @@ public class TimerBasedPrompt : Prompt
         markerController.OnMarkerStop.AddListener(Evaluate);
     }
 
-    public void Evaluate(MarkerController rotatingMarker)
+    protected override void Start()
     {
-        if (rotatingMarker.CurrentNormalizedPosition >= 1f)
+        base.Start();
+        OnEvaluatePromptRating.AddListener(inputListener.InvokeOnEvaluatePrompt);
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        OnEvaluatePromptRating.RemoveListener(inputListener.InvokeOnEvaluatePrompt);
+    }
+
+    public void Evaluate(MarkerController marker)
+    {
+        if (marker.CurrentNormalizedPosition >= 1f)
             promptRating = PromptRating.Miss;
-        else if (rotatingMarker.CurrentNormalizedPosition <= promptAreas.Perfect.fillAmount)
+        else if (marker.CurrentNormalizedPosition <= promptAreas.Perfect.fillAmount)
             promptRating = PromptRating.Perfect;
-        else if (rotatingMarker.CurrentNormalizedPosition <= promptAreas.Great.fillAmount)
+        else if (marker.CurrentNormalizedPosition <= promptAreas.Great.fillAmount)
             promptRating = PromptRating.Great;
-        else if (rotatingMarker.CurrentNormalizedPosition <= promptAreas.Good.fillAmount)
+        else if (marker.CurrentNormalizedPosition <= promptAreas.Good.fillAmount)
             promptRating = PromptRating.Good;
-        else if (rotatingMarker.CurrentNormalizedPosition <= promptAreas.Bad.fillAmount)
+        else if (marker.CurrentNormalizedPosition <= promptAreas.Bad.fillAmount)
             promptRating = PromptRating.Bad;
-        else if (rotatingMarker.CurrentNormalizedPosition < promptAreas.Awful.fillAmount)
+        else if (marker.CurrentNormalizedPosition < promptAreas.Awful.fillAmount)
             promptRating = PromptRating.Awful;
         else
             Debug.LogError("No rating");

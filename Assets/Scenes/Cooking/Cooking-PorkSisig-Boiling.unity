@@ -602,6 +602,7 @@ GameObject:
   - component: {fileID: 1260807802}
   - component: {fileID: 1260807799}
   - component: {fileID: 1260807801}
+  - component: {fileID: 1260807805}
   - component: {fileID: 1260807804}
   m_Layer: 5
   m_Name: StoveAreaPanel
@@ -692,6 +693,22 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  OnEvaluatePrompt:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1260807805}
+        m_MethodName: IncreasePromptRatingCount
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: OnEvaluatePromptRating, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!222 &1260807800
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -877,19 +894,8 @@ MonoBehaviour:
           m_StringArgument: TakeOff
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1980054254}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1260807804}
-        m_MethodName: SaveRating
+      - m_Target: {fileID: 1260807805}
+        m_MethodName: EvaluateFinalRating
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -897,7 +903,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -934,10 +940,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 1260807797}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4beddbaa0c33804f97dfdbbf2f1315a, type: 3}
+  m_Script: {fileID: 11500000, guid: 256c38eda360b78418d6ed3a47738938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stage: {fileID: 11400000, guid: 07e0989769d0a3d4d9b9b7b8066d7a25, type: 2}
+  StageScene: {fileID: 11400000, guid: 07e0989769d0a3d4d9b9b7b8066d7a25, type: 2}
+--- !u!114 &1260807805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260807797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b92fa00cb3c773b4c8ad7fe5cfa2adb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnFinalRatingCalculated:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1980054254}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1980054255}
+        m_MethodName: DisplayResult
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: RatingEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!95 &1303023260 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7120480946588641123, guid: 539340f11c7fdef41a3de37540391bbe,
@@ -1153,11 +1197,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ResultsCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 6712775321162760088, guid: 7057b1831f20a3445b8f66653a4710d5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6712775321162760092, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1263,66 +1302,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6712775320271122690, guid: 7057b1831f20a3445b8f66653a4710d5,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6712775320271122690, guid: 7057b1831f20a3445b8f66653a4710d5,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6712775320271122690, guid: 7057b1831f20a3445b8f66653a4710d5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 384.57056
-      objectReference: {fileID: 0}
-    - target: {fileID: 6712775320271122690, guid: 7057b1831f20a3445b8f66653a4710d5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -143.99503
-      objectReference: {fileID: 0}
-    - target: {fileID: 6712775320477394498, guid: 7057b1831f20a3445b8f66653a4710d5,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6712775320477394498, guid: 7057b1831f20a3445b8f66653a4710d5,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6712775320477394498, guid: 7057b1831f20a3445b8f66653a4710d5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 642.57056
-      objectReference: {fileID: 0}
-    - target: {fileID: 6712775320477394498, guid: 7057b1831f20a3445b8f66653a4710d5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -143.99503
-      objectReference: {fileID: 0}
-    - target: {fileID: 6712775320554127303, guid: 7057b1831f20a3445b8f66653a4710d5,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6712775320554127303, guid: 7057b1831f20a3445b8f66653a4710d5,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6712775320554127303, guid: 7057b1831f20a3445b8f66653a4710d5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 900.57056
-      objectReference: {fileID: 0}
-    - target: {fileID: 6712775320554127303, guid: 7057b1831f20a3445b8f66653a4710d5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -143.99503
-      objectReference: {fileID: 0}
     - target: {fileID: 6712775320588704820, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1336,12 +1315,12 @@ PrefabInstance:
     - target: {fileID: 6712775320588704820, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 255.07056
+      value: 448.57056
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320588704820, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -108.509964
+      value: -101.51
       objectReference: {fileID: 0}
     - target: {fileID: 6712775320231078572, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
@@ -1376,12 +1355,12 @@ PrefabInstance:
     - target: {fileID: 6712775321180900410, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1029.0706
+      value: 835.57056
       objectReference: {fileID: 0}
     - target: {fileID: 6712775321180900410, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -108.509964
+      value: -101.51
       objectReference: {fileID: 0}
     - target: {fileID: 6712775321180900411, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
@@ -1403,6 +1382,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1980054253}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1980054255 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4824327907823996780, guid: 7057b1831f20a3445b8f66653a4710d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1980054253}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1980054254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6e26ca76d758141b548c8667d00370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &529458053499495098
 PrefabInstance:
   m_ObjectHideFlags: 0
