@@ -161,6 +161,10 @@ GameObject:
   - component: {fileID: 153401401}
   - component: {fileID: 153401400}
   - component: {fileID: 1551491893137177437}
+  - component: {fileID: 2896727673285113740}
+  - component: {fileID: 1427531802638313214}
+  - component: {fileID: 7487847238667239497}
+  - component: {fileID: 2040439286916621128}
   m_Layer: 5
   m_Name: PanPanel
   m_TagString: Untagged
@@ -240,3 +244,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c480fa50992ab9149bea863b053750f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &2896727673285113740
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7524272385879475370}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &1427531802638313214
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7524272385879475370}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 146.71117, y: -89.87625}
+      - {x: 208.04208, y: 2.887333}
+      - {x: 162.03075, y: 120.033844}
+      - {x: 0.000026226044, y: 179.3353}
+      - {x: -164.73897, y: 122.55357}
+      - {x: -223.13931, y: 3.2325554}
+      - {x: -140.8501, y: -93.52644}
+      - {x: -1.972445, y: -128.3263}
+--- !u!114 &7487847238667239497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7524272385879475370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1244d8d86b8005047b93e463342ee7e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnItemDroppedOnArea:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: OnItemDrop, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &2040439286916621128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7524272385879475370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bbf2c7b2bd35a042af27bee818df5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CookableIngredients: []
