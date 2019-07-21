@@ -1621,17 +1621,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -101.51
       objectReference: {fileID: 0}
-    - target: {fileID: 6712775321180900411, guid: 7057b1831f20a3445b8f66653a4710d5,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 11400000, guid: 86db2e5306a573b4fb627dd98aaaf47a,
-        type: 2}
     - target: {fileID: 6712775320588704821, guid: 7057b1831f20a3445b8f66653a4710d5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 11400000, guid: 07e0989769d0a3d4d9b9b7b8066d7a25,
+        type: 2}
+    - target: {fileID: 6712775321180900411, guid: 7057b1831f20a3445b8f66653a4710d5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 86db2e5306a573b4fb627dd98aaaf47a,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7057b1831f20a3445b8f66653a4710d5, type: 3}
@@ -2052,6 +2052,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PotPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 7120480945713624617, guid: 539340f11c7fdef41a3de37540391bbe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7120480946588641120, guid: 539340f11c7fdef41a3de37540391bbe,
         type: 3}
       propertyPath: OnLidOn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2197,6 +2202,61 @@ PrefabInstance:
       propertyPath: OnDestinationReached.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1095555159}
+    - target: {fileID: 7120480945199101019, guid: 539340f11c7fdef41a3de37540391bbe,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120480945199101019, guid: 539340f11c7fdef41a3de37540391bbe,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120480945199101019, guid: 539340f11c7fdef41a3de37540391bbe,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 53
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120480946588641124, guid: 539340f11c7fdef41a3de37540391bbe,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 279
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120480945985153412, guid: 539340f11c7fdef41a3de37540391bbe,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120480945165839971, guid: 539340f11c7fdef41a3de37540391bbe,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 114
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120480945645213882, guid: 539340f11c7fdef41a3de37540391bbe,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 112.79997
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120480946588641125, guid: 539340f11c7fdef41a3de37540391bbe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120480945165839975, guid: 539340f11c7fdef41a3de37540391bbe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120480945645213887, guid: 539340f11c7fdef41a3de37540391bbe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120480945985153417, guid: 539340f11c7fdef41a3de37540391bbe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 539340f11c7fdef41a3de37540391bbe, type: 3}
 --- !u!1001 &8809499751152908902
