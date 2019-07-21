@@ -36,7 +36,7 @@ public class GrillingStep : MonoBehaviour
         // Set the current ingredient
         currentIngredient = ingredientsLeft.Peek();
         currentIngredientInCookware = currentIngredient.GetComponent<Cookable>().IngredientInCookware;
-        currentIngredientAnim = currentIngredientInCookware.GetComponent<Animator>(); // :(
+        currentIngredientAnim = currentIngredientInCookware.GetComponent<Animator>();
         currentIngredient.SetActive(true);
 
         // Remove the ingredient from the queue of ingredients yet to be cooked
