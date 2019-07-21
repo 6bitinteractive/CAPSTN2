@@ -4,23 +4,11 @@ using UnityEngine;
 
 public class PanAnimationController : MonoBehaviour
 {
-    private SwipeDirectionListener swipeDirectionListener;
     private Animator animator;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
-    }
-
-    private void OnEnable()
-    {
-        swipeDirectionListener = SingletonManager.GetInstance<SwipeDirectionListener>();
-        swipeDirectionListener.OnCorrectSwipe.AddListener(FlipPan);
-    }
-
-    private void OnDisable()
-    {
-        swipeDirectionListener.OnCorrectSwipe.RemoveListener(FlipPan);
     }
 
     public void FlipPan(SwipeData swipeData)

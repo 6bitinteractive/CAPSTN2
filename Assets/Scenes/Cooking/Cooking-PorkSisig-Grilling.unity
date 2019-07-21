@@ -441,6 +441,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583822186}
   m_CullTransparentMesh: 0
+--- !u!114 &763110877 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1551491893137177437, guid: 29faec68d38220246b91c6c400403d46,
+    type: 3}
+  m_PrefabInstance: {fileID: 7524272385995062428}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c480fa50992ab9149bea863b053750f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &824969335
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,7 +792,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnCorrectSwipe:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 763110877}
+        m_MethodName: FlipPan
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: SwipeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &901754084
 GameObject:
