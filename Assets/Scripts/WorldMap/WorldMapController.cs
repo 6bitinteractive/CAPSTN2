@@ -64,6 +64,7 @@ public class WorldMapController : MonoBehaviour
             {
                 if (gameObject.transform.position == waypoint.transform.position)
                 {
+                    gameObject.transform.Translate(0, 0.5f, 0);
                     OnWaypointEnter.Invoke();
                     isAtTargetPosition = true;
                     pathManager.Stop();
