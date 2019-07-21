@@ -673,7 +673,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 420940337}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 945614286}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bfe696df44ebf2488892531a637b372, type: 3}
@@ -980,6 +980,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bfe696df44ebf2488892531a637b372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &945614286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4728069955356712898, guid: a045d8b1faa69fe4786b14a420386c1e,
+    type: 3}
+  m_PrefabInstance: {fileID: 420940337}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &975413202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1051,7 +1057,7 @@ PrefabInstance:
         type: 3}
       propertyPath: startNode
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 945614286}
     - target: {fileID: 3975083756073565750, guid: 5d41ef8c0048bcb4186c5a4187b903a6,
         type: 3}
       propertyPath: MoveSpeed
