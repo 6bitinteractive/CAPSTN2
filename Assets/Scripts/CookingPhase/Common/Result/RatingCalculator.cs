@@ -36,7 +36,7 @@ public class RatingCalculator : MonoBehaviour
         // TODO: calculation
         int rating = 2;
 
-        ratingsManager.UpdateStageRating(stage, 3); // Store rating (persistent/session)
+        ratingsManager.UpdateStageRating(stage, rating); // Store rating (persistent/session)
         OnFinalRatingCalculated.Invoke(rating);
     }
 }
