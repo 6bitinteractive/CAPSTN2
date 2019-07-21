@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PorkMeatImage
+  m_Controller: {fileID: 9100000, guid: 3ab6dec0bc421ba43bbbc809a1bc0820, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: b62ada7b27adf8f46addf8270a4d40b6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ca9e16d7e604c2746a7970f463486ee4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 07d8b5ce7e1fafb41b092e3acbbb4d1b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 02126717a34bd78428b1bbd1352b29cd, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 365b3ea6d2340d1499a999e4c02bd225, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a3b809db0dbd9d34fbdbcd99624af665, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: cfaf9acc71b7e42479c573f16be14ec3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 06d950e3eb6c8ae46a6108c35819da61, type: 2}
