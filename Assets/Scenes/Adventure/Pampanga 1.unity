@@ -1064,7 +1064,7 @@ GameObject:
   - component: {fileID: 939959557}
   - component: {fileID: 939959558}
   m_Layer: 0
-  m_Name: Chef Lucing
+  m_Name: Chef Lucita
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1106,7 +1106,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Chef Lucing
+  - name: Chef Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
     sentence: Mayap a yabak pu!
@@ -1127,13 +1127,13 @@ MonoBehaviour:
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: bee3ddadbf100c2479fae154c6afec6d, type: 3}
     rightSpeaker: {fileID: 0}
-    sentence: Are you chef Lucing?
+    sentence: Are you chef Lucita?
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Chef Lucing
+  - name: Chef Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
     sentence: That is correct.
@@ -1151,7 +1151,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Chef Lucing
+  - name: Chef Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
     sentence: I refuse.
@@ -1169,7 +1169,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Chef Lucing
+  - name: Chef Lucita
     leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
     rightSpeaker: {fileID: 0}
     sentence: I do not teach just about anyone young lady.
@@ -1178,7 +1178,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Chef Lucing
+  - name: Chef Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
     sentence: You must be deemed worthy.
@@ -1187,7 +1187,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Chef Lucing
+  - name: Chef Lucita
     leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
     rightSpeaker: {fileID: 0}
     sentence: '...You look familiar have we met before?'
@@ -1205,7 +1205,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Chef Lucing
+  - name: Chef Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
     sentence: I see... I change my mind.
@@ -1214,7 +1214,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Chef Lucing
+  - name: Chef Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
     sentence: I will teach you how to cook sisig.
@@ -1232,7 +1232,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Chef Lucing
+  - name: Chef Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
     sentence: Yes, you remind me of someone back in my younger days.
@@ -1241,7 +1241,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Chef Lucing
+  - name: Chef Lucita
     leftSpeaker: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858, type: 3}
     rightSpeaker: {fileID: 0}
     sentence: She too was an aspiring chef.
@@ -1250,7 +1250,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Chef Lucing
+  - name: Chef Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
     sentence: Ahh how nostalgic.
@@ -1259,7 +1259,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Chef Lucing
+  - name: Chef Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
     sentence: ' Anyways enough chitchat lets get to cooking.'
@@ -1268,7 +1268,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Chef Lucing
+  - name: Chef Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
     sentence: It wont be an easy task I assure you!
@@ -1277,7 +1277,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Chef Lucing
+  - name: Chef Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
     sentence: Are you sure, you are ready?
@@ -2096,12 +2096,12 @@ PrefabInstance:
     - target: {fileID: 2168344348245210694, guid: a90c66c7ee2a8684094f832bd2183c7d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.39
+      value: -9.49
       objectReference: {fileID: 0}
     - target: {fileID: 2168344348245210694, guid: a90c66c7ee2a8684094f832bd2183c7d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.34
+      value: -3.95
       objectReference: {fileID: 0}
     - target: {fileID: 2168344348245210694, guid: a90c66c7ee2a8684094f832bd2183c7d,
         type: 3}
@@ -2166,12 +2166,12 @@ PrefabInstance:
     - target: {fileID: 4974479811362358285, guid: a90c66c7ee2a8684094f832bd2183c7d,
         type: 3}
       propertyPath: m_SortingLayerID
-      value: 1546808503
+      value: 611808203
       objectReference: {fileID: 0}
     - target: {fileID: 4974479811362358285, guid: a90c66c7ee2a8684094f832bd2183c7d,
         type: 3}
       propertyPath: m_SortingLayer
-      value: -1
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 407129057946403908, guid: a90c66c7ee2a8684094f832bd2183c7d,
         type: 3}
@@ -2392,7 +2392,7 @@ MonoBehaviour:
   - name: School Girl
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
-    sentence: I want to make kain the sisig that chef Lucing made.
+    sentence: I want to make kain the sisig that chef Lucita made.
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
