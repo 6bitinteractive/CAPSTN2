@@ -78,6 +78,32 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1102 &-5497042301329278812
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PigEarExit
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: a960fa995b0f90040a04fcb0c6a229a9, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1101 &-3976162854210279692
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -255,6 +281,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -5992654106582143215}
     m_Position: {x: 320, y: -160, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -5497042301329278812}
+    m_Position: {x: 355, y: -95, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -3976162854210279692}
@@ -266,4 +295,4 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 10, y: -150, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -5992654106582143215}
+  m_DefaultState: {fileID: 3052574868216803947}

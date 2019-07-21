@@ -9,8 +9,7 @@ using Random = UnityEngine.Random;
 
 public class GrillingStep : MonoBehaviour
 {
-    [SerializeField] private float initialPromptDelay = 6f;
-    [SerializeField] private float promptDelay = 1.5f;
+    [SerializeField] private FloatRange promptDelay;
     [SerializeField] private int maxPromptsPerIngredient = 5;
     [SerializeField] private List<GameObject> ingredientsToGrill;
     [SerializeField] private List<SpawnZone> spawnZones;
@@ -19,13 +18,14 @@ public class GrillingStep : MonoBehaviour
 
     private Queue<GameObject> ingredientsLeft;
     private GameObject currentIngredient;
+    private GameObject currentIngredientInCookware;
     private Animator currentIngredientAnim;
     private int promptCount;
 
     private void Start()
     {
         ingredientsLeft = new Queue<GameObject>(ingredientsToGrill);
-        BeginCookingIngredient();
+        //BeginCookingIngredient();
     }
 
     public void BeginCookingIngredient()
@@ -35,20 +35,20 @@ public class GrillingStep : MonoBehaviour
 
         // Set the current ingredient
         currentIngredient = ingredientsLeft.Peek();
-        currentIngredientAnim = currentIngredient.GetComponent<Animator>();
+        currentIngredientInCookware = currentIngredient.GetComponent<Cookable>().IngredientInCookware;
+        currentIngredientAnim = currentIngredientInCookware.GetComponent<Animator>(); // :(
         currentIngredient.SetActive(true);
 
         // Remove the ingredient from the queue of ingredients yet to be cooked
         ingredientsLeft.Dequeue();
 
         // Spawn the first prompt
-        Invoke("SpawnPrompt", initialPromptDelay);
+        //Invoke("SpawnPrompt", initialPromptDelay);
     }
 
     public void SpawnPrompt()
     {
-        spawnZones[Random.Range(0, spawnZones.Count)].Spawn();
-        promptCount++;
+        Invoke("Spawn", promptDelay.RandomInRange);
     }
 
     public void FlipIngredient()
@@ -58,7 +58,6 @@ public class GrillingStep : MonoBehaviour
 
     public void CheckGameState()
     {
-
         if (MaxPromptReached()) // Check if we're done with one ingredient
         {
             if (StageEnd()) // Check if no ingredients left
@@ -74,7 +73,7 @@ public class GrillingStep : MonoBehaviour
         }
         else
         {
-            Invoke("SpawnPrompt", promptDelay);
+            SpawnPrompt();
         }
     }
 
@@ -89,6 +88,12 @@ public class GrillingStep : MonoBehaviour
         return ingredientsLeft.Count == 0;
     }
 
+    private void Spawn()
+    {
+        spawnZones[Random.Range(0, spawnZones.Count)].Spawn();
+        promptCount++;
+    }
+
     private IEnumerator BeginNext()
     {
         // Wait for animation to finish
@@ -97,9 +102,9 @@ public class GrillingStep : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         // Hide previous ingredient
-        currentIngredient.SetActive(false);
+        currentIngredientInCookware.SetActive(false);
 
         // Start next
-        Invoke("BeginCookingIngredient", promptDelay);
+        BeginCookingIngredient();
     }
 }
