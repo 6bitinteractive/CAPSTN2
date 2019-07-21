@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class SwipeAreaPrompt : Prompt, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
+    private RectTransform rectTransform;
     private GameObject parent;
     private SwipeDirection arrowPromptDirection = SwipeDirection.None;
     private bool inputInCorrectArea;
@@ -20,6 +21,7 @@ public class SwipeAreaPrompt : Prompt, IPointerEnterHandler, IPointerExitHandler
     {
         base.Awake();
 
+        rectTransform = GetComponent<RectTransform>();
         parent = transform.parent.gameObject;
         arrowPromptDirection = GetComponentInParent<ArrowPrompt>().SwipeDirection;
         if (arrowPromptDirection == SwipeDirection.None)
@@ -47,6 +49,11 @@ public class SwipeAreaPrompt : Prompt, IPointerEnterHandler, IPointerExitHandler
         if (swipeData.Direction == SwipeDirection.None)
             return;
 
+        if (RectTransformUtility.RectangleContainsScreenPoint(rectTransform, swipeData.StartPosition))
+        {
+            inputInCorrectArea = true;
+        }
+
         if (swipeData.Direction == arrowPromptDirection && inputInCorrectArea)
         {
             OnCorrectSwipeDirection.Invoke(swipeData);
@@ -57,19 +64,19 @@ public class SwipeAreaPrompt : Prompt, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        inputInCorrectArea = true;
-        Debug.Log("Within correct area");
+        //inputInCorrectArea = true;
+        //Debug.Log("Within correct area");
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        inputInCorrectArea = false;
-        Debug.Log("Outside correct area");
+        //inputInCorrectArea = false;
+        //Debug.Log("Outside correct area");
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        inputInCorrectArea = true;
-        Debug.Log("Within correct area");
+        //inputInCorrectArea = true;
+        //Debug.Log("Within correct area");
     }
 }
