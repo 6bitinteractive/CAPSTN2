@@ -6,7 +6,7 @@ public class PlayerAdventureController : MonoBehaviour
 {
     [SerializeField] private float Speed;
     [SerializeField] private LayerMask LayerMask;
-
+    [SerializeField] float minX, maxX;
     private Vector3 touchPos;
     private Vector3 directiona;
     private Vector3 targetPos;
@@ -48,6 +48,7 @@ public class PlayerAdventureController : MonoBehaviour
                 //  Debug.Log("Reached target destination");
             }
         }
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX), transform.position.y, transform.position.z);
     }
 
     void CastRay()
