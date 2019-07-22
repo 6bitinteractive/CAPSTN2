@@ -245,7 +245,7 @@ PrefabInstance:
     - target: {fileID: 5131909266224661057, guid: e6f572d9a7c3b0a4da6954123336206d,
         type: 3}
       propertyPath: m_text
-      value: Cook with Aling Lucing?
+      value: Cook with Aling Lucita?
       objectReference: {fileID: 0}
     - target: {fileID: 5131909266224661057, guid: e6f572d9a7c3b0a4da6954123336206d,
         type: 3}
@@ -2745,7 +2745,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.9935684, y: -0.23212051}
+  m_Offset: {x: 3.95, y: -0.23212051}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2756,7 +2756,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.140947, y: 16.072289}
+  m_Size: {x: 12, y: 16.8}
   m_EdgeRadius: 0
 --- !u!4 &1996504478
 Transform:
