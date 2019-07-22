@@ -1272,28 +1272,17 @@ MonoBehaviour:
   dialogueArray:
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
+    rightSpeaker: {fileID: 0}
     sentence: (If I recall correctly this is how they say good morning..) Mayap a
       yabak pu!
     onEndSentence:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 386521065}
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
+        m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
     leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
     sentence: Mayap a yabak pu!
     onEndSentence:
       m_PersistentCalls:
@@ -1301,7 +1290,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Maricela
-    leftSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322, type: 3}
     rightSpeaker: {fileID: 0}
     sentence: I'm Maricela, an aspiring cook! Are you Aling Lucita?
     onEndSentence:
@@ -1311,7 +1300,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
     leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
     sentence: Yes, I am Aling Lucita.
     onEndSentence:
       m_PersistentCalls:
@@ -1319,7 +1308,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
+    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
     rightSpeaker: {fileID: 0}
     sentence: A lot of people are giving praise to your sisig. How did you start cooking
       your food?
@@ -1330,7 +1319,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
     leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
     sentence: My granda used to cook us Sisig as salad, but as years go by, we started
       adding more ingredients and revolutionizing it.
     onEndSentence:
@@ -1348,8 +1337,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
-    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
     sentence: Yes. And as I redefine the cooking methods such as boiling, grilling,
       and frying I realized that I made my own version of the food.
     onEndSentence:
@@ -1368,8 +1357,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
-    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
     sentence: But, you look really familiar! Are you perhaps... nevermind. (50 years
       have passed, that couldn't be her.)
     onEndSentence:
@@ -1388,8 +1377,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
-    leftSpeaker: {fileID: 21300000, guid: bee3ddadbf100c2479fae154c6afec6d, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
     sentence: I know this is too much, can you help me learn my own version of Sisig?
     onEndSentence:
       m_PersistentCalls:
@@ -1398,7 +1387,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
     leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
     sentence: (She reminds me of my old chef friend, I'll give her a shot) Alright,
       but I am strict about anything sisig-related. So make sure you listen properly!
     onEndSentence:
@@ -1417,7 +1406,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
     leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
     sentence: This is a really funny coincidence, I do hope you also have the skills
       my friend had. Let's start cooking!
     onEndSentence:
