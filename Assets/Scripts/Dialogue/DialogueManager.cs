@@ -120,21 +120,31 @@ public class DialogueManager : MonoBehaviour
 
     public void CheckRightPortrait(Dialogue dialogueEntry)
     {
+
         // If its null take the last portrait and set it as current portrait
         if (dialogueEntry.rightSpeaker == null)
+        {
+            rightSpeaker.gameObject.SetActive(false);
             return;
-            //dialogueEntry.rightSpeaker = rightSpeaker.sprite;
+        }
         else
+        {
+            rightSpeaker.gameObject.SetActive(true);
             rightSpeaker.sprite = dialogueEntry.rightSpeaker;
-        Debug.Log(dialogueEntry.rightSpeaker);
+        }
     }
 
     public void CheckLeftPortrait(Dialogue dialogueEntry)
     {
         if (dialogueEntry.leftSpeaker == null)
+        {
+            leftSpeaker.gameObject.SetActive(false);
             return;
-            //dialogueEntry.leftSpeaker = leftSpeaker.sprite;
+        }
         else
+        {
+            leftSpeaker.gameObject.SetActive(true);
             leftSpeaker.sprite = dialogueEntry.leftSpeaker;
+        }
     }
 }

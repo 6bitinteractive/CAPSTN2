@@ -165,8 +165,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueArray:
   - name: Lola
-    leftSpeaker: {fileID: 21300000, guid: bee3ddadbf100c2479fae154c6afec6d, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: So, what are your plans after college RiRi?
     onEndSentence:
       m_PersistentCalls:
@@ -183,8 +183,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
-    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: Is that so? Then let's have a test for tonight's dinner then.
     onEndSentence:
       m_PersistentCalls:
@@ -192,8 +192,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
-    leftSpeaker: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: Using the leftover ingredients, cook fried rice for dinner, RiRi.
     onEndSentence:
       m_PersistentCalls:
@@ -896,22 +896,11 @@ MonoBehaviour:
   dialogueArray:
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322, type: 3}
-    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
+    rightSpeaker: {fileID: 0}
     sentence: Lolaaaa!
     onEndSentence:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 0
+        m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
@@ -938,18 +927,7 @@ MonoBehaviour:
     sentence: Yes dearie I am fine, it's just a minor cough.
     onEndSentence:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1586928453}
-          m_MethodName: set_flipX
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Maricela
@@ -971,8 +949,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
-    leftSpeaker: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: What's wrong RiRi?
     onEndSentence:
       m_PersistentCalls:
@@ -990,7 +968,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
   - name: Lola
     leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: My my, you are still as energetic as you were before. Hahaha!
     onEndSentence:
       m_PersistentCalls:
@@ -1007,8 +985,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: You're still my little RiRi. Oh, how time flies.
     onEndSentence:
       m_PersistentCalls:
@@ -1017,7 +995,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
   - name: Lola
     leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: Why don't we continue our chat inside? It's getting chilly outside.
     onEndSentence:
       m_PersistentCalls:
@@ -1025,7 +1003,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Maricela
-    leftSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
     rightSpeaker: {fileID: 0}
     sentence: Yes Lola!
     onEndSentence:
@@ -1975,12 +1953,12 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[3].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2030,7 +2008,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[1].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_flipX
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2095,7 +2073,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2120,7 +2098,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[1].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2261,6 +2239,31 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueArray.Array.data[12].name
       value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3400490635153947922, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}

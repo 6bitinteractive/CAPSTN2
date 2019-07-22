@@ -794,7 +794,7 @@ MonoBehaviour:
   dialogueArray:
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
+    rightSpeaker: {fileID: 0}
     sentence: Lola here you go, my own version of Fried Rice!
     onEndSentence:
       m_PersistentCalls:
@@ -802,8 +802,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
-    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: "Hmm, you\u2019re quite there but there\u2019s something missing in
       your dish."
     onEndSentence:
@@ -831,8 +831,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
-    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: "It\u2019s not that your food tastes bad RiRi, what I meant was, your
       connection to the dish."
     onEndSentence:
@@ -841,8 +841,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
-    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: You followed the recipe which is not a bad thing, but I need to feel
       your uniqueness.
     onEndSentence:
@@ -852,7 +852,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
   - name: Lola
     leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: Here, I'll show you.
     onEndSentence:
       m_PersistentCalls:
@@ -864,17 +864,6 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 21300000, guid: d314181cbc2664c4eb7c5872dc160f38,
               type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -903,7 +892,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858, type: 3}
+    leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
     sentence: "So\u2026 how do I do that?"
     onEndSentence:
@@ -912,8 +901,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
-    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: You need to learn about the food RiRi, connect with the food, the people,
       and the culture. Go out and explore different cuisines.
     onEndSentence:
@@ -932,31 +921,9 @@ MonoBehaviour:
           m_MethodName: set_sprite
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 21300000, guid: e9fb059aac975b74993c6422fe73ff43,
+            m_ObjectArgument: {fileID: 21300000, guid: ecbba6720638c1740840d02c89072c29,
               type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -965,8 +932,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
-    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: You are right, because there will be a time that I'll have to close
       my shop since I am getting old.
     onEndSentence:
@@ -975,8 +942,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
-    leftSpeaker: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: And I hope when the time comes, you are ready to take over me as the
       new chef of the eatery.
     onEndSentence:
@@ -1004,8 +971,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
-    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: I'm fine RiRi. I just need a day's rest and I'll be up and okay like
       nothing happened.
     onEndSentence:
@@ -1014,8 +981,8 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Lola
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: "Don\u2019t worry about me dear, I\u2019ll be able to manage on my own,
       I\u2019ll rest so you can show me your learnings when you come back!"
     onEndSentence:
@@ -1023,7 +990,7 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Lola
+  - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
     rightSpeaker: {fileID: 0}
     sentence: I will Lola! See you later!
@@ -2069,7 +2036,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[6].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2084,7 +2051,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2459,7 +2426,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[17].name
-      value: Lola
+      value: Maricela
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2600,6 +2567,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3400490635153947922, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
