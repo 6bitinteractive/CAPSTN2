@@ -289,6 +289,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5131909266366709367, guid: e6f572d9a7c3b0a4da6954123336206d,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131909266366709367, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1456521607}
@@ -313,6 +318,31 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 67b721aee3b8db644a795fafa9794e01,
         type: 2}
+    - target: {fileID: 5131909266366709367, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131909266366709367, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131909266366709367, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 386521065}
+    - target: {fileID: 5131909266366709367, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131909266366709367, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5131909266224661056, guid: e6f572d9a7c3b0a4da6954123336206d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -326,7 +356,7 @@ PrefabInstance:
     - target: {fileID: 5131909266691276381, guid: e6f572d9a7c3b0a4da6954123336206d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5131909266691276381, guid: e6f572d9a7c3b0a4da6954123336206d,
         type: 3}
@@ -351,6 +381,31 @@ PrefabInstance:
     - target: {fileID: 5131909266691276381, guid: e6f572d9a7c3b0a4da6954123336206d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131909266691276381, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131909266691276381, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131909266691276381, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 805146390}
+    - target: {fileID: 5131909266691276381, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131909266691276381, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1129,6 +1184,12 @@ MonoBehaviour:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
+--- !u!1 &805146390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5131909266691276383, guid: e6f572d9a7c3b0a4da6954123336206d,
+    type: 3}
+  m_PrefabInstance: {fileID: 92473425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &829929400 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
@@ -1211,12 +1272,23 @@ MonoBehaviour:
   dialogueArray:
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
     sentence: (If I recall correctly this is how they say good morning..) Mayap a
       yabak pu!
     onEndSentence:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 386521065}
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
@@ -1354,6 +1426,17 @@ MonoBehaviour:
         - m_Target: {fileID: 92473427}
           m_MethodName: SetActive
           m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 2034585823}
+          m_MethodName: DisableAction
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3196,6 +3279,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1709934453}
+    - target: {fileID: 5844868907315857387, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
         type: 3}
       propertyPath: m_fontAsset
