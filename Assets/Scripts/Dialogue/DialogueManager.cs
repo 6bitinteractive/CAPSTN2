@@ -122,17 +122,18 @@ public class DialogueManager : MonoBehaviour
     {
         // If its null take the last portrait and set it as current portrait
         if (dialogueEntry.rightSpeaker == null)
-            dialogueEntry.rightSpeaker = rightSpeaker.sprite;
-
+            return;
+            //dialogueEntry.rightSpeaker = rightSpeaker.sprite;
         else
             rightSpeaker.sprite = dialogueEntry.rightSpeaker;
+        Debug.Log(dialogueEntry.rightSpeaker);
     }
 
     public void CheckLeftPortrait(Dialogue dialogueEntry)
     {
         if (dialogueEntry.leftSpeaker == null)
-            dialogueEntry.leftSpeaker = leftSpeaker.sprite;
-
+            return;
+            //dialogueEntry.leftSpeaker = leftSpeaker.sprite;
         else
             leftSpeaker.sprite = dialogueEntry.leftSpeaker;
     }

@@ -411,7 +411,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -927,7 +927,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
   - name: Lola
     leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: Yes RiRi? *coughs*
     onEndSentence:
       m_PersistentCalls:
@@ -945,7 +945,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
   - name: Lola
     leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: Yes dearie I am fine, it's just a minor cough.
     onEndSentence:
       m_PersistentCalls:
@@ -1531,13 +1531,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 1168a9f502bde0d4b8fa04ade1bb00cb, type: 3}
     - target: {fileID: 1813122121804889669, guid: c1709e7d95bfafd4bb50a8476cb7fb7e,
         type: 3}
       propertyPath: m_Volume
       value: 0.05
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1568034196, guid: c1709e7d95bfafd4bb50a8476cb7fb7e, type: 3}
+    - {fileID: 1568034195, guid: c1709e7d95bfafd4bb50a8476cb7fb7e, type: 3}
+    - {fileID: 299087524, guid: c1709e7d95bfafd4bb50a8476cb7fb7e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c1709e7d95bfafd4bb50a8476cb7fb7e, type: 3}
 --- !u!1 &1586928449
 GameObject:

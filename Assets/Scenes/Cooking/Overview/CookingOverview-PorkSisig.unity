@@ -1579,6 +1579,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StepButton-Chopping
       objectReference: {fileID: 0}
+    - target: {fileID: 8381006136738059656, guid: fb721ce4852bc8847aaf5634b2e13439,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8381006136738059659, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1637,12 +1642,12 @@ PrefabInstance:
     - target: {fileID: 8381006136738059659, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 927.1111
       objectReference: {fileID: 0}
     - target: {fileID: 8381006136738059659, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -167.70302
       objectReference: {fileID: 0}
     - target: {fileID: 8381006136738059659, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
@@ -1662,7 +1667,7 @@ PrefabInstance:
     - target: {fileID: 8381006136738059659, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8381006136738059659, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
@@ -1672,7 +1677,7 @@ PrefabInstance:
     - target: {fileID: 8381006136738059659, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8381006136738059659, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
@@ -2394,7 +2399,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: fef054e6f1fa19441865e8961d041879, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1568034196, guid: c1709e7d95bfafd4bb50a8476cb7fb7e, type: 3}
+    - {fileID: 1568034195, guid: c1709e7d95bfafd4bb50a8476cb7fb7e, type: 3}
+    - {fileID: 299087524, guid: c1709e7d95bfafd4bb50a8476cb7fb7e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c1709e7d95bfafd4bb50a8476cb7fb7e, type: 3}
 --- !u!1 &2123522680
 GameObject:

@@ -237,6 +237,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8943524987379369143, guid: fa30df542984d4448a21d2cce93018c6,
+        type: 3}
+      propertyPath: clips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8943524987379369143, guid: fa30df542984d4448a21d2cce93018c6,
+        type: 3}
+      propertyPath: sfx
+      value: 
+      objectReference: {fileID: 299087524}
+    - target: {fileID: 8943524987379369143, guid: fa30df542984d4448a21d2cce93018c6,
+        type: 3}
+      propertyPath: clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: b54b0d06bed0d2f4bbc1918eb8399dce, type: 3}
+    - target: {fileID: 8943524987379369143, guid: fa30df542984d4448a21d2cce93018c6,
+        type: 3}
+      propertyPath: clips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c4a4a847d61b0214288b9505de7fc335, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa30df542984d4448a21d2cce93018c6, type: 3}
 --- !u!224 &1369044 stripped
@@ -383,6 +403,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7120480945440877055}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &299087524 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 299087524, guid: c1709e7d95bfafd4bb50a8476cb7fb7e,
+    type: 3}
+  m_PrefabInstance: {fileID: 514912504}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &367931713 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7120480945645213886, guid: 539340f11c7fdef41a3de37540391bbe,
@@ -468,6 +494,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1568034196, guid: c1709e7d95bfafd4bb50a8476cb7fb7e, type: 3}
+      propertyPath: waterSFX.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 57d47a5d6cd1ad54e9b5aaaf549f7bb9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1709e7d95bfafd4bb50a8476cb7fb7e, type: 3}
 --- !u!1001 &631391537
@@ -959,6 +989,13 @@ MonoBehaviour:
     Max: 3
   maxPrompts: 10
   spawnZonesContainer: {fileID: 666347203}
+  sfx: {fileID: 299087524}
+  clips:
+  - {fileID: 8300000, guid: 6e4354df2e8e678478226cf57f7ce719, type: 3}
+  - {fileID: 8300000, guid: 5595c3d1a65fb864fa1acc87dffdcc1b, type: 3}
+  - {fileID: 8300000, guid: 9307bc6fb6618b943b691d8a289478d3, type: 3}
+  - {fileID: 8300000, guid: b54b0d06bed0d2f4bbc1918eb8399dce, type: 3}
+  - {fileID: 8300000, guid: c4a4a847d61b0214288b9505de7fc335, type: 3}
   OnWaterBoiling:
     m_PersistentCalls:
       m_Calls:
@@ -1631,7 +1668,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 86db2e5306a573b4fb627dd98aaaf47a,
+      objectReference: {fileID: 11400000, guid: 67b721aee3b8db644a795fafa9794e01,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7057b1831f20a3445b8f66653a4710d5, type: 3}
@@ -2205,12 +2242,12 @@ PrefabInstance:
     - target: {fileID: 7120480945199101019, guid: 539340f11c7fdef41a3de37540391bbe,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.17
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 7120480945199101019, guid: 539340f11c7fdef41a3de37540391bbe,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 7120480945199101019, guid: 539340f11c7fdef41a3de37540391bbe,
         type: 3}

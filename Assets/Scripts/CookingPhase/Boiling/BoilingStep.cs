@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Audio;
 
 public class BoilingStep : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class BoilingStep : MonoBehaviour
     [SerializeField] private FloatRange pressureEventDelayRange;
     [SerializeField] private int maxPrompts;
     [SerializeField] private GameObject spawnZonesContainer;
+    [SerializeField] AudioSource sfx;
+    [SerializeField] AudioClip[] clips;
 
     [Header("1 - Adding ingredients")]
     public UnityEvent OnWaterBoiling = new UnityEvent();
@@ -73,7 +76,7 @@ public class BoilingStep : MonoBehaviour
     {
         if (MaxPromptReached())
             return;
-
+        PlaySFX(1);
         startPressureAccumulation = true;
         pressureEventDelay = pressureEventDelayRange.RandomInRange; // Randomize when to spawn prompt
         Debug.Log("Prompt Delay: " + pressureEventDelay);
@@ -85,7 +88,7 @@ public class BoilingStep : MonoBehaviour
     {
         if (MaxPromptReached())
             return;
-
+        PlaySFX(2);
         OnPressureReleased.Invoke();
     }
 
@@ -119,5 +122,10 @@ public class BoilingStep : MonoBehaviour
         {
             Invoke("SpawnPrompt", pressureEventDelayRange.RandomInRange);
         }
+    }
+    public void PlaySFX(int index)
+    {              
+        sfx.clip = clips[index];
+        sfx.Play();
     }
 }

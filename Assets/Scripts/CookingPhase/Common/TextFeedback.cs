@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class TextFeedback : MonoBehaviour
 {
+    [SerializeField] AudioSource sfx;
+    [SerializeField] AudioClip[] clips;
     private List<SpawnZone> spawnZones = new List<SpawnZone>();
 
     private void Awake()
@@ -20,14 +23,22 @@ public class TextFeedback : MonoBehaviour
             case PromptRating.Awful:
             case PromptRating.Bad:
                 spawnZones[2].Spawn();
+                PlaySFX(0);
                 break;
             case PromptRating.Good:
                 spawnZones[1].Spawn();
+                PlaySFX(1);
                 break;
             case PromptRating.Great:
             case PromptRating.Perfect:
                 spawnZones[0].Spawn();
+                PlaySFX(1);
                 break;
         }
+    }
+    public void PlaySFX(int index)
+    {
+        sfx.clip = clips[index];
+        sfx.Play();
     }
 }

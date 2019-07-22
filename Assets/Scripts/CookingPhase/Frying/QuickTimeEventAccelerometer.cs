@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class QuickTimeEventAccelerometer : Prompt
 {
@@ -13,6 +14,8 @@ public class QuickTimeEventAccelerometer : Prompt
     private Vector3 InitialTilt;
     private Vector3 Tilt;
     private bool isFlippingUpwards;
+    [SerializeField] AudioSource sfx;
+    [SerializeField] AudioClip[] clips;
 
     protected override void Awake()
     {
@@ -33,6 +36,7 @@ public class QuickTimeEventAccelerometer : Prompt
 
         if (currentTime <= 0)
         {
+            PlaySFX(1);
             Debug.Log("Failed");
             OnFailedInput.Invoke();
             Hide();
@@ -46,6 +50,7 @@ public class QuickTimeEventAccelerometer : Prompt
 
     private void SuccessfulInput()
     {
+        PlaySFX(0);
         Debug.Log("Success");
         OnSuccessfulInput.Invoke();
         Hide();
@@ -100,5 +105,11 @@ public class QuickTimeEventAccelerometer : Prompt
             Debug.Log("Down");
             SuccessfulInput();
         }
+    }
+
+    public void PlaySFX(int index)
+    {
+        sfx.clip = clips[index];
+        sfx.Play();
     }
 }
