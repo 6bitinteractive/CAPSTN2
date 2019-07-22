@@ -286,17 +286,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1968796355}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnFadeScene:
@@ -852,7 +841,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 5844868907975112647}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1968796355}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -907,7 +896,7 @@ MonoBehaviour:
   dialogueArray:
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322, type: 3}
-    rightSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: Lolaaaa!
     onEndSentence:
       m_PersistentCalls:
@@ -1771,12 +1760,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1968796355 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5844868907315857388, guid: 4dc95df0d43717d43801c32a84cdce7d,
-    type: 3}
-  m_PrefabInstance: {fileID: 5844868907975112647}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1997519569
 GameObject:
   m_ObjectHideFlags: 0
