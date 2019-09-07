@@ -36,13 +36,14 @@ public class PathManager : MonoBehaviour
 
                 transform.position = Vector3.Lerp(currentWaypointPosition, currentPath.Peek(), moveTimeCurrent / moveTimeTotal);
 
+                /*
                 // Animation           
                 Vector3 direction = (currentPath.Peek() - transform.position).normalized;
                 if (direction.x <= 0)
                     animator.SetBool("towardsRight", false);
                 else
                     animator.SetBool("towardsRight", true);
-                    
+                    */             
             }
             else
             {
@@ -68,7 +69,7 @@ public class PathManager : MonoBehaviour
         currentPath = new Stack<Vector3>();
         var currentNode = FindClosestWaypoint(transform.position);
         var endNode = FindClosestWaypoint(destination);
-        LastNode = endNode;
+       // LastNode = endNode;
 
         /*
         // 2 - Check to make sure that node for both end points can be found and that they're different
@@ -170,7 +171,7 @@ public class PathManager : MonoBehaviour
         currentPath = null;
         moveTimeTotal = 0;
         moveTimeCurrent = 0;
-        animator.SetBool("isMoving", false);
+      //  animator.SetBool("isMoving", false);
     }
 
     // TODO: Possible optimizations

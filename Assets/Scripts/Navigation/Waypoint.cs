@@ -36,8 +36,7 @@ public class Waypoint : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-     
+    {   
         if (collision.gameObject.layer == 8)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = GlowSprite;

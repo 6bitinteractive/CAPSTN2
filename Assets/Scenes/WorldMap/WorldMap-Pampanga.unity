@@ -284,6 +284,36 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadSelectedStage
       objectReference: {fileID: 0}
+    - target: {fileID: 5131909266691276381, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131909266691276381, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131909266691276381, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131909266691276381, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1114642984}
+    - target: {fileID: 5131909266691276381, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: EnableAction
+      objectReference: {fileID: 0}
+    - target: {fileID: 5131909266691276381, guid: e6f572d9a7c3b0a4da6954123336206d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6f572d9a7c3b0a4da6954123336206d, type: 3}
 --- !u!224 &250150502 stripped
@@ -392,6 +422,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Waypoint 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728069955356712898, guid: a045d8b1faa69fe4786b14a420386c1e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4728069955356712897, guid: a045d8b1faa69fe4786b14a420386c1e,
         type: 3}
@@ -810,6 +845,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waypoint (Pampanga)
       objectReference: {fileID: 0}
+    - target: {fileID: 4728069955356712898, guid: a045d8b1faa69fe4786b14a420386c1e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4728069955356712897, guid: a045d8b1faa69fe4786b14a420386c1e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -917,9 +957,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4728069955356712958, guid: a045d8b1faa69fe4786b14a420386c1e,
         type: 3}
+      propertyPath: Neighbors.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728069955356712958, guid: a045d8b1faa69fe4786b14a420386c1e,
+        type: 3}
       propertyPath: Neighbors.Array.data[0]
       value: 
       objectReference: {fileID: 546689671}
+    - target: {fileID: 4728069955356712958, guid: a045d8b1faa69fe4786b14a420386c1e,
+        type: 3}
+      propertyPath: Neighbors.Array.data[1]
+      value: 
+      objectReference: {fileID: 665264306}
     - target: {fileID: 4728069955221267169, guid: a045d8b1faa69fe4786b14a420386c1e,
         type: 3}
       propertyPath: m_fontSize
@@ -959,6 +1009,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -1.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 4728069954349125645, guid: a045d8b1faa69fe4786b14a420386c1e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a045d8b1faa69fe4786b14a420386c1e, type: 3}
@@ -1075,6 +1130,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d41ef8c0048bcb4186c5a4187b903a6, type: 3}
+--- !u!114 &1114642984 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4965963477383992761, guid: 5d41ef8c0048bcb4186c5a4187b903a6,
+    type: 3}
+  m_PrefabInstance: {fileID: 975413202}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31979dfea3081c043926348604912197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1486980284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,6 +1539,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waypoint (Lola's Crib)
       objectReference: {fileID: 0}
+    - target: {fileID: 4728069955356712898, guid: a045d8b1faa69fe4786b14a420386c1e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4728069955356712897, guid: a045d8b1faa69fe4786b14a420386c1e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1615,6 +1687,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4b4da44cb32605947bf918897ba0d776,
         type: 3}
+    - target: {fileID: 4728069955356712956, guid: a045d8b1faa69fe4786b14a420386c1e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4728069955356712959, guid: a045d8b1faa69fe4786b14a420386c1e,
         type: 3}
       propertyPath: m_Offset.y
