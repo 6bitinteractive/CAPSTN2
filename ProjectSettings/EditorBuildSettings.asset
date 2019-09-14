@@ -36,9 +36,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Cooking/Overview/CookingOverview-PorkSisig.unity
     guid: d34158b1382e2c0468f159d0a157ca68
   - enabled: 1
-    path: Assets/Scenes/Cooking/Cooking-PorkSisig-Boiling.unity
-    guid: aa1aeb619f8efce4981015adaea0102b
-  - enabled: 1
     path: Assets/Scenes/Cooking/Cooking-PorkSisig-Grilling.unity
     guid: 651b67cf87f6f9f458185441a699f12d
   - enabled: 1
@@ -56,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dialogue/AfterSisig.unity
     guid: 223fafb811a3f5f428b8e1f2c735e6fb
+  - enabled: 1
+    path: Assets/Scenes/Cooking/Cooking-PorkSisig-Boiling.unity
+    guid: 622a7da23d9d4e7488cc177853b24e81
   m_configObjects: {}

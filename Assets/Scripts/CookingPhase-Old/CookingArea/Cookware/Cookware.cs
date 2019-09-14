@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Cookware : MonoBehaviour
 {
     [HideInInspector] public List<Cookable> CookableIngredients = new List<Cookable>();
-    public HeatSetting CurrentHeat { get; set; }
+    //public HeatSetting CurrentHeat { get; set; }
 
     private DropArea dropArea;
 
@@ -28,45 +28,45 @@ public class Cookware : MonoBehaviour
         dropArea.OnItemDroppedOnArea.RemoveAllListeners();
     }
 
-    private void FixedUpdate()
-    {
-        if (CookableIngredients.Count > 0)
-        {
-            foreach (var item in CookableIngredients)
-                ApplyHeat(item.Temperature);
-        }
-    }
+    //private void FixedUpdate()
+    //{
+    //    if (CookableIngredients.Count > 0)
+    //    {
+    //        foreach (var item in CookableIngredients)
+    //            ApplyHeat(item.Temperature);
+    //    }
+    //}
 
-    public void ApplyHeat(Slider cookingIngredientTemp)
-    {
-        if (cookingIngredientTemp == null) { return; }
+    //public void ApplyHeat(Slider cookingIngredientTemp)
+    //{
+    //    if (cookingIngredientTemp == null) { return; }
 
-        // TODO: Apply heat over time
-        float heat = 0;
-        switch (CurrentHeat)
-        {
-            case HeatSetting.Low:
-                heat = StoveController.LowHeatValue;
-                break;
-            case HeatSetting.Medium:
-                heat = StoveController.MediumHeatValue;
-                break;
-            case HeatSetting.High:
-                heat = StoveController.HighHeatValue;
-                break;
-            default:
-                heat = 0;
-                break;
-        }
+    //    // TODO: Apply heat over time
+    //    float heat = 0;
+    //    switch (CurrentHeat)
+    //    {
+    //        case HeatSetting.Low:
+    //            heat = StoveController.LowHeatValue;
+    //            break;
+    //        case HeatSetting.Medium:
+    //            heat = StoveController.MediumHeatValue;
+    //            break;
+    //        case HeatSetting.High:
+    //            heat = StoveController.HighHeatValue;
+    //            break;
+    //        default:
+    //            heat = 0;
+    //            break;
+    //    }
 
-        cookingIngredientTemp.value += heat;
-    }
+    //    cookingIngredientTemp.value += heat;
+    //}
 
-    public void AddToBoilingIngredients(Cookable ingredient)
-    {
-        CookableIngredients.Add(ingredient);
-        Debug.Log("Added to cookware: " + ingredient.gameObject.name);
-    }
+    //public void AddToBoilingIngredients(Cookable ingredient)
+    //{
+    //    CookableIngredients.Add(ingredient);
+    //    Debug.Log("Added to cookware: " + ingredient.gameObject.name);
+    //}
 
     private void AddToCookableIngredients(Draggable item)
     {

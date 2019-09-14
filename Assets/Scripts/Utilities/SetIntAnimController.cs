@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Typically used for switching states at Animation timeline.
+
 [RequireComponent(typeof(Animator))]
 
 public class SetIntAnimController : MonoBehaviour

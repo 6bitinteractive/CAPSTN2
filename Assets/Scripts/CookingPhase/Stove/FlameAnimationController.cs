@@ -17,7 +17,7 @@ public class FlameAnimationController : MonoBehaviour
         animator = GetComponent<Animator>();
 
         // Turn off flame
-        //image.enabled = false; // NOTE: Current art implementation has no "off" setting
+        image.enabled = false; // NOTE: Current art implementation has no "off" setting
     }
 
     public void UpdateFlame(HeatSetting heatSetting)
@@ -25,7 +25,7 @@ public class FlameAnimationController : MonoBehaviour
         image.enabled = true;
         animator.SetInteger("State", (int)heatSetting);
 
-        //if (heatSetting == HeatSetting.Off)
-        //    image.enabled = false; // NOTE: Current art implementation has no "off" setting
+        if (heatSetting == HeatSetting.Off)
+            image.enabled = false; // NOTE: Current art implementation has no "off" setting
     }
 }
