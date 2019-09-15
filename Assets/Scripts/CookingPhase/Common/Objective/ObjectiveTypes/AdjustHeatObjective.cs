@@ -9,13 +9,17 @@ public class AdjustHeatObjective : Objective
 
     private HeatSetting currentSetting;
     private StoveController stoveController;
+    private Animator stoveControllerAnimator;
 
     protected override void InitializeObjective()
     {
         base.InitializeObjective();
 
         stoveController = kitchen.Equipment.GetComponentInChildren<StoveController>();
+        stoveControllerAnimator = stoveController.GetComponent<Animator>();
         stoveController.OnStoveSettingChanged.AddListener(SetHeatSetting);
+
+        stoveControllerAnimator.SetBool("Blinking", true);
     }
 
     protected override void OnDestroy()
@@ -33,6 +37,7 @@ public class AdjustHeatObjective : Objective
 
     private void SetHeatSetting(HeatSetting heatSetting)
     {
+        stoveControllerAnimator.SetBool("Blinking", false); // FIX: Avoid calling multiple times
         currentSetting = heatSetting;
     }
 }
