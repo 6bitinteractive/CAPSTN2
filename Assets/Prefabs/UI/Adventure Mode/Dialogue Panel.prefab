@@ -118,7 +118,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4033020484576534321}
         m_MethodName: DisplayNextSentence
         m_Mode: 1
         m_Arguments:
@@ -768,6 +768,7 @@ GameObject:
   - component: {fileID: 5844868907753801732}
   - component: {fileID: 5844868907753801733}
   - component: {fileID: 5844868907753801734}
+  - component: {fileID: 4033020484576534321}
   m_Layer: 5
   m_Name: Dialogue Panel
   m_TagString: Untagged
@@ -857,6 +858,30 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4033020484576534321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5844868907753801848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e669e1152223d8542afd6be1f6985247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 5844868907728584831}
+  dialogueText: {fileID: 5844868907742612873}
+  leftSpeaker: {fileID: 5844868908323577053}
+  rightSpeaker: {fileID: 5844868907315857386}
+  animator: {fileID: 5844868907753801734}
+  nextButton: {fileID: 5844868906346474232}
+  playerAdventureController: {fileID: 0}
+  OnFullDialogueEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &5844868907765273612
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +1002,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4033020484576534321}
         m_MethodName: EndDialogue
         m_Mode: 1
         m_Arguments:
