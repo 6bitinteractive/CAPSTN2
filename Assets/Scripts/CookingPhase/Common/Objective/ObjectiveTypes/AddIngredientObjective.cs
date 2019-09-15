@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class AddIngredientObjective : Objective
 {
-    [SerializeField] private Kitchen kitchen;
     [SerializeField] private List<Cookable> ingredientsToBeAdded;
-
     private int currentIngredient;
 
     protected override void OnEnable()
@@ -34,9 +32,6 @@ public class AddIngredientObjective : Objective
     {
         if (ingredientsToBeAdded.Count == 0)
             Debug.LogError("Specify which ingredients are to be added.");
-
-        if (kitchen.Cookware == null)
-            Debug.LogError("Kitchen variable is not set.");
 
         // Enable first ingredient
         ingredientsToBeAdded[currentIngredient].gameObject.SetActive(true);

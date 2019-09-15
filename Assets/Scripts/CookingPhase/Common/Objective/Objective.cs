@@ -18,8 +18,12 @@ public abstract class Objective : MonoBehaviour
     public ObjectiveEvent OnSuccess = new ObjectiveEvent();
     public ObjectiveEvent OnFail = new ObjectiveEvent();
 
+    protected static Kitchen kitchen;
+
+    protected virtual void Awake() { }
     protected virtual void OnEnable() { }
     protected virtual void OnDisable() { }
+    protected virtual void OnDestroy() { }
 
     private void Start()
     {
@@ -37,6 +41,7 @@ public abstract class Objective : MonoBehaviour
     public void Begin()
     {
         Debug.Log("Objective - Initialized");
+        kitchen = SingletonManager.GetInstance<Kitchen>(); // TODO: Iffy to use the singleton manager; issues with race condition
         InitializeObjective();
 
         Active = true;

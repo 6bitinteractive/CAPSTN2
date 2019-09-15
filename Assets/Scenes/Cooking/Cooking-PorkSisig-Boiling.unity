@@ -271,6 +271,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7718167361380902649}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1110966105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3950824821809205607, guid: e83e7d10d232f854eab4f3506ae491bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 3950824822023634978}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1974388408 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
@@ -300,6 +306,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AddIngredientObjective
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951437658866597269, guid: 6033c3790bba73a489205974bccaa159,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6951437658866597268, guid: 6033c3790bba73a489205974bccaa159,
         type: 3}
@@ -698,6 +709,85 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e83e7d10d232f854eab4f3506ae491bd, type: 3}
+--- !u!1001 &6851496187090265027
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1045649556}
+    m_Modifications:
+    - target: {fileID: 6851496187070122958, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: m_Name
+      value: AdjustHeatObjective-High
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122958, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122957, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122957, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122957, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122957, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122957, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122957, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122957, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122957, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122957, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122957, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122957, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122956, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: descriptionText
+      value: Adjust heat to <color="blue">high</color>
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3747a553b1b196149bd20c5f1bde00d7, type: 3}
 --- !u!1001 &7552385174038203471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -897,6 +987,11 @@ PrefabInstance:
       propertyPath: Cookware
       value: 
       objectReference: {fileID: 1386080668617038199}
+    - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: Equipment
+      value: 
+      objectReference: {fileID: 1110966105}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f0588ae6acafbb41bed6e8405a38c38, type: 3}
 --- !u!1001 &7718167361380902649
