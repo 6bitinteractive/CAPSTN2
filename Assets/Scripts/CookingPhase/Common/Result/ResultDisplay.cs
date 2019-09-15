@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SceneLoader))]
+
 public class ResultDisplay : MonoBehaviour
 {
     [SerializeField] private ResultText resultText;
     [SerializeField] private GameObject starRatingsPanel;
-    [SerializeField] private Step step;
-    [SerializeField] private SceneLoader sceneLoader;
+    [SerializeField] private Kitchen kitchen;
 
     private List<StarRating> starRatings = new List<StarRating>();
+    private SceneLoader sceneLoader;
 
     private void Awake()
     {
         starRatings.AddRange(starRatingsPanel.GetComponentsInChildren<StarRating>());
+        sceneLoader = GetComponent<SceneLoader>();
     }
 
     public void DisplayResult(int rating = 3)
@@ -26,7 +29,7 @@ public class ResultDisplay : MonoBehaviour
 
     public void ReplayScene()
     {
-        sceneLoader.LoadScene(step.StageScene);
+        sceneLoader.LoadScene(kitchen.StageScene);
     }
 
     public void LoadNextScene()
@@ -36,6 +39,6 @@ public class ResultDisplay : MonoBehaviour
         //sceneLoader.LoadScene(nextScene >= step.Recipe.Stages.Count ? step.Recipe.CookingOverview : step.Recipe.Stages[nextScene]);
 
         // For now, the Next button always loads the CookingOverview scene
-        sceneLoader.LoadScene(step.Recipe.CookingOverview);
+        sceneLoader.LoadScene(kitchen.Recipe.CookingOverview);
     }
 }

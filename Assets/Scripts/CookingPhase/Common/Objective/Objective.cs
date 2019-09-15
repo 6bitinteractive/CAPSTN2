@@ -18,6 +18,9 @@ public abstract class Objective : MonoBehaviour
     public ObjectiveEvent OnSuccess = new ObjectiveEvent();
     public ObjectiveEvent OnFail = new ObjectiveEvent();
 
+    protected virtual void OnEnable() { }
+    protected virtual void OnDisable() { }
+
     private void Start()
     {
         // Begin objective as soon as the object has been enabled

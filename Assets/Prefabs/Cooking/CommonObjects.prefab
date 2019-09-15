@@ -64,7 +64,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 50
   m_TargetDisplay: 0
 --- !u!114 &5357085074187050109
 MonoBehaviour:
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resultText: {fileID: 3802864256876647487}
   starRatingsPanel: {fileID: 6261303616535208809}
-  step: {fileID: 7361202602154854508}
+  kitchen: {fileID: 0}
   sceneLoader: {fileID: 7953671891037394371}
 --- !u!1 &298687284985020642
 GameObject:
@@ -2340,7 +2340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7552385174291408537}
-  - component: {fileID: 7361202602154854508}
+  - component: {fileID: 1215473850045948912}
   - component: {fileID: 7953671891037394371}
   m_Layer: 0
   m_Name: CommonObjects
@@ -2370,7 +2370,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7361202602154854508
+--- !u!114 &1215473850045948912
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2379,11 +2379,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7552385174291408538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 256c38eda360b78418d6ed3a47738938, type: 3}
+  m_Script: {fileID: 11500000, guid: 86eb04075dfa8ea45bd59e98122004f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Recipe: {fileID: 11400000, guid: d63573a0c4502b440abdae53873e9b15, type: 2}
-  StageScene: {fileID: 11400000, guid: 07e0989769d0a3d4d9b9b7b8066d7a25, type: 2}
+  Recipe: {fileID: 0}
+  StageScene: {fileID: 0}
+  cookware: {fileID: 0}
 --- !u!114 &7953671891037394371
 MonoBehaviour:
   m_ObjectHideFlags: 0
