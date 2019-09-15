@@ -283,7 +283,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3950824822023634978}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &1963399686
+--- !u!95 &1963399689
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

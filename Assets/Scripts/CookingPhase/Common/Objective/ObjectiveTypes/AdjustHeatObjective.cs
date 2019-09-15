@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class AdjustHeatObjective : Objective
 {
@@ -9,24 +10,33 @@ public class AdjustHeatObjective : Objective
 
     private HeatSetting currentSetting;
     private StoveController stoveController;
+    private Slider stoveControllerSlider;
     private Animator stoveControllerAnimator;
-
-    protected override void InitializeObjective()
-    {
-        base.InitializeObjective();
-
-        stoveController = kitchen.Equipment.GetComponentInChildren<StoveController>();
-        stoveControllerAnimator = stoveController.GetComponent<Animator>();
-        stoveController.OnStoveSettingChanged.AddListener(SetHeatSetting);
-
-        stoveControllerAnimator.SetBool("Blinking", true);
-    }
 
     protected override void OnDestroy()
     {
         base.OnDestroy();
 
         stoveController.OnStoveSettingChanged.RemoveAllListeners();
+    }
+
+    protected override void InitializeObjective()
+    {
+        base.InitializeObjective();
+
+        stoveController = kitchen.Equipment.GetComponentInChildren<StoveController>();
+        stoveControllerSlider = stoveController.GetComponent<Slider>();
+        stoveControllerAnimator = stoveController.GetComponent<Animator>();
+        stoveController.OnStoveSettingChanged.AddListener(SetHeatSetting);
+
+        stoveControllerAnimator.SetBool("Blinking", true);
+        stoveControllerSlider.interactable = true;
+    }
+
+    protected override void FinalizeObjective()
+    {
+        base.FinalizeObjective();
+        stoveControllerSlider.interactable = false;
     }
 
     protected override bool SuccessConditionMet()
