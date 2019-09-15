@@ -120,6 +120,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &38679031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+    type: 3}
+  m_PrefabInstance: {fileID: 136414009}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4178e2707550da349a1ea0e74bef7fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &92473425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -597,7 +609,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1953211859}
+      objectReference: {fileID: 38679031}
     - target: {fileID: 7666349374062067934, guid: 9bb1a168bb6e97141855406769924b33,
         type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -607,6 +619,137 @@ PrefabInstance:
         type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617,
+        type: 3}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].sentence
+      value: Good morning!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].name
+      value: Woman
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].sentence
+      value: Mayap a yabak pu!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858,
+        type: 3}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].sentence
+      value: Hmm?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[3].name
+      value: Woman
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[3].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858,
+        type: 3}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[3].sentence
+      value: It means good morning.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[3].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[4].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[4].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7,
+        type: 3}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[4].sentence
+      value: Oh!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[4].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[5].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[5].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322,
+        type: 3}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[5].sentence
+      value: It's so fun travelling, I keep on learning new things!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7029491645476315926, guid: 9bb1a168bb6e97141855406769924b33,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[5].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bb1a168bb6e97141855406769924b33, type: 3}
@@ -760,6 +903,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &413415106 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+    type: 3}
+  m_PrefabInstance: {fileID: 573417911}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4178e2707550da349a1ea0e74bef7fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &510035728
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,13 +1088,25 @@ RectTransform:
   - {fileID: 938540992}
   - {fileID: 92473426}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &559440482 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1590272463}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4178e2707550da349a1ea0e74bef7fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &573417911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -950,7 +1117,7 @@ PrefabInstance:
     - target: {fileID: 2093543107990855973, guid: 11b11125c136efd489afe4fd9c766674,
         type: 3}
       propertyPath: m_Name
-      value: Chef Lucing
+      value: Chef Lucita
       objectReference: {fileID: 0}
     - target: {fileID: 2093543107990855973, guid: 11b11125c136efd489afe4fd9c766674,
         type: 3}
@@ -1046,7 +1213,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 939959558}
+      objectReference: {fileID: 413415106}
     - target: {fileID: 7752221333017960097, guid: 11b11125c136efd489afe4fd9c766674,
         type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1056,6 +1223,415 @@ PrefabInstance:
         type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].onEndSentence.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].sentence
+      value: (If I recall correctly this is how they say good morning..) Mayap a yabak
+        pu!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].name
+      value: Aling Lucita
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].rightSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].sentence
+      value: Mayap a yabak pu!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].sentence
+      value: I'm Maricela, an aspiring cook! Are you Aling Lucita?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[3].name
+      value: Aling Lucita
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[3].rightSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[3].sentence
+      value: Yes, I am Aling Lucita.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[3].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[4].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[4].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[4].sentence
+      value: A lot of people are giving praise to your sisig. How did you start cooking
+        your food?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[4].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[5].name
+      value: Aling Lucita
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[5].rightSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[5].sentence
+      value: My granda used to cook us Sisig as salad, but as years go by, we started
+        adding more ingredients and revolutionizing it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[5].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[6].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[6].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[6].sentence
+      value: Woah, I didn't knew that!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[6].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[7].name
+      value: Aling Lucita
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[7].rightSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[7].sentence
+      value: Yes. And as I redefine the cooking methods such as boiling, grilling,
+        and frying I realized that I made my own version of the food.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[7].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[8].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[8].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[8].sentence
+      value: (This is what Lola is talking about!) You mean you had a connection with
+        the dish?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[8].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[9].name
+      value: Aling Lucita
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[9].rightSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[9].sentence
+      value: But, you look really familiar! Are you perhaps... nevermind. (50 years
+        have passed, that couldn't be her.)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[9].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[10].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[10].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[10].sentence
+      value: Oh, you might've mistake me from someone else, it's my first time being
+        here! But I'm loving the atmosphere, the heat, and the friendly people!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[10].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[11].name
+      value: Aling Lucita
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[11].rightSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[11].sentence
+      value: I know this is too much, can you help me learn my own version of Sisig?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[11].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[12].name
+      value: Aling Lucita
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[12].rightSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[12].sentence
+      value: (She reminds me of my old chef friend, I'll give her a shot) Alright,
+        but I am strict about anything sisig-related. So make sure you listen properly!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[12].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[13].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[13].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[13].sentence
+      value: Yes I will! Thank you for this opportunity!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[13].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].name
+      value: Aling Lucita
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].rightSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].sentence
+      value: This is a really funny coincidence, I do hope you also have the skills
+        my friend had. Let's start cooking!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 92473427}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2034585823}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DisableAction
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: 11b11125c136efd489afe4fd9c766674,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[14].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11b11125c136efd489afe4fd9c766674, type: 3}
@@ -1110,80 +1686,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &766778348
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
-    type: 3}
-  m_PrefabInstance: {fileID: 3400490634532923282}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 766778349}
-  - component: {fileID: 766778350}
-  m_Layer: 0
-  m_Name: Child F
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &766778349
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3400490633785556095, guid: c92d0a65abf429e41aa96fd441f1d917,
-    type: 3}
-  m_PrefabInstance: {fileID: 3400490634532923282}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766778348}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2130975362}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &766778350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-    type: 3}
-  m_PrefabInstance: {fileID: 3400490634532923282}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766778348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4178e2707550da349a1ea0e74bef7fd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueArray:
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: Hi! You're so adorable!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Girl
-    leftSpeaker: {fileID: 21300000, guid: bee3ddadbf100c2479fae154c6afec6d, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: "I\u2019m not supposed to talk to strangers, but thank you! Hehehe!"
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Girl
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: Ooops... I just did. Bye-bye!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
 --- !u!1 &805146390 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5131909266691276383, guid: e6f572d9a7c3b0a4da6954123336206d,
@@ -1226,216 +1728,6 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 5844868907975112647}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &939959556
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 939959557}
-  - component: {fileID: 939959558}
-  m_Layer: 0
-  m_Name: Chef Lucita
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &939959557
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939959556}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2130975362}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &939959558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939959556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4178e2707550da349a1ea0e74bef7fd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueArray:
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: (If I recall correctly this is how they say good morning..) Mayap a
-      yabak pu!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Aling Lucita
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
-    sentence: Mayap a yabak pu!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: I'm Maricela, an aspiring cook! Are you Aling Lucita?
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Aling Lucita
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
-    sentence: Yes, I am Aling Lucita.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: A lot of people are giving praise to your sisig. How did you start cooking
-      your food?
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Aling Lucita
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
-    sentence: My granda used to cook us Sisig as salad, but as years go by, we started
-      adding more ingredients and revolutionizing it.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: Woah, I didn't knew that!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Aling Lucita
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
-    sentence: Yes. And as I redefine the cooking methods such as boiling, grilling,
-      and frying I realized that I made my own version of the food.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: (This is what Lola is talking about!) You mean you had a connection
-      with the dish?
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Aling Lucita
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
-    sentence: But, you look really familiar! Are you perhaps... nevermind. (50 years
-      have passed, that couldn't be her.)
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: Oh, you might've mistake me from someone else, it's my first time being
-      here! But I'm loving the atmosphere, the heat, and the friendly people!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Aling Lucita
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
-    sentence: I know this is too much, can you help me learn my own version of Sisig?
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Aling Lucita
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
-    sentence: (She reminds me of my old chef friend, I'll give her a shot) Alright,
-      but I am strict about anything sisig-related. So make sure you listen properly!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: Yes I will! Thank you for this opportunity!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Aling Lucita
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
-    sentence: This is a really funny coincidence, I do hope you also have the skills
-      my friend had. Let's start cooking!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 92473427}
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 2034585823}
-          m_MethodName: DisableAction
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
 --- !u!4 &1044117744 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2168344348245210694, guid: a90c66c7ee2a8684094f832bd2183c7d,
@@ -1656,7 +1948,7 @@ PrefabInstance:
     - target: {fileID: 1813122122348102874, guid: c1709e7d95bfafd4bb50a8476cb7fb7e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1813122122348102874, guid: c1709e7d95bfafd4bb50a8476cb7fb7e,
         type: 3}
@@ -2113,7 +2405,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1944017269}
+      objectReference: {fileID: 559440482}
     - target: {fileID: 7752221333017960097, guid: fe504919af01eb040862f58667bee42d,
         type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -2123,6 +2415,143 @@ PrefabInstance:
         type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].name
+      value: School Girl
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].sentence
+      value: "Ugh.. where are my friends? We\u2019re going to eat at Aling Lucita."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].sentence
+      value: Uhm, Hi! Do you know where Aling Lucita is?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].name
+      value: School Girl
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].sentence
+      value: She is usually manning her shop, so she should be nearby.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[3].name
+      value: School Girl
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[3].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[3].sentence
+      value: You should try her Sisig! It is sooooo good!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[3].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[4].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[4].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[4].sentence
+      value: I will then! I want to learn on how to prepare it too!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[4].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[5].name
+      value: School Girl
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[5].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[5].sentence
+      value: "That\u2019s cool, see you around!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: fe504919af01eb040862f58667bee42d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[5].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe504919af01eb040862f58667bee42d, type: 3}
@@ -2164,7 +2593,7 @@ Transform:
   - {fileID: 573417912}
   - {fileID: 1264255650}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1662328127 stripped
 MonoBehaviour:
@@ -2377,7 +2806,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 766778350}
+      objectReference: {fileID: 1819513469}
     - target: {fileID: 7752221333017960097, guid: a90c66c7ee2a8684094f832bd2183c7d,
         type: 3}
       propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -2393,6 +2822,77 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: a90c66c7ee2a8684094f832bd2183c7d,
+        type: 3}
+      propertyPath: dialogueArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: a90c66c7ee2a8684094f832bd2183c7d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].name
+      value: Maricela
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: a90c66c7ee2a8684094f832bd2183c7d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: a90c66c7ee2a8684094f832bd2183c7d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].sentence
+      value: Hi! You're so adorable!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: a90c66c7ee2a8684094f832bd2183c7d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[0].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: a90c66c7ee2a8684094f832bd2183c7d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].name
+      value: Girl
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: a90c66c7ee2a8684094f832bd2183c7d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: bee3ddadbf100c2479fae154c6afec6d,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: a90c66c7ee2a8684094f832bd2183c7d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].sentence
+      value: "I\u2019m not supposed to talk to strangers, but thank you! Hehehe!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: a90c66c7ee2a8684094f832bd2183c7d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: a90c66c7ee2a8684094f832bd2183c7d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].name
+      value: Girl
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: a90c66c7ee2a8684094f832bd2183c7d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].leftSpeaker
+      value: 
+      objectReference: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617,
+        type: 3}
+    - target: {fileID: 6952697396338802025, guid: a90c66c7ee2a8684094f832bd2183c7d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].sentence
+      value: Ooops... I just did. Bye-bye!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952697396338802025, guid: a90c66c7ee2a8684094f832bd2183c7d,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[2].onEndSentence.m_TypeName
+      value: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a90c66c7ee2a8684094f832bd2183c7d, type: 3}
 --- !u!1 &1780274183 stripped
@@ -2401,6 +2901,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6185687234019796071}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1819513469 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6952697396338802025, guid: a90c66c7ee2a8684094f832bd2183c7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1764078574}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4178e2707550da349a1ea0e74bef7fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1835215046
 GameObject:
   m_ObjectHideFlags: 0
@@ -2511,202 +3023,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1944017267
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1944017268}
-  - component: {fileID: 1944017269}
-  m_Layer: 0
-  m_Name: School Girl
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1944017268
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944017267}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2130975362}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1944017269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944017267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4178e2707550da349a1ea0e74bef7fd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueArray:
-  - name: School Girl
-    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: "Ugh.. where are my friends? We\u2019re going to eat at Aling Lucita."
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: Uhm, Hi! Do you know where Aling Lucita is?
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: School Girl
-    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: She is usually manning her shop, so she should be nearby.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: School Girl
-    leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: You should try her Sisig! It is sooooo good!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: I will then! I want to learn on how to prepare it too!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: School Girl
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: "That\u2019s cool, see you around!"
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
---- !u!1 &1953211858
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1953211860}
-  - component: {fileID: 1953211859}
-  m_Layer: 0
-  m_Name: Woman
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1953211859
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953211858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4178e2707550da349a1ea0e74bef7fd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueArray:
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: Good morning!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Woman
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: Mayap a yabak pu!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: Hmm?
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Woman
-    leftSpeaker: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: It means good morning.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: Oh!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: It's so fun travelling, I keep on learning new things!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
---- !u!4 &1953211860
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1953211858}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2130975362}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1964267077
 GameObject:
@@ -2920,203 +3236,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2130975360
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3400490635153947922, guid: c92d0a65abf429e41aa96fd441f1d917,
-    type: 3}
-  m_PrefabInstance: {fileID: 3400490634532923282}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2130975362}
-  m_Layer: 0
-  m_Name: Dialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2130975362
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-    type: 3}
-  m_PrefabInstance: {fileID: 3400490634532923282}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130975360}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.944785, y: 1.2564073, z: -11.203104}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 766778349}
-  - {fileID: 1944017268}
-  - {fileID: 1953211860}
-  - {fileID: 939959557}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3400490634532923282
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_Name
-      value: Child F
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[4].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EndDialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EndDialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[4].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[4].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[4].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: SceneData, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[0].sentence
-      value: Hi! You're so adorable!
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].sentence
-      value: "I\u2019m not supposed to talk to strangers, but thank you! Hehehe!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[2].sentence
-      value: Ooops... I just did. Bye-bye!
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[2].name
-      value: Girl
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].name
-      value: Girl
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[0].name
-      value: Maricela
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947922, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_Name
-      value: Dialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.944785
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.2564073
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -11.203104
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c92d0a65abf429e41aa96fd441f1d917, type: 3}
 --- !u!1001 &5844868907975112647
 PrefabInstance:
   m_ObjectHideFlags: 0
