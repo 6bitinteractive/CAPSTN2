@@ -13,12 +13,13 @@ public class AdjustHeatObjective : Objective
     private Slider stoveControllerSlider;
     private Animator stoveControllerAnimator;
 
-    protected override void OnDestroy()
-    {
-        base.OnDestroy();
+    // FIX: Null reference when objective is done?
+    //protected override void OnDestroy()
+    //{
+    //    base.OnDestroy();
 
-        stoveController.OnStoveSettingChanged.RemoveAllListeners();
-    }
+    //    stoveController.OnStoveSettingChanged.RemoveAllListeners();
+    //}
 
     protected override void InitializeObjective()
     {

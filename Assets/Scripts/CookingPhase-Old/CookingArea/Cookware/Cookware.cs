@@ -7,7 +7,10 @@ using UnityEngine.UI;
 
 public class Cookware : MonoBehaviour
 {
+    [SerializeField] private RectTransform lidPosition;
     [HideInInspector] public List<Cookable> CookableIngredients = new List<Cookable>();
+
+    public RectTransform LidPosition => lidPosition;
     //public HeatSetting CurrentHeat { get; set; }
 
     private DropArea dropArea;
@@ -82,8 +85,8 @@ public class Cookware : MonoBehaviour
 
     private void ShowIngredientInCookware(Draggable item)
     {
-        if (item == null) { return; }
-
-        item.GetComponent<Cookable>().ShowIngredientInCookware();
+        Cookable cookable = item.GetComponent<Cookable>();
+        if (cookable == null) { return; }
+        cookable.ShowIngredientInCookware();
     }
 }
