@@ -18,9 +18,9 @@ public abstract class Objective : MonoBehaviour
     public ObjectiveEvent OnSuccess = new ObjectiveEvent();
     public ObjectiveEvent OnFail = new ObjectiveEvent();
 
-    public ObjectiveEvent OnPerfect = new ObjectiveEvent();
-    public ObjectiveEvent OnUnder = new ObjectiveEvent();
-    public ObjectiveEvent OnOver = new ObjectiveEvent();
+    public ObjectiveEvent OnPerfectState = new ObjectiveEvent();
+    public ObjectiveEvent OnUnderState = new ObjectiveEvent();
+    public ObjectiveEvent OnOverState = new ObjectiveEvent();
 
     protected static Kitchen kitchen;
 
