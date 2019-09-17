@@ -37,6 +37,16 @@ public class AddIngredientObjective : Objective
         ingredientsToBeAdded[currentIngredient].gameObject.SetActive(true);
     }
 
+    protected override void FinalizeObjective()
+    {
+        base.FinalizeObjective();
+
+        foreach (var ingredient in ingredientsToBeAdded)
+        {
+            ingredient.gameObject.SetActive(false);
+        }
+    }
+
     protected override bool SuccessConditionMet()
     {
         bool success = true; // We start with true in case there's only one item

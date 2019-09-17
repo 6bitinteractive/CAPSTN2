@@ -37,6 +37,7 @@ public class AdjustHeatObjective : Objective
     protected override void FinalizeObjective()
     {
         base.FinalizeObjective();
+        stoveControllerAnimator.SetBool("Blinking", false);
         stoveControllerSlider.interactable = false;
     }
 
