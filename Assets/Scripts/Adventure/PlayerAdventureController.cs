@@ -58,7 +58,7 @@ public class PlayerAdventureController : MonoBehaviour
         Vector3 worldPoint = MainCamera.ScreenToWorldPoint(Input.mousePosition);
         worldPoint.z = MainCamera.transform.position.z;
         Ray ray = new Ray(worldPoint, new Vector3(0, 0, 1));
-        RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
+        RaycastHit2D hit = Physics2D.GetRayIntersection(ray, LayerMask);
 
         if (hit)
         {
