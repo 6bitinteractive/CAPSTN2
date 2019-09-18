@@ -7,6 +7,8 @@ public class PlayerAdventureController : MonoBehaviour
     [SerializeField] private float Speed;
     [SerializeField] private LayerMask LayerMask;
     [SerializeField] float minX, maxX;
+    [SerializeField] private Camera MainCamera;
+
     private Vector3 touchPos;
     private Vector3 directiona;
     private Vector3 targetPos;
@@ -53,8 +55,8 @@ public class PlayerAdventureController : MonoBehaviour
 
     void CastRay()
     {
-        Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        worldPoint.z = Camera.main.transform.position.z;
+        Vector3 worldPoint = MainCamera.ScreenToWorldPoint(Input.mousePosition);
+        worldPoint.z = MainCamera.transform.position.z;
         Ray ray = new Ray(worldPoint, new Vector3(0, 0, 1));
         RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
 

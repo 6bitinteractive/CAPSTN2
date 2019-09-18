@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    [SerializeField] private Camera mainCamera; // To prevent having more than 1 MainCamera
     [SerializeField] private bool debugMode;
     public delegate void SceneLoadEvent();
     public static event SceneLoadEvent BeforeSceneUnload, AfterSceneLoad;
@@ -77,6 +78,8 @@ public class SceneController : MonoBehaviour
         if (BeforeSceneUnload != null)
             BeforeSceneUnload();
 
+        mainCamera.enabled = true;
+
         // Unload the current active scene
         yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
 
@@ -86,6 +89,8 @@ public class SceneController : MonoBehaviour
         // If this event has any subscribers, call it
         if (AfterSceneLoad != null)
             AfterSceneLoad();
+
+        mainCamera.enabled = false;
 
         // Start fading back in and wait for it to finish before exiting the function
         yield return StartCoroutine(Fade(0f));
