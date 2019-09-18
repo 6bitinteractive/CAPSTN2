@@ -46,11 +46,9 @@ public class SwipeDetector : MonoBehaviour
             switch (touch.phase)
             {
                 case TouchPhase.Began:
-                case TouchPhase.Moved:
                     SetStartPosition(touch.position);
                     break;
 
-                case TouchPhase.Stationary:
                 case TouchPhase.Ended:
                 case TouchPhase.Canceled:
                     SetEndPosition(touch.position);
