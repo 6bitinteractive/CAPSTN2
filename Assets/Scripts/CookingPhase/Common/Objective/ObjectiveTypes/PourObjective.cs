@@ -6,9 +6,12 @@ public class PourObjective : Objective
 {
     [SerializeField] private WaterStateController water;
     [SerializeField] private float requiredPourDuration = 2f;
+    [SerializeField] private float requiredPouringAngle = -0.3f;
 
     private float currentPourDuration;
     private int currentWaterState = 10;
+    private Vector3 InitialTilt;
+    private Vector3 Tilt;
 
     protected override void RunObjective()
     {
@@ -53,8 +56,19 @@ public class PourObjective : Objective
 
         #region Mobile Input
 #if UNITY_ANDROID || UNITY_IOS
-        // TODO: Implement using accelerometer/gyro
-        return Input.touchCount > 0;
+        
+        Tilt = Input.acceleration;
+       
+        Debug.Log("Current Tilt: " + Tilt);
+
+        // Pouring Leftwards
+        if (Tilt.x <= requiredPouringAngle)
+        {
+            Debug.Log("Pouring");
+            return true;
+        }
+
+        return false;
 #endif
         #endregion
     }
