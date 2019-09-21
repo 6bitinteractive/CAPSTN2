@@ -156,6 +156,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 559177926348135221}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &657034681 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2787259756061889409, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+    type: 3}
+  m_PrefabInstance: {fileID: 7552385174038203471}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &662446991 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3950824820984493462, guid: e83e7d10d232f854eab4f3506ae491bd,
@@ -909,6 +921,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
         type: 3}
+      propertyPath: underState.OnStateReached.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
+        type: 3}
       propertyPath: water
       value: 
       objectReference: {fileID: 1075779835}
@@ -1012,6 +1029,49 @@ PrefabInstance:
       propertyPath: overState.dialogueText
       value: This is a bit too much!
       objectReference: {fileID: 0}
+    - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
+        type: 3}
+      propertyPath: perfectState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 45d73a64cb67b1249b9b35e70db22205,
+        type: 3}
+    - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
+        type: 3}
+      propertyPath: perfectState.dialogueHint.dialogueText
+      value: That should be enough water!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
+        type: 3}
+      propertyPath: underState.OnStateReached.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
+        type: 3}
+      propertyPath: underState.OnStateReached.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
+        type: 3}
+      propertyPath: underState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b,
+        type: 3}
+    - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
+        type: 3}
+      propertyPath: underState.dialogueHint.dialogueText
+      value: Hmmm...A little more.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
+        type: 3}
+      propertyPath: overState.dialogueHint.dialogueText
+      value: This is a bit too much!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
+        type: 3}
+      propertyPath: overState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 108d0244f79c8cc498776d2670c7a0e6,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8083c22cd1341f4c8abaae8a8e6e9f1, type: 3}
 --- !u!1001 &1294113730399472327
@@ -2347,6 +2407,56 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 546669158868403635, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: characterPortrait
+      value: 
+      objectReference: {fileID: 657034681}
+    - target: {fileID: 7036585350723601249, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_text
+      value: Pour the water until the pork is covered.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036585350723601249, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036585350723601249, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036585350723601249, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036585350723601249, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036585350723601249, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036585350723601249, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7829037928639393111, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332928751676187061, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7552385174291408538, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: m_Name
@@ -2583,6 +2693,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410889772022872803, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8284159892255163490, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f0588ae6acafbb41bed6e8405a38c38, type: 3}

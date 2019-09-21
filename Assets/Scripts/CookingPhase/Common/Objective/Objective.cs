@@ -11,7 +11,7 @@ public abstract class Objective : MonoBehaviour
     [SerializeField][TextArea(1, 3)] protected string descriptionText;
 
     public string Description => descriptionText;
-    public List<ObjectiveState> ObjectiveStates { get; protected set; }
+    public List<ObjectiveState> ObjectiveStates = new List<ObjectiveState>();
     public bool Successful { get; protected set; }
     public bool Active { get; protected set; }
 
@@ -29,8 +29,6 @@ public abstract class Objective : MonoBehaviour
 
     private void Start()
     {
-        ObjectiveStates = new List<ObjectiveState>();
-
         // Begin objective as soon as the object has been enabled
         Begin();
     }
@@ -119,8 +117,7 @@ public class ObjectiveState
     public System.Func<bool> HasBeenReached { get; set; }
     public bool Active { get; set; }
 
-    [TextArea(1, 3)] public string dialogueText;
-
+    public DialogueHint dialogueHint;
     public ObjectiveStateEvent OnStateReached = new ObjectiveStateEvent();
 
     public ObjectiveState(Status _status)

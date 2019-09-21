@@ -17,6 +17,22 @@ public class PourObjective : Objective
     private Vector3 InitialTilt;
     private Vector3 Tilt;
 
+    protected override void Awake()
+    {
+        base.Awake();
+
+        // Setup objectives
+        // Add to list
+        ObjectiveStates.Add(perfectState);
+        ObjectiveStates.Add(underState);
+        ObjectiveStates.Add(overState);
+
+        // Define condition
+        perfectState.HasBeenReached = () => currentWaterState == 15; // 15 for now so that it ends up with the still animation
+        underState.HasBeenReached = () => currentWaterState > 10 && currentWaterState < 15 && !IsPouring();
+        overState.HasBeenReached = () => false; // TODO: Implement when art assets are done
+    }
+
     protected override void RunObjective()
     {
         base.RunObjective();
@@ -42,22 +58,6 @@ public class PourObjective : Objective
             water.SwitchState(currentWaterState);
             currentWaterState++;
         }
-    }
-
-    protected override void InitializeObjective()
-    {
-        base.InitializeObjective();
-
-        // Setup objectives
-        // Add to list
-        ObjectiveStates.Add(perfectState);
-        ObjectiveStates.Add(underState);
-        ObjectiveStates.Add(overState);
-
-        // Define condition
-        perfectState.HasBeenReached = () => currentWaterState == 14;
-        underState.HasBeenReached = () => currentWaterState > 10 && currentWaterState < 14 && !IsPouring();
-        overState.HasBeenReached = () => false; // TODO: Implement when art assets are done
     }
 
     protected override bool SuccessConditionMet()
