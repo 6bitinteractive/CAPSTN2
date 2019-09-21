@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05bb389cb61a21c41892baa7e52cd9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: Adjust heat to <b>high</b>
+  descriptionText: Adjust heat to <color="blue">high</color>
   OnBegin:
     m_PersistentCalls:
       m_Calls: []
