@@ -13,7 +13,7 @@ public class ResultDisplay : MonoBehaviour
     private List<StarRating> starRatings = new List<StarRating>();
     private SceneLoader sceneLoader;
 
-    private void Start()
+    private void Awake()
     {
         starRatings.AddRange(starRatingsPanel.GetComponentsInChildren<StarRating>());
         sceneLoader = GetComponent<SceneLoader>();
