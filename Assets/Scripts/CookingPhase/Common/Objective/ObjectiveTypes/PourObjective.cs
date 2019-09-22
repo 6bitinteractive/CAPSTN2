@@ -7,6 +7,7 @@ public class PourObjective : Objective
     [SerializeField] private WaterStateController water;
     [SerializeField] private float requiredPourDuration = 2f;
     [SerializeField] private float requiredPouringAngle = -0.3f;
+    [SerializeField] private DialogueHint dialogueHint;
 
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
     [SerializeField] private ObjectiveState underState = new ObjectiveState(ObjectiveState.Status.Under);
@@ -31,6 +32,12 @@ public class PourObjective : Objective
         perfectState.HasBeenReached = () => currentWaterState == 15; // 15 for now so that it ends up with the still animation
         underState.HasBeenReached = () => currentWaterState > 10 && currentWaterState < 15 && !IsPouring();
         overState.HasBeenReached = () => false; // TODO: Implement when art assets are done
+    }
+
+    protected override void InitializeObjective()
+    {
+        base.InitializeObjective();
+        SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
     }
 
     protected override void RunObjective()

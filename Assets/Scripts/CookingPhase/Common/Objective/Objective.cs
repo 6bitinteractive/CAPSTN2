@@ -11,9 +11,9 @@ public abstract class Objective : MonoBehaviour
     [SerializeField][TextArea(1, 3)] protected string descriptionText;
 
     public string Description => descriptionText;
-    public List<ObjectiveState> ObjectiveStates = new List<ObjectiveState>(); // NOTE: See PourObjective.cs for implementation of ObjectiveStates
     public bool Successful { get; protected set; }
     public bool Active { get; protected set; }
+    [HideInInspector] public List<ObjectiveState> ObjectiveStates = new List<ObjectiveState>(); // NOTE: See PourObjective.cs for implementation of ObjectiveStates
 
     public ObjectiveEvent OnBegin = new ObjectiveEvent();
     public ObjectiveEvent OnEnd = new ObjectiveEvent();

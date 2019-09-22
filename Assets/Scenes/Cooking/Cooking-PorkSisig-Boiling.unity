@@ -1072,6 +1072,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
         type: 3}
+    - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
+        type: 3}
+      propertyPath: dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+        type: 3}
+    - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
+        type: 3}
+      propertyPath: dialogueHint.dialogueText
+      value: Pour enough water to boil pork.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8083c22cd1341f4c8abaae8a8e6e9f1, type: 3}
 --- !u!1001 &1294113730399472327
@@ -1939,6 +1950,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
         type: 3}
+    - target: {fileID: 6400498538117018178, guid: a82c13e3250f01541a01a4f6171f094f,
+        type: 3}
+      propertyPath: dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+        type: 3}
+    - target: {fileID: 6400498538117018178, guid: a82c13e3250f01541a01a4f6171f094f,
+        type: 3}
+      propertyPath: dialogueHint.dialogueText
+      value: Now wait for it to boil.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a82c13e3250f01541a01a4f6171f094f, type: 3}
 --- !u!1001 &6851496187090265027
@@ -2293,6 +2315,17 @@ PrefabInstance:
       propertyPath: underState.dialogueHint.dialogueText
       value: Just a little more...
       objectReference: {fileID: 0}
+    - target: {fileID: 7258991850271817006, guid: 20c83cb01b4465144ae84f5270384cfc,
+        type: 3}
+      propertyPath: dialogueHint.dialogueText
+      value: Remove the scum using the ladle.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258991850271817006, guid: 20c83cb01b4465144ae84f5270384cfc,
+        type: 3}
+      propertyPath: dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20c83cb01b4465144ae84f5270384cfc, type: 3}
 --- !u!1001 &7362022209945906726

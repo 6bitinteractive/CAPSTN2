@@ -8,6 +8,8 @@ public class RemoveScumObjective : Objective
 {
     [SerializeField] private WaterScum waterScum;
     [SerializeField] private KitchenUtensil ladle;
+    [SerializeField] private DialogueHint dialogueHint;
+
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
     [SerializeField] private ObjectiveState underState = new ObjectiveState(ObjectiveState.Status.Under);
 
@@ -47,6 +49,7 @@ public class RemoveScumObjective : Objective
     {
         base.InitializeObjective();
         ladle.gameObject.SetActive(true);
+        SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
     }
 
     protected override void FinalizeObjective()

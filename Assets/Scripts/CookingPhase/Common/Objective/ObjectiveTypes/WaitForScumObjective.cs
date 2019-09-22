@@ -5,6 +5,8 @@ using UnityEngine;
 public class WaitForScumObjective : Objective
 {
     [SerializeField] private WaterScum waterScum;
+    [SerializeField] private DialogueHint dialogueHint;
+
     private Coroutine coroutine;
 
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
@@ -33,6 +35,7 @@ public class WaitForScumObjective : Objective
         waterScum.gameObject.SetActive(true);
 
         coroutine = StartCoroutine(waterScum.Display());
+        SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
     }
 
     protected override void FinalizeObjective()

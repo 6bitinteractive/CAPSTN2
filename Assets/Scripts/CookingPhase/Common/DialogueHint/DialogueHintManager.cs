@@ -25,11 +25,16 @@ public class DialogueHintManager : MonoBehaviour
         }
     }
 
-    public void Show(ObjectiveState objectiveState)
+    public void Show(DialogueHint dialogueHint)
     {
-        dialogueHintDisplay.characterPortrait.sprite = objectiveState.dialogueHint.characterPortrait;
-        dialogueHintDisplay.dialogueText.text = objectiveState.dialogueHint.dialogueText;
+        dialogueHintDisplay.characterPortrait.sprite = dialogueHint.characterPortrait;
+        dialogueHintDisplay.dialogueText.text = dialogueHint.dialogueText;
         dialogueHintDisplay.Show(true);
+    }
+
+    private void Show(ObjectiveState objectiveState)
+    {
+        Show(objectiveState.dialogueHint);
     }
 
     private void SubscribeToEvent(Objective objective)
