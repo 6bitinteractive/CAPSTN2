@@ -126,6 +126,37 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1386080668617038198}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &240949390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240949384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01fad6488e23d94c898b337f982193c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &240949391
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240949384}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b3a0613f539bae429812a1a213771a6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &301710322 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1386080667967076465, guid: b01abd8778539bb49a624c9e2929e427,
@@ -248,6 +279,8 @@ GameObject:
   - component: {fileID: 1191485172}
   - component: {fileID: 1191485171}
   - component: {fileID: 1191485175}
+  - component: {fileID: 1191485177}
+  - component: {fileID: 1191485176}
   m_Layer: 5
   m_Name: Ladle
   m_TagString: Untagged
@@ -368,6 +401,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ad5e3e78ea30f45b68bb77d3c764f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1191485176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191485169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01fad6488e23d94c898b337f982193c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1191485177
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191485169}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b3a0613f539bae429812a1a213771a6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1963399685 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3950824822513037755, guid: e83e7d10d232f854eab4f3506ae491bd,
@@ -788,7 +852,7 @@ PrefabInstance:
     - target: {fileID: 559177926974933127, guid: c7eb8202151dc27479ce1e0bf11fc46e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 425
+      value: 1216
       objectReference: {fileID: 0}
     - target: {fileID: 559177926974933127, guid: c7eb8202151dc27479ce1e0bf11fc46e,
         type: 3}
@@ -1160,7 +1224,7 @@ PrefabInstance:
     - target: {fileID: 1600753451542417291, guid: 4b73822dad76a8e43aa4ed0d4b7f5422,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 425
+      value: 1216
       objectReference: {fileID: 0}
     - target: {fileID: 1600753451542417291, guid: 4b73822dad76a8e43aa4ed0d4b7f5422,
         type: 3}
@@ -1484,7 +1548,7 @@ PrefabInstance:
     - target: {fileID: 6169716286074218012, guid: 23d4d195465c9f44484ee0e5e1b05258,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 425
+      value: 1216
       objectReference: {fileID: 0}
     - target: {fileID: 6169716286074218012, guid: 23d4d195465c9f44484ee0e5e1b05258,
         type: 3}
@@ -1735,6 +1799,11 @@ PrefabInstance:
     - target: {fileID: 3950824822493528114, guid: e83e7d10d232f854eab4f3506ae491bd,
         type: 3}
       propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3950824822700344150, guid: e83e7d10d232f854eab4f3506ae491bd,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2791,6 +2860,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217135153445722006, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 5683103781369759020, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}

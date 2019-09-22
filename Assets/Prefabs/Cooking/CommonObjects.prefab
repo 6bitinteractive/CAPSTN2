@@ -3620,6 +3620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3217135153445722006}
   - component: {fileID: 2866379937112763513}
+  - component: {fileID: 2572162892964425852}
   m_Layer: 5
   m_Name: NextButtonPanel
   m_TagString: Untagged
@@ -3655,6 +3656,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7568053989730152725}
   m_CullTransparentMesh: 0
+--- !u!95 &2572162892964425852
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7568053989730152725}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: a6653e26d3296e04ca0696e1ea7b1449, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7829037928639393111
 GameObject:
   m_ObjectHideFlags: 0
