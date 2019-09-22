@@ -13,6 +13,8 @@ public class AdjustHeatObjective : Objective
     private Slider stoveControllerSlider;
     private Animator stoveControllerAnimator;
 
+    private bool showNextButton;
+
     // FIX: Null reference when objective is done?
     //protected override void OnDestroy()
     //{
@@ -39,6 +41,7 @@ public class AdjustHeatObjective : Objective
         base.FinalizeObjective();
         stoveControllerAnimator.SetBool("Blinking", false);
         stoveControllerSlider.interactable = false;
+        showNextButton = false;
     }
 
     protected override bool SuccessConditionMet()
@@ -49,6 +52,12 @@ public class AdjustHeatObjective : Objective
 
     private void SetHeatSetting(HeatSetting heatSetting)
     {
+        if (!showNextButton)
+        {
+            showNextButton = true;
+            GoToNextObjective(false);
+        }
+
         stoveControllerAnimator.SetBool("Blinking", false); // FIX: Avoid calling multiple times
         currentSetting = heatSetting;
     }

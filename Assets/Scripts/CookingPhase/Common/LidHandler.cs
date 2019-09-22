@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Draggable))]
@@ -9,6 +10,7 @@ using UnityEngine;
 public class LidHandler : MonoBehaviour
 {
     public bool IsCoveringCookware { get; private set; }
+    public UnityEvent OnCoverCookware = new UnityEvent();
 
     private RectTransform rectTransform;
     private BoxCollider2D boxCollider;
@@ -38,6 +40,7 @@ public class LidHandler : MonoBehaviour
     {
         cookware = collision.GetComponent<Cookware>();
         IsCoveringCookware = cookware;
+        OnCoverCookware.Invoke();
 
         Debug.Log("Lid - Covering cookware");
     }

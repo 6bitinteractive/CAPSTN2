@@ -63,7 +63,12 @@ public class AddIngredientObjective : Objective
     private void AddNextIngredient()
     {
         currentIngredient++;
-        if (currentIngredient >= ingredientsToBeAdded.Count) { return; }
+
+        if (currentIngredient >= ingredientsToBeAdded.Count)
+        {
+            GoToNextObjective(true);
+            return;
+        }
 
         ingredientsToBeAdded[currentIngredient].gameObject.SetActive(true);
     }

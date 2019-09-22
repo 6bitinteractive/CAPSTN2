@@ -48,8 +48,15 @@ public class RemoveScumObjective : Objective
     protected override void InitializeObjective()
     {
         base.InitializeObjective();
+
+        // Show the ladle
         ladle.gameObject.SetActive(true);
+
+        // Show the dialogue hint
         SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
+
+        // Listen to event
+        underState.OnStateReached.AddListener(x => GoToNextObjective(false));
     }
 
     protected override void FinalizeObjective()

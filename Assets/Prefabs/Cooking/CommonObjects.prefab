@@ -1266,6 +1266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectiveManager: {fileID: 7552385173462586586}
+  nextButtonPanel: {fileID: 2572162892964425852}
   objectivePanelPrefab: {fileID: 1450984710880635504, guid: 9e0d6a7976677214d808653e26095318,
     type: 3}
   objectiveListPanel: {fileID: 6933679715620121396}
@@ -3285,6 +3286,7 @@ GameObject:
   - component: {fileID: 3217135153445722006}
   - component: {fileID: 2866379937112763513}
   - component: {fileID: 2572162892964425852}
+  - component: {fileID: 2766728106980417534}
   m_Layer: 5
   m_Name: NextButtonPanel
   m_TagString: Untagged
@@ -3339,6 +3341,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &2766728106980417534
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7568053989730152725}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7903609498864184578
 GameObject:
   m_ObjectHideFlags: 0

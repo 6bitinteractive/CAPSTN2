@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66637b09b75f47441a60df3ff27a18b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 3
+  delay: 4
   characterPortrait: {fileID: 4059798091718409228}
   dialogueText: {fileID: 9178301103471176940}
 --- !u!95 &3335042096041584492

@@ -34,8 +34,14 @@ public class WaitForScumObjective : Objective
         waterScum.transform.parent.gameObject.SetActive(true);
         waterScum.gameObject.SetActive(true);
 
+        // Start showing scum
         coroutine = StartCoroutine(waterScum.Display());
+
+        // Show dialogue hint
         SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
+
+        // Listen to event
+        underState.OnStateReached.AddListener(x => GoToNextObjective(false));
     }
 
     protected override void FinalizeObjective()

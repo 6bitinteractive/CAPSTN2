@@ -17,12 +17,18 @@ public class CoverCookwareObjective : Objective
     {
         base.InitializeObjective();
 
+        // Show the lid
         lid.gameObject.SetActive(true);
+
+        // Listen to event
+        lid.OnCoverCookware.AddListener(() => GoToNextObjective(false));
     }
 
     protected override void FinalizeObjective()
     {
         base.FinalizeObjective();
+
+        // Show timeskip screen
         SingletonManager.GetInstance<Timeskip>().Show(timeskipSprite);
     }
 

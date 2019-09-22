@@ -52,6 +52,7 @@ public class PourObjective : Objective
             // For first, have water appear right away
             if (currentWaterState == 10)
             {
+                GoToNextObjective(false); // Show next button at this point
                 water.SwitchState(currentWaterState);
                 currentWaterState++;
             }

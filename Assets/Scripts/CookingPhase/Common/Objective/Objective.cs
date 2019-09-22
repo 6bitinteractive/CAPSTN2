@@ -20,6 +20,10 @@ public abstract class Objective : MonoBehaviour
     public ObjectiveEvent OnSuccess = new ObjectiveEvent();
     public ObjectiveEvent OnFail = new ObjectiveEvent();
 
+    // NOTE: These are kind of hacks since there's no pattern as to when the Next button will end an objective or if it's just automatic
+    public ObjectiveEvent OnReadyForNext = new ObjectiveEvent(); // Allow player to move to next objective (i.e. show Next button)
+    public ObjectiveEvent OnAutomaticallyGoToNext = new ObjectiveEvent();
+
     protected static Kitchen kitchen;
 
     protected virtual void Awake() { }
@@ -87,6 +91,15 @@ public abstract class Objective : MonoBehaviour
 
     // Stuff to do before ending (eg. do some calculations before checking success condition)
     protected virtual void FinalizeObjective() { }
+
+    // Go to next objective (via next button or automatically
+    protected virtual void GoToNextObjective(bool automatic = false) // False = a Next button will be shown to the player and he has the autonomy to end at his own time
+    {
+        if (automatic)
+            OnAutomaticallyGoToNext.Invoke(this);
+        else
+            OnReadyForNext.Invoke(this);
+    }
 
     // Evaluate each state
     private void EvaluateState()

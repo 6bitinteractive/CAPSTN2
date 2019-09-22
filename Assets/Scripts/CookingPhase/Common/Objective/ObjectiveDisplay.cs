@@ -3,20 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using System;
 
 public class ObjectiveDisplay : MonoBehaviour
 {
     [SerializeField] private ObjectiveManager objectiveManager;
+    [SerializeField] private Animator nextButtonPanel;
     [SerializeField] private GameObject objectivePanelPrefab;
     [SerializeField] private Transform objectiveListPanel;
+
     private List<ObjectiveItemDisplay> objectiveItemDisplayList = new List<ObjectiveItemDisplay>();
+    private Button nextButton;
+    private CanvasGroup nextButtonCanvasGroup;
 
     private void Start()
     {
+        nextButton = nextButtonPanel.GetComponentInChildren<Button>();
+        nextButtonCanvasGroup = nextButtonPanel.GetComponent<CanvasGroup>();
+
         foreach (var objective in objectiveManager.Objectives)
         {
-            // Listen to when objective ends
+            // Listen to certain objective events
+            objective.OnEnd.AddListener(HideNextButton);
             objective.OnEnd.AddListener(ToggleObjectiveItem);
+            objective.OnReadyForNext.AddListener(ShowNextButton);
+            objective.OnAutomaticallyGoToNext.AddListener(ClickNext);
 
             // Create a list item to display each objective in the recipe/objective dialog panel
             GameObject o = Instantiate(objectivePanelPrefab, objectiveListPanel, false);
@@ -25,6 +36,25 @@ public class ObjectiveDisplay : MonoBehaviour
             objItemDisplay.SetDescriptionText(objective.Description);
             objectiveItemDisplayList.Add(objItemDisplay);
         }
+    }
+
+    private void ClickNext(Objective objective)
+    {
+        // We simulate clicking the next button to automatically end objectives
+        ShowNextButton(objective); // We mimic letting the button slide in to avoid issues with animation...
+        nextButtonCanvasGroup.alpha = 0; // ... but hide the button
+        nextButton.onClick.Invoke();
+    }
+
+    private void ShowNextButton(Objective objective)
+    {
+        nextButtonCanvasGroup.alpha = 1;
+        nextButtonPanel.SetTrigger("SlideIn");
+    }
+
+    private void HideNextButton(Objective objective)
+    {
+        nextButtonPanel.SetTrigger("SlideOut");
     }
 
     private void ToggleObjectiveItem(Objective objective)
