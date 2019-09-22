@@ -1,35 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
-public class DialogueHintDisplay : MonoBehaviour, IPointerDownHandler
+public class DialogueHintDisplay : MonoBehaviour
 {
     [SerializeField] private float delay = 3f;
 
     public Image characterPortrait;
     public TextMeshProUGUI dialogueText;
 
-    // FIX: Redundant functions (Show, Hide)
-    private void OnEnable()
+    private Animator animator;
+
+    private void Awake()
     {
-        Invoke("Hide", delay);
+        animator = GetComponent<Animator>();
     }
 
     public void Show(bool value = false)
     {
-        gameObject.SetActive(value);
+        animator.SetTrigger("SlideIn");
+        Invoke("Hide", delay);
     }
 
     private void Hide()
     {
-        gameObject.SetActive(false);
-    }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        Hide();
+        animator.SetTrigger("SlideOut");
     }
 }
