@@ -11,7 +11,7 @@ public abstract class Objective : MonoBehaviour
     [SerializeField][TextArea(1, 3)] protected string descriptionText;
 
     public string Description => descriptionText;
-    public List<ObjectiveState> ObjectiveStates = new List<ObjectiveState>();
+    public List<ObjectiveState> ObjectiveStates = new List<ObjectiveState>(); // NOTE: See PourObjective.cs for implementation of ObjectiveStates
     public bool Successful { get; protected set; }
     public bool Active { get; protected set; }
 
@@ -109,9 +109,9 @@ public abstract class Objective : MonoBehaviour
     }
 }
 
-// Note: Current implementation assumes once a state has been reached, it's never going to be checked again if it recurs
+// NOTE: Current implementation assumes once a state has been reached, it's never going to be checked again if it recurs
 [System.Serializable]
-public class ObjectiveState
+public class ObjectiveState // NOTE: See PourObjective.cs for implementation of ObjectiveStates
 {
     public Status StatusType { get; }
     public System.Func<bool> HasBeenReached { get; set; }

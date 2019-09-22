@@ -1033,7 +1033,7 @@ PrefabInstance:
         type: 3}
       propertyPath: perfectState.dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 45d73a64cb67b1249b9b35e70db22205,
+      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
         type: 3}
     - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
         type: 3}
@@ -1054,7 +1054,7 @@ PrefabInstance:
         type: 3}
       propertyPath: underState.dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b,
+      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
         type: 3}
     - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
         type: 3}
@@ -1070,7 +1070,7 @@ PrefabInstance:
         type: 3}
       propertyPath: overState.dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 108d0244f79c8cc498776d2670c7a0e6,
+      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8083c22cd1341f4c8abaae8a8e6e9f1, type: 3}
@@ -1917,6 +1917,28 @@ PrefabInstance:
       propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6400498538117018178, guid: a82c13e3250f01541a01a4f6171f094f,
+        type: 3}
+      propertyPath: perfectState.dialogueHint.dialogueText
+      value: It's boiling!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400498538117018178, guid: a82c13e3250f01541a01a4f6171f094f,
+        type: 3}
+      propertyPath: underState.dialogueHint.dialogueText
+      value: Not there yet...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400498538117018178, guid: a82c13e3250f01541a01a4f6171f094f,
+        type: 3}
+      propertyPath: underState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+        type: 3}
+    - target: {fileID: 6400498538117018178, guid: a82c13e3250f01541a01a4f6171f094f,
+        type: 3}
+      propertyPath: perfectState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a82c13e3250f01541a01a4f6171f094f, type: 3}
 --- !u!1001 &6851496187090265027
@@ -2249,6 +2271,28 @@ PrefabInstance:
       propertyPath: ladle
       value: 
       objectReference: {fileID: 1191485175}
+    - target: {fileID: 7258991850271817006, guid: 20c83cb01b4465144ae84f5270384cfc,
+        type: 3}
+      propertyPath: perfectState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+        type: 3}
+    - target: {fileID: 7258991850271817006, guid: 20c83cb01b4465144ae84f5270384cfc,
+        type: 3}
+      propertyPath: perfectState.dialogueHint.dialogueText
+      value: It's all scooped out!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258991850271817006, guid: 20c83cb01b4465144ae84f5270384cfc,
+        type: 3}
+      propertyPath: underState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+        type: 3}
+    - target: {fileID: 7258991850271817006, guid: 20c83cb01b4465144ae84f5270384cfc,
+        type: 3}
+      propertyPath: underState.dialogueHint.dialogueText
+      value: Just a little more...
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20c83cb01b4465144ae84f5270384cfc, type: 3}
 --- !u!1001 &7362022209945906726
@@ -2407,6 +2451,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7552385174291408538, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_Name
+      value: CommonObjects
+      objectReference: {fileID: 0}
+    - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: Recipe
+      value: 
+      objectReference: {fileID: 11400000, guid: d63573a0c4502b440abdae53873e9b15,
+        type: 2}
+    - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: StageScene
+      value: 
+      objectReference: {fileID: 11400000, guid: 07e0989769d0a3d4d9b9b7b8066d7a25,
+        type: 2}
+    - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: cookware
+      value: 
+      objectReference: {fileID: 1386080668617038199}
+    - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: Cookware
+      value: 
+      objectReference: {fileID: 1386080668617038199}
+    - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: Equipment
+      value: 
+      objectReference: {fileID: 1110966105}
     - target: {fileID: 546669158868403635, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: characterPortrait
@@ -2457,43 +2533,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7552385174291408538, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_Name
-      value: CommonObjects
-      objectReference: {fileID: 0}
     - target: {fileID: 82033564809223770, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: Recipe
-      value: 
-      objectReference: {fileID: 11400000, guid: d63573a0c4502b440abdae53873e9b15,
-        type: 2}
-    - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: StageScene
-      value: 
-      objectReference: {fileID: 11400000, guid: 07e0989769d0a3d4d9b9b7b8066d7a25,
-        type: 2}
-    - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: cookware
-      value: 
-      objectReference: {fileID: 1386080668617038199}
-    - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: Cookware
-      value: 
-      objectReference: {fileID: 1386080668617038199}
-    - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: Equipment
-      value: 
-      objectReference: {fileID: 1110966105}
     - target: {fileID: 1788426058036115792, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: m_text

@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class WaterScum : MonoBehaviour
 {
     [SerializeField] private float delayAppearance = 2f;
-    private List<Image> waterScum = new List<Image>();
-    private int currentIndex;
+
+    // FIX?: public for quick access from WaitForScumObjective, for now?
+    public List<Image> waterScum = new List<Image>();
+    public int currentIndex;
 
     // FIX?: better variable name D:
     public bool Displayed { get; private set; }

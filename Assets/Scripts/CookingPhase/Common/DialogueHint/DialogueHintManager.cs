@@ -17,32 +17,32 @@ public class DialogueHintManager : MonoBehaviour
         SingletonManager.UnRegister<DialogueHintManager>();
     }
 
-    private IEnumerator Start()
+    private void Start()
     {
         foreach (var objective in objectiveManager.Objectives)
         {
-            // FIX: multiple checks happening because of race condition ):
-            // Skip those without any states
-            if (objective.ObjectiveStates.Count == 0)
-            {
-                yield return new WaitForEndOfFrame(); // try waiting
-                Debug.Log(objective.gameObject.name + "State Count: " + objective.ObjectiveStates.Count);
-
-                if (objective.ObjectiveStates.Count == 0) // still nothing means there really are no states
-                    continue;
-            }
-
-            foreach (var state in objective.ObjectiveStates)
-            {
-                state.OnStateReached.AddListener(Show);
-            }
+            objective.OnBegin.AddListener(SubscribeToEvent);
         }
     }
 
-    private void Show(ObjectiveState objectiveState)
+    public void Show(ObjectiveState objectiveState)
     {
         dialogueHintDisplay.characterPortrait.sprite = objectiveState.dialogueHint.characterPortrait;
         dialogueHintDisplay.dialogueText.text = objectiveState.dialogueHint.dialogueText;
         dialogueHintDisplay.Show(true);
+    }
+
+    private void SubscribeToEvent(Objective objective)
+    {
+        if (objective.ObjectiveStates.Count == 0)
+        {
+            Debug.Log(objective.gameObject.name + "State Count: " + objective.ObjectiveStates.Count);
+            return;
+        }
+
+        foreach (var state in objective.ObjectiveStates)
+        {
+            state.OnStateReached.AddListener(Show);
+        }
     }
 }

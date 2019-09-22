@@ -8,13 +8,25 @@ public class RemoveScumObjective : Objective
 {
     [SerializeField] private WaterScum waterScum;
     [SerializeField] private KitchenUtensil ladle;
+    [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
+    [SerializeField] private ObjectiveState underState = new ObjectiveState(ObjectiveState.Status.Under);
 
     private SwipeDetector swipeDetector;
+    private int scumRemovedCount;
 
     protected override void Awake()
     {
         base.Awake();
         swipeDetector = GetComponent<SwipeDetector>();
+
+        // Setup objectives
+        // Add to list
+        ObjectiveStates.Add(perfectState);
+        ObjectiveStates.Add(underState);
+
+        // Define condition
+        perfectState.HasBeenReached = () => waterScum.Removed; // Player has removed all of the scum
+        underState.HasBeenReached = () => scumRemovedCount == 1; // Encourage player to remove more after first swipe
     }
 
     protected override void OnEnable()
@@ -58,6 +70,7 @@ public class RemoveScumObjective : Objective
                 if (ladle.InCookware)
                 {
                     waterScum.Remove();
+                    scumRemovedCount++;
                 }
                 break;
             default:

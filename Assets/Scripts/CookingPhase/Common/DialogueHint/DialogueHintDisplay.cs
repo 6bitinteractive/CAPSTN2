@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
-public class DialogueHintDisplay : MonoBehaviour
+public class DialogueHintDisplay : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] private float delay = 3f;
 
@@ -25,5 +26,10 @@ public class DialogueHintDisplay : MonoBehaviour
     private void Hide()
     {
         gameObject.SetActive(false);
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        Hide();
     }
 }

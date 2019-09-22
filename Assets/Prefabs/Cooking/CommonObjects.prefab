@@ -682,7 +682,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -709,6 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66637b09b75f47441a60df3ff27a18b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 3
   characterPortrait: {fileID: 0}
   dialogueText: {fileID: 7036585350723601249}
 --- !u!1 &2510132653497099652
