@@ -5,16 +5,19 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
+[RequireComponent(typeof(Animator))]
 
 public class Timeskip : MonoBehaviour, IPointerDownHandler
 {
     private Image image;
+    private Animator animator;
 
     private void Awake()
     {
         SingletonManager.Register<Timeskip>(this);
+        animator = GetComponent<Animator>();
         image = GetComponent<Image>();
-        image.enabled = false;
+        image.raycastTarget = false;
     }
 
     private void OnDestroy()
@@ -25,11 +28,13 @@ public class Timeskip : MonoBehaviour, IPointerDownHandler
     public void Show(Sprite sprite)
     {
         image.sprite = sprite;
-        image.enabled = true;
+        image.raycastTarget = true;
+        animator.SetTrigger("Show");
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        image.enabled = false;
+        image.raycastTarget = false;
+        animator.SetTrigger("Hide");
     }
 }
