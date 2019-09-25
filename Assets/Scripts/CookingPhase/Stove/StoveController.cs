@@ -19,11 +19,15 @@ public class StoveController : MonoBehaviour
     public HeatSetting CurrentHeatSetting { get; private set; }
     public OnStoveSettingChanged OnStoveSettingChanged = new OnStoveSettingChanged();
 
+    private HeatSetting previousSetting;
+
     public void UpdateStoveSetting(float sliderValue)
     {
+        previousSetting = CurrentHeatSetting;
+
         if (sliderValue <= 0f)
             CurrentHeatSetting = HeatSetting.Off;
-            //CurrentHeatSetting = HeatSetting.Low; // NOTE: Current art implementation has no "off" setting
+        //CurrentHeatSetting = HeatSetting.Low; // NOTE: Current art implementation has no "off" setting
         else if (sliderValue > 0 && sliderValue <= maxLow)
             CurrentHeatSetting = HeatSetting.Low;
         else if (sliderValue <= maxMedium && sliderValue > maxLow)
@@ -31,7 +35,8 @@ public class StoveController : MonoBehaviour
         else
             CurrentHeatSetting = HeatSetting.High;
 
-        OnStoveSettingChanged.Invoke(CurrentHeatSetting);
+        if (CurrentHeatSetting != previousSetting)
+            OnStoveSettingChanged.Invoke(CurrentHeatSetting);
     }
 }
 

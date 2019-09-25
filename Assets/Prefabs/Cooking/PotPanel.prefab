@@ -279,7 +279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.0000138, y: 79.00004}
+  m_AnchoredPosition: {x: 0, y: 77}
   m_SizeDelta: {x: 480, y: 355}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &704255134282338813
@@ -407,6 +407,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32da2477c09e1e34a9b2baa8f6713e22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnCoverCookware:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &4467840421384038655
 MonoBehaviour:
   m_ObjectHideFlags: 0
