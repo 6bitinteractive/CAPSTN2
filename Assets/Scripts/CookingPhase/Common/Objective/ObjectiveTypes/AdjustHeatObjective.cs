@@ -14,6 +14,7 @@ public class AdjustHeatObjective : Objective
     private Animator stoveControllerAnimator;
 
     private bool showNextButton;
+    [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
 
     // FIX: Null reference when objective is done?
     //protected override void OnDestroy()
@@ -22,6 +23,18 @@ public class AdjustHeatObjective : Objective
 
     //    stoveController.OnStoveSettingChanged.RemoveAllListeners();
     //}
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        // Setup objectives
+        // Add to list
+        ObjectiveStates.Add(perfectState);
+
+        // Define condition
+        perfectState.HasBeenReached = () => SuccessConditionMet();
+    }
 
     protected override void InitializeObjective()
     {

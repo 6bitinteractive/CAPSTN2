@@ -7,6 +7,20 @@ public class AddIngredientObjective : Objective
     [SerializeField] private List<Cookable> ingredientsToBeAdded;
     private int currentIngredient;
 
+    [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        // Setup objectives
+        // Add to list
+        ObjectiveStates.Add(perfectState);
+
+        // Define condition
+        perfectState.HasBeenReached = () => SuccessConditionMet();
+    }
+
     protected override void OnEnable()
     {
         base.OnEnable();

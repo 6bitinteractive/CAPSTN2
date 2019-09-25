@@ -51,6 +51,9 @@ public class DialogueHintManager : MonoBehaviour
 
     private void Show(ObjectiveState objectiveState)
     {
+        // If there's no dialogue, don't show the dialogue hint panel
+        if (objectiveState.dialogueHint.dialogueText?.Length == 0) { return; }
+
         Show(objectiveState.dialogueHint);
     }
 

@@ -13,10 +13,12 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public bool Grabbed { get; private set; }
     [HideInInspector] public OnItemDrop OnDropItem = new OnItemDrop();
 
+    private Canvas canvas; // Canvas that contains this draggable element
     private RectTransform rectTransform;
 
     private void Start()
     {
+        canvas = GetComponentInParent<Canvas>();
         rectTransform = GetComponent<RectTransform>();
     }
 
@@ -32,7 +34,7 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         #region Standard Input
 #if UNITY_STANDALONE_WIN
-        if (!rectTransform) // If this is not a UI element
+        if (!rectTransform || canvas.renderMode == RenderMode.ScreenSpaceCamera) // If this is not a UI element or rendering using Screenspace - Camera
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector3(mousePosition.x, mousePosition.y, 0f); // set z-position to 0 to avoid it going "invisible" (being set to -10)
