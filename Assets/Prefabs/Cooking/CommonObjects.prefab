@@ -1681,7 +1681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac21d60a95b167448bd38896d7a4f1ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectiveManager: {fileID: 0}
+  objectiveManager: {fileID: 7552385173462586586}
   particleSystems:
   - {fileID: 1842275972377648914}
   - {fileID: 13862277281602694}
@@ -3093,7 +3093,7 @@ Canvas:
   m_GameObject: {fileID: 7552385174476635716}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 7552385174479125109}
   m_PlaneDistance: 100
   m_PixelPerfect: 0

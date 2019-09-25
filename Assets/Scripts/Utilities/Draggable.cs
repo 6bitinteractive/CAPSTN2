@@ -56,7 +56,7 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             {
                 case TouchPhase.Began:
                 case TouchPhase.Moved:
-                    if (!rectTransform)
+                    if (!rectTransform || canvas.renderMode == RenderMode.ScreenSpaceCamera)
                     {
                         Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
                         transform.position = new Vector3(touchPosition.x, touchPosition.y, 0f);
