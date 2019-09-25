@@ -14,12 +14,14 @@ public class RemoveScumObjective : Objective
     [SerializeField] private ObjectiveState underState = new ObjectiveState(ObjectiveState.Status.Under);
 
     private SwipeDetector swipeDetector;
+    private Animator ladleAnimator;
     private int scumRemovedCount;
 
     protected override void Awake()
     {
         base.Awake();
         swipeDetector = GetComponent<SwipeDetector>();
+        ladleAnimator = ladle.GetComponent<Animator>();
 
         // Setup objectives
         // Add to list
@@ -50,7 +52,7 @@ public class RemoveScumObjective : Objective
         base.InitializeObjective();
 
         // Show the ladle
-        ladle.gameObject.SetActive(true);
+        ladleAnimator.SetTrigger("SlideIn");
 
         // Show the dialogue hint
         SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
@@ -62,7 +64,7 @@ public class RemoveScumObjective : Objective
     protected override void FinalizeObjective()
     {
         base.FinalizeObjective();
-        ladle.gameObject.SetActive(false);
+        ladleAnimator.SetTrigger("SlideOut");
     }
 
     protected override bool SuccessConditionMet()
@@ -79,7 +81,9 @@ public class RemoveScumObjective : Objective
             case SwipeDirection.LeftDown:
                 if (ladle.InCookware)
                 {
+                    if (waterScum.Removed) { return; }
                     waterScum.Remove();
+                    ladleAnimator.SetTrigger("Scoop");
                     scumRemovedCount++;
                 }
                 break;
