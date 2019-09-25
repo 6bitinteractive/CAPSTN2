@@ -11,15 +11,23 @@ public class ResultDisplay : MonoBehaviour
     [SerializeField] private Kitchen kitchen;
 
     private List<StarRating> starRatings = new List<StarRating>();
+    private CanvasGroup canvasGroup;
+    private Animator animator;
     private SceneLoader sceneLoader;
 
     private void Awake()
     {
         starRatings.AddRange(starRatingsPanel.GetComponentsInChildren<StarRating>());
+        Debug.Log("Star rating image count: " + starRatings.Count);
+
+        canvasGroup = GetComponent<CanvasGroup>();
+        animator = GetComponent<Animator>();
         sceneLoader = GetComponent<SceneLoader>();
+
+        Show(false);
     }
 
-    public void DisplayResult(int rating = 3)
+    public void UpdateDisplay(int rating = 3)
     {
         for (int i = 0; i < rating; i++)
             starRatings[i].SwitchOn();
@@ -40,5 +48,13 @@ public class ResultDisplay : MonoBehaviour
 
         // For now, the Next button always loads the CookingOverview scene
         sceneLoader.LoadScene(kitchen.Recipe.CookingOverview);
+    }
+
+    public void Show(bool value = true)
+    {
+        animator.enabled = value;
+        canvasGroup.interactable = value;
+        canvasGroup.blocksRaycasts = value;
+        canvasGroup.alpha = value ? 1 : 0;
     }
 }
