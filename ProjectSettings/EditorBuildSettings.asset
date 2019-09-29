@@ -50,4 +50,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cooking/Cooking-PorkSisig-Boiling.unity
     guid: 622a7da23d9d4e7488cc177853b24e81
+  - enabled: 1
+    path: Assets/Scenes/Cooking/Cooking-PorkSisig-Grilling.unity
+    guid: 45de0cb4c0f85384491d502a67cb7d78
+  - enabled: 1
+    path: Assets/Scenes/Cooking/Cooking-PorkSisig-Chopping.unity
+    guid: 80232649a00ce0f48b7e5e457bd822b6
   m_configObjects: {}
