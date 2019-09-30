@@ -11,6 +11,7 @@ public class LidHandler : MonoBehaviour
 {
     public bool IsCoveringCookware { get; private set; }
     public UnityEvent OnCoverCookware = new UnityEvent();
+    public UnityEvent OnTakeOffCookware = new UnityEvent();
 
     private RectTransform rectTransform;
     private BoxCollider2D boxCollider;
@@ -49,6 +50,7 @@ public class LidHandler : MonoBehaviour
     {
         cookware = null;
         IsCoveringCookware = false;
+        OnTakeOffCookware.Invoke();
         Debug.Log("Lid - off");
     }
 }
