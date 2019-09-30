@@ -8,6 +8,10 @@ public class RemoveScumObjective : Objective
 {
     [SerializeField] private WaterScum waterScum;
     [SerializeField] private KitchenUtensil ladle;
+
+    [Tooltip("Hack; assigning the sprite changes in the same animator with position changes somehow ruins positioning...?")]
+    [SerializeField] private Animator ladleImageAnimator;
+
     [SerializeField] private DialogueHint dialogueHint;
 
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
@@ -64,7 +68,6 @@ public class RemoveScumObjective : Objective
     protected override void FinalizeObjective()
     {
         base.FinalizeObjective();
-        ladleAnimator.SetTrigger("SlideOut");
     }
 
     protected override bool SuccessConditionMet()
@@ -82,13 +85,31 @@ public class RemoveScumObjective : Objective
                 if (ladle.InCookware)
                 {
                     if (waterScum.Removed) { return; }
-                    waterScum.Remove();
-                    ladleAnimator.SetTrigger("Scoop");
-                    scumRemovedCount++;
+                    StartCoroutine(Scoop());
                 }
                 break;
             default:
                 break;
         }
+    }
+
+    private IEnumerator Scoop()
+    {
+        waterScum.Remove();
+        ladleAnimator.SetTrigger("Scoop");
+        ladleImageAnimator.SetTrigger("Scoop");
+
+        yield return new WaitUntil(() => AnimatorUtils.IsInState(ladleAnimator, "LadleScoop") && AnimatorUtils.IsDonePlaying(ladleAnimator, "LadleScoop"));
+        Debug.Log("Done scoop animation");
+        ladleAnimator.SetTrigger("SlideOut");
+        scumRemovedCount++;
+
+        yield return new WaitUntil(() => AnimatorUtils.IsInState(ladleAnimator, "LadleSlideOut") && AnimatorUtils.IsDonePlaying(ladleAnimator, "LadleSlideOut"));
+        ladleImageAnimator.SetTrigger("Reset");
+
+        if (waterScum.Removed)
+            yield break;
+
+        ladleAnimator.SetTrigger("SlideIn");
     }
 }
