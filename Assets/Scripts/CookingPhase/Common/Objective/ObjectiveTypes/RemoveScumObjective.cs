@@ -95,7 +95,10 @@ public class RemoveScumObjective : Objective
 
     private IEnumerator Scoop()
     {
-        waterScum.Remove();
+        // Remove scum every second swipe
+        if (scumRemovedCount != 0 && scumRemovedCount % 2 == 0)
+            waterScum.Remove();
+
         ladleAnimator.SetTrigger("Scoop");
         ladleImageAnimator.SetTrigger("Scoop");
 
