@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class PourObjective : Objective
 {
+    [SerializeField] private Animator waterBowl;
+    [SerializeField] private Animator waterBowlFlow;
     [SerializeField] private WaterStateController water; // FIX: Need to allow any type of liquid
     [SerializeField] private float requiredPourDuration = 2f;
     [SerializeField] private float requiredPouringAngle = -0.3f;
@@ -16,6 +18,8 @@ public class PourObjective : Objective
     [SerializeField] private ObjectiveState overState = new ObjectiveState(ObjectiveState.Status.Over);
 
     private float currentPourDuration;
+    private Transform waterBowlTransform;
+    private Quaternion defaultWaterBowlRotation;
     private int currentWaterState = 9;
     private Vector3 InitialTilt;
     private Vector3 Tilt;
@@ -40,6 +44,11 @@ public class PourObjective : Objective
     {
         base.InitializeObjective();
         SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
+
+        waterBowlTransform = waterBowl.GetComponent<Transform>();
+        defaultWaterBowlRotation = waterBowlTransform.rotation;
+        waterBowl.gameObject.SetActive(true);
+        waterBowlFlow.gameObject.SetActive(false);
     }
 
     protected override void RunObjective()
@@ -47,7 +56,15 @@ public class PourObjective : Objective
         base.RunObjective();
 
         // FIX: Hard-coded; abstract these and shove to WaterStateController
-        if (currentWaterState >= 16) { return; }
+        if (currentWaterState >= 16)
+        {
+            // Waterbowl reset
+            waterBowlTransform.rotation = defaultWaterBowlRotation; // Go back to default rotation
+            waterBowlFlow.gameObject.SetActive(false); // Hide the water flowing animation
+            return;
+        }
+
+        Vector3 eulerAngles = waterBowlTransform.eulerAngles;
 
         if (IsPouring())
         {
@@ -59,7 +76,21 @@ public class PourObjective : Objective
                 water.SwitchState(currentWaterState);
             }
 
+            // Track how long the player has been pouring
             currentPourDuration += Time.deltaTime;
+
+            // Rotate the water bowl
+            waterBowlFlow.gameObject.SetActive(true); // Show water flowing out of the bowl
+            if (eulerAngles.z <= 20) // Limit the rotation
+            {
+                waterBowlTransform.Rotate(new Vector3(0f, 0f, 10 * Time.deltaTime));
+            }
+        }
+        else
+        {
+            //Waterbowl reset
+            waterBowlTransform.rotation = defaultWaterBowlRotation; // Go back to default rotation
+            waterBowlFlow.gameObject.SetActive(false); // Hide the water flowing animation
         }
 
         if (currentPourDuration >= requiredPourDuration)
@@ -68,6 +99,16 @@ public class PourObjective : Objective
             currentWaterState++;
             water.SwitchState(currentWaterState);
         }
+    }
+
+    protected override void FinalizeObjective()
+    {
+        base.FinalizeObjective();
+        // Waterbowl reset
+        waterBowlTransform.rotation = defaultWaterBowlRotation; // Go back to default rotation
+        waterBowlFlow.gameObject.SetActive(false); // Hide the water flowing animation
+
+        waterBowl.SetTrigger("SlideOut");
     }
 
     protected override void PostFinalizeObjective()

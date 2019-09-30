@@ -185,6 +185,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7953305866617644798}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &632083380 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5209759638902114679, guid: 2146d3c4f3848e24f9919318756f06eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 7953305866617644798}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &662446991 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3950824820984493462, guid: e83e7d10d232f854eab4f3506ae491bd,
@@ -237,6 +243,12 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 2142642618838908523, guid: 854f1ce177fc9c845a1c5d87cbd901e9,
     type: 3}
   m_PrefabInstance: {fileID: 6304138320464546717}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1023127643 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1023127643, guid: 2146d3c4f3848e24f9919318756f06eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 7953305866617644798}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1045649556 stripped
 Transform:
@@ -1026,6 +1038,16 @@ PrefabInstance:
       propertyPath: overState.OnStateReached.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
+        type: 3}
+      propertyPath: waterBowl
+      value: 
+      objectReference: {fileID: 632083380}
+    - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
+        type: 3}
+      propertyPath: waterBowlFlow
+      value: 
+      objectReference: {fileID: 1023127643}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8083c22cd1341f4c8abaae8a8e6e9f1, type: 3}
 --- !u!1001 &1294113730399472327
@@ -3331,6 +3353,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterBowl
       objectReference: {fileID: 0}
+    - target: {fileID: 7953305867198838095, guid: 2146d3c4f3848e24f9919318756f06eb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7953305867198838092, guid: 2146d3c4f3848e24f9919318756f06eb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3436,10 +3463,25 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7953305867198838093, guid: 2146d3c4f3848e24f9919318756f06eb,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7953305867198838089, guid: 2146d3c4f3848e24f9919318756f06eb,
         type: 3}
       propertyPath: IngredientInCookware
       value: 
-      objectReference: {fileID: 1075779832}
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878730033174361951, guid: 2146d3c4f3848e24f9919318756f06eb,
+        type: 3}
+      propertyPath: onTapSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d70c9f0bea3d8ce48b9668f023b7fd6a,
+        type: 3}
+    - target: {fileID: 1023127641, guid: 2146d3c4f3848e24f9919318756f06eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2146d3c4f3848e24f9919318756f06eb, type: 3}

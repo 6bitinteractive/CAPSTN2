@@ -50,6 +50,8 @@ public class Cookable : MonoBehaviour
 
     public void ShowIngredientInCookware()
     {
+        if (IngredientInCookware == null) { return; }
+
         // Show the ingredient
         IngredientInCookware.SetActive(true);
         OnIngredientDroppedToCookware.Invoke();
