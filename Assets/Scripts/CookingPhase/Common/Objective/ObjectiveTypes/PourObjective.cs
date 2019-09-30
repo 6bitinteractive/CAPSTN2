@@ -113,11 +113,12 @@ public class PourObjective : Objective
     {
         if (currentWaterState != 14) // Poured too much/little water
         {
+            // Switch to correct state
             currentWaterState = 14;
             water.SwitchState(currentWaterState);
 
-            DialogueHint dialogue = new DialogueHint(dialogueHint.characterPortrait, string.Empty);
-            dialogue.dialogueText = "Let's adjust the amount of water.";
+            // Give player a heads up
+            DialogueHint dialogue = new DialogueHint(dialogueHint.characterPortrait, "Let's adjust the amount of water.");
             SingletonManager.GetInstance<DialogueHintManager>().Show(dialogue);
         }
     }
