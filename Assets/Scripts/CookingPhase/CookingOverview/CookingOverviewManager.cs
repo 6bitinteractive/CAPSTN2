@@ -61,7 +61,7 @@ public class CookingOverviewManager : MonoBehaviour
         {
             steps[i].Rating = ratingsManager.LoadStageRating(steps[i].StageScene); // Load the rating
             steps[i].Locked = steps[i].Rating <= 0; // Unlock if there's a stored rating, i.e. not 0; Make sure stages with no ratings remain locked
-            steps[i].Locked = steps[i > 0 ? i - 1 : 0].Rating <= MinRating; // Remain locked if previous stage wasn't successfully beaten
+            steps[i].Locked = steps[i > 0 ? i - 1 : 0].Rating < MinRating; // Remain locked if previous stage wasn't successfully beaten
         }
 
         // Always unlock the first step
