@@ -77,6 +77,8 @@ public abstract class Objective : MonoBehaviour
             OnFail.Invoke(this);
         }
 
+        PostFinalizeObjective();
+
         OnEnd.Invoke(this);
     }
 
@@ -91,6 +93,9 @@ public abstract class Objective : MonoBehaviour
 
     // Stuff to do before ending (eg. do some calculations before checking success condition)
     protected virtual void FinalizeObjective() { }
+
+    // Stuff to do after finalizing and evaluating if objective was done successfully but just before ending
+    protected virtual void PostFinalizeObjective() { }
 
     // Go to next objective (via next button or automatically
     protected virtual void GoToNextObjective(bool automatic = false) // False = a Next button will be shown to the player and he has the autonomy to end at his own time

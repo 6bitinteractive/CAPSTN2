@@ -46,7 +46,7 @@ public class WaterStateController : MonoBehaviour
     public enum WaterState
     {
         None, Pouring, Still, Simmering,
-        Pouring1 = 10, Pouring2 = 11, Pouring3 = 12, Pouring4 = 13, Pouring5 = 14 // Note: Temporary?
+        Pouring1 = 10, Pouring2 = 11, Pouring3 = 12, Pouring4 = 13, Pouring5 = 14, Pouring6 = 15 // Note: Temporary?
     }
 
 }
