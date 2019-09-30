@@ -10,7 +10,7 @@ using UnityEngine.Events;
 public class RatingCalculator : MonoBehaviour
 {
     [SerializeField] private ObjectiveManager objectiveManager;
-    [SerializeField][Range(0, 1)] private float maxOneStar = 0.5f, maxTwoStar = 0.7f;
+    [SerializeField] [Range(0, 1)] private float maxOneStar = 0.5f, maxTwoStar = 0.7f;
 
     public RatingEvent OnFinalRatingCalculated = new RatingEvent();
 
@@ -20,12 +20,14 @@ public class RatingCalculator : MonoBehaviour
 
     private void OnEnable()
     {
-        objectiveManager.OnAllObjectivesDone.AddListener(EvaluateFinalRating);
+        if (objectiveManager != null)
+            objectiveManager.OnAllObjectivesDone.AddListener(EvaluateFinalRating);
     }
 
     private void OnDisable()
     {
-        objectiveManager.OnAllObjectivesDone.RemoveListener(EvaluateFinalRating);
+        if (objectiveManager != null)
+            objectiveManager.OnAllObjectivesDone.RemoveListener(EvaluateFinalRating);
     }
 
     private void Start()
@@ -46,6 +48,7 @@ public class RatingCalculator : MonoBehaviour
 
     public void EvaluateFinalRating()
     {
+        Debug.LogFormat("Correct: {0}", objectiveManager.Objectives.FindAll(x => x.Successful).Count);
         float totalCorrect = (float)objectiveManager.Objectives.FindAll(x => x.Successful).Count / (float)objectiveManager.Objectives.Count;
         Debug.LogFormat("Correct %: {0}", totalCorrect);
 

@@ -68,6 +68,7 @@ public class RemoveScumObjective : Objective
     protected override void FinalizeObjective()
     {
         base.FinalizeObjective();
+        ladleAnimator.SetTrigger("SlideOut");
     }
 
     protected override bool SuccessConditionMet()
