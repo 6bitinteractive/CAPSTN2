@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(SwipeDetector))]
 
@@ -17,9 +18,14 @@ public class RemoveScumObjective : Objective
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
     [SerializeField] private ObjectiveState underState = new ObjectiveState(ObjectiveState.Status.Under);
 
+    [Header("Other events")]
+    [SerializeField] private UnityEvent OnScoopBegin = new UnityEvent();
+    [SerializeField] private UnityEvent OnScoopEnd = new UnityEvent();
+
     private SwipeDetector swipeDetector;
     private Animator ladleAnimator;
     private int scumRemovedCount;
+    private bool isSwiping;
 
     protected override void Awake()
     {
@@ -68,7 +74,9 @@ public class RemoveScumObjective : Objective
     protected override void FinalizeObjective()
     {
         base.FinalizeObjective();
-        ladleAnimator.SetTrigger("SlideOut");
+
+        if (!AnimatorUtils.IsInState(ladleAnimator, "LadleSlideOut"))
+            ladleAnimator.SetTrigger("SlideOut");
     }
 
     protected override bool SuccessConditionMet()
@@ -85,7 +93,7 @@ public class RemoveScumObjective : Objective
             case SwipeDirection.LeftDown:
                 if (ladle.InCookware)
                 {
-                    if (waterScum.Removed) { return; }
+                    if (waterScum.Removed || isSwiping) { return; }
                     StartCoroutine(Scoop());
                 }
                 break;
@@ -96,24 +104,29 @@ public class RemoveScumObjective : Objective
 
     private IEnumerator Scoop()
     {
-        // Remove scum every second swipe
-        if (scumRemovedCount != 0 && scumRemovedCount % 2 == 0)
-            waterScum.Remove();
+        isSwiping = true;
+        OnScoopBegin.Invoke();
+
+        waterScum.Remove();
 
         ladleAnimator.SetTrigger("Scoop");
         ladleImageAnimator.SetTrigger("Scoop");
 
+
         yield return new WaitUntil(() => AnimatorUtils.IsInState(ladleAnimator, "LadleScoop") && AnimatorUtils.IsDonePlaying(ladleAnimator, "LadleScoop"));
-        Debug.Log("Done scoop animation");
-        ladleAnimator.SetTrigger("SlideOut");
+        //Debug.Log("Done scoop animation");
         scumRemovedCount++;
+        ladleAnimator.SetTrigger("SlideOut");
 
         yield return new WaitUntil(() => AnimatorUtils.IsInState(ladleAnimator, "LadleSlideOut") && AnimatorUtils.IsDonePlaying(ladleAnimator, "LadleSlideOut"));
+        isSwiping = false;
+
         ladleImageAnimator.SetTrigger("Reset");
 
         if (waterScum.Removed)
             yield break;
 
         ladleAnimator.SetTrigger("SlideIn");
+        OnScoopEnd.Invoke();
     }
 }

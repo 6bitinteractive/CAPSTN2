@@ -55,7 +55,7 @@ public class PourObjective : Objective
     {
         base.RunObjective();
 
-        // FIX: Hard-coded; abstract these and shove to WaterStateController
+        // FIX: Hard-coded; abstract these and shove to Pourable(???) component
         if (currentWaterState >= 16)
         {
             // Waterbowl reset
