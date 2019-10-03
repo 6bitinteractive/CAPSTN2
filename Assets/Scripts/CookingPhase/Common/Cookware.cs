@@ -14,10 +14,12 @@ public class Cookware : MonoBehaviour
     //public HeatSetting CurrentHeat { get; set; }
 
     private DropArea dropArea;
+    private Collider2D collider2d;
 
     private void Awake()
     {
         dropArea = GetComponent<DropArea>();
+        collider2d = GetComponent<Collider2D>();
     }
 
     private void OnEnable()
@@ -73,20 +75,22 @@ public class Cookware : MonoBehaviour
 
     private void AddToCookableIngredients(Draggable item)
     {
-        if (item == null) { return; }
-
         Cookable cookableIngredient = item.GetComponent<Cookable>();
-
-        if (cookableIngredient)
-        {
-            CookableIngredients.Add(cookableIngredient);
-        }
+        if (cookableIngredient == null) { return; }
+        CookableIngredients.Add(cookableIngredient);
     }
 
     private void ShowIngredientInCookware(Draggable item)
     {
-        Cookable cookable = item.GetComponent<Cookable>();
-        if (cookable == null) { return; }
-        cookable.ShowIngredientInCookware();
+        Cookable cookableIngredient = item.GetComponent<Cookable>();
+        FoodPrepUtensil foodPrepUtensil = item.GetComponent<FoodPrepUtensil>();
+
+        if (cookableIngredient == null && foodPrepUtensil == null) { return; }
+
+        if (cookableIngredient)
+            cookableIngredient.ShowIngredientInCookware();
+
+        if (foodPrepUtensil)
+            foodPrepUtensil.SpawnIngredient(collider2d);
     }
 }
