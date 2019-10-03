@@ -15,6 +15,9 @@ public class ObjectiveManager : MonoBehaviour
         Objectives = new List<Objective>();
         Objectives.AddRange(GetComponentsInChildren<Objective>());
 
+        // Only get the direct descendants
+        Objectives = Objectives.FindAll((x) => x.transform.parent == transform);
+
         foreach (var objective in Objectives)
             objective.gameObject.SetActive(false);
     }
@@ -27,7 +30,19 @@ public class ObjectiveManager : MonoBehaviour
 
     public void EndCurrentObjective()
     {
+        // Is this an ObjectiveGroup, i.e. we will need to go through its sub-objectives first
+        if (typeof(ObjectiveGroup).IsAssignableFrom(Objectives[currentObjective].GetType()))
+        {
+            Debug.Log("Objective Group...");
+            if (!((ObjectiveGroup)Objectives[currentObjective]).IsComplete) // As long as this objective hasn't ran out of sub-objectives to do...
+            {
+                ((ObjectiveGroup)Objectives[currentObjective]).MoveToNextObjective(); // ...just keep going to the next
+                return;
+            }
+        }
+
         Objectives[currentObjective].End();
+        Debug.Log("Current objective: " + currentObjective);
         currentObjective++;
 
         if (currentObjective >= Objectives.Count)

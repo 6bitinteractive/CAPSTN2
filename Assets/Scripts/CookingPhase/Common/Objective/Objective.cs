@@ -8,7 +8,8 @@ using UnityEngine.Events;
 
 public abstract class Objective : MonoBehaviour
 {
-    [SerializeField][TextArea(1, 3)] protected string descriptionText;
+    public bool BeginAtStart = true;
+    [SerializeField] [TextArea(1, 3)] protected string descriptionText;
 
     public string Description => descriptionText;
     public bool Successful { get; protected set; }
@@ -34,7 +35,8 @@ public abstract class Objective : MonoBehaviour
     private void Start()
     {
         // Begin objective as soon as the object has been enabled
-        Begin();
+        if (BeginAtStart)
+            Begin();
     }
 
     private void Update()

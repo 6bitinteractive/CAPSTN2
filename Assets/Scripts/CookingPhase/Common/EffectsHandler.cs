@@ -10,7 +10,19 @@ public class EffectsHandler : MonoBehaviour
     private void Start()
     {
         foreach (var objective in objectiveManager.Objectives)
+        {
+            // Is this an ObjectiveGroup, i.e. we will need to go through its sub-objectives first
+            if (typeof(ObjectiveGroup).IsAssignableFrom(objective.GetType()))
+            {
+                ObjectiveGroup og = (ObjectiveGroup)objective;
+                foreach (var item in og.objectives)
+                {
+                    item.OnBegin.AddListener(ListenToStateChanges);
+                }
+            }
+
             objective.OnBegin.AddListener(ListenToStateChanges);
+        }
     }
 
     private void ListenToStateChanges(Objective objective)

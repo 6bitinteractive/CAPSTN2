@@ -23,11 +23,19 @@ public class ObjectiveDisplay : MonoBehaviour
 
         foreach (var objective in objectiveManager.Objectives)
         {
-            // Listen to certain objective events
-            objective.OnEnd.AddListener(HideNextButton);
-            objective.OnEnd.AddListener(ToggleObjectiveItem);
-            objective.OnReadyForNext.AddListener(ShowNextButton);
-            objective.OnAutomaticallyGoToNext.AddListener(ClickNext);
+            // Is this an ObjectiveGroup, i.e. we will need to go through its sub-objectives first
+            if (typeof(ObjectiveGroup).IsAssignableFrom(objective.GetType()))
+            {
+                ObjectiveGroup og = (ObjectiveGroup)objective;
+                foreach (var item in og.objectives)
+                {
+                    ListenToEvents(item);
+                }
+            }
+
+            // Main objectives
+            ListenToEvents(objective);
+
 
             // Create a list item to display each objective in the recipe/objective dialog panel
             GameObject o = Instantiate(objectivePanelPrefab, objectiveListPanel, false);
@@ -36,6 +44,15 @@ public class ObjectiveDisplay : MonoBehaviour
             objItemDisplay.SetDescriptionText(objective.Description);
             objectiveItemDisplayList.Add(objItemDisplay);
         }
+    }
+
+    // Listen to certain objective events
+    private void ListenToEvents(Objective objective)
+    {
+        objective.OnEnd.AddListener(HideNextButton);
+        objective.OnEnd.AddListener(ToggleObjectiveItem);
+        objective.OnReadyForNext.AddListener(ShowNextButton);
+        objective.OnAutomaticallyGoToNext.AddListener(ClickNext);
     }
 
     private void ClickNext(Objective objective)
