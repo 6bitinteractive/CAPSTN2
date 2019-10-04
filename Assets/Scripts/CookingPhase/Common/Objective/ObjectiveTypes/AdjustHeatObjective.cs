@@ -59,7 +59,7 @@ public class AdjustHeatObjective : Objective
 
     protected override bool SuccessConditionMet()
     {
-        Debug.Log("Current Heat Setting: " + currentSetting);
+        //Debug.Log("Current Heat Setting: " + currentSetting);
         return currentSetting == requiredHeatSetting;
     }
 

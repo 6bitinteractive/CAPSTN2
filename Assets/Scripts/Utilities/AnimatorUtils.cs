@@ -7,7 +7,7 @@ public class AnimatorUtils : MonoBehaviour
     // state = typically, it's the name of the clip
     public static bool IsDonePlaying(Animator animator, string state, int layer = 0, float percentage = 1f)
     {
-        Debug.Log("Animator normalized time: " + animator.GetCurrentAnimatorStateInfo(layer).normalizedTime);
+        //Debug.Log("Animator normalized time: " + animator.GetCurrentAnimatorStateInfo(layer).normalizedTime);
         return animator.GetCurrentAnimatorStateInfo(layer).normalizedTime >= percentage;
     }
 
