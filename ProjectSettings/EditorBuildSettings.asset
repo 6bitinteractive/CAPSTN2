@@ -33,20 +33,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Dialogue/AfterTutorial.unity
     guid: fc36a2962db31a24a8832df29d439f6c
   - enabled: 1
-    path: Assets/Scenes/Cooking/Overview/CookingOverview-PorkSisig.unity
-    guid: d34158b1382e2c0468f159d0a157ca68
-  - enabled: 1
-    path: Assets/Scenes/Cooking/Cooking-PorkSisig-Frying.unity
-    guid: ebc95e30528c62a40b2481308a77dd84
-  - enabled: 1
-    path: Assets/Scenes/Cooking/Completed/CookingCompleted-PorkSisig.unity
-    guid: e69c451a6c2927d4c93bff3d4ecee5fc
-  - enabled: 1
     path: Assets/Scenes/Cooking/Cooking-AligueRice-Frying.unity
     guid: 8d29205f22eb00e4d8c6b1e82051b7b0
   - enabled: 1
-    path: Assets/Scenes/Dialogue/AfterSisig.unity
-    guid: 223fafb811a3f5f428b8e1f2c735e6fb
+    path: Assets/Scenes/Cooking/Overview/CookingOverview-PorkSisig.unity
+    guid: d34158b1382e2c0468f159d0a157ca68
   - enabled: 1
     path: Assets/Scenes/Cooking/Cooking-PorkSisig-Boiling.unity
     guid: 622a7da23d9d4e7488cc177853b24e81
@@ -56,4 +47,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cooking/Cooking-PorkSisig-Chopping.unity
     guid: 80232649a00ce0f48b7e5e457bd822b6
+  - enabled: 1
+    path: Assets/Scenes/Cooking/Cooking-PorkSisig-Frying.unity
+    guid: 35a2b41918a7ca24c8576bbe2e716674
+  - enabled: 1
+    path: Assets/Scenes/Cooking/Completed/CookingCompleted-PorkSisig.unity
+    guid: e69c451a6c2927d4c93bff3d4ecee5fc
+  - enabled: 1
+    path: Assets/Scenes/Dialogue/AfterSisig.unity
+    guid: 223fafb811a3f5f428b8e1f2c735e6fb
   m_configObjects: {}
