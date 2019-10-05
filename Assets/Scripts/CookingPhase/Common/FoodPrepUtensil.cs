@@ -79,7 +79,7 @@ public class FoodPrepUtensil : MonoBehaviour
             GameObject go = Instantiate(ingredientToSpawnPrefab, position, Quaternion.identity, collider2D.transform);
 
             currentCount++;
-            Debug.Log(currentCount);
+            //Debug.Log("Spawned ingredient count: " + currentCount);
         }
 
         // Broadcast that the ingredient has been added

@@ -122,8 +122,6 @@ public abstract class Objective : MonoBehaviour
                 return;
             }
         }
-
-        return;
     }
 }
 

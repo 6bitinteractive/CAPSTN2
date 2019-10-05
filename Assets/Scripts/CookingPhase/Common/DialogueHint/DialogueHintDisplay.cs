@@ -6,7 +6,7 @@ using TMPro;
 
 public class DialogueHintDisplay : MonoBehaviour
 {
-    [SerializeField] private float delay = 3f;
+    [SerializeField] private float delay = 3.5f;
 
     public Image characterPortrait;
     public TextMeshProUGUI dialogueText;

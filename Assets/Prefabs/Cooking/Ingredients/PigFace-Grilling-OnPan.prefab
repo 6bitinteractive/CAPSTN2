@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1658358329939049778, guid: 699a12fd04b9ff648b8fd7774d24b530,
         type: 3}
       propertyPath: m_Name
-      value: PigFace-Grilling
+      value: PigFace-Grilling-OnPan
       objectReference: {fileID: 0}
     - target: {fileID: 8729824043125544174, guid: 699a12fd04b9ff648b8fd7774d24b530,
         type: 3}

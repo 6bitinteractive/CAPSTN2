@@ -7,6 +7,7 @@ public class PreheatCookwareAddIngredientObjective : Objective
     [SerializeField] private List<Cookable> ingredientsToBeAdded;
     [SerializeField] private GameObject steam;
     [SerializeField] private float steamWaitTime = 5f;
+    [SerializeField] private DialogueHint dialogueHint;
 
     private bool preheated, addedBeforePreheated;
     private int currentIngredient;
@@ -22,7 +23,7 @@ public class PreheatCookwareAddIngredientObjective : Objective
         ObjectiveStates.Add(perfectState);
 
         // Define condition
-        perfectState.HasBeenReached = () => preheated;
+        perfectState.HasBeenReached = () => preheated && !addedBeforePreheated;
     }
 
     protected override void OnEnable()
@@ -48,6 +49,9 @@ public class PreheatCookwareAddIngredientObjective : Objective
 
     protected override void InitializeObjective()
     {
+        base.InitializeObjective();
+        SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
+
         if (ingredientsToBeAdded.Count == 0)
             Debug.LogError("Specify which ingredients are to be added.");
 

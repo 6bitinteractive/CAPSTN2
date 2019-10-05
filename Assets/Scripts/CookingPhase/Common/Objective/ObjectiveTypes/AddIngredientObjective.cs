@@ -44,6 +44,8 @@ public class AddIngredientObjective : Objective
 
     protected override void InitializeObjective()
     {
+        base.InitializeObjective();
+
         if (ingredientsToBeAdded.Count == 0)
             Debug.LogError("Specify which ingredients are to be added.");
 

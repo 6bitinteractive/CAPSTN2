@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Animator), typeof(AudioSource))]
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(AudioSource))]
 
 public class WaterStateController : MonoBehaviour
 {
@@ -39,7 +40,6 @@ public class WaterStateController : MonoBehaviour
     // NOTE: fuction overload since Unity doesn't support enum parameters at UnityEvent inspector :(
     public void SwitchState(int state)
     {
-        if (animator == null) { return; }
         SwitchState((WaterState)state);
     }
 
