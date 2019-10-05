@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 8914878583864332002}
   - component: {fileID: 8914878583864332001}
   - component: {fileID: 8914878583864332000}
-  m_Layer: 5
+  m_Layer: 15
   m_Name: PanImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
