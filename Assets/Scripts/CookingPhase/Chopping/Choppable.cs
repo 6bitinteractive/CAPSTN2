@@ -10,6 +10,7 @@ public class Choppable : MonoBehaviour
     [SerializeField] private int maxIngredientSlices;
     [SerializeField] private int sliceCount;
     [SerializeField] private bool isChopped = false;
+    [SerializeField] private GameObject swipePrompt;
     [SerializeField] private UnityEvent onIngredientChop = new UnityEvent();
     [SerializeField] private UnityEvent onIngredientChopEnd = new UnityEvent();
 
@@ -27,7 +28,7 @@ public class Choppable : MonoBehaviour
     void OnEnable()
     {
        maxIngredientSlices += currentIngredientState.Length;
-       swipeable.SwipeDirection = currentIngredientState[sliceCount].GetComponent<Swipeable>().SwipeDirection;
+       UpdateCurrentIngredient();
     }
 
     public void OnChop()
@@ -43,15 +44,22 @@ public class Choppable : MonoBehaviour
         
         else
         {           
-            sliceCount++;
-            gameObject.GetComponent<Image>().sprite = currentIngredientState[sliceCount].GetComponent<Image>().sprite; // Change sprite
-            swipeable.SwipeDirection = currentIngredientState[sliceCount].GetComponent<Swipeable>().SwipeDirection; // Change direction
+            sliceCount++;      
+            UpdateCurrentIngredient();
             onIngredientChop.Invoke();
         }
     }
 
     public bool MaxSliceReached()
     {
-        return sliceCount >= MaxIngredientSlices - 1;
+        return sliceCount >= MaxIngredientSlices - 2;
+    }
+
+    private void UpdateCurrentIngredient()
+    {
+        //Note* This is starting to look like too much get components might have to clean it someday
+        gameObject.GetComponent<Image>().sprite = currentIngredientState[sliceCount].GetComponent<Image>().sprite; // Change sprite
+        swipeable.SwipeDirection = currentIngredientState[sliceCount].GetComponent<Swipeable>().SwipeDirection; // Change direction
+        swipePrompt.GetComponent<Animator>().runtimeAnimatorController = currentIngredientState[sliceCount].GetComponent<Swipeable>().SwipeAnimatorPrompt;
     }
 }

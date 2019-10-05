@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8949354826191315521}
   - component: {fileID: 2301232617548092813}
   - component: {fileID: 7337733856965719361}
+  - component: {fileID: 3313565489168530907}
   m_Layer: 5
   m_Name: PigEarSlice-1
   m_TagString: Untagged
@@ -88,6 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SwipeDirection: 8
+  SwipeAnimatorPrompt: {fileID: 9100000, guid: 705569460c983c145a847c8b47691420, type: 2}
   OnCorrectSwipe:
     m_PersistentCalls:
       m_Calls: []
@@ -97,3 +99,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: SwipeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!95 &3313565489168530907
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3162871631792763505}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 318a8df3b1d789c4d87aa4123a6aed98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

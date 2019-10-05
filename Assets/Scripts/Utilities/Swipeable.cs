@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Swipeable : MonoBehaviour
 {
     public SwipeDirection SwipeDirection;
+    public RuntimeAnimatorController SwipeAnimatorPrompt;
     public UnityEvent OnCorrectSwipe = new UnityEvent();
     public SwipeEvent OnCorrectSwipeDirection = new SwipeEvent();
 
@@ -18,6 +19,7 @@ public class Swipeable : MonoBehaviour
         swipeDirectionListener = SingletonManager.GetInstance<SwipeDirectionListener>();
         SwipeDetector.OnSwipe += VerifySwipe;
         OnCorrectSwipeDirection.AddListener(swipeDirectionListener.InvokeOnCorrectSwipe);
+        SwipeAnimatorPrompt = GetComponent<RuntimeAnimatorController>();
     }
 
     private void VerifySwipe(SwipeData swipeData)
