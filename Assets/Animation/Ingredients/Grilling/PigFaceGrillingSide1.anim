@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PigFaceSide2
+  m_Name: PigFaceGrillingSide1
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 1db94630e7f99df40b5964a152da8c8a, type: 3}
+      value: {fileID: 21300000, guid: c16a76739d2e36a41b47b52e70c205bd, type: 3}
     - time: 0.2
-      value: {fileID: 21300000, guid: 05708a3e985156f4f8dff4a11da9e199, type: 3}
+      value: {fileID: 21300000, guid: c31c36307c140824f9ae6a68529814b1, type: 3}
     - time: 0.4
-      value: {fileID: 21300000, guid: 4b0dc471aa7c9ff48ab7beaca7cc371f, type: 3}
+      value: {fileID: 21300000, guid: 5b3c3d0c79f414a4f9ef3566f8ce4e07, type: 3}
     attribute: m_Sprite
     path: 
     classID: 114
@@ -44,9 +44,9 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 1db94630e7f99df40b5964a152da8c8a, type: 3}
-    - {fileID: 21300000, guid: 05708a3e985156f4f8dff4a11da9e199, type: 3}
-    - {fileID: 21300000, guid: 4b0dc471aa7c9ff48ab7beaca7cc371f, type: 3}
+    - {fileID: 21300000, guid: c16a76739d2e36a41b47b52e70c205bd, type: 3}
+    - {fileID: 21300000, guid: c31c36307c140824f9ae6a68529814b1, type: 3}
+    - {fileID: 21300000, guid: 5b3c3d0c79f414a4f9ef3566f8ce4e07, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

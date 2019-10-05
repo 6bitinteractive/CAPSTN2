@@ -77,7 +77,6 @@ public class FoodPrepUtensil : MonoBehaviour
             // Spawn at the same x-axis as this utensil, randomize the y based on the Cookware's polygonCollider's bounds
             Vector3 position = new Vector3(transform.position.x, Random.Range(collider2D.bounds.min.y, collider2D.bounds.max.y), 0f);
             GameObject go = Instantiate(ingredientToSpawnPrefab, position, Quaternion.identity, collider2D.transform);
-            Collider2D collider = go.GetComponent<Collider2D>();
 
             currentCount++;
             Debug.Log(currentCount);

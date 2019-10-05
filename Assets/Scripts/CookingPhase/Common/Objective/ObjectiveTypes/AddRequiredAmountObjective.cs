@@ -13,6 +13,8 @@ public class AddRequiredAmountObjective : Objective
     private Animator ingredientToBeAddedAnim;
 
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
+    [SerializeField] private ObjectiveState underState = new ObjectiveState(ObjectiveState.Status.Under);
+    [SerializeField] private ObjectiveState overState = new ObjectiveState(ObjectiveState.Status.Over);
 
     private int currentAmount;
 
@@ -25,9 +27,13 @@ public class AddRequiredAmountObjective : Objective
         // Setup objectives
         // Add to list
         ObjectiveStates.Add(perfectState);
+        ObjectiveStates.Add(underState);
+        ObjectiveStates.Add(overState);
 
         // Define condition
         perfectState.HasBeenReached = () => SuccessConditionMet();
+        underState.HasBeenReached = () => currentAmount == 1;
+        overState.HasBeenReached = () => currentAmount > requiredAmount;
     }
 
     protected override void OnEnable()
@@ -40,7 +46,6 @@ public class AddRequiredAmountObjective : Objective
     {
         base.InitializeObjective();
         ingredientToBeAdded.gameObject.SetActive(true);
-        GoToNextObjective(false);
     }
 
     protected override void FinalizeObjective()
@@ -59,6 +64,9 @@ public class AddRequiredAmountObjective : Objective
     private void UpdateCount()
     {
         currentAmount++;
+
+        if (currentAmount == 1)
+            GoToNextObjective(false);
 
         if (currentAmount >= maxAmount)
             ingredientToBeAddedAnim.SetTrigger("SlideOut");

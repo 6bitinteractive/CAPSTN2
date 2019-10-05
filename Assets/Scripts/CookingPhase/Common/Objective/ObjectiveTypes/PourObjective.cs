@@ -159,7 +159,7 @@ public class PourObjective : Objective
             water.SwitchState(currentWaterState);
 
             // Give player a heads up
-            DialogueHint dialogue = new DialogueHint(dialogueHint.characterPortrait, "Let me just adjust the water to the proper amount...");
+            DialogueHint dialogue = new DialogueHint(dialogueHint.characterPortrait, "Let me adjust the amount of water...");
             SingletonManager.GetInstance<DialogueHintManager>().Show(dialogue);
         }
     }

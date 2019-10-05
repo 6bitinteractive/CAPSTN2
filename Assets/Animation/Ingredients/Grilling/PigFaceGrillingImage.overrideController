@@ -6,7 +6,7 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PigFaceImage
+  m_Name: PigFaceGrillingImage
   m_Controller: {fileID: 9100000, guid: 3ab6dec0bc421ba43bbbc809a1bc0820, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: b62ada7b27adf8f46addf8270a4d40b6, type: 2}
