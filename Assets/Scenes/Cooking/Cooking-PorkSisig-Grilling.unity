@@ -120,6 +120,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &215187785 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3950824822513037753, guid: e83e7d10d232f854eab4f3506ae491bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 3950824822023634978}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &520599538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -265,6 +277,12 @@ MonoBehaviour:
 --- !u!224 &1620071494 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2378664236392328556, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8914878584336432876}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1907893575 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1308396166429863232, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
     type: 3}
   m_PrefabInstance: {fileID: 8914878584336432876}
   m_PrefabAsset: {fileID: 0}
@@ -1448,6 +1466,90 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53003d1568d38d146b217c6438b2c2ba, type: 3}
+--- !u!1001 &6331611724976842817
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1045649556}
+    m_Modifications:
+    - target: {fileID: 6331611724459928828, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: m_Name
+      value: TurnOffHeatWhenCookedObjective
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331611724459928831, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331611724459928831, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331611724459928831, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331611724459928831, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331611724459928831, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331611724459928831, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331611724459928831, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331611724459928831, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331611724459928831, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331611724459928831, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331611724459928831, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6331611724459928830, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: panLid
+      value: 
+      objectReference: {fileID: 1907893575}
+    - target: {fileID: 6331611724459928830, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: cookware
+      value: 
+      objectReference: {fileID: 635744268}
+    - target: {fileID: 6331611724459928830, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: stoveControllerSlider
+      value: 
+      objectReference: {fileID: 215187785}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 007403d13f005654e897f2379c75389c, type: 3}
 --- !u!1001 &7552385174038203471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2166,6 +2268,92 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 662446991}
     m_Modifications:
+    - target: {fileID: 1527542857537574344, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5b3a0613f539bae429812a1a213771a6, type: 2}
+    - target: {fileID: 1308396166429863238, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
+        type: 3}
+      propertyPath: OnCoverCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1239122253}
+    - target: {fileID: 1308396166429863238, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
+        type: 3}
+      propertyPath: OnCoverCookware.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1308396166429863238, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
+        type: 3}
+      propertyPath: OnTakeOffCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1239122253}
+    - target: {fileID: 1308396166429863238, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
+        type: 3}
+      propertyPath: OnTakeOffCookware.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700318228172145577, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
+        type: 3}
+      propertyPath: m_Name
+      value: PanLidPosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OnCoverCookware.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OnTakeOffCookware.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OnCoverCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OnCoverCookware.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OnCoverCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1239122253}
+    - target: {fileID: 0}
+      propertyPath: OnCoverCookware.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OnCoverCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OnTakeOffCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OnTakeOffCookware.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OnTakeOffCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1239122253}
+    - target: {fileID: 0}
+      propertyPath: OnTakeOffCookware.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OnTakeOffCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: OnTakeOffCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8914878584657068749, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
         type: 3}
       propertyPath: m_Name

@@ -10,6 +10,7 @@ using UnityEngine.Events;
 
 public class IngredientStateController : MonoBehaviour
 {
+    [Tooltip("Some mechanics cook the ingredient by time, i.e. automatic, while others depending on the player's action.")]
     [SerializeField] private bool automaticSwitch;
 
     [Tooltip("Will always be 0 (zero) if not automatic.")]
@@ -31,8 +32,9 @@ public class IngredientStateController : MonoBehaviour
     }
 
     private Animator animator;
-    private int current;
+    private int currentState;
     private bool isCooking;
+    private float currentTime;
 
     private void Awake()
     {
@@ -40,8 +42,22 @@ public class IngredientStateController : MonoBehaviour
 
         if (automaticSwitch)
         {
-            IsCooking = true;
-            InvokeRepeating("Switch", delayBeforeSwitch, delayBeforeSwitch);
+            StartCooking(new StateSwitchOption(true, true));
+        }
+    }
+
+    private void Update()
+    {
+        if (!IsCooking) { return; }
+
+        if (currentTime >= delayBeforeSwitch)
+        {
+            Switch();
+            currentTime = 0;
+        }
+        else
+        {
+            currentTime += Time.deltaTime;
         }
     }
 
@@ -77,16 +93,32 @@ public class IngredientStateController : MonoBehaviour
         SwitchState((IngredientState)ingredientState);
     }
 
+    // Logically, it should continue from previous state...
+    public void StartCooking(StateSwitchOption option)
+    {
+        IsCooking = true;
+
+        if (!option.continuePreviousState)
+        {
+            currentState = 0;
+            currentTime = 0;
+            CurrentState = IngredientState.Raw;
+        }
+
+        if (!option.automaticallySwitchState)
+            IsCooking = false;
+    }
+
     private void Switch()
     {
         if (!IsCooking) { return; }
 
-        current++;
-        SwitchState(current);
+        currentState++;
+        SwitchState(currentState);
 
         if (CurrentState == IngredientState.Overcooked)
         {
-            CancelInvoke();
+            IsCooking = false;
             return;
         }
     }
@@ -95,4 +127,16 @@ public class IngredientStateController : MonoBehaviour
 public enum IngredientState
 {
     Raw, Undercooked, Perfect, Overcooked
+}
+
+public struct StateSwitchOption
+{
+    public bool continuePreviousState;      // If cooking was stopped, resuming it would just proceed to the next state
+    public bool automaticallySwitchState;   // Automatically switch to next state after a delay else manually switch states using the provided method above
+
+    public StateSwitchOption(bool _continuePreviousState, bool _automaticallySwitchState)
+    {
+        continuePreviousState = _continuePreviousState;
+        automaticallySwitchState = _automaticallySwitchState;
+    }
 }
