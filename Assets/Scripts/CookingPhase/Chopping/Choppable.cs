@@ -36,6 +36,7 @@ public class Choppable : MonoBehaviour
         {
             isChopped = true;
             onIngredientChopEnd.Invoke();
+            swipeable.SwipeDirection = SwipeDirection.None;
             gameObject.SetActive(false);
             return;
         }

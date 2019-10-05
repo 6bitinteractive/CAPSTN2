@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6462989991280359155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6462989991280359148}
+  - component: {fileID: 6462989991280359150}
+  - component: {fileID: 6462989991280359149}
+  - component: {fileID: 6462989991280359151}
+  - component: {fileID: 6462989991280359144}
+  m_Layer: 5
+  m_Name: PigEar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &6462989991280359148
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462989991280359155}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -14.5, y: 8.5}
+  m_SizeDelta: {x: 29, y: 16.899994}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6462989991280359150
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462989991280359155}
+  m_CullTransparentMesh: 0
+--- !u!114 &6462989991280359149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462989991280359155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 6f12eeeb77ab11c47b5a4b6eae74c7f5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!114 &6462989991280359151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462989991280359155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adad5baa689e5cb47b8159877f29538e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentIngredientState:
+  - {fileID: 3162871631792763505, guid: 2b0112d84f6d25043bac4aaa7a73a31f, type: 3}
+  - {fileID: 3162871631792763505, guid: 1b7e3a1906a60b54bb8f61d630a6644d, type: 3}
+  - {fileID: 3162871631792763505, guid: 9276acdbafc9d2748b48c2ccd94aaa7f, type: 3}
+  - {fileID: 3162871631792763505, guid: 17afa8c34727ec148a405d0f2e8b5bd5, type: 3}
+  - {fileID: 3162871631792763505, guid: 7563a73f91badfd43a7bcc591691dc32, type: 3}
+  - {fileID: 3162871631792763505, guid: eb8f007b1a5dcbf45b1758972d3721d5, type: 3}
+  - {fileID: 3162871631792763505, guid: 58a0d46f60a2aff4695b8cf785b38ea5, type: 3}
+  - {fileID: 3162871631792763505, guid: 6209c8fe36fa88948b5fae3b94aa07fd, type: 3}
+  - {fileID: 3162871631792763505, guid: acbd78c5c483038428c18961494b184c, type: 3}
+  - {fileID: 3162871631792763505, guid: be25dac90825a2b499f39caddae58ebc, type: 3}
+  - {fileID: 3162871631792763505, guid: 14c2cfc69bdd50a45be562e0a2cf452b, type: 3}
+  - {fileID: 3162871631792763505, guid: 670b1d6f767c7944a9ba4864ded5db67, type: 3}
+  maxIngredientSlices: 0
+  sliceCount: 0
+  isChopped: 0
+  onIngredientChop:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onIngredientChopEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &6462989991280359144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462989991280359155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a48eb5f6a00b88c408c52ae615b9cc2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SwipeDirection: 0
+  OnCorrectSwipe:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnCorrectSwipeDirection:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: SwipeEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null

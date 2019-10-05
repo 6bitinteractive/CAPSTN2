@@ -100,6 +100,12 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        StartCoroutine(EndingDialogue());
+    }
+
+    private IEnumerator EndingDialogue()
+    {
+        yield return new WaitForSeconds(0.5f); // Fixes freezing bug when player presses skip button too fast
         OnFullDialogueEnd.Invoke();
 
         if ((animator != null) && (animator.isActiveAndEnabled))
@@ -118,7 +124,7 @@ public class DialogueManager : MonoBehaviour
         lastSentence.onEndSentence.Invoke();
     }
 
-    public void CheckRightPortrait(Dialogue dialogueEntry)
+        public void CheckRightPortrait(Dialogue dialogueEntry)
     {
 
         // If its null take the last portrait and set it as current portrait

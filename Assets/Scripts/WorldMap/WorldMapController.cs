@@ -22,6 +22,7 @@ public class WorldMapController : MonoBehaviour
         player = gameObject;
         pathManager = GetComponent<PathManager>();
         animator = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -50,30 +51,35 @@ public class WorldMapController : MonoBehaviour
             {
                 StartCoroutine(MovingToWaypoint(waypoint));
             }         
-        }
+        }  
+    }
 
-        IEnumerator MovingToWaypoint(Waypoint waypoint)
+    IEnumerator MovingToWaypoint(Waypoint waypoint)
+    {
+        waypointUI = waypoint.GetComponent<WaypointUI>();
+        pathManager.NavigateTo(waypoint.transform.position);
+        bool isAtTargetPosition = false;
+        DisableAction(); // Disable player action while moving
+        //animator.SetBool("isMoving", true);
+
+        while (!isAtTargetPosition)
         {
-            waypointUI = waypoint.GetComponent<WaypointUI>();
-            pathManager.NavigateTo(waypoint.transform.position);
-            bool isAtTargetPosition = false;
-            DisableAction(); // Disable player action while moving
-            //animator.SetBool("isMoving", true);
-
-            while (!isAtTargetPosition)
+            if (gameObject.transform.position == waypoint.transform.position)
             {
-                if (gameObject.transform.position == waypoint.transform.position)
-                {
-                    // gameObject.transform.Translate(0, 0.5f, 0);
-                    OnWaypointEnter.Invoke();
-                    isAtTargetPosition = true;
-                    pathManager.Stop();
-                    waypointUI.InvokeOnWaypointArrival();
-                    yield break;
-                }
-                yield return 0;
+                // gameObject.transform.Translate(0, 0.5f, 0);
+                OnWaypointEnter.Invoke();
+                isAtTargetPosition = true;
+                pathManager.Stop();
+                waypointUI.InvokeOnWaypointArrival();
+                yield break;
             }
-        } 
+            yield return 0;
+        }
+    }
+
+    public void MoveToWaypoint(Waypoint waypoint)
+    {
+        StartCoroutine(MovingToWaypoint(waypoint));
     }
 
     public void EnableAction()
