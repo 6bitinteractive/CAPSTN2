@@ -2433,7 +2433,7 @@ PrefabInstance:
     - target: {fileID: 4781448913022080364, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: OnDestinationReached.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4781448913022080364, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
@@ -2838,7 +2838,7 @@ PrefabInstance:
     - target: {fileID: 8087771845888280200, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8087771845888280200, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
@@ -3065,36 +3065,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 662446991}
     m_Modifications:
-    - target: {fileID: 1527542857537574344, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 5b3a0613f539bae429812a1a213771a6, type: 2}
-    - target: {fileID: 1308396166429863238, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
-        type: 3}
-      propertyPath: OnCoverCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1239122253}
-    - target: {fileID: 1308396166429863238, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
-        type: 3}
-      propertyPath: OnCoverCookware.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 1308396166429863238, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
-        type: 3}
-      propertyPath: OnTakeOffCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1239122253}
-    - target: {fileID: 1308396166429863238, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
-        type: 3}
-      propertyPath: OnTakeOffCookware.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 6700318228172145577, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
-        type: 3}
-      propertyPath: m_Name
-      value: PanLidPosition
-      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: OnCoverCookware.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3155,6 +3125,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PanPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527542857537574344, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5b3a0613f539bae429812a1a213771a6, type: 2}
+    - target: {fileID: 1308396166429863238, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
+        type: 3}
+      propertyPath: OnCoverCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1239122253}
+    - target: {fileID: 1308396166429863238, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
+        type: 3}
+      propertyPath: OnCoverCookware.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1308396166429863238, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
+        type: 3}
+      propertyPath: OnTakeOffCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1239122253}
+    - target: {fileID: 1308396166429863238, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
+        type: 3}
+      propertyPath: OnTakeOffCookware.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700318228172145577, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
+        type: 3}
+      propertyPath: m_Name
+      value: PanLidPosition
       objectReference: {fileID: 0}
     - target: {fileID: 4895458841484006363, guid: 7a3706c9af15ffa4aa8d92de7405f08d,
         type: 3}
