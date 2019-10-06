@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+// Older implementation of Objective item
+// See ObjectiveItemUI
+
 public class ObjectiveItemDisplay : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI objectiveDescriptionText;

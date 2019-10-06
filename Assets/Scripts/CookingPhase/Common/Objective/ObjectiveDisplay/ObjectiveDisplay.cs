@@ -12,7 +12,7 @@ public class ObjectiveDisplay : MonoBehaviour
     [SerializeField] private GameObject objectivePanelPrefab;
     [SerializeField] private Transform objectiveListPanel;
 
-    private List<ObjectiveItemDisplay> objectiveItemDisplayList = new List<ObjectiveItemDisplay>();
+    private List<ObjectiveItemUI> objectiveItemDisplayList = new List<ObjectiveItemUI>();
     private Button nextButton;
     private CanvasGroup nextButtonCanvasGroup;
 
@@ -21,19 +21,20 @@ public class ObjectiveDisplay : MonoBehaviour
         nextButton = nextButtonPanel.GetComponentInChildren<Button>();
         nextButtonCanvasGroup = nextButtonPanel.GetComponent<CanvasGroup>();
 
-        foreach (var objective in objectiveManager.Objectives)
+        for (int i = 0; i < objectiveManager.Objectives.Count; i++)
         {
             // Listen to certain objective events
-            objective.OnEnd.AddListener(HideNextButton);
-            objective.OnEnd.AddListener(ToggleObjectiveItem);
-            objective.OnReadyForNext.AddListener(ShowNextButton);
-            objective.OnAutomaticallyGoToNext.AddListener(ClickNext);
+            objectiveManager.Objectives[i].OnEnd.AddListener(HideNextButton);
+            objectiveManager.Objectives[i].OnEnd.AddListener(ToggleObjectiveItem);
+            objectiveManager.Objectives[i].OnReadyForNext.AddListener(ShowNextButton);
+            objectiveManager.Objectives[i].OnAutomaticallyGoToNext.AddListener(ClickNext);
 
             // Create a list item to display each objective in the recipe/objective dialog panel
             GameObject o = Instantiate(objectivePanelPrefab, objectiveListPanel, false);
-            ObjectiveItemDisplay objItemDisplay = o.GetComponent<ObjectiveItemDisplay>();
-            objItemDisplay.CorrespondingObjective = objective;
-            objItemDisplay.SetDescriptionText(objective.Description);
+            ObjectiveItemUI objItemDisplay = o.GetComponent<ObjectiveItemUI>();
+            objItemDisplay.CorrespondingObjective = objectiveManager.Objectives[i];
+            objItemDisplay.SetData(string.Format("Step {0} of {1}", i+1, objectiveManager.Objectives.Count), objectiveManager.Objectives[i].Description);
+            objItemDisplay.transform.SetAsFirstSibling(); // The latest item is at the back
             objectiveItemDisplayList.Add(objItemDisplay);
         }
     }
@@ -60,6 +61,8 @@ public class ObjectiveDisplay : MonoBehaviour
     private void ToggleObjectiveItem(Objective objective)
     {
         // TODO: Optimize this?
-        objectiveItemDisplayList.Find(x => x.CorrespondingObjective == objective).SetToggleCheckbox(objective.Successful);
+        ObjectiveItemUI obj = objectiveItemDisplayList.Find(x => x.CorrespondingObjective == objective);
+        obj.SetCheckmark(objective.Successful);
+        obj.Show(false);
     }
 }
