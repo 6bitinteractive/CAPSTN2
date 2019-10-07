@@ -629,6 +629,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GreenChili-ToAdd
       objectReference: {fileID: 0}
+    - target: {fileID: 5876877779909888841, guid: e673b938c2541df458b0e54365a57914,
+        type: 3}
+      propertyPath: IngredientInCookware
+      value: 
+      objectReference: {fileID: 1562815415}
     - target: {fileID: 5876877779909888844, guid: e673b938c2541df458b0e54365a57914,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -734,11 +739,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5876877779909888841, guid: e673b938c2541df458b0e54365a57914,
-        type: 3}
-      propertyPath: IngredientInCookware
-      value: 
-      objectReference: {fileID: 1562815415}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e673b938c2541df458b0e54365a57914, type: 3}
 --- !u!224 &1008183526 stripped
@@ -974,6 +974,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PorkMeat-ToAdd
       objectReference: {fileID: 0}
+    - target: {fileID: 2257270332332392996, guid: 2924179411f074845a2fc26f231db258,
+        type: 3}
+      propertyPath: IngredientInCookware
+      value: 
+      objectReference: {fileID: 1835965133}
     - target: {fileID: 2257270332332392993, guid: 2924179411f074845a2fc26f231db258,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1079,11 +1084,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2257270332332392996, guid: 2924179411f074845a2fc26f231db258,
-        type: 3}
-      propertyPath: IngredientInCookware
-      value: 
-      objectReference: {fileID: 1835965133}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2924179411f074845a2fc26f231db258, type: 3}
 --- !u!224 &1549542765 stripped
@@ -1229,6 +1229,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1045649556}
     m_Modifications:
+    - target: {fileID: 328540679576329438, guid: 75efe86b20d989d47bb743bc7027a6b3,
+        type: 3}
+      propertyPath: m_Name
+      value: OtherIngredients-StirFryObjective
+      objectReference: {fileID: 0}
     - target: {fileID: 4629949566252436202, guid: 75efe86b20d989d47bb743bc7027a6b3,
         type: 3}
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.size
@@ -1278,11 +1283,6 @@ PrefabInstance:
         type: 3}
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: SlideOut
-      objectReference: {fileID: 0}
-    - target: {fileID: 328540679576329438, guid: 75efe86b20d989d47bb743bc7027a6b3,
-        type: 3}
-      propertyPath: m_Name
-      value: OtherIngredients-StirFryObjective
       objectReference: {fileID: 0}
     - target: {fileID: 328540679576329439, guid: 75efe86b20d989d47bb743bc7027a6b3,
         type: 3}
@@ -1823,6 +1823,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1045649556}
     m_Modifications:
+    - target: {fileID: 328540679576329438, guid: 75efe86b20d989d47bb743bc7027a6b3,
+        type: 3}
+      propertyPath: m_Name
+      value: Onion-StirFryObjective
+      objectReference: {fileID: 0}
     - target: {fileID: 4629949566252436202, guid: 75efe86b20d989d47bb743bc7027a6b3,
         type: 3}
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.size
@@ -1857,11 +1862,6 @@ PrefabInstance:
         type: 3}
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 328540679576329438, guid: 75efe86b20d989d47bb743bc7027a6b3,
-        type: 3}
-      propertyPath: m_Name
-      value: Onion-StirFryObjective
       objectReference: {fileID: 0}
     - target: {fileID: 328540679576329439, guid: 75efe86b20d989d47bb743bc7027a6b3,
         type: 3}
@@ -2486,6 +2486,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 7703675425583042072, guid: c173e2a3c6f070042ba98955da2c0868,
+        type: 3}
+      propertyPath: minDistance
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6421684125476184636, guid: c173e2a3c6f070042ba98955da2c0868,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2591,11 +2596,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7703675425583042072, guid: c173e2a3c6f070042ba98955da2c0868,
-        type: 3}
-      propertyPath: minDistance
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 8284671739836988335, guid: c173e2a3c6f070042ba98955da2c0868,
         type: 3}
       propertyPath: m_Layer
@@ -2664,7 +2664,7 @@ PrefabInstance:
         type: 3}
       propertyPath: StageScene
       value: 
-      objectReference: {fileID: 11400000, guid: 86db2e5306a573b4fb627dd98aaaf47a,
+      objectReference: {fileID: 11400000, guid: 569eb71a8cd7731468f49e9e2f2563c7,
         type: 2}
     - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
