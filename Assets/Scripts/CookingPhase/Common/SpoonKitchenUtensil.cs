@@ -12,16 +12,16 @@ public class SpoonKitchenUtensil : MonoBehaviour
     public float MixDuration { get; set; }
 
     private KitchenUtensil kitchenUtensil;
-    private Draggable draggable;
-    private PolygonCollider2D polygonCollider2D;
 
     private void Awake()
     {
         kitchenUtensil = GetComponent<KitchenUtensil>();
-        draggable = GetComponent<Draggable>();
-        polygonCollider2D = GetComponent<PolygonCollider2D>();
-        polygonCollider2D.isTrigger = true; // This is for checking if it's within a cookware's collider
         transform.hasChanged = false;
+    }
+
+    private void OnEnable()
+    {
+        MixDuration = 0f;
     }
 
     private void Update()
@@ -30,11 +30,11 @@ public class SpoonKitchenUtensil : MonoBehaviour
 
         if (transform.hasChanged)
         {
-            Debug.Log(gameObject.name + " is mixing.");
             IsMixing = true;
             MixDuration += Time.deltaTime;
-            Debug.Log(MixDuration);
             transform.hasChanged = false; // Must always be set back to false
+            //Debug.Log(gameObject.name + " is mixing.");
+            //Debug.Log(MixDuration);
         }
         else
         {

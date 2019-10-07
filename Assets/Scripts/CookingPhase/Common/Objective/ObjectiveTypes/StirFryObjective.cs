@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Note: Make sure the object attached with the SpoonKitchenUtensil does NOT have collision check enabled with the layer for ingredients
+// And IsTrigger is set to false
+// It somehow messes up with the colliders for checking if it's in the cookware???
+
 public class StirFryObjective : Objective
 {
     [SerializeField] private SpoonKitchenUtensil spoon;
@@ -14,12 +18,14 @@ public class StirFryObjective : Objective
     [SerializeField] private ObjectiveState overState = new ObjectiveState(ObjectiveState.Status.Over);
 
     private Animator spoonAnim;
+    private DisableAnimation spoonDisableAnim;
     private bool showNextButton = true;
 
     protected override void Awake()
     {
         base.Awake();
         spoonAnim = spoon.GetComponent<Animator>();
+        spoonDisableAnim = spoon.GetComponent<DisableAnimation>();
 
         // Setup objectives
         // Add to list
@@ -39,9 +45,14 @@ public class StirFryObjective : Objective
         SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
 
         if (spoon.gameObject.activeInHierarchy)
+        {
+            spoonDisableAnim.enabled = true;
             spoonAnim.SetTrigger("SlideIn");
+        }
         else
+        {
             spoon.gameObject.SetActive(true);
+        }
     }
 
     protected override void RunObjective()
@@ -54,15 +65,12 @@ public class StirFryObjective : Objective
             showNextButton = false;
             GoToNextObjective(false);
         }
-
-        Debug.Log(spoon.MixDuration);
     }
 
-    protected override void FinalizeObjective()
+    protected override void PostFinalizeObjective()
     {
         base.FinalizeObjective();
         spoon.MixDuration = 0f;
-        spoonAnim.SetTrigger("SlideOut");
     }
 
     protected override bool SuccessConditionMet()

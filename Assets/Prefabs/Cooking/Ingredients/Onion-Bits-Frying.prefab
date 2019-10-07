@@ -47,7 +47,7 @@ PrefabInstance:
     - target: {fileID: 4446624269898270507, guid: 795f3c5c7f56ee542a96c40b638f3b76,
         type: 3}
       propertyPath: m_Name
-      value: Onion-Frying Variant
+      value: Onion-Bits-Frying
       objectReference: {fileID: 0}
     - target: {fileID: 4446624269898270507, guid: 795f3c5c7f56ee542a96c40b638f3b76,
         type: 3}
@@ -58,16 +58,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 6610183123305551908, guid: 795f3c5c7f56ee542a96c40b638f3b76,
-        type: 3}
-      propertyPath: OnSwitchState.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6610183123305551908, guid: 795f3c5c7f56ee542a96c40b638f3b76,
-        type: 3}
-      propertyPath: OnCookUpdate.m_PersistentCalls.m_Calls.Array.size
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6021499195524968183, guid: 795f3c5c7f56ee542a96c40b638f3b76,
         type: 3}
@@ -116,6 +106,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 3d841e4097b97a640ac33dc71b45cea3,
         type: 3}
+    - target: {fileID: 6610183123305551908, guid: 795f3c5c7f56ee542a96c40b638f3b76,
+        type: 3}
+      propertyPath: OnSwitchState.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610183123305551908, guid: 795f3c5c7f56ee542a96c40b638f3b76,
+        type: 3}
+      propertyPath: OnCookUpdate.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610183123305551908, guid: 795f3c5c7f56ee542a96c40b638f3b76,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 795f3c5c7f56ee542a96c40b638f3b76, type: 3}
 --- !u!1 &2410769697448737976 stripped
