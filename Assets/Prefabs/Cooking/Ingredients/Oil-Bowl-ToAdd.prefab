@@ -215,9 +215,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addIngredientAnimator: {fileID: 1368117104050926943}
-  ingredientToSpawnPrefab: {fileID: 0}
+  ingredientToSpawnPrefab: {fileID: 5305335769000712784, guid: 8193385117167d24d9107be30b4e17a9,
+    type: 3}
   minSpawnCount: 1
-  maxSpawnCount: 3
+  maxSpawnCount: 1
   OnAddIngredient:
     m_PersistentCalls:
       m_Calls: []
@@ -264,7 +265,7 @@ GameObject:
   - component: {fileID: 4888742413935942859}
   - component: {fileID: 4888742413935942858}
   m_Layer: 5
-  m_Name: Oil-AddRequired
+  m_Name: Oil-Bowl-ToAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

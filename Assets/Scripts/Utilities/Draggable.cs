@@ -41,7 +41,7 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         }
         else
         {
-            transform.position = Input.mousePosition;
+            transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0f);
         }
 #endif
         #endregion
@@ -63,7 +63,7 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                     }
                     else
                     {
-                        transform.position = touch.position;
+                        transform.position = new Vector3(touch.position.x, touch.position.y, 0f);
                     }
                     break;
             }

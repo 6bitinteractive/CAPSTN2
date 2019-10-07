@@ -790,11 +790,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8914878584657068750}
     m_Modifications:
-    - target: {fileID: 6834761906163243676, guid: 753cb9f33332e4b439c304dea97a4cc4,
-        type: 3}
-      propertyPath: m_Name
-      value: PanLid
-      objectReference: {fileID: 0}
     - target: {fileID: 6834761906163243677, guid: 753cb9f33332e4b439c304dea97a4cc4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -904,6 +899,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0099998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6834761906163243676, guid: 753cb9f33332e4b439c304dea97a4cc4,
+        type: 3}
+      propertyPath: m_Name
+      value: PanLid
       objectReference: {fileID: 0}
     - target: {fileID: 6834761906163243673, guid: 753cb9f33332e4b439c304dea97a4cc4,
         type: 3}
