@@ -21,6 +21,8 @@ public class ObjectiveDisplay : MonoBehaviour
         nextButton = nextButtonPanel.GetComponentInChildren<Button>();
         nextButtonCanvasGroup = nextButtonPanel.GetComponent<CanvasGroup>();
 
+        objectiveManager.OnAllObjectivesDone.AddListener(() => StartCoroutine(HideObjectives()));
+
         for (int i = 0; i < objectiveManager.Objectives.Count; i++)
         {
             // Listen to certain objective events
@@ -64,5 +66,11 @@ public class ObjectiveDisplay : MonoBehaviour
         ObjectiveItemUI obj = objectiveItemDisplayList.Find(x => x.CorrespondingObjective == objective);
         obj.SetCheckmark(objective.Successful);
         obj.Show(false);
+    }
+
+    private IEnumerator HideObjectives()
+    {
+        yield return new WaitForSeconds(2f);
+        objectiveListPanel.gameObject.SetActive(false);
     }
 }

@@ -40,16 +40,29 @@ public class ObjectiveItemUI : MonoBehaviour
     public void Show(bool display = true)
     {
         if (display)
-            animator.SetTrigger("SlideIn");
+            Display();
         else
             StartCoroutine(Hide());
+    }
+
+    private void Display()
+    {
+        gameObject.SetActive(true);
+
+        if (AnimatorUtils.IsInState(animator, "ObjectiveItemUISlideIn"))
+            return;
+
+        animator.SetTrigger("SlideIn");
     }
 
     private IEnumerator Hide()
     {
         yield return new WaitForSeconds(1f); // So that the player can see the checkmark change
         animator.SetTrigger("SlideOut");
-        //yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.5f); // Make it look like it's a stack of cards
         transform.SetAsFirstSibling();
+        animator.SetTrigger("SlideIn");
+        yield return new WaitUntil(() => AnimatorUtils.IsInState(animator, "ObjectiveItemUISlideIn") && AnimatorUtils.IsDonePlaying(animator, "ObjectiveItemUISlideIn"));
+        gameObject.SetActive(false);
     }
 }
