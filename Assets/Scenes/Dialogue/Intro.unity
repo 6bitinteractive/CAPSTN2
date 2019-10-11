@@ -207,6 +207,16 @@ MonoBehaviour:
       of fried rice Lola!
     onEndSentence:
       m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: Fried Rice? Sounds easy enough for me! Just wait and enjoy my own version
+      of fried rice Lola!
+    onEndSentence:
+      m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 327217263}
           m_MethodName: LoadScene
@@ -984,6 +994,15 @@ MonoBehaviour:
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
     sentence: Why don't we continue our chat inside? It's getting chilly outside.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: Yes Lola!
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
@@ -1857,7 +1876,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.size
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -1877,7 +1896,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[12].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2153,6 +2172,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueArray.Array.data[1].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[12].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3400490635153947922, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
