@@ -24,21 +24,18 @@ public class Swipeable : MonoBehaviour
 
     private void VerifySwipe(SwipeData swipeData)
     {
-        Debug.Log("Nep");
         if (swipeData.Direction == SwipeDirection.None)
             return;
 
         if (RectTransformUtility.RectangleContainsScreenPoint(rectTransform, swipeData.StartPosition))
         {
             inputInCorrectArea = true;
-            Debug.Log("a");
         }
 
         if (swipeData.Direction == SwipeDirection)
         {
             OnCorrectSwipeDirection.Invoke(swipeData);
             OnCorrectSwipe.Invoke();
-            Debug.Log("b");
         }
     }
 }
