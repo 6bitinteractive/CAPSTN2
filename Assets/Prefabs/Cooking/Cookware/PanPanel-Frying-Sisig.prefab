@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 6421684125476184636}
   - component: {fileID: 6421684125476184638}
   - component: {fileID: 6421684125476184637}
-  m_Layer: 5
+  m_Layer: 19
   m_Name: PanPanel-Frying-Sisig
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -24,7 +24,6 @@ public class FoodPrepUtensil : MonoBehaviour
     private Vector2 defaultPosition;
     private PolygonCollider2D polygonCollider;
 
-
     private void Awake()
     {
         image = GetComponent<Image>();
@@ -75,6 +74,7 @@ public class FoodPrepUtensil : MonoBehaviour
 
         while (currentCount < randomSpawnCount)
         {
+            // FIX: Position can sometimes go out of the collider's bounds?
             // Spawn at the same x-axis as this utensil, randomize the y based on the Cookware's polygonCollider's bounds
             Vector3 position = new Vector3(transform.position.x, Random.Range(collider2D.bounds.min.y, collider2D.bounds.max.y), 0f);
             GameObject go = Instantiate(ingredientToSpawnPrefab, position, Quaternion.identity, collider2D.transform);
@@ -88,6 +88,7 @@ public class FoodPrepUtensil : MonoBehaviour
 
         // Reset back to default image; wait for a few seconds so that enabling back the collider won't continuosly trigger spawning of ingredients
         yield return new WaitForSeconds(resetPositionDelay);
+
         Reset();
     }
 }

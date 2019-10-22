@@ -2819,11 +2819,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PanPanel
       objectReference: {fileID: 0}
-    - target: {fileID: 6421684125476184627, guid: c173e2a3c6f070042ba98955da2c0868,
-        type: 3}
-      propertyPath: m_Layer
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 7703675425583042072, guid: c173e2a3c6f070042ba98955da2c0868,
         type: 3}
       propertyPath: minDistance
