@@ -15,6 +15,7 @@ public class FoodPrepUtensil : MonoBehaviour
     [SerializeField] private GameObject ingredientToSpawnPrefab;
     [SerializeField] private int minSpawnCount = 1;
     [SerializeField] private int maxSpawnCount = 3;
+    [SerializeField] private float resetPositionDelay = 0.5f;
 
     public UnityEvent OnAddIngredient = new UnityEvent();
 
@@ -86,7 +87,7 @@ public class FoodPrepUtensil : MonoBehaviour
         OnAddIngredient.Invoke();
 
         // Reset back to default image; wait for a few seconds so that enabling back the collider won't continuosly trigger spawning of ingredients
-        yield return new WaitForSeconds(1.5f); // FIX? hard-coded
+        yield return new WaitForSeconds(resetPositionDelay);
         Reset();
     }
 }
