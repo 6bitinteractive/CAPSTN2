@@ -220,6 +220,7 @@ MonoBehaviour:
   minSpawnCount: 1
   maxSpawnCount: 1
   resetPositionDelay: 0.5
+  spawnPositionOffset: {x: 0, y: -1.7, z: 0}
   OnAddIngredient:
     m_PersistentCalls:
       m_Calls: []

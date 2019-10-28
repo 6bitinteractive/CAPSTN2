@@ -16,6 +16,7 @@ public class FoodPrepUtensil : MonoBehaviour
     [SerializeField] private int minSpawnCount = 1;
     [SerializeField] private int maxSpawnCount = 3;
     [SerializeField] private float resetPositionDelay = 0.5f;
+    [SerializeField] private Vector3 spawnPositionOffset;
 
     public UnityEvent OnAddIngredient = new UnityEvent();
 
@@ -74,9 +75,9 @@ public class FoodPrepUtensil : MonoBehaviour
 
         while (currentCount < randomSpawnCount)
         {
-            // FIX: Position can sometimes go out of the collider's bounds?
             // Spawn at the same x-axis as this utensil, randomize the y based on the Cookware's polygonCollider's bounds
-            Vector3 position = new Vector3(transform.position.x, Random.Range(collider2D.bounds.min.y, collider2D.bounds.max.y), 0f);
+            //Vector3 position = new Vector3(transform.position.x, Random.Range(collider2D.bounds.min.y, collider2D.bounds.max.y), 0f);
+            Vector3 position = new Vector3(transform.position.x, transform.position.y, 0f) + spawnPositionOffset;
             GameObject go = Instantiate(ingredientToSpawnPrefab, position, Quaternion.identity, collider2D.transform);
 
             currentCount++;
