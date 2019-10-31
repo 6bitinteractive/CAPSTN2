@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PigMeatMinceableController
+  m_Controller: {fileID: 9100000, guid: 580348c5c90467549885b528bcfa27c6, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 12b5efcda4d04f54f90a626b90f44d1b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6ef11fbe12b484944a694b3a0d3f63a6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 869717116abd9c149a1f2d6cf6c1f047, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2e9d4e2da82f2ba4d8ba13e608b0a39f, type: 2}
