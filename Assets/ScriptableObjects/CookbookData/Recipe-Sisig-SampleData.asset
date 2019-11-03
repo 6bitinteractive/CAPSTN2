@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2c4148fce2abb44a58f12c2f7a5ff1, type: 3}
+  m_Name: Recipe-Sisig-SampleData
+  m_EditorClassIdentifier: 
+  cookbookPages:
+  - pageType: 2
+    title: Pork Sisig
+    description:
+    - "<b>Ingredients</b>\n1 lb. pig ears\r\n1 1/2 lb pork belly\r\n1 piece onion
+      minced\r\n3 tablespoons soy sauce\r"
+    - "<b>Instructions</b>\r\n1. Pour the water in a pan and bring to a boil Add salt
+      and pepper.\r\n2. Put-in the pig\u2019s ears and pork belly then simmer for
+      40 minutes 3. to 1 hour (or until tender).\r\n4. Remove the boiled ingredients
+      from the pot then drain excess water\r"
+    image: {fileID: 0}
+  - pageType: 1
+    title: How to Cook
+    description:
+    - "This sisig recipe starts by boiling pork belly and pig ears until tender. These
+      are then grilled for a few minutes until it browns and develops a good texture.
+      I chop the meat into small pieces after grilling.\r\n\r\nStart cooking the sisig
+      by saut\xE9ing ginger. Add chicken liver. Cook it thoroughly. Note that ginger
+      is an optional ingredient for this sisig version. I added it to reduce the gaminess
+      of chicken liver. Feel free to use it based on your preference."
+    image: {fileID: 21300000, guid: 4be6b0ae017a9d6478234537d348fb1d, type: 3}
+  - pageType: 4
+    title: Origin
+    description:
+    - "Sisig originated from Pampanga. This place is considered as the culinary capital
+      of the Philippines. It was invented by Lucia Cunanan. She is popularly known
+      as Aling Lucing and the Sisig queen.\r\n\r\nThe US military bases located in
+      the town might have played a role in the invention of this dish. People can
+      buy cheap pig heads in commissaries because these are not normally consumed
+      inside the base. Meat from the pig heads are scraped out, boiled, grilled, and
+      made into what is now known as Sisig"
+    image: {fileID: 21300000, guid: c7bb6b441873b4c47bc6e128fc0858f3, type: 3}
