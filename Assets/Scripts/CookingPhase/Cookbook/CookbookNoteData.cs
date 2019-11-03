@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "CookbookNote", menuName = "Cookbook Note")]
 public class CookbookNoteData : ScriptableObject
 {
-    public List<CookbookPageData> cookbookPages;
+    public List<CookbookPageData> pages;
 }
 
 [System.Serializable]
@@ -17,6 +17,9 @@ public class CookbookPageData
     [Tooltip("If two columns - 0: Left, 1: Right")]
     [TextArea(3, 6)]
     public List<string> description;
+
+    [Tooltip("Set a different font size, if necessary. Default is 36.")]
+    public float descriptionTextFontSize = 36;
 
     public Sprite image;
 }
