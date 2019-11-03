@@ -87,6 +87,7 @@ public class CookbookContentManager : MonoBehaviour
 
     public void DisplayList(CookbookList list, int page = 0)
     {
+        currentPage = page;
         currentList = list;
         SelectPageLayout(list.pageType);
 
@@ -95,7 +96,7 @@ public class CookbookContentManager : MonoBehaviour
         regularPreviousButton.SetActive(false);
 
         // There's a next page if currentPage is less than the currentLayout's max number of pages
-        gridNextButton.SetActive(currentPage < Mathf.CeilToInt((float)list.notes.Count / (float)currentPageLayout.MaxCountPerPage));
+        gridNextButton.SetActive(currentPage < Mathf.CeilToInt(list.notes.Count / (float)currentPageLayout.MaxCountPerPage) - 1);
         gridPreviousButton.SetActive(currentPage != 0);
 
         currentPageLayout.SetContent(list, page);

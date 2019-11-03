@@ -65,12 +65,16 @@ public class CookbookLayout : MonoBehaviour
 
     public void SetContent(CookbookList list, int page = 0)
     {
-        EnableButtons(gridItems.Count); // TODO: calculate how many to show
+        int startIndex = gridItems.Count * page;
+        int lastIndex = (gridItems.Count * (page + 1)) - 1;
+        int maxNumberOfPages = Mathf.CeilToInt(list.notes.Count / (float)MaxCountPerPage) - 1; // page starts with 0
+        int lastItemIndexForPage = page == maxNumberOfPages ? gridItems.Count - 1 - (lastIndex - list.notes.Count) : MaxCountPerPage;
+
+        EnableButtons(lastItemIndexForPage);
         ClearContent();
 
         // Set the content of the list
-        int startIndex = page; // TODO: calculate what's the start index
-        for (int i = startIndex; i < gridItems.Count; i++)
+        for (int i = startIndex; i < lastItemIndexForPage; i++)
         {
             foreach (var item in gridItems)
             {
@@ -97,11 +101,11 @@ public class CookbookLayout : MonoBehaviour
             item.text = string.Empty;
     }
 
-    private void EnableButtons(int count)
+    private void EnableButtons(int lastIndex)
     {
         for (int i = 0; i < gridItems.Count; i++)
         {
-            gridItems[i].gameObject.SetActive(i < count);
+            gridItems[i].gameObject.SetActive(i < lastIndex);
         }
     }
 }
