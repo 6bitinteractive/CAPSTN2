@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa2c4148fce2abb44a58f12c2f7a5ff1, type: 3}
   m_Name: Recipe-Sisig-SampleData
   m_EditorClassIdentifier: 
+  displayName: Pork Sisig
   pages:
   - pageType: 2
     title: Pork Sisig

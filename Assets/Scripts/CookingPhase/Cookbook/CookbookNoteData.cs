@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "CookbookNote", menuName = "Cookbook Note")]
 public class CookbookNoteData : ScriptableObject
 {
+    public string displayName;
     public List<CookbookPageData> pages;
 }
 
@@ -30,5 +31,6 @@ public enum CookbookPageType
     Title100ImageLeft30Description70,
     Title100Description50Description50,
     ImageLeft30FullHeightTitle70Description70,
-    ImageLeft50FullHeightTitle50Description50
+    ImageLeft50FullHeightTitle50Description50,
+    Title100ListGrid,
 }

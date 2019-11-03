@@ -8,15 +8,28 @@ using TMPro;
 public class CookbookLayout : MonoBehaviour
 {
     [SerializeField] private CookbookPageType pageType;
+    public CookbookPageType PageType => pageType;
+
     [SerializeField] private TextMeshProUGUI title;
+
+    [Header("Optional")]
     [SerializeField] private List<TextMeshProUGUI> description;
 
     [Tooltip("Leave empty if there's no need to display an image.")]
     [SerializeField] private Image image;
 
-    public CookbookPageType PageType => pageType;
+    [Header("For Grid-type")]
+    [SerializeField] private GameObject gridContainer;
+    private List<CookbookListItem> gridItems = new List<CookbookListItem>();
+    public int MaxCountPerPage { get { return gridItems.Count; } }
 
     private CanvasDisplayManager canvasDisplay;
+
+    private void Awake()
+    {
+        if (gridContainer != null)
+            gridItems.AddRange(gridContainer.GetComponentsInChildren<CookbookListItem>());
+    }
 
     private void OnEnable()
     {
@@ -25,14 +38,7 @@ public class CookbookLayout : MonoBehaviour
 
     public void SetContent(CookbookPageData pageData)
     {
-        // Clear previous content
-        title.text = string.Empty;
-
-        if (image != null)
-            image.sprite = null;
-
-        foreach (var item in description)
-            item.text = string.Empty;
+        ClearContent();
 
         // Set new content
         title.text = pageData.title;
@@ -57,8 +63,45 @@ public class CookbookLayout : MonoBehaviour
             image.sprite = pageData.image;
     }
 
+    public void SetContent(CookbookList list, int page = 0)
+    {
+        EnableButtons(gridItems.Count); // TODO: calculate how many to show
+        ClearContent();
+
+        // Set the content of the list
+        int startIndex = page; // TODO: calculate what's the start index
+        for (int i = startIndex; i < gridItems.Count; i++)
+        {
+            foreach (var item in gridItems)
+            {
+                item.Note = list.notes[i];
+                item.displayNameText.text = list.notes[i].displayName;
+            }
+        }
+    }
+
     public void Display(bool display = true)
     {
         canvasDisplay.Display(display);
+    }
+
+    private void ClearContent()
+    {
+        // Clear previous content
+        title.text = string.Empty;
+
+        if (image != null)
+            image.sprite = null;
+
+        foreach (var item in description)
+            item.text = string.Empty;
+    }
+
+    private void EnableButtons(int count)
+    {
+        for (int i = 0; i < gridItems.Count; i++)
+        {
+            gridItems[i].gameObject.SetActive(i < count);
+        }
     }
 }
