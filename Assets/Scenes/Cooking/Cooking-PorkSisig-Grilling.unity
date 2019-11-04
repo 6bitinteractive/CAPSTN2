@@ -2583,6 +2583,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TurnOffHeatWhenCookedObjective
       objectReference: {fileID: 0}
+    - target: {fileID: 6331611724459928828, guid: 007403d13f005654e897f2379c75389c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6331611724459928831, guid: 007403d13f005654e897f2379c75389c,
         type: 3}
       propertyPath: m_LocalPosition.x

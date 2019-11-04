@@ -97,7 +97,7 @@ public abstract class Objective : MonoBehaviour
     // Stuff to do after finalizing and evaluating if objective was done successfully but just before ending
     protected virtual void PostFinalizeObjective() { }
 
-    // Go to next objective (via next button or automatically
+    // Go to next objective (via next button or automatically)
     protected virtual void GoToNextObjective(bool automatic = false) // False = a Next button will be shown to the player and he has the autonomy to end at his own time
     {
         if (automatic)

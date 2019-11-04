@@ -100,6 +100,7 @@ public class TransitionalStepObjective : Objective
             cookwareAnimator.SetTrigger("SlideIn");
             yield return new WaitUntil(() => AnimatorUtils.IsDonePlaying(cookwareAnimator, "CookwareSlideIn"));
 
+            yield return new WaitForSeconds(1f);
             GoToNextObjective(true);
         }
         else if ((swipeData.Direction == SwipeDirection.Right
