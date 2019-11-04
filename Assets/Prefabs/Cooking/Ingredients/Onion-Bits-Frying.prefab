@@ -59,6 +59,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 2234901680429250896, guid: 795f3c5c7f56ee542a96c40b638f3b76,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 9e6abf763a37fbc4da36c093302c300d,
+        type: 2}
     - target: {fileID: 6021499195524968183, guid: 795f3c5c7f56ee542a96c40b638f3b76,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -89,23 +95,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2234901680429250896, guid: 795f3c5c7f56ee542a96c40b638f3b76,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 9e6abf763a37fbc4da36c093302c300d,
-        type: 2}
     - target: {fileID: 3780666577782068175, guid: 795f3c5c7f56ee542a96c40b638f3b76,
         type: 3}
       propertyPath: OnDestinationReached.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6692797921070329805, guid: 795f3c5c7f56ee542a96c40b638f3b76,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 3d841e4097b97a640ac33dc71b45cea3,
-        type: 3}
     - target: {fileID: 6610183123305551908, guid: 795f3c5c7f56ee542a96c40b638f3b76,
         type: 3}
       propertyPath: OnSwitchState.m_PersistentCalls.m_Calls.Array.size
@@ -119,8 +113,19 @@ PrefabInstance:
     - target: {fileID: 6610183123305551908, guid: 795f3c5c7f56ee542a96c40b638f3b76,
         type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610183123305551908, guid: 795f3c5c7f56ee542a96c40b638f3b76,
+        type: 3}
+      propertyPath: automaticSwitch
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6692797921070329805, guid: 795f3c5c7f56ee542a96c40b638f3b76,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3d841e4097b97a640ac33dc71b45cea3,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 795f3c5c7f56ee542a96c40b638f3b76, type: 3}
 --- !u!1 &2410769697448737976 stripped

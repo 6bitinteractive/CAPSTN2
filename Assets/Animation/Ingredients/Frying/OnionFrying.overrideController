@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: OnionFrying
+  m_Controller: {fileID: 9100000, guid: b7a2a4879f00456469431f864a26a875, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: f2e415780aaedab4c9e58e473a039128, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bc1afeb04d9cdfd45be470cca633b4fc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 83028397d90034a47b038e372a67043c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6882c0cc608b54447956ec67c0262464, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 64e2cc2c5281c074e9e789bff36f88f6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3730c0fe8da33ef4b94226a9e4f02d8b, type: 2}

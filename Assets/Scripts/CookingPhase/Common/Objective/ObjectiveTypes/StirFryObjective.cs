@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,6 +25,7 @@ public class StirFryObjective : Objective
     private Animator spoonAnim;
     private DisableAnimation spoonDisableAnim;
     private bool showNextButton = true;
+    private List<IngredientStateController> ingredients = new List<IngredientStateController>();
 
     protected override void Awake()
     {
@@ -57,6 +59,33 @@ public class StirFryObjective : Objective
         else
         {
             spoon.gameObject.SetActive(true);
+        }
+
+        foreach (var item in kitchen.Cookware.CookableIngredients)
+        {
+            ingredients.AddRange(item.IngredientInCookware.GetComponentsInChildren<IngredientStateController>());
+            Debug.Log("Total ingredients: " + ingredients.Count);
+        }
+
+        perfectState.OnStateReached.AddListener(SwitchState);
+        overState.OnStateReached.AddListener(SwitchState);
+    }
+
+    private void SwitchState(ObjectiveState objectiveState)
+    {
+        IngredientState state = IngredientState.Raw;
+        if (objectiveState.StatusType == ObjectiveState.Status.Perfect)
+        {
+            state = IngredientState.Perfect;
+        }
+        else if (objectiveState.StatusType == ObjectiveState.Status.Over)
+        {
+            state = IngredientState.Overcooked;
+        }
+
+        foreach (var item in ingredients)
+        {
+            item.SwitchState(state);
         }
     }
 
