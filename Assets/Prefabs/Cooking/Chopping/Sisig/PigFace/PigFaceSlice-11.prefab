@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SwipeDirection: 2
-  SwipeAnimatorPrompt: {fileID: 9100000, guid: aa266fc02f7ecc24e81170a287212fe5, type: 2}
+  SwipeAnimatorPrompt: {fileID: 9100000, guid: 35f1df241a1b8024bbce9feb02ab4fc1, type: 2}
   OnCorrectSwipe:
     m_PersistentCalls:
       m_Calls: []
