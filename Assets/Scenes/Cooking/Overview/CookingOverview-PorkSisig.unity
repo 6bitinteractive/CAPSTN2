@@ -1391,7 +1391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepsPanel: {fileID: 1201762937}
-  MinRating: 2
+  MinRating: 1
   OnAllStagesDone:
     m_PersistentCalls:
       m_Calls:
