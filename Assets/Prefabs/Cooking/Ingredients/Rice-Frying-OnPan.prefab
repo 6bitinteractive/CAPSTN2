@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7702152083491371634
 RectTransform:
   m_ObjectHideFlags: 0
@@ -53,6 +53,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rice-Bits-Frying (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 426325711055127285, guid: c55857c5f5d688243b87b32a52cafee5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.060193166
       objectReference: {fileID: 0}
     - target: {fileID: 2868503289021757601, guid: c55857c5f5d688243b87b32a52cafee5,
         type: 3}
@@ -164,11 +169,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 679dd90a14693164ca9935d9257369e1, type: 2}
-    - target: {fileID: 426325711055127285, guid: c55857c5f5d688243b87b32a52cafee5,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.060193166
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c55857c5f5d688243b87b32a52cafee5, type: 3}
 --- !u!224 &1103201561823534172 stripped
@@ -188,6 +188,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rice-Bits-Frying (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 426325711055127285, guid: c55857c5f5d688243b87b32a52cafee5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.06019318
       objectReference: {fileID: 0}
     - target: {fileID: 2868503289021757601, guid: c55857c5f5d688243b87b32a52cafee5,
         type: 3}
@@ -299,11 +304,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 679dd90a14693164ca9935d9257369e1, type: 2}
-    - target: {fileID: 426325711055127285, guid: c55857c5f5d688243b87b32a52cafee5,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.06019318
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c55857c5f5d688243b87b32a52cafee5, type: 3}
 --- !u!224 &1808298871510570379 stripped
@@ -323,6 +323,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rice-Bits-Frying (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 426325711055127285, guid: c55857c5f5d688243b87b32a52cafee5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.060193166
       objectReference: {fileID: 0}
     - target: {fileID: 2868503289021757601, guid: c55857c5f5d688243b87b32a52cafee5,
         type: 3}
@@ -434,11 +439,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 679dd90a14693164ca9935d9257369e1, type: 2}
-    - target: {fileID: 426325711055127285, guid: c55857c5f5d688243b87b32a52cafee5,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.060193166
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c55857c5f5d688243b87b32a52cafee5, type: 3}
 --- !u!224 &7580105430216816105 stripped
@@ -458,6 +458,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rice-Bits-Frying (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 426325711055127285, guid: c55857c5f5d688243b87b32a52cafee5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.06019318
       objectReference: {fileID: 0}
     - target: {fileID: 2868503289021757601, guid: c55857c5f5d688243b87b32a52cafee5,
         type: 3}
@@ -569,11 +574,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 679dd90a14693164ca9935d9257369e1, type: 2}
-    - target: {fileID: 426325711055127285, guid: c55857c5f5d688243b87b32a52cafee5,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.06019318
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c55857c5f5d688243b87b32a52cafee5, type: 3}
 --- !u!224 &8567041046387846889 stripped
@@ -593,6 +593,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rice-Bits-Frying (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 426325711055127285, guid: c55857c5f5d688243b87b32a52cafee5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.06019318
       objectReference: {fileID: 0}
     - target: {fileID: 2868503289021757601, guid: c55857c5f5d688243b87b32a52cafee5,
         type: 3}
@@ -704,11 +709,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 679dd90a14693164ca9935d9257369e1, type: 2}
-    - target: {fileID: 426325711055127285, guid: c55857c5f5d688243b87b32a52cafee5,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.06019318
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c55857c5f5d688243b87b32a52cafee5, type: 3}
 --- !u!224 &4712588957528643768 stripped
@@ -728,6 +728,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rice-Bits-Frying
+      objectReference: {fileID: 0}
+    - target: {fileID: 426325711055127285, guid: c55857c5f5d688243b87b32a52cafee5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.06019318
       objectReference: {fileID: 0}
     - target: {fileID: 2868503289021757601, guid: c55857c5f5d688243b87b32a52cafee5,
         type: 3}
@@ -839,11 +844,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 679dd90a14693164ca9935d9257369e1, type: 2}
-    - target: {fileID: 426325711055127285, guid: c55857c5f5d688243b87b32a52cafee5,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.06019318
-      objectReference: {fileID: 0}
     - target: {fileID: 8412405509833274122, guid: c55857c5f5d688243b87b32a52cafee5,
         type: 3}
       propertyPath: m_Offset.x
@@ -873,6 +873,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rice-Bits-Frying (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 426325711055127285, guid: c55857c5f5d688243b87b32a52cafee5,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.06019318
       objectReference: {fileID: 0}
     - target: {fileID: 2868503289021757601, guid: c55857c5f5d688243b87b32a52cafee5,
         type: 3}
@@ -984,11 +989,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 679dd90a14693164ca9935d9257369e1, type: 2}
-    - target: {fileID: 426325711055127285, guid: c55857c5f5d688243b87b32a52cafee5,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.06019318
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c55857c5f5d688243b87b32a52cafee5, type: 3}
 --- !u!224 &5857519440626251950 stripped
