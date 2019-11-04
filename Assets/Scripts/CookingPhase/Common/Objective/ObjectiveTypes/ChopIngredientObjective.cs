@@ -7,13 +7,15 @@ public class ChopIngredientObjective : Objective
 {
     [SerializeField] private int maxIngredientSlices = 0;
     [SerializeField] private List<Choppable> ingredientsToSlice;
-
+    [SerializeField] private bool tap;
     private Queue<Choppable> ingredientsLeft;
     private Choppable currentIngredient;
     private int currentIngredientCount;
     private int sliceCount = 0;
 
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
+
+    public bool Tap { get => tap; set => tap = value; }
 
     protected override void Awake()
     {
@@ -73,6 +75,18 @@ public class ChopIngredientObjective : Objective
         foreach (var ingredient in ingredientsToSlice)
         {
             ingredient.gameObject.SetActive(false);
+        }
+    }
+
+    protected override void RunObjective()
+    {
+        base.RunObjective();
+
+        if (!Tap) { return; }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            SliceIngredient();
         }
     }
 
