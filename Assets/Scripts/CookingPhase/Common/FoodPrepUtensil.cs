@@ -55,6 +55,9 @@ public class FoodPrepUtensil : MonoBehaviour
 
     private IEnumerator AddIngredient(Collider2D collider2D)
     {
+        // Make sure collider is disabled
+        yield return new WaitUntil(() => polygonCollider.enabled == false);
+
         // Hide default image of utensil (the one that can be dragged by the player)
         image.enabled = false;
 
@@ -81,7 +84,7 @@ public class FoodPrepUtensil : MonoBehaviour
             GameObject go = Instantiate(ingredientToSpawnPrefab, position, Quaternion.identity, collider2D.transform);
 
             currentCount++;
-            //Debug.Log("Spawned ingredient count: " + currentCount);
+            Debug.Log("Spawned ingredient count: " + currentCount);
         }
 
         // Broadcast that the ingredient has been added
