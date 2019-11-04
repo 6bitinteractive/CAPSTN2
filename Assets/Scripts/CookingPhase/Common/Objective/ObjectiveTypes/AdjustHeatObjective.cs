@@ -59,6 +59,7 @@ public class AdjustHeatObjective : Objective
         stoveControllerAnimator.SetBool("Blinking", false);
         stoveControllerSlider.interactable = false;
         showNextButton = false;
+        stoveController.OnStoveSettingChanged.RemoveListener(SetHeatSetting);
     }
 
     protected override bool SuccessConditionMet()

@@ -63,15 +63,13 @@ public class TurnOffHeatWhenCookedObjective : Objective
 
     private void SwicthCooking(HeatSetting heatSetting)
     {
-        if (heatSetting == HeatSetting.Off)
+        foreach (var item in ingredients)
         {
-            foreach (var item in ingredients)
-            {
-                item.IsCooking = false;
-            }
-
-            GoToNextObjective(true);
+            item.IsCooking = heatSetting != HeatSetting.Off;
         }
+
+        // NOTE: Don't automatically go to next as there's a bug that automatically registers SwipeRight for the TransitionalStep
+        GoToNextObjective(false);
     }
 
     protected override bool SuccessConditionMet()

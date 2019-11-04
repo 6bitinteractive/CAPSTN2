@@ -689,6 +689,7 @@ GameObject:
   - component: {fileID: 8914878584657068750}
   - component: {fileID: 3111112838734530944}
   - component: {fileID: 4895458841484006363}
+  - component: {fileID: 1805596433872670949}
   m_Layer: 19
   m_Name: PanPanel
   m_TagString: Untagged
@@ -783,6 +784,25 @@ PolygonCollider2D:
       - {x: -1.8905494, y: -212.15382}
       - {x: -156.86113, y: -166.57578}
       - {x: -252.53696, y: -7.3616943}
+--- !u!95 &1805596433872670949
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8914878584657068749}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f5f6fe585a391449af0c958bd657359, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5544398280201582556
 PrefabInstance:
   m_ObjectHideFlags: 0

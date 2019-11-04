@@ -64,6 +64,7 @@ public class AddRequiredAmountObjective : Objective
     private void UpdateCount()
     {
         currentAmount++;
+        //Debug.Log("Current count: " + currentAmount);
 
         if (currentAmount == 1)
             GoToNextObjective(false);
