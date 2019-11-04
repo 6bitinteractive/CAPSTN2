@@ -65,4 +65,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cooking/Cooking-LumpiangUbod-Chopping.unity
     guid: 07393297b7d1b6b4abf1f37616418197
+  - enabled: 1
+    path: Assets/Scenes/Cookbook-NotebookStyle.unity
+    guid: 2655a42ea8df55e4794f1add656a99e0
+  - enabled: 1
+    path: Assets/Scenes/Cooking/Cooking-LumpiangUbod-Frying.unity
+    guid: 2fd462b43881ee94288dd7d5e21efc9b
   m_configObjects: {}
