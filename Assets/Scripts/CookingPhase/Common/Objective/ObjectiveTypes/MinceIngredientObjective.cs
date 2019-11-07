@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // FIX: Hard-coded; for water only D:
 
 public class MinceIngredientObjective : Objective
 {
     [SerializeField] private Minceable minceableIngredient;
+    [SerializeField] private ProgressBar progressBar;
+    [SerializeField] private float progressIncrementValue;
     [SerializeField] private int maxRequiredTaps = 50;
-    [SerializeField] private int minRequiredTaps = 40;
+    [SerializeField] private int minRequiredTaps = 37;
     [SerializeField] private DialogueHint dialogueHint;
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
     [SerializeField] private ObjectiveState underState = new ObjectiveState(ObjectiveState.Status.Under);
@@ -29,6 +32,7 @@ public class MinceIngredientObjective : Objective
 
         //Set Percentage
         fiftyPercent = (fiftyPercent * maxRequiredTaps) / 100;
+        progressBar.GetComponent<Slider>().maxValue = maxRequiredTaps;
 
         // Define condition
         perfectState.HasBeenReached = () => SuccessConditionMet();
@@ -66,6 +70,7 @@ public class MinceIngredientObjective : Objective
         {
     
             currentTaps++;
+            progressBar.IncrementProgress(progressIncrementValue);
             animator.SetTrigger("Mince");
             CheckCurrentTaps();
 

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ShrimpFrying
+  m_Controller: {fileID: 9100000, guid: b7a2a4879f00456469431f864a26a875, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 83028397d90034a47b038e372a67043c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 434847aad97300b498049001a4646567, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f2e415780aaedab4c9e58e473a039128, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 5b0c1c6f334b32742b507a7c48c26672, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 64e2cc2c5281c074e9e789bff36f88f6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 47520b1ea45e00f4e8d998016777e160, type: 2}

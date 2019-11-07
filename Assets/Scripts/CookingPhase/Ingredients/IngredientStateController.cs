@@ -64,23 +64,25 @@ public class IngredientStateController : MonoBehaviour
     public void SwitchState(IngredientState ingredientState)
     {
         if (animator == null) { return; }
+        if (CurrentState == IngredientState.Overcooked) { return; } // No further changes can occur once overcooked
 
         switch (ingredientState)
         {
             case IngredientState.Undercooked:
                 CurrentState = IngredientState.Undercooked;
-                animator.SetTrigger("Undercooked");
+                animator.SetInteger("State", 0);
                 break;
             case IngredientState.Perfect:
                 CurrentState = IngredientState.Perfect;
-                animator.SetTrigger("Perfect");
+                animator.SetInteger("State", 1);
                 break;
             case IngredientState.Overcooked:
                 CurrentState = IngredientState.Overcooked;
-                animator.SetTrigger("Overcooked");
+                animator.SetInteger("State", 2);
                 break;
             default:
                 CurrentState = IngredientState.Raw;
+                animator.SetInteger("State", 0);
                 break;
         }
 

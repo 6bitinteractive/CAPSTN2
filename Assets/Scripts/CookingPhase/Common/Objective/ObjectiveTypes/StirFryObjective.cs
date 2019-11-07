@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // Note: Make sure the object attached with the SpoonKitchenUtensil does NOT have collision check enabled with the layer for ingredients
 // And IsTrigger is set to false
@@ -11,6 +13,9 @@ public class StirFryObjective : Objective
     [SerializeField] private SpoonKitchenUtensil spoon;
     [SerializeField] private float minDuration = 7f;
     [SerializeField] private float maxDuration = 15f;
+    [SerializeField] private float durationLimit = 20f;
+    [SerializeField] private Image progressMeter;
+    [SerializeField] private Color perfectColorState, underColorState, overColorState;
 
     [SerializeField] private DialogueHint dialogueHint;
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
@@ -20,6 +25,7 @@ public class StirFryObjective : Objective
     private Animator spoonAnim;
     private DisableAnimation spoonDisableAnim;
     private bool showNextButton = true;
+    private List<IngredientStateController> ingredients = new List<IngredientStateController>();
 
     protected override void Awake()
     {
@@ -43,6 +49,7 @@ public class StirFryObjective : Objective
     {
         base.InitializeObjective();
         SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
+        progressMeter.transform.parent.gameObject.SetActive(true);
 
         if (spoon.gameObject.activeInHierarchy)
         {
@@ -53,11 +60,53 @@ public class StirFryObjective : Objective
         {
             spoon.gameObject.SetActive(true);
         }
+
+        foreach (var item in kitchen.Cookware.CookableIngredients)
+        {
+            ingredients.AddRange(item.IngredientInCookware.GetComponentsInChildren<IngredientStateController>());
+            Debug.Log("Total ingredients: " + ingredients.Count);
+        }
+
+        perfectState.OnStateReached.AddListener(SwitchState);
+        overState.OnStateReached.AddListener(SwitchState);
+    }
+
+    private void SwitchState(ObjectiveState objectiveState)
+    {
+        IngredientState state = IngredientState.Raw;
+        if (objectiveState.StatusType == ObjectiveState.Status.Perfect)
+        {
+            state = IngredientState.Perfect;
+        }
+        else if (objectiveState.StatusType == ObjectiveState.Status.Over)
+        {
+            state = IngredientState.Overcooked;
+        }
+
+        foreach (var item in ingredients)
+        {
+            item.SwitchState(state);
+        }
     }
 
     protected override void RunObjective()
     {
         base.RunObjective();
+
+        // Fix: It's in Update() D:
+        // Progress Meter
+        if (durationLimit <= 0f)
+            Debug.Log("Duration limit cannot be less than or equal to zero.");
+
+        progressMeter.fillAmount = spoon.MixDuration / durationLimit;
+
+        if (spoon.MixDuration < minDuration)
+            progressMeter.color = underColorState;
+        else if ((spoon.MixDuration >= minDuration) && (spoon.MixDuration <= maxDuration))
+            progressMeter.color = perfectColorState;
+        else
+            progressMeter.color = overColorState;
+
 
         // If player has mixed for a few seconds, show the Next button
         if (spoon.MixDuration >= 3f && showNextButton)
@@ -71,6 +120,7 @@ public class StirFryObjective : Objective
     {
         base.FinalizeObjective();
         spoon.MixDuration = 0f;
+        progressMeter.transform.parent.gameObject.SetActive(false);
     }
 
     protected override bool SuccessConditionMet()

@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1478960164331641924
 RectTransform:
   m_ObjectHideFlags: 0
@@ -57,6 +57,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Garlic-Bits-Frying (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015818385
       objectReference: {fileID: 0}
     - target: {fileID: 5622665915434368002, guid: 66c3a3e9eae8480479056883ae79a56f,
         type: 3}
@@ -163,11 +168,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015818385
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c3a3e9eae8480479056883ae79a56f, type: 3}
 --- !u!224 &5383695035298035113 stripped
@@ -187,6 +187,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Garlic-Bits-Frying (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015818385
       objectReference: {fileID: 0}
     - target: {fileID: 5622665915434368002, guid: 66c3a3e9eae8480479056883ae79a56f,
         type: 3}
@@ -293,11 +298,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015818385
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c3a3e9eae8480479056883ae79a56f, type: 3}
 --- !u!224 &6314362053996486452 stripped
@@ -317,6 +317,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Garlic-Bits-Frying (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015818385
       objectReference: {fileID: 0}
     - target: {fileID: 5622665915434368002, guid: 66c3a3e9eae8480479056883ae79a56f,
         type: 3}
@@ -423,11 +428,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015818385
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c3a3e9eae8480479056883ae79a56f, type: 3}
 --- !u!224 &7981165904791979365 stripped
@@ -447,6 +447,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Garlic-Bits-Frying (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015818382
       objectReference: {fileID: 0}
     - target: {fileID: 5622665915434368002, guid: 66c3a3e9eae8480479056883ae79a56f,
         type: 3}
@@ -553,11 +558,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015818382
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c3a3e9eae8480479056883ae79a56f, type: 3}
 --- !u!224 &7891286996068505884 stripped
@@ -577,6 +577,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Garlic-Bits-Frying (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015818385
       objectReference: {fileID: 0}
     - target: {fileID: 5622665915434368002, guid: 66c3a3e9eae8480479056883ae79a56f,
         type: 3}
@@ -683,11 +688,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015818385
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c3a3e9eae8480479056883ae79a56f, type: 3}
 --- !u!224 &9176348915536821032 stripped
@@ -707,6 +707,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Garlic-Bits-Frying
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015818385
       objectReference: {fileID: 0}
     - target: {fileID: 5622665915434368002, guid: 66c3a3e9eae8480479056883ae79a56f,
         type: 3}
@@ -813,11 +818,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015818385
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c3a3e9eae8480479056883ae79a56f, type: 3}
 --- !u!224 &809660237048516849 stripped
@@ -837,6 +837,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Garlic-Bits-Frying (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015818385
       objectReference: {fileID: 0}
     - target: {fileID: 5622665915434368002, guid: 66c3a3e9eae8480479056883ae79a56f,
         type: 3}
@@ -943,11 +948,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015818385
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c3a3e9eae8480479056883ae79a56f, type: 3}
 --- !u!224 &2255984767275279297 stripped
@@ -967,6 +967,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Garlic-Bits-Frying (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015818385
       objectReference: {fileID: 0}
     - target: {fileID: 5622665915434368002, guid: 66c3a3e9eae8480479056883ae79a56f,
         type: 3}
@@ -1073,11 +1078,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015818385
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c3a3e9eae8480479056883ae79a56f, type: 3}
 --- !u!224 &1178343911805662844 stripped
@@ -1097,6 +1097,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Garlic-Bits-Frying (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015818385
       objectReference: {fileID: 0}
     - target: {fileID: 5622665915434368002, guid: 66c3a3e9eae8480479056883ae79a56f,
         type: 3}
@@ -1203,11 +1208,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015818385
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c3a3e9eae8480479056883ae79a56f, type: 3}
 --- !u!224 &3092971942715346749 stripped
@@ -1227,6 +1227,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Garlic-Bits-Frying (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015818382
       objectReference: {fileID: 0}
     - target: {fileID: 5622665915434368002, guid: 66c3a3e9eae8480479056883ae79a56f,
         type: 3}
@@ -1333,11 +1338,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015818382
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c3a3e9eae8480479056883ae79a56f, type: 3}
 --- !u!224 &3146375224153987255 stripped
@@ -1357,6 +1357,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Garlic-Bits-Frying (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.015818385
       objectReference: {fileID: 0}
     - target: {fileID: 5622665915434368002, guid: 66c3a3e9eae8480479056883ae79a56f,
         type: 3}
@@ -1462,11 +1467,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7792314422462613078, guid: 66c3a3e9eae8480479056883ae79a56f,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.015818385
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66c3a3e9eae8480479056883ae79a56f, type: 3}

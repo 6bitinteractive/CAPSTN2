@@ -1,5 +1,34 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!60 &903082120020523171
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513662811982860851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.3511086, y: 14.511574}
+      - {x: 19.316208, y: -5.095623}
+      - {x: -1.9389191, y: -15.6718025}
+      - {x: -13.911737, y: 1.6601715}
 --- !u!1001 &5274034850649091723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122,11 +151,31 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 00fb85d080c1bb04e920a1537d160f7b, type: 2}
+    - target: {fileID: 2027143583794454223, guid: 8670c2761cc70864a9c08059a1dabe4c,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 4.061382
+      objectReference: {fileID: 0}
+    - target: {fileID: 2027143583794454223, guid: 8670c2761cc70864a9c08059a1dabe4c,
+        type: 3}
+      propertyPath: m_Radius
+      value: 14.061381
+      objectReference: {fileID: 0}
+    - target: {fileID: 2027143583794454223, guid: 8670c2761cc70864a9c08059a1dabe4c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5151350470701687735, guid: 8670c2761cc70864a9c08059a1dabe4c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4620916750555370590, guid: 8670c2761cc70864a9c08059a1dabe4c,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 9f98c7a137215ac4fb14c533c789ed1f,
+      objectReference: {fileID: 21300000, guid: 052ab51dcca34bd4d972704194d0e29c,
         type: 3}
     - target: {fileID: 7887384721082019632, guid: 8670c2761cc70864a9c08059a1dabe4c,
         type: 3}
@@ -145,3 +194,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8670c2761cc70864a9c08059a1dabe4c, type: 3}
+--- !u!1 &7513662811982860851 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2410769697448737976, guid: 8670c2761cc70864a9c08059a1dabe4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5274034850649091723}
+  m_PrefabAsset: {fileID: 0}
