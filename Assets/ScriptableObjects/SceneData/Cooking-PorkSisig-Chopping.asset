@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a54e64adba06224eaaf7ea1c86a54e8, type: 3}
   m_Name: Cooking-PorkSisig-Chopping
   m_EditorClassIdentifier: 
-  SceneName: Cooking-PorkSisig-Chopping 1
+  SceneName: Cooking-PorkSisig-Chopping
