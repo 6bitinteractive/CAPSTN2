@@ -2163,6 +2163,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1701880941}
     m_Modifications:
+    - target: {fileID: 9070421521592026734, guid: def4f52d25b571d4ba766ed805ec50b5,
+        type: 3}
+      propertyPath: m_Name
+      value: DicedPork-Frying-OnPan
+      objectReference: {fileID: 0}
     - target: {fileID: 1757540058574435253, guid: def4f52d25b571d4ba766ed805ec50b5,
         type: 3}
       propertyPath: m_Mass
@@ -2172,11 +2177,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 0.7141259
-      objectReference: {fileID: 0}
-    - target: {fileID: 9070421521592026734, guid: def4f52d25b571d4ba766ed805ec50b5,
-        type: 3}
-      propertyPath: m_Name
-      value: DicedPork-Frying-OnPan
       objectReference: {fileID: 0}
     - target: {fileID: 2716339916798877244, guid: def4f52d25b571d4ba766ed805ec50b5,
         type: 3}
@@ -3999,13 +3999,13 @@ PrefabInstance:
         type: 3}
       propertyPath: Recipe
       value: 
-      objectReference: {fileID: 11400000, guid: e21f13898db1eba4ba8e3f2340888ae1,
+      objectReference: {fileID: 11400000, guid: 0d96379d1987a744b916a5917854fd63,
         type: 2}
     - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: StageScene
       value: 
-      objectReference: {fileID: 11400000, guid: a6a2938a1d28bbb43a0871d888857f91,
+      objectReference: {fileID: 11400000, guid: f1be4214371212a46be8e32ba2621bf1,
         type: 2}
     - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}

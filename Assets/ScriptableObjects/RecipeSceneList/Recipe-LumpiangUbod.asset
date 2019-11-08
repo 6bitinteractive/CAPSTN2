@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9623e70b5b24bb30ef1be685eb19, type: 3}
+  m_Name: Recipe-LumpiangUbod
+  m_EditorClassIdentifier: 
+  CookingOverview: {fileID: 11400000, guid: 38c790628cf70a84a8a8a216c1be6ef6, type: 2}
+  Stages:
+  - {fileID: 11400000, guid: fa92a6d622d524c4e9019ee1c82d3997, type: 2}
+  - {fileID: 11400000, guid: f1be4214371212a46be8e32ba2621bf1, type: 2}
