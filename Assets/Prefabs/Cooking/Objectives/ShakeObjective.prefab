@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2917929960170651923}
+  - component: {fileID: 5793011207589329252}
   m_Layer: 0
   m_Name: ShakeObjective
   m_TagString: Untagged
@@ -30,3 +31,79 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5793011207589329252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2917929960170651922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ae2e8adbce1f84c8e17728fbaccd7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionText: Add 1 pinch of salt
+  ObjectiveStates: []
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ObjectiveEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ObjectiveEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnSuccess:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ObjectiveEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnFail:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ObjectiveEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnReadyForNext:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ObjectiveEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnAutomaticallyGoToNext:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ObjectiveEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  shaker: {fileID: 0}
+  requiredAmount: 1
+  perfectState:
+    dialogueHint:
+      characterPortrait: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+        type: 3}
+      dialogueText: This amount is good!
+    OnStateReached:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: ObjectiveStateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  underState:
+    dialogueHint:
+      characterPortrait: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+        type: 3}
+      dialogueText: Add some more...
+    OnStateReached:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: ObjectiveStateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  overState:
+    dialogueHint:
+      characterPortrait: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+        type: 3}
+      dialogueText: This is a bit too much...
+    OnStateReached:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: ObjectiveStateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
