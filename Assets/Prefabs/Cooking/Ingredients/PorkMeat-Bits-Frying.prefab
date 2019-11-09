@@ -120,7 +120,7 @@ PrefabInstance:
     - target: {fileID: 2027143583794454223, guid: 8670c2761cc70864a9c08059a1dabe4c,
         type: 3}
       propertyPath: m_Radius
-      value: 29.52
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 5151350470701687735, guid: 8670c2761cc70864a9c08059a1dabe4c,
         type: 3}
@@ -146,7 +146,7 @@ PrefabInstance:
     - target: {fileID: 7887384721082019632, guid: 8670c2761cc70864a9c08059a1dabe4c,
         type: 3}
       propertyPath: m_AngularDrag
-      value: 80
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8670c2761cc70864a9c08059a1dabe4c, type: 3}
