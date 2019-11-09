@@ -75,3 +75,38 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: ObjectiveEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  requiredAmount: 5
+  minAmount: 1
+  maxAmount: 8
+  foodPrepUtensil: {fileID: 0}
+  ingredientToBeAdded: {fileID: 0}
+  perfectState:
+    dialogueHint:
+      characterPortrait: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+        type: 3}
+      dialogueText: This amount is good!
+    OnStateReached:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: ObjectiveStateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  underState:
+    dialogueHint:
+      characterPortrait: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+        type: 3}
+      dialogueText: Add some more...
+    OnStateReached:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: ObjectiveStateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  overState:
+    dialogueHint:
+      characterPortrait: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+        type: 3}
+      dialogueText: This is a bit too much oil!
+    OnStateReached:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: ObjectiveStateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null

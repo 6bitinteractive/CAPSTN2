@@ -72,19 +72,22 @@ public class FoodPrepUtensil : MonoBehaviour
         // Hide
         addIngredientAnimator.gameObject.SetActive(false);
 
-        // Have a random count if necessary
-        int randomSpawnCount = Random.Range(minSpawnCount, maxSpawnCount);
-        int currentCount = 0;
-
-        while (currentCount < randomSpawnCount)
+        if (ingredientToSpawnPrefab != null) // If there's something to spawn in the cookware...
         {
-            // Spawn at the same x-axis as this utensil, randomize the y based on the Cookware's polygonCollider's bounds
-            //Vector3 position = new Vector3(transform.position.x, Random.Range(collider2D.bounds.min.y, collider2D.bounds.max.y), 0f);
-            Vector3 position = new Vector3(transform.position.x, transform.position.y, 0f) + spawnPositionOffset;
-            GameObject go = Instantiate(ingredientToSpawnPrefab, position, Quaternion.identity, collider2D.transform);
+            // Have a random count if necessary
+            int randomSpawnCount = Random.Range(minSpawnCount, maxSpawnCount);
+            int currentCount = 0;
 
-            currentCount++;
-            Debug.Log("Spawned ingredient count: " + currentCount);
+            while (currentCount < randomSpawnCount)
+            {
+                // Spawn at the same x-axis as this utensil, randomize the y based on the Cookware's polygonCollider's bounds
+                //Vector3 position = new Vector3(transform.position.x, Random.Range(collider2D.bounds.min.y, collider2D.bounds.max.y), 0f);
+                Vector3 position = new Vector3(transform.position.x, transform.position.y, 0f) + spawnPositionOffset;
+                GameObject go = Instantiate(ingredientToSpawnPrefab, position, Quaternion.identity, collider2D.transform);
+
+                currentCount++;
+                Debug.Log("Spawned ingredient count: " + currentCount);
+            }
         }
 
         // Broadcast that the ingredient has been added

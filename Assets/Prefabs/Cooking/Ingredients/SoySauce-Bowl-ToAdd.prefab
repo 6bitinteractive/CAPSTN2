@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoySauce-Bowl-ToAdd
       objectReference: {fileID: 0}
+    - target: {fileID: 4888742413199503107, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: ingredientToSpawnPrefab
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4888742413935942859, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -145,6 +150,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6013363919688943254, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 852556451ade2704d9b001d4159f19a6,
+        type: 3}
     - target: {fileID: 1368117104050926943, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_Controller

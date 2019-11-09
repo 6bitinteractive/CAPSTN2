@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* NOTE
+ * Sometimes, the amount added is doubled so the value of the currentAmount being checked will be wrong.
+ * Save then unload the scene then try to run the scene again.
+ */
+
 public class AddRequiredAmountObjective : Objective
 {
     [SerializeField] private int requiredAmount = 5;
