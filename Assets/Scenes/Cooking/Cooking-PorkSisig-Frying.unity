@@ -1344,41 +1344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f25f2f0238947a3cd460f3ed5a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1501277164 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1590442019867165531, guid: 75efe86b20d989d47bb743bc7027a6b3,
-    type: 3}
-  m_PrefabInstance: {fileID: 328540679573982086}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1501277166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1501277164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.26787773, g: 0.1295835, b: 0.3018868, a: 0.5647059}
-  m_RaycastTarget: 0
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 69a43cff15e552649ae13d1e953fed3e, type: 3}
-  m_Type: 3
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 1
-  m_FillAmount: 0
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
 --- !u!1001 &1549542764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1768,6 +1733,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4008464636871638542, guid: 75efe86b20d989d47bb743bc7027a6b3,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2058909242}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75efe86b20d989d47bb743bc7027a6b3, type: 3}
 --- !u!1001 &1671525546
@@ -2496,11 +2466,6 @@ PrefabInstance:
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 4629949566252436202, guid: 75efe86b20d989d47bb743bc7027a6b3,
-        type: 3}
-      propertyPath: progressMeter
-      value: 
-      objectReference: {fileID: 328540679573982090}
     - target: {fileID: 328540679576329439, guid: 75efe86b20d989d47bb743bc7027a6b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2556,55 +2521,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1101860616679515389, guid: 75efe86b20d989d47bb743bc7027a6b3,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1101860616679515389, guid: 75efe86b20d989d47bb743bc7027a6b3,
-        type: 3}
-      propertyPath: m_FillMethod
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3822732209530934726, guid: 75efe86b20d989d47bb743bc7027a6b3,
-        type: 3}
-      propertyPath: m_Name
-      value: ProgressIndicatorImage
-      objectReference: {fileID: 0}
-    - target: {fileID: 8165105135138875172, guid: 75efe86b20d989d47bb743bc7027a6b3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7895246132784860172, guid: 75efe86b20d989d47bb743bc7027a6b3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4008464636871638542, guid: 75efe86b20d989d47bb743bc7027a6b3,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2058909242}
-    - target: {fileID: 4008464636871638542, guid: 75efe86b20d989d47bb743bc7027a6b3,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1546808503
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75efe86b20d989d47bb743bc7027a6b3, type: 3}
---- !u!114 &328540679573982090 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4355611436377129706, guid: 75efe86b20d989d47bb743bc7027a6b3,
-    type: 3}
-  m_PrefabInstance: {fileID: 328540679573982086}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2a343e28e97eba42b69c6e44cd42cc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &640699594568711621
 PrefabInstance:
   m_ObjectHideFlags: 0
