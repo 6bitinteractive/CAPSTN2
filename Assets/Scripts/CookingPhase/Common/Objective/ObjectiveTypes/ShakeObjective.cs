@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ShakeObjective : Objective
 {
+    [Tooltip("Make sure it's not the ShakerPanel's animator.")]
     [SerializeField] private Animator shaker;
     [SerializeField] private int requiredAmount = 1;
     [SerializeField] private int maxAmount = 5;
