@@ -84,7 +84,7 @@ public class MinceIngredientObjective : Objective
     protected override void FinalizeObjective()
     {
         base.FinalizeObjective();
-        minceableIngredient.gameObject.SetActive(false);
+       // minceableIngredient.gameObject.SetActive(false);
     }
 
     protected override bool SuccessConditionMet()
