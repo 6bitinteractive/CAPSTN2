@@ -70,13 +70,17 @@ public class CookingOverviewManager : MonoBehaviour
         for (int i = 0; i < steps.Count; i++)
         {
             // It's the most recent unlocked step if the step itself is unlocked and its right neighbor is locked
-            steps[i].Current = !steps[i].Locked && steps[i + 1 >= steps.Count ? i : i + 1].Locked;
+            // Or, in the case of the last stage, simply return true (i.e. the only requirement is that it is unlocked itself
+            steps[i].Current = !steps[i].Locked && (i + 1 >= steps.Count ? true : steps[i + 1].Locked);
 
             // Are all the steps done
             if (i == steps.Count - 1) // Is this the last step
             {
                 if (steps[i].Rating >= MinRating) // Is it above the required minimum rating
+                {
+                    steps[i].Current = false;
                     OnAllStagesDone.Invoke();
+                }
             }
         }
     }
