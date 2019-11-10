@@ -16,6 +16,8 @@ public class ShakeObjective : Objective
 
     private int count;
     private bool canUseShaker = true;
+    private Vector3 Tilt;
+    private bool isPullingRight;
 
     protected override void Awake()
     {
@@ -45,7 +47,7 @@ public class ShakeObjective : Objective
     {
         base.RunObjective();
 
-        if (UsedShaker())
+        if (canUseShaker && UsedShaker())
         {
             canUseShaker = false;
             StartCoroutine(ShakeContainer());
@@ -63,12 +65,13 @@ public class ShakeObjective : Objective
 
         // Play animation
         shaker.SetTrigger("Shake");
-        yield return new WaitWhile(() => AnimatorUtils.IsInState(shaker, "Shake") && AnimatorUtils.IsDonePlaying(shaker, "Shake"));
+        yield return new WaitUntil(() => AnimatorUtils.IsInState(shaker, "Shake") && AnimatorUtils.IsDonePlaying(shaker, "Shake"));
+        shaker.SetTrigger("Reset");
 
         // Increase count
         count++;
         Debug.Log("Used shaker: " + count + "x.");
-
+        
         // Allow to use shaker again
         canUseShaker = true;
     }
@@ -92,8 +95,7 @@ public class ShakeObjective : Objective
         #region Mobile Input
 #if UNITY_ANDROID || UNITY_IOS
 
-        return false;
-
+          return CheckShake();
 #endif
         #endregion
     }
@@ -101,5 +103,26 @@ public class ShakeObjective : Objective
     protected override bool SuccessConditionMet()
     {
         return count == requiredAmount;
+    }
+
+    private bool CheckShake()
+    {
+        Tilt = Input.acceleration;
+
+       // Debug.Log("Current Tilt: " + Tilt);
+
+        // Pulling phone rightwards
+        if (Tilt.x > 0.4f)
+        {
+            isPullingRight = true;
+        }
+
+        // Moving phone leftwards when sucessfully pulled rightwards first
+        if (isPullingRight && Tilt.x < -0.4f)
+        {
+            isPullingRight = false;
+            return true;
+        }
+        return false;
     }
 }
