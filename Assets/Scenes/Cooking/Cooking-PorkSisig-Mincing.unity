@@ -996,6 +996,11 @@ PrefabInstance:
       propertyPath: minRequiredTaps
       value: 37
       objectReference: {fileID: 0}
+    - target: {fileID: 6391353998632090961, guid: 4b3631d71b06c6a438ca9b5afda816ab,
+        type: 3}
+      propertyPath: descriptionText
+      value: Mince pork meat
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b3631d71b06c6a438ca9b5afda816ab, type: 3}
 --- !u!1001 &7552385174038203471
