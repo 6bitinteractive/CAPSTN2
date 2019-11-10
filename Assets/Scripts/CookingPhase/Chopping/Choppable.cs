@@ -17,7 +17,7 @@ public class Choppable : MonoBehaviour
     public int MaxIngredientSlices { get => maxIngredientSlices; set => maxIngredientSlices = value; }
     public bool IsChopped { get => isChopped; set => isChopped = value; }
     public UnityEvent OnIngredientChopEnd { get => onIngredientChopEnd; set => onIngredientChopEnd = value; }
-
+  
     private Swipeable swipeable;
 
     private void Awake()
@@ -28,6 +28,7 @@ public class Choppable : MonoBehaviour
     void OnEnable()
     {
        maxIngredientSlices += currentIngredientState.Length;
+       swipeable.OnCorrectSwipe.AddListener(OnChop);
        UpdateCurrentIngredient();
     }
 
@@ -38,7 +39,6 @@ public class Choppable : MonoBehaviour
             isChopped = true;
             onIngredientChopEnd.Invoke();
             swipeable.SwipeDirection = SwipeDirection.None;
-            gameObject.SetActive(false);
             return;
         }
         
@@ -52,7 +52,7 @@ public class Choppable : MonoBehaviour
 
     public bool MaxSliceReached()
     {
-        return sliceCount >= MaxIngredientSlices - 2;
+        return sliceCount >= MaxIngredientSlices - 1;
     }
 
     private void UpdateCurrentIngredient()
