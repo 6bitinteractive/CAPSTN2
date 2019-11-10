@@ -11,17 +11,16 @@ using UnityEngine.UI;
 public class StirFryObjective : Objective
 {
     [SerializeField] private SpoonKitchenUtensil spoon;
-    [SerializeField] private float minDuration = 7f;
-    [SerializeField] private float maxDuration = 15f;
     [SerializeField] private float durationLimit = 20f;
-    [SerializeField] private Image progressMeter;
-    [SerializeField] private Color perfectColorState, underColorState, overColorState;
+    [SerializeField] private ProgressMeter progressMeter;
 
     [SerializeField] private DialogueHint dialogueHint;
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
     [SerializeField] private ObjectiveState underState = new ObjectiveState(ObjectiveState.Status.Under);
     [SerializeField] private ObjectiveState overState = new ObjectiveState(ObjectiveState.Status.Over);
 
+    private float minDuration;
+    private float maxDuration;
     private Animator spoonAnim;
     private DisableAnimation spoonDisableAnim;
     private bool showNextButton = true;
@@ -30,6 +29,9 @@ public class StirFryObjective : Objective
     protected override void Awake()
     {
         base.Awake();
+        minDuration = durationLimit * progressMeter.perfectMin;
+        maxDuration = durationLimit * progressMeter.perfectMax;
+
         spoonAnim = spoon.GetComponent<Animator>();
         spoonDisableAnim = spoon.GetComponent<DisableAnimation>();
 
@@ -98,15 +100,8 @@ public class StirFryObjective : Objective
         if (durationLimit <= 0f)
             Debug.Log("Duration limit cannot be less than or equal to zero.");
 
-        progressMeter.fillAmount = spoon.MixDuration / durationLimit;
-
-        if (spoon.MixDuration < minDuration)
-            progressMeter.color = underColorState;
-        else if ((spoon.MixDuration >= minDuration) && (spoon.MixDuration <= maxDuration))
-            progressMeter.color = perfectColorState;
-        else
-            progressMeter.color = overColorState;
-
+        float progressValue = spoon.MixDuration / durationLimit;
+        progressMeter.UpdateProgress(progressValue);
 
         // If player has mixed for a few seconds, show the Next button
         if (spoon.MixDuration >= 3f && showNextButton)
