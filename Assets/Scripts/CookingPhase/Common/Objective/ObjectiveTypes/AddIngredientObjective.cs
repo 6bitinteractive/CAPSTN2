@@ -5,9 +5,10 @@ using UnityEngine;
 public class AddIngredientObjective : Objective
 {
     [SerializeField] private List<Cookable> ingredientsToBeAdded;
-    private int currentIngredient;
-
+    [SerializeField] private DialogueHint dialogueHint;
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
+
+    private int currentIngredient;
 
     protected override void Awake()
     {
@@ -21,33 +22,22 @@ public class AddIngredientObjective : Objective
         perfectState.HasBeenReached = () => SuccessConditionMet();
     }
 
-    protected override void OnEnable()
-    {
-        base.OnEnable();
-
-        // Listen to event if previous ingredient has been dropped
-        foreach (var ingredient in ingredientsToBeAdded)
-        {
-            ingredient.OnIngredientDroppedToCookware.AddListener(AddNextIngredient);
-        }
-    }
-
-    protected override void OnDisable()
-    {
-        base.OnDisable();
-
-        foreach (var ingredient in ingredientsToBeAdded)
-        {
-            ingredient.OnIngredientDroppedToCookware.RemoveAllListeners();
-        }
-    }
-
     protected override void InitializeObjective()
     {
         base.InitializeObjective();
 
         if (ingredientsToBeAdded.Count == 0)
             Debug.LogError("Specify which ingredients are to be added.");
+
+        // Listen to event if previous ingredient has been dropped
+        foreach (var ingredient in ingredientsToBeAdded)
+        {
+            ingredient.OnIngredientDroppedToCookware.AddListener(AddNextIngredient);
+        }
+
+        // Show dialogue hint
+        if (dialogueHint != null)
+            SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
 
         // Enable first ingredient
         ingredientsToBeAdded[currentIngredient].gameObject.SetActive(true);
@@ -59,6 +49,7 @@ public class AddIngredientObjective : Objective
 
         foreach (var ingredient in ingredientsToBeAdded)
         {
+            ingredient.OnIngredientDroppedToCookware.RemoveListener(AddNextIngredient);
             ingredient.gameObject.SetActive(false);
         }
     }

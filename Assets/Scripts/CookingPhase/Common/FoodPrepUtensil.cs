@@ -12,18 +12,28 @@ using Random = UnityEngine.Random;
 public class FoodPrepUtensil : MonoBehaviour
 {
     [SerializeField] private Animator addIngredientAnimator;
+    [SerializeField] private float resetPositionDelay = 0.5f;
+
+    [Header("Spawn Ingredient")]
     [SerializeField] private GameObject ingredientToSpawnPrefab;
     [SerializeField] private int minSpawnCount = 1;
     [SerializeField] private int maxSpawnCount = 3;
-    [SerializeField] private float resetPositionDelay = 0.5f;
+    [SerializeField] private SpawnType spawnType = SpawnType.Offset;
+
+    [Header("SpawnType: Position Offset from Utensil")]
     [SerializeField] private Vector3 spawnPositionOffset;
 
+    [Header("SpawnType: Specified Position/s")]
+    public List<RectTransform> spawnPositionList;
+
+    [Header("Event")]
     public UnityEvent OnAddIngredient = new UnityEvent();
 
     private Image image;
     private RectTransform rectTransform;
     private Vector2 defaultPosition;
     private PolygonCollider2D polygonCollider;
+    private Queue<RectTransform> spawnPositions = new Queue<RectTransform>();
 
     private void Awake()
     {
@@ -31,6 +41,9 @@ public class FoodPrepUtensil : MonoBehaviour
         polygonCollider = GetComponent<PolygonCollider2D>();
         rectTransform = GetComponent<RectTransform>();
         defaultPosition = rectTransform.anchoredPosition;
+
+        foreach (var item in spawnPositionList)
+            spawnPositions.Enqueue(item);
     }
 
     private void OnEnable()
@@ -62,27 +75,59 @@ public class FoodPrepUtensil : MonoBehaviour
         image.enabled = false;
 
         // Start animation of adding in the ingredient
-        addIngredientAnimator.gameObject.SetActive(true);
-        addIngredientAnimator.SetTrigger("Add");
+        if (addIngredientAnimator != null)
+        {
+            addIngredientAnimator.gameObject.SetActive(true);
+            addIngredientAnimator.SetTrigger("Add");
 
-        // Wait for animation to finish
-        yield return new WaitUntil(() => AnimatorUtils.IsInState(addIngredientAnimator, "FoodPrepUtensilAddIngredient")
-                                        && AnimatorUtils.IsDonePlaying(addIngredientAnimator, "FoodPrepUtensilAddIngredient"));
+            // Wait for animation to finish
+            yield return new WaitUntil(() => AnimatorUtils.IsInState(addIngredientAnimator, "FoodPrepUtensilAddIngredient")
+                                            && AnimatorUtils.IsDonePlaying(addIngredientAnimator, "FoodPrepUtensilAddIngredient"));
 
-        // Hide
-        addIngredientAnimator.gameObject.SetActive(false);
+            // Hide
+            addIngredientAnimator.gameObject.SetActive(false);
+        }
 
         if (ingredientToSpawnPrefab != null) // If there's something to spawn in the cookware...
         {
             // Have a random count if necessary
             int randomSpawnCount = Random.Range(minSpawnCount, maxSpawnCount);
             int currentCount = 0;
+            Vector3 position = Vector3.zero;
 
             while (currentCount < randomSpawnCount)
             {
-                // Spawn at the same x-axis as this utensil, randomize the y based on the Cookware's polygonCollider's bounds
-                //Vector3 position = new Vector3(transform.position.x, Random.Range(collider2D.bounds.min.y, collider2D.bounds.max.y), 0f);
-                Vector3 position = new Vector3(transform.position.x, transform.position.y, 0f) + spawnPositionOffset;
+                switch (spawnType)
+                {
+                    case SpawnType.InPosition:
+                        {
+                            position = ingredientToSpawnPrefab.transform.position;
+                            break;
+                        }
+
+                    case SpawnType.Offset:
+                        {
+                            position = new Vector3(transform.position.x, transform.position.y, 0f) + spawnPositionOffset;
+                            break;
+                        }
+
+                    case SpawnType.SpecifiedPosition:
+                        {
+                            var queueItem = spawnPositions.Peek();
+                            position = queueItem.position;
+                            spawnPositions.Dequeue();
+                            spawnPositions.Enqueue(queueItem);
+                            break;
+                        }
+
+                    case SpawnType.Random:
+                        {
+                            // Spawn at the same x-axis as this utensil, randomize the y based on the Cookware's polygonCollider's bounds
+                            position = new Vector3(transform.position.x, Random.Range(collider2D.bounds.min.y, collider2D.bounds.max.y), 0f);
+                            break;
+                        }
+                }
+
                 GameObject go = Instantiate(ingredientToSpawnPrefab, position, Quaternion.identity, collider2D.transform);
 
                 currentCount++;
@@ -97,5 +142,10 @@ public class FoodPrepUtensil : MonoBehaviour
         yield return new WaitForSeconds(resetPositionDelay);
 
         Reset();
+    }
+
+    public enum SpawnType
+    {
+        InPosition, Offset, SpecifiedPosition, Random
     }
 }

@@ -3547,7 +3547,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7758644883087865013}
-        m_MethodName: DisplayResult
+        m_MethodName: UpdateDisplay
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

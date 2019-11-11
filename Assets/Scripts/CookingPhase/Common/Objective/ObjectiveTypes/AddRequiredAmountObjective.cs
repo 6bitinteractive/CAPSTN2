@@ -2,11 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/* NOTE
- * Sometimes, the amount added is doubled so the value of the currentAmount being checked will be wrong.
- * Save then unload the scene then try to run the scene again.
- */
-
 public class AddRequiredAmountObjective : Objective
 {
     [SerializeField] private int requiredAmount = 5;
@@ -17,6 +12,7 @@ public class AddRequiredAmountObjective : Objective
     [SerializeField] private GameObject ingredientToBeAdded;
     private Animator ingredientToBeAddedAnim;
 
+    [SerializeField] private DialogueHint dialogueHint;
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
     [SerializeField] private ObjectiveState underState = new ObjectiveState(ObjectiveState.Status.Under);
     [SerializeField] private ObjectiveState overState = new ObjectiveState(ObjectiveState.Status.Over);
@@ -27,7 +23,8 @@ public class AddRequiredAmountObjective : Objective
     {
         base.Awake();
 
-        ingredientToBeAddedAnim = ingredientToBeAdded.GetComponent<Animator>();
+        if (ingredientToBeAdded != null)
+            ingredientToBeAddedAnim = ingredientToBeAdded.GetComponent<Animator>();
 
         // Setup objectives
         // Add to list
@@ -41,24 +38,30 @@ public class AddRequiredAmountObjective : Objective
         overState.HasBeenReached = () => currentAmount > requiredAmount;
     }
 
-    protected override void OnEnable()
-    {
-        base.OnEnable();
-        foodPrepUtensil.OnAddIngredient.AddListener(UpdateCount);
-    }
-
     protected override void InitializeObjective()
     {
         base.InitializeObjective();
-        ingredientToBeAdded.gameObject.SetActive(true);
+        foodPrepUtensil.OnAddIngredient.AddListener(UpdateCount);
+
+        if (ingredientToBeAdded != null)
+            ingredientToBeAdded.gameObject.SetActive(true);
+
+        // Show dialogue hint
+        if (dialogueHint != null)
+            SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
     }
 
     protected override void FinalizeObjective()
     {
         base.FinalizeObjective();
 
-        if (!AnimatorUtils.IsInState(ingredientToBeAddedAnim, "AddRequiredAmountSlideOut"))
-            ingredientToBeAddedAnim.SetTrigger("SlideOut");
+        if (ingredientToBeAddedAnim != null)
+        {
+            if (!AnimatorUtils.IsInState(ingredientToBeAddedAnim, "AddRequiredAmountSlideOut"))
+                ingredientToBeAddedAnim.SetTrigger("SlideOut");
+        }
+
+        foodPrepUtensil.OnAddIngredient.RemoveListener(UpdateCount);
     }
 
     protected override bool SuccessConditionMet()
@@ -69,12 +72,17 @@ public class AddRequiredAmountObjective : Objective
     private void UpdateCount()
     {
         currentAmount++;
-        //Debug.Log("Current count: " + currentAmount);
+        Debug.Log("Current Added Count: " + currentAmount);
 
         if (currentAmount == 1)
             GoToNextObjective(false);
 
         if (currentAmount >= maxAmount)
-            ingredientToBeAddedAnim.SetTrigger("SlideOut");
+        {
+            if (ingredientToBeAddedAnim != null)
+                ingredientToBeAddedAnim.SetTrigger("SlideOut");
+
+            GoToNextObjective(true);
+        }
     }
 }
