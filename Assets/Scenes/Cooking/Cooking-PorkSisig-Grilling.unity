@@ -618,12 +618,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2234901680429250896, guid: 795f3c5c7f56ee542a96c40b638f3b76,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: 9e6abf763a37fbc4da36c093302c300d,
-        type: 2}
     - target: {fileID: 6021499195524968183, guid: 795f3c5c7f56ee542a96c40b638f3b76,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -654,6 +648,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2234901680429250896, guid: 795f3c5c7f56ee542a96c40b638f3b76,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 9e6abf763a37fbc4da36c093302c300d,
+        type: 2}
     - target: {fileID: 3780666577782068175, guid: 795f3c5c7f56ee542a96c40b638f3b76,
         type: 3}
       propertyPath: OnDestinationReached.m_PersistentCalls.m_Calls.Array.size
@@ -1383,7 +1383,7 @@ PrefabInstance:
     - target: {fileID: 1041999086142858249, guid: f24cae0089f30e1469fcc32d74fbdd2f,
         type: 3}
       propertyPath: descriptionText
-      value: Once steam appears, add in Pig Ear
+      value: Once steam appears, add in Pig Ear.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f24cae0089f30e1469fcc32d74fbdd2f, type: 3}
@@ -1868,7 +1868,7 @@ PrefabInstance:
     - target: {fileID: 7051262971578090797, guid: 3aca5cd199b63234781e42eea02d162c,
         type: 3}
       propertyPath: descriptionText
-      value: Add 5 tsp of cooking oil
+      value: Add 5 tsp of cooking oil.
       objectReference: {fileID: 0}
     - target: {fileID: 7051262971578090797, guid: 3aca5cd199b63234781e42eea02d162c,
         type: 3}
@@ -2056,23 +2056,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Oil-Bowl
       objectReference: {fileID: 0}
-    - target: {fileID: 4888742413199503107, guid: 2bb4639186b59484f9a9b8415506e73a,
-        type: 3}
-      propertyPath: ingredientPrefab
-      value: 
-      objectReference: {fileID: 5305335769000712784, guid: 8193385117167d24d9107be30b4e17a9,
-        type: 3}
-    - target: {fileID: 4888742413199503107, guid: 2bb4639186b59484f9a9b8415506e73a,
-        type: 3}
-      propertyPath: ingredientToSpawnPrefab
-      value: 
-      objectReference: {fileID: 5305335769000712784, guid: 8193385117167d24d9107be30b4e17a9,
-        type: 3}
-    - target: {fileID: 4888742413199503107, guid: 2bb4639186b59484f9a9b8415506e73a,
-        type: 3}
-      propertyPath: maxSpawnCount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4888742413935942859, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2177,6 +2160,23 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888742413199503107, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: ingredientPrefab
+      value: 
+      objectReference: {fileID: 5305335769000712784, guid: 8193385117167d24d9107be30b4e17a9,
+        type: 3}
+    - target: {fileID: 4888742413199503107, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: ingredientToSpawnPrefab
+      value: 
+      objectReference: {fileID: 5305335769000712784, guid: 8193385117167d24d9107be30b4e17a9,
+        type: 3}
+    - target: {fileID: 4888742413199503107, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: maxSpawnCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4888742413199503106, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
@@ -2890,7 +2890,7 @@ PrefabInstance:
     - target: {fileID: 7126820681990864463, guid: 27d65c3e76c39bf4e9a8864fc6b1b94e,
         type: 3}
       propertyPath: descriptionText
-      value: Set aside the Pig Ears.
+      value: Take the pan off the stove and set aside the Pig Ears.
       objectReference: {fileID: 0}
     - target: {fileID: 7126820681990864463, guid: 27d65c3e76c39bf4e9a8864fc6b1b94e,
         type: 3}
