@@ -77,7 +77,7 @@ MonoBehaviour:
     m_TypeName: ObjectiveEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
   spoon: {fileID: 0}
-  durationLimit: 10
+  durationLimit: 20
   progressMeter: {fileID: 4355611436377129706}
   nextButtonDisplayDelay: 2
   dialogueHint:

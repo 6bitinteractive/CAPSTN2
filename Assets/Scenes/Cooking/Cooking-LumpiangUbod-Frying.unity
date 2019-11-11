@@ -1664,6 +1664,11 @@ PrefabInstance:
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: SlideOut
       objectReference: {fileID: 0}
+    - target: {fileID: 4629949566252436202, guid: 75efe86b20d989d47bb743bc7027a6b3,
+        type: 3}
+      propertyPath: durationLimit
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 328540679576329439, guid: 75efe86b20d989d47bb743bc7027a6b3,
         type: 3}
       propertyPath: m_LocalPosition.x

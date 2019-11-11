@@ -52,7 +52,7 @@ public class StirFryObjective : Objective
         base.InitializeObjective();
         SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
         progressMeter.transform.parent.gameObject.SetActive(true);
-        spoon.enabled = false;
+        spoon.enabled = false; // Turn off at start so that movement when spoon enters the pan at start is not counted as mixing
 
         if (spoon.gameObject.activeInHierarchy)
         {
@@ -132,7 +132,7 @@ public class StirFryObjective : Objective
     private IEnumerator EnableSpoon()
     {
         yield return new WaitUntil(() => AnimatorUtils.IsInState(spoonAnim, "SlideIn") && AnimatorUtils.IsDonePlaying(spoonAnim, "SlideIn"));
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f); // Wait for a bit so that movement within the pan when the spoon slides in doesn't count as valid input/mixing
         spoon.enabled = true;
     }
 }
