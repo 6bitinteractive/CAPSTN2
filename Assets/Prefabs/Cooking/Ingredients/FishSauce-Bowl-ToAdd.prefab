@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &370956145713888867
+--- !u!1001 &6538511474368747720
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,12 +10,7 @@ PrefabInstance:
     - target: {fileID: 4888742413935942856, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_Name
-      value: Oil-Bowl
-      objectReference: {fileID: 0}
-    - target: {fileID: 4888742413935942856, guid: 2bb4639186b59484f9a9b8415506e73a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      value: FishSauce-Bowl-ToAdd
       objectReference: {fileID: 0}
     - target: {fileID: 4888742413935942859, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
@@ -35,17 +30,17 @@ PrefabInstance:
     - target: {fileID: 4888742413935942859, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4888742413935942859, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4888742413935942859, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4888742413935942859, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
@@ -122,5 +117,51 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4888742413199503119, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_Name
+      value: FoodPrepUtensil-FishSauce
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888742413199503107, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: ingredientToSpawnPrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888742413199503105, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: defaultSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b7d79ef22be1a174684a8d8b33dda687,
+        type: 3}
+    - target: {fileID: 4888742413199503105, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: onTapSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5ca972854f19b2c47b7cc6baa4773c9b,
+        type: 3}
+    - target: {fileID: 4888742413199503109, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b7d79ef22be1a174684a8d8b33dda687,
+        type: 3}
+    - target: {fileID: 4888742414096984894, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b564c908cbad3be49a1d19fecb9c73d9,
+        type: 3}
+    - target: {fileID: 1368117104050926943, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: d111c9023324d864a8e7e1b36bdf625a,
+        type: 2}
+    - target: {fileID: 6013363919688943254, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 332fb2bd39447304fbd41b9d04a32db8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bb4639186b59484f9a9b8415506e73a, type: 3}

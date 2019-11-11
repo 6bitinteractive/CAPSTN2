@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6538511474368747720
+--- !u!1001 &5031932149242515544
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,12 +10,7 @@ PrefabInstance:
     - target: {fileID: 4888742413935942856, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_Name
-      value: SoySauce-Bowl-ToAdd
-      objectReference: {fileID: 0}
-    - target: {fileID: 4888742413199503107, guid: 2bb4639186b59484f9a9b8415506e73a,
-        type: 3}
-      propertyPath: ingredientToSpawnPrefab
-      value: 
+      value: Water-Bowl-ToAdd
       objectReference: {fileID: 0}
     - target: {fileID: 4888742413935942859, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
@@ -125,42 +120,43 @@ PrefabInstance:
     - target: {fileID: 4888742413199503119, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_Name
-      value: FoodPrepUtensil-SoySauce
+      value: FoodPrepUtensil-Water
       objectReference: {fileID: 0}
-    - target: {fileID: 4888742413199503109, guid: 2bb4639186b59484f9a9b8415506e73a,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 576d9d4092f225342b871fb7cd5acea8,
-        type: 3}
     - target: {fileID: 4888742413199503105, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: defaultSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 576d9d4092f225342b871fb7cd5acea8,
+      objectReference: {fileID: 21300000, guid: 820de8df49a5f364383ad7f91af7bfc9,
         type: 3}
     - target: {fileID: 4888742413199503105, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: onTapSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 56dd4f85ad7420b43a64f160f511888e,
+      objectReference: {fileID: 21300000, guid: 1ec913519173c40408480c148594ab48,
         type: 3}
-    - target: {fileID: 3724198432683999069, guid: 2bb4639186b59484f9a9b8415506e73a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6013363919688943254, guid: 2bb4639186b59484f9a9b8415506e73a,
+    - target: {fileID: 4888742413199503109, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 852556451ade2704d9b001d4159f19a6,
+      objectReference: {fileID: 21300000, guid: 820de8df49a5f364383ad7f91af7bfc9,
+        type: 3}
+    - target: {fileID: 4888742414096984894, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9715ae34464a36e46a7f9a9c114c2003,
         type: 3}
     - target: {fileID: 1368117104050926943, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 22100000, guid: d83c2eb8bd342a34a962a16fb2c073ee,
+      objectReference: {fileID: 22100000, guid: fb294e82077dccd459e0d90341890d9e,
         type: 2}
+    - target: {fileID: 6013363919688943254, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59f0a517e5a12f04f96930691c28b44d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bb4639186b59484f9a9b8415506e73a, type: 3}
