@@ -31,6 +31,7 @@ public class DropArea : MonoBehaviour
         if (!item.Grabbed)
         {
             OnItemDroppedOnArea.Invoke(item);
+            Debug.Log("Item dropped in " + gameObject.name + ": " + item.name);
             item = null;
         }
     }
