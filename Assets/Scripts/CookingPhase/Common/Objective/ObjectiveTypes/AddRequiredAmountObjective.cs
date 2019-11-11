@@ -47,7 +47,7 @@ public class AddRequiredAmountObjective : Objective
             ingredientToBeAdded.gameObject.SetActive(true);
 
         // Show dialogue hint
-        if (dialogueHint != null)
+        if (dialogueHint.dialogueText != string.Empty)
             SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
     }
 

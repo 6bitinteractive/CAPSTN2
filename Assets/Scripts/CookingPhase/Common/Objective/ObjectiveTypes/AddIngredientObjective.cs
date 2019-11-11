@@ -36,7 +36,7 @@ public class AddIngredientObjective : Objective
         }
 
         // Show dialogue hint
-        if (dialogueHint != null)
+        if (dialogueHint.dialogueText != string.Empty)
             SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
 
         // Enable first ingredient
