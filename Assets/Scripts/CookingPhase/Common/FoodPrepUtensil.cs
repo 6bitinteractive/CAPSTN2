@@ -94,6 +94,7 @@ public class FoodPrepUtensil : MonoBehaviour
             int randomSpawnCount = Random.Range(minSpawnCount, maxSpawnCount);
             int currentCount = 0;
             Vector3 position = Vector3.zero;
+            Transform parent = collider2D.transform;
 
             while (currentCount < randomSpawnCount)
             {
@@ -114,6 +115,7 @@ public class FoodPrepUtensil : MonoBehaviour
                     case SpawnType.SpecifiedPosition:
                         {
                             var queueItem = spawnPositions.Peek();
+                            parent = queueItem.transform;
                             position = queueItem.position;
                             spawnPositions.Dequeue();
                             spawnPositions.Enqueue(queueItem);
@@ -128,7 +130,7 @@ public class FoodPrepUtensil : MonoBehaviour
                         }
                 }
 
-                GameObject go = Instantiate(ingredientToSpawnPrefab, position, Quaternion.identity, collider2D.transform);
+                GameObject go = Instantiate(ingredientToSpawnPrefab, position, Quaternion.identity, parent);
 
                 currentCount++;
                 Debug.Log("Spawned ingredient count: " + currentCount);
