@@ -8,6 +8,16 @@ using UnityEngine.Events;
 public class TiltDetector : MonoBehaviour
 {
     public TiltEvent OnTilt = new TiltEvent();
+    private TiltType tiltType;
+    [SerializeField] private float requiredToTilt = 0.8f;
+    private Vector3 currentTilt;
+
+    public TiltType TiltType { get => tiltType; set => tiltType = value; }
+
+    private void Start()
+    {
+        Input.gyro.enabled = true;
+    }
 
     private void Update()
     {
@@ -27,6 +37,38 @@ public class TiltDetector : MonoBehaviour
         #region Mobile Input
 #if UNITY_ANDROID || UNITY_IOS
 
+        currentTilt = Input.gyro.gravity;
+
+        switch(tiltType)
+        {
+            case TiltType.Horizontal:
+                if (currentTilt.x <= -requiredToTilt)
+                {
+                    Debug.Log("left");
+                    OnTilt.Invoke(TiltDirection.Left);
+                }
+
+                else if (currentTilt.x >= requiredToTilt)
+                {
+                    Debug.Log("right");
+                    OnTilt.Invoke(TiltDirection.Right);
+                }
+                break;
+
+            case TiltType.Vertical:
+                if (currentTilt.y <= -requiredToTilt)
+                {
+                    Debug.Log("up");
+                    OnTilt.Invoke(TiltDirection.Up);
+                }
+
+                else if (currentTilt.y >= requiredToTilt)
+                {
+                    Debug.Log("down");
+                    OnTilt.Invoke(TiltDirection.Down);
+                }
+                break;
+        }
 #endif
         #endregion
     }
@@ -39,4 +81,10 @@ public enum TiltDirection
     Down,
     Left,
     Right
+}
+
+public enum TiltType
+{
+    Horizontal,
+    Vertical
 }

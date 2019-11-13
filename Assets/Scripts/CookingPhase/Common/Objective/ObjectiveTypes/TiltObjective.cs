@@ -33,6 +33,7 @@ public class TiltObjective : Objective
         base.InitializeObjective();
         tiltDetector.OnTilt.AddListener(CheckPlayerTiltInput);
         tiltDetector.enabled = true;
+        InitializeTiltType();
         perfectState.OnStateReached.AddListener((x) => GoToNextObjective(true));
 
         if (dialogueHint.dialogueText != string.Empty)
@@ -54,6 +55,14 @@ public class TiltObjective : Objective
     protected override bool SuccessConditionMet()
     {
         return playerTilt == requiredTiltDirection;
+    }
+
+    private void InitializeTiltType()
+    {
+        if (requiredTiltDirection == TiltDirection.Up || requiredTiltDirection == TiltDirection.Down)
+            tiltDetector.TiltType = TiltType.Vertical;
+        else
+            tiltDetector.TiltType = TiltType.Horizontal;
     }
 }
 
