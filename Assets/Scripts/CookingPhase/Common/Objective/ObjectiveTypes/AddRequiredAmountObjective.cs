@@ -34,7 +34,7 @@ public class AddRequiredAmountObjective : Objective
 
         // Define condition
         perfectState.HasBeenReached = () => SuccessConditionMet();
-        underState.HasBeenReached = () => currentAmount == 1;
+        underState.HasBeenReached = () => currentAmount == 1 && requiredAmount != 1;
         overState.HasBeenReached = () => currentAmount > requiredAmount;
     }
 

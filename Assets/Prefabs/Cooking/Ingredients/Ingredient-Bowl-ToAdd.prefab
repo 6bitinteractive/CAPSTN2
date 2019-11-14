@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 4888742413199503104}
   - component: {fileID: 4888742413199503105}
   m_Layer: 18
-  m_Name: FoodPrepUtensil-Oil
+  m_Name: FoodPrepUtensil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,12 +215,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   addIngredientAnimator: {fileID: 1368117104050926943}
+  resetPositionDelay: 0.5
   ingredientToSpawnPrefab: {fileID: 5305335769000712784, guid: 8193385117167d24d9107be30b4e17a9,
     type: 3}
   minSpawnCount: 1
   maxSpawnCount: 1
-  resetPositionDelay: 0.5
+  spawnType: 1
   spawnPositionOffset: {x: 0, y: -1.7, z: 0}
+  spawnPositionList: []
   OnAddIngredient:
     m_PersistentCalls:
       m_Calls: []
@@ -267,7 +269,7 @@ GameObject:
   - component: {fileID: 4888742413935942859}
   - component: {fileID: 4888742413935942858}
   m_Layer: 5
-  m_Name: Oil-Bowl-ToAdd
+  m_Name: Ingredient-Bowl-ToAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

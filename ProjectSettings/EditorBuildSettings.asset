@@ -71,4 +71,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cooking/Cooking-LumpiangUbod-Wrapping.unity
     guid: c7d6a91144698194ca6ef4900f58035e
+  - enabled: 1
+    path: Assets/Scenes/Cooking/Cooking-LumpiangUbod-Boiling.unity
+    guid: b21c948bf922f984aa13fc5d1963b0ce
   m_configObjects: {}
