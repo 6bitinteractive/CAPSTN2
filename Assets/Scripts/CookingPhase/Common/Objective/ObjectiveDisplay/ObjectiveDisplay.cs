@@ -53,14 +53,13 @@ public class ObjectiveDisplay : MonoBehaviour
     private void ShowNextButton(Objective objective)
     {
         nextButtonCanvasGroup.alpha = 1;
-        //nextButtonPanel.SetTrigger("SlideIn");
+        //nextButton.interactable = true;
         StartCoroutine(AnimateNextButton(true));
         Debug.Log("Showing Next button.");
     }
 
     private void HideNextButton(Objective objective)
     {
-        //nextButtonPanel.SetTrigger("SlideOut");
         StartCoroutine(AnimateNextButton(false));
         Debug.Log("Hid Next button");
     }
@@ -81,8 +80,10 @@ public class ObjectiveDisplay : MonoBehaviour
 
     private IEnumerator AnimateNextButton(bool slideIn)
     {
+        nextButton.interactable = false;
         string state = slideIn ? "SlideInOnTrigger" : "SlideOutOnTrigger";
         nextButtonPanel.SetTrigger(slideIn ? "SlideIn" : "SlideOut");
         yield return new WaitUntil(() => AnimatorUtils.IsInState(nextButtonPanel, state) && AnimatorUtils.IsDonePlaying(nextButtonPanel, state));
+        nextButton.interactable = true;
     }
 }
