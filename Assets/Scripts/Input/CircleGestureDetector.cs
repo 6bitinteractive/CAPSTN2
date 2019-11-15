@@ -92,7 +92,7 @@ public class CircleGestureDetector : MonoBehaviour
 
         // Is it clockwise
         float orientation = GetOrientation(gestureDetector[0], gestureDetector[1], gestureDetector[2]);
-        Debug.Log("Orientation: " + orientation);
+        //Debug.Log("Orientation: " + orientation);
 
         if (gestureLength > gestureBase && gestureSum.magnitude < gestureBase / 2)
         {

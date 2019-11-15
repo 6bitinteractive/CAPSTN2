@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &328540679576329438
+--- !u!1 &8302914280397859035
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 328540679576329439}
-  - component: {fileID: 4629949566252436202}
+  - component: {fileID: 8302914280397859034}
+  - component: {fileID: 8302914280397859037}
+  - component: {fileID: 8302914280397859036}
   m_Layer: 0
-  m_Name: StirFryObjective
+  m_Name: StirObjective
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &328540679576329439
+--- !u!4 &8302914280397859034
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328540679576329438}
+  m_GameObject: {fileID: 8302914280397859035}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 9109866592224488629}
+  - {fileID: 2118542266268468296}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4629949566252436202
+--- !u!114 &8302914280397859037
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328540679576329438}
+  m_GameObject: {fileID: 8302914280397859035}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2eb161541c12234a8e1389d1e85e4c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f7ed90de1030384db1d7be318b421dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startOnEnable: 1
-  descriptionText: Stir fry the onions until they are cooked.
+  descriptionText: Stir the mixture.
   ObjectiveStates: []
   OnBegin:
     m_PersistentCalls:
@@ -77,50 +78,41 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: ObjectiveEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
-  spoon: {fileID: 0}
-  durationLimit: 20
-  progressMeter: {fileID: 4355611436377129706}
-  nextButtonDisplayDelay: 2
-  dialogueHint:
-    characterPortrait: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
-      type: 3}
-    dialogueText: Stir fry the onions until they are translucent.
+  requiredStirCount: 5
+  progressMeter: {fileID: 6879266122026920471}
   perfectState:
     dialogueHint:
-      characterPortrait: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
-        type: 3}
-      dialogueText: Perfect!
+      characterPortrait: {fileID: 0}
+      dialogueText: 
     OnStateReached:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: ObjectiveStateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-  underState:
-    dialogueHint:
-      characterPortrait: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
-        type: 3}
-      dialogueText: It's starting to cook...
-    OnStateReached:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: ObjectiveStateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-  overState:
-    dialogueHint:
-      characterPortrait: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
-        type: 3}
-      dialogueText: It's burning!
-    OnStateReached:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: ObjectiveStateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
---- !u!1001 &1167502254320358761
+--- !u!114 &8302914280397859036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8302914280397859035}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ad72e82fbcb8445a6372924743eec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numOfCircleToShow: 1
+  OnClockwiseCircleGesture:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1001 &8302914281630072212
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 328540679576329439}
+    m_TransformParent: {fileID: 8302914280397859034}
     m_Modifications:
     - target: {fileID: 7017605207157649997, guid: bd6480eaa4f62c24c85b9e703251dc13,
         type: 3}
@@ -234,17 +226,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd6480eaa4f62c24c85b9e703251dc13, type: 3}
---- !u!224 &9109866592224488629 stripped
+--- !u!224 &2118542266268468296 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7953201339893725660, guid: bd6480eaa4f62c24c85b9e703251dc13,
     type: 3}
-  m_PrefabInstance: {fileID: 1167502254320358761}
+  m_PrefabInstance: {fileID: 8302914281630072212}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4355611436377129706 stripped
+--- !u!114 &6879266122026920471 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3189094561474992003, guid: bd6480eaa4f62c24c85b9e703251dc13,
     type: 3}
-  m_PrefabInstance: {fileID: 1167502254320358761}
+  m_PrefabInstance: {fileID: 8302914281630072212}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
