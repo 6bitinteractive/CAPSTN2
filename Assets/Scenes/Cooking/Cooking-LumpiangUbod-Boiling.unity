@@ -4381,11 +4381,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7953305867198838089, guid: 2146d3c4f3848e24f9919318756f06eb,
-        type: 3}
-      propertyPath: IngredientInCookware
-      value: 
-      objectReference: {fileID: 1075779832}
     - target: {fileID: 7878730033174361951, guid: 2146d3c4f3848e24f9919318756f06eb,
         type: 3}
       propertyPath: onTapSprite
