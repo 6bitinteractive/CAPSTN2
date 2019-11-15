@@ -1123,6 +1123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 825e0b09d24b5e348a6a12b16cd71fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tapPrompt: {fileID: 7166560043221031382}
+  delay: 2
   OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -4833,6 +4835,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea68324dd46c948479f8b08f23b5c9a2, type: 3}
+--- !u!1 &7166560043221031382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6258770439200927961, guid: ea68324dd46c948479f8b08f23b5c9a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3868349012461218063}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &8251276343256538908 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5128842358470227475, guid: ea68324dd46c948479f8b08f23b5c9a2,

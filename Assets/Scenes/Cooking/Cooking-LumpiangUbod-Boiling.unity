@@ -1312,6 +1312,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7552385174038203471}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1047808862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7166560043221031382, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+    type: 3}
+  m_PrefabInstance: {fileID: 7552385174038203471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1053443714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1894,6 +1900,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
         type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
+        type: 3}
       propertyPath: descriptionText
       value: Add 3 tbsp cornstarch mixture.
       objectReference: {fileID: 0}
@@ -1910,6 +1921,46 @@ PrefabInstance:
     - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
         type: 3}
       propertyPath: startOnEnable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3616,7 +3667,7 @@ PrefabInstance:
     - target: {fileID: 8087771845888280200, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8087771845888280200, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
@@ -3702,7 +3753,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 819508896}
+      objectReference: {fileID: 1047808862}
     - target: {fileID: 8087771845888280200, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
