@@ -11,10 +11,11 @@ public class OnStoveSettingChanged : UnityEvent<HeatSetting> { }
 
 public class StoveController : MonoBehaviour
 {
+    // Default Values
+    public static float lowSettingValue = 0.18f, mediumSettingValue = 0.674f, highSettingValue = 0.985f;
+
     [Range(0, 1)]
     [SerializeField] private float maxLow = 0.3f, maxMedium = 0.7f;
-
-    //public static float LowHeatValue = 0.0003f, MediumHeatValue = 0.0006f, HighHeatValue = 0.001f;
 
     public HeatSetting CurrentHeatSetting { get; private set; }
     public OnStoveSettingChanged OnStoveSettingChanged = new OnStoveSettingChanged();

@@ -8,13 +8,14 @@ public class AdjustHeatObjective : Objective
 {
     [SerializeField] private HeatSetting requiredHeatSetting;
 
+    [SerializeField] private DialogueHint failDialogue;
+    [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
+
     private HeatSetting currentSetting;
     private StoveController stoveController;
     private Slider stoveControllerSlider;
     private Animator stoveControllerAnimator;
-
     private bool showNextButton;
-    [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
 
     // FIX: Null reference when objective is done?
     //protected override void OnDestroy()
@@ -58,8 +59,34 @@ public class AdjustHeatObjective : Objective
         base.FinalizeObjective();
         stoveControllerAnimator.SetBool("Blinking", false);
         stoveControllerSlider.interactable = false;
-        showNextButton = false;
         stoveController.OnStoveSettingChanged.RemoveListener(SetHeatSetting);
+    }
+
+    protected override void PostFinalizeObjective()
+    {
+        base.PostFinalizeObjective();
+        showNextButton = false;
+
+        if (SuccessConditionMet()) { return; }
+
+        switch (requiredHeatSetting)
+        {
+            case HeatSetting.Off:
+                stoveControllerSlider.value = 0f;
+                break;
+            case HeatSetting.Low:
+                stoveControllerSlider.value = StoveController.lowSettingValue;
+                break;
+            case HeatSetting.Medium:
+                stoveControllerSlider.value = StoveController.mediumSettingValue;
+                break;
+            case HeatSetting.High:
+                stoveControllerSlider.value = StoveController.highSettingValue;
+                break;
+        }
+
+        if (failDialogue.dialogueText != string.Empty)
+            SingletonManager.GetInstance<DialogueHintManager>().Show(failDialogue);
     }
 
     protected override bool SuccessConditionMet()
