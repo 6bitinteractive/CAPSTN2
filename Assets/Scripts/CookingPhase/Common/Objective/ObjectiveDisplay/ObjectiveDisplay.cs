@@ -35,7 +35,7 @@ public class ObjectiveDisplay : MonoBehaviour
             GameObject o = Instantiate(objectivePanelPrefab, objectiveListPanel, false);
             ObjectiveItemUI objItemDisplay = o.GetComponent<ObjectiveItemUI>();
             objItemDisplay.CorrespondingObjective = objectiveManager.Objectives[i];
-            objItemDisplay.SetData(string.Format("Step {0} of {1}", i+1, objectiveManager.Objectives.Count), objectiveManager.Objectives[i].Description);
+            objItemDisplay.SetData(string.Format("Step {0} of {1}", i + 1, objectiveManager.Objectives.Count), objectiveManager.Objectives[i].Description);
             objItemDisplay.transform.SetAsFirstSibling(); // The latest item is at the back
             objectiveItemDisplayList.Add(objItemDisplay);
         }
@@ -47,17 +47,22 @@ public class ObjectiveDisplay : MonoBehaviour
         ShowNextButton(objective); // We mimic letting the button slide in to avoid issues with animation...
         nextButtonCanvasGroup.alpha = 0; // ... but hide the button
         nextButton.onClick.Invoke();
+        Debug.Log("Automatically clicked Next button.");
     }
 
     private void ShowNextButton(Objective objective)
     {
         nextButtonCanvasGroup.alpha = 1;
-        nextButtonPanel.SetTrigger("SlideIn");
+        //nextButtonPanel.SetTrigger("SlideIn");
+        StartCoroutine(AnimateNextButton(true));
+        Debug.Log("Showing Next button.");
     }
 
     private void HideNextButton(Objective objective)
     {
-        nextButtonPanel.SetTrigger("SlideOut");
+        //nextButtonPanel.SetTrigger("SlideOut");
+        StartCoroutine(AnimateNextButton(false));
+        Debug.Log("Hid Next button");
     }
 
     private void ToggleObjectiveItem(Objective objective)
@@ -72,5 +77,12 @@ public class ObjectiveDisplay : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         objectiveListPanel.gameObject.SetActive(false);
+    }
+
+    private IEnumerator AnimateNextButton(bool slideIn)
+    {
+        string state = slideIn ? "SlideInOnTrigger" : "SlideOutOnTrigger";
+        nextButtonPanel.SetTrigger(slideIn ? "SlideIn" : "SlideOut");
+        yield return new WaitUntil(() => AnimatorUtils.IsInState(nextButtonPanel, state) && AnimatorUtils.IsDonePlaying(nextButtonPanel, state));
     }
 }

@@ -46,9 +46,9 @@ public class PreheatCookwareAddIngredientObjective : Objective
         Invoke("LetOutSteam", steamWaitTime);
     }
 
-    protected override void FinalizeObjective()
+    protected override void PostFinalizeObjective()
     {
-        base.FinalizeObjective();
+        base.PostFinalizeObjective();
 
         foreach (var ingredient in ingredientsToBeAdded)
         {
@@ -78,7 +78,7 @@ public class PreheatCookwareAddIngredientObjective : Objective
         if (!preheated)
             addedBeforePreheated = true;
 
-
+        // If there are no more ingredients to add...
         if (currentIngredient >= ingredientsToBeAdded.Count)
         {
             GoToNextObjective(true);

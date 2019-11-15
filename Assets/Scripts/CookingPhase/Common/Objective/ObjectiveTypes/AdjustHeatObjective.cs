@@ -46,10 +46,6 @@ public class AdjustHeatObjective : Objective
         stoveControllerAnimator = stoveController.GetComponent<Animator>();
         stoveController.OnStoveSettingChanged.AddListener(SetHeatSetting);
 
-        // Hack... for cases when the player already has the correct setting (most likely because they incorrectly set the heat prior to this objective)
-        // We manually invoke the event so that it can be checked right away
-        stoveController.OnStoveSettingChanged.Invoke(stoveController.CurrentHeatSetting);
-
         stoveControllerAnimator.SetBool("Blinking", true);
         stoveControllerSlider.interactable = true;
     }

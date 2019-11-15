@@ -82,7 +82,9 @@ public class AddRequiredAmountObjective : Objective
         Debug.Log("Current Added Count: " + currentAmount);
 
         if (currentAmount == 1)
+        {
             GoToNextObjective(false);
+        }
 
         if (currentAmount >= maxAmount)
         {
