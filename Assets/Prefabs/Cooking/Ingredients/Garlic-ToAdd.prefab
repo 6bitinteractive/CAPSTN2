@@ -12,6 +12,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Garlic-ToAdd
       objectReference: {fileID: 0}
+    - target: {fileID: 345536820579207828, guid: c7eb8202151dc27479ce1e0bf11fc46e,
+        type: 3}
+      propertyPath: defaultSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 13698ac7aec51c24b96dc1282d806fa9,
+        type: 3}
+    - target: {fileID: 345536820579207828, guid: c7eb8202151dc27479ce1e0bf11fc46e,
+        type: 3}
+      propertyPath: onTapSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ffb1d409644844448bee2de5e282f4ae,
+        type: 3}
+    - target: {fileID: 559177926974933120, guid: c7eb8202151dc27479ce1e0bf11fc46e,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 13698ac7aec51c24b96dc1282d806fa9,
+        type: 3}
     - target: {fileID: 559177926974933127, guid: c7eb8202151dc27479ce1e0bf11fc46e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -80,12 +98,12 @@ PrefabInstance:
     - target: {fileID: 559177926974933127, guid: c7eb8202151dc27479ce1e0bf11fc46e,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 364
+      value: 247
       objectReference: {fileID: 0}
     - target: {fileID: 559177926974933127, guid: c7eb8202151dc27479ce1e0bf11fc46e,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 332
+      value: 245
       objectReference: {fileID: 0}
     - target: {fileID: 559177926974933127, guid: c7eb8202151dc27479ce1e0bf11fc46e,
         type: 3}
@@ -117,23 +135,5 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 559177926974933120, guid: c7eb8202151dc27479ce1e0bf11fc46e,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 13698ac7aec51c24b96dc1282d806fa9,
-        type: 3}
-    - target: {fileID: 345536820579207828, guid: c7eb8202151dc27479ce1e0bf11fc46e,
-        type: 3}
-      propertyPath: defaultSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 13698ac7aec51c24b96dc1282d806fa9,
-        type: 3}
-    - target: {fileID: 345536820579207828, guid: c7eb8202151dc27479ce1e0bf11fc46e,
-        type: 3}
-      propertyPath: onTapSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ffb1d409644844448bee2de5e282f4ae,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7eb8202151dc27479ce1e0bf11fc46e, type: 3}
