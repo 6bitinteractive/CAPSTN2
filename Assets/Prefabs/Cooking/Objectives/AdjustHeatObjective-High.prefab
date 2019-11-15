@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05bb389cb61a21c41892baa7e52cd9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionText: Adjust heat to <color="blue">high</color>
+  descriptionText: Adjust heat to <color="blue">high</color>.
+  ObjectiveStates: []
   OnBegin:
     m_PersistentCalls:
       m_Calls: []
@@ -64,4 +65,23 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: ObjectiveEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  OnReadyForNext:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ObjectiveEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  OnAutomaticallyGoToNext:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ObjectiveEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
   requiredHeatSetting: 3
+  perfectState:
+    dialogueHint:
+      characterPortrait: {fileID: 0}
+      dialogueText: 
+    OnStateReached:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: ObjectiveStateEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null

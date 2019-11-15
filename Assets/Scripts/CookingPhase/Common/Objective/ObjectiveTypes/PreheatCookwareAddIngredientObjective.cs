@@ -26,27 +26,6 @@ public class PreheatCookwareAddIngredientObjective : Objective
         perfectState.HasBeenReached = () => preheated && !addedBeforePreheated;
     }
 
-    protected override void OnEnable()
-    {
-        base.OnEnable();
-
-        // Listen to event if previous ingredient has been dropped
-        foreach (var ingredient in ingredientsToBeAdded)
-        {
-            ingredient.OnIngredientDroppedToCookware.AddListener(AddNextIngredient);
-        }
-    }
-
-    protected override void OnDisable()
-    {
-        base.OnDisable();
-
-        foreach (var ingredient in ingredientsToBeAdded)
-        {
-            ingredient.OnIngredientDroppedToCookware.RemoveAllListeners();
-        }
-    }
-
     protected override void InitializeObjective()
     {
         base.InitializeObjective();
@@ -54,6 +33,12 @@ public class PreheatCookwareAddIngredientObjective : Objective
 
         if (ingredientsToBeAdded.Count == 0)
             Debug.LogError("Specify which ingredients are to be added.");
+
+        // Listen to event if previous ingredient has been dropped
+        foreach (var ingredient in ingredientsToBeAdded)
+        {
+            ingredient.OnIngredientDroppedToCookware.AddListener(AddNextIngredient);
+        }
 
         // Enable first ingredient
         ingredientsToBeAdded[currentIngredient].gameObject.SetActive(true);
@@ -67,6 +52,7 @@ public class PreheatCookwareAddIngredientObjective : Objective
 
         foreach (var ingredient in ingredientsToBeAdded)
         {
+            ingredient.OnIngredientDroppedToCookware.RemoveListener(AddNextIngredient);
             ingredient.gameObject.SetActive(false);
         }
     }

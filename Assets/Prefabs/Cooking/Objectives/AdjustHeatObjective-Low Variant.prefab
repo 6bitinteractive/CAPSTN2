@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8200644543923350642
+--- !u!1001 &562733120943337928
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,12 +10,12 @@ PrefabInstance:
     - target: {fileID: 6851496187070122958, guid: 3747a553b1b196149bd20c5f1bde00d7,
         type: 3}
       propertyPath: m_Name
-      value: AdjustHeatObjective-Low Variant
+      value: AdjustHeatObjective-Low
       objectReference: {fileID: 0}
     - target: {fileID: 6851496187070122956, guid: 3747a553b1b196149bd20c5f1bde00d7,
         type: 3}
       propertyPath: descriptionText
-      value: Adjust heat to <color="blue">low</color>
+      value: Adjust heat to <color="blue">low</color>.
       objectReference: {fileID: 0}
     - target: {fileID: 6851496187070122956, guid: 3747a553b1b196149bd20c5f1bde00d7,
         type: 3}

@@ -1,6 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+// int: current count/amount
+[System.Serializable] public class AddIngredientEvent : UnityEvent<int> { }
 
 public class AddRequiredAmountObjective : Objective
 {
@@ -16,6 +20,8 @@ public class AddRequiredAmountObjective : Objective
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
     [SerializeField] private ObjectiveState underState = new ObjectiveState(ObjectiveState.Status.Under);
     [SerializeField] private ObjectiveState overState = new ObjectiveState(ObjectiveState.Status.Over);
+
+    public AddIngredientEvent OnAddIngredient = new AddIngredientEvent();
 
     private int currentAmount;
 
@@ -72,6 +78,7 @@ public class AddRequiredAmountObjective : Objective
     private void UpdateCount()
     {
         currentAmount++;
+        OnAddIngredient.Invoke(currentAmount);
         Debug.Log("Current Added Count: " + currentAmount);
 
         if (currentAmount == 1)
