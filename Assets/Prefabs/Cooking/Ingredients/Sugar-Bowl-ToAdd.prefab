@@ -120,7 +120,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.8
+      scalar: 0.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4791,11 +4791,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4888742413199503107, guid: 2bb4639186b59484f9a9b8415506e73a,
-        type: 3}
-      propertyPath: ingredientToSpawnPrefab
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4888742413935942859, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4901,16 +4896,31 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7099749427512580494, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7099749427512580494, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4888742413199503119, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_Name
+      value: FoodPrepUtensil-Sugar
+      objectReference: {fileID: 0}
     - target: {fileID: 4888742413199503109, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b28294c320c98104f852aeae33dd6b88,
         type: 3}
-    - target: {fileID: 4888742413199503119, guid: 2bb4639186b59484f9a9b8415506e73a,
+    - target: {fileID: 4888742413199503107, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
-      propertyPath: m_Name
-      value: FoodPrepUtensil-Sugar
+      propertyPath: ingredientToSpawnPrefab
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4888742413199503105, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
@@ -4936,16 +4946,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: c0f02d73b47c74e448576d692749c014,
         type: 3}
-    - target: {fileID: 7099749427512580494, guid: 2bb4639186b59484f9a9b8415506e73a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7099749427512580494, guid: 2bb4639186b59484f9a9b8415506e73a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bb4639186b59484f9a9b8415506e73a, type: 3}
 --- !u!1 &7116728887127094335 stripped
