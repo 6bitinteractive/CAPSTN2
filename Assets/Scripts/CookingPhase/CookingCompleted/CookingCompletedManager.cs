@@ -96,7 +96,7 @@ public class CookingCompletedManager : MonoBehaviour
         foreach (var stage in recipe.Stages)
             average += ratingsManager.LoadStageRating(stage);
 
-        average /= recipe.Stages.Count * maxRating;
+        average /= recipe.Stages.Count;
 
         Debug.Log("Average: " + average);
 
