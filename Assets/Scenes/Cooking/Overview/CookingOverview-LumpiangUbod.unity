@@ -687,6 +687,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 359986528910415533, guid: 9ed0bcf42c6325c47a1c0ef302f47f27,
+        type: 3}
+      propertyPath: recipe
+      value: 
+      objectReference: {fileID: 11400000, guid: 0d96379d1987a744b916a5917854fd63,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ed0bcf42c6325c47a1c0ef302f47f27, type: 3}
 --- !u!95 &1062555116 stripped

@@ -15,3 +15,7 @@ MonoBehaviour:
   CookingOverview: {fileID: 11400000, guid: e3d5dc63895ce1b41bbca172232e006d, type: 2}
   Stages:
   - {fileID: 11400000, guid: a6a2938a1d28bbb43a0871d888857f91, type: 2}
+  PostCookingScene: {fileID: 11400000, guid: e3d5dc63895ce1b41bbca172232e006d, type: 2}
+  SuccessfulFinalDishSequence: []
+  FailedFinalDishSequence: []
+  DishNameImage: {fileID: 0}

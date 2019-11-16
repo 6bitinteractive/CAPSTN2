@@ -597,6 +597,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3937096026231818851, guid: ec4903e75ba22054f846402fa1344edc,
+        type: 3}
+      propertyPath: m_Name
+      value: CookingOverviewCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 4031785258968152006, guid: ec4903e75ba22054f846402fa1344edc,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -616,11 +621,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3937096026231818851, guid: ec4903e75ba22054f846402fa1344edc,
-        type: 3}
-      propertyPath: m_Name
-      value: CookingOverviewCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 3937096026231818855, guid: ec4903e75ba22054f846402fa1344edc,
         type: 3}
@@ -1012,5 +1012,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3937096026231818854, guid: ec4903e75ba22054f846402fa1344edc,
+        type: 3}
+      propertyPath: recipe
+      value: 
+      objectReference: {fileID: 11400000, guid: d63573a0c4502b440abdae53873e9b15,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec4903e75ba22054f846402fa1344edc, type: 3}

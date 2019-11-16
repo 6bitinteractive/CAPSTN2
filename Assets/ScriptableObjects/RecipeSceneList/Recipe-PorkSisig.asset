@@ -19,3 +19,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2eb3dad1239314c46a7db3b862df6653, type: 2}
   - {fileID: 11400000, guid: 36aad41bdb1d99044ba579b9c65cc92d, type: 2}
   - {fileID: 11400000, guid: 569eb71a8cd7731468f49e9e2f2563c7, type: 2}
+  PostCookingScene: {fileID: 11400000, guid: 674e03eafb6718a408e11afb3430890a, type: 2}
+  SuccessfulFinalDishSequence:
+  - {fileID: 21300000, guid: d491ed70631bb3b45bef57d3a21fe1c6, type: 3}
+  - {fileID: 21300000, guid: 3242b8cc179eb8a4485e7d1263ff8d66, type: 3}
+  - {fileID: 21300000, guid: a95488a490d95b1459492a0f106c19ce, type: 3}
+  - {fileID: 21300000, guid: 462bad92d4cc8e146a806ce4352459cf, type: 3}
+  FailedFinalDishSequence:
+  - {fileID: 21300000, guid: d491ed70631bb3b45bef57d3a21fe1c6, type: 3}
+  - {fileID: 21300000, guid: 3242b8cc179eb8a4485e7d1263ff8d66, type: 3}
+  - {fileID: 21300000, guid: a95488a490d95b1459492a0f106c19ce, type: 3}
+  - {fileID: 21300000, guid: 73a9db7d6a98cbe4c92e71dff6cdedd3, type: 3}
+  DishNameImage: {fileID: 21300000, guid: 5d0c8b457e0186b4e83481565d315b6e, type: 3}

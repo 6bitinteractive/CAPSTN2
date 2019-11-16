@@ -28,7 +28,10 @@ public class StepUI : MonoBehaviour
         image = GetComponent<Image>();
         button = GetComponent<Button>();
         button.onClick.AddListener(InvokeOnStageSelect);
+    }
 
+    public void UpdateStepUI()
+    {
         if (step.Locked)
         {
             button.enabled = false;

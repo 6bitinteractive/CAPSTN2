@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class CookingOverviewManager : MonoBehaviour
 {
+    [SerializeField] private Recipe recipe;
     [SerializeField] private GameObject stepsPanel;
     [Range(1, 3)] [SerializeField] private int MinRating = 2;
 
@@ -16,12 +17,10 @@ public class CookingOverviewManager : MonoBehaviour
     private SceneData selectedStage;
     private SceneController sceneController;
     private RatingsManager ratingsManager;
+    private StageTracker stageTracker;
 
     private void Awake()
     {
-        sceneController = SingletonManager.GetInstance<SceneController>();
-        ratingsManager = SingletonManager.GetInstance<RatingsManager>();
-
         if (stepsPanel == null)
             Debug.LogError(gameObject.name + ": No steps in list");
 
@@ -33,14 +32,24 @@ public class CookingOverviewManager : MonoBehaviour
     {
         foreach (var stepUI in stepsUI)
             stepUI.OnStageSelect.AddListener(SetSelectedStage);
-
-        UnlockSteps();
     }
 
     private void OnDisable()
     {
         foreach (var stepUI in stepsUI)
             stepUI.OnStageSelect.RemoveListener(SetSelectedStage);
+    }
+
+    private void Start()
+    {
+        sceneController = SingletonManager.GetInstance<SceneController>();
+        ratingsManager = SingletonManager.GetInstance<RatingsManager>();
+        stageTracker = SingletonManager.GetInstance<StageTracker>();
+
+        // Set this as the game's current recipe
+        stageTracker.CurrentRecipe = recipe;
+
+        UnlockSteps();
     }
 
     public void LoadSelectedStage()
@@ -78,10 +87,17 @@ public class CookingOverviewManager : MonoBehaviour
             {
                 if (steps[i].Rating >= MinRating) // Is it above the required minimum rating
                 {
-                    steps[i].Current = false;
+                    steps[i].Current = false; // Don't set the last stage as the current stage (i.e., will not make it's icon bigger)
+                    stageTracker.RecentCompletedRecipe = recipe; // Set this as the recently completed recipe
                     OnAllStagesDone.Invoke();
                 }
             }
+        }
+
+        // Update StepUI
+        for (int i = 0; i < stepsUI.Count; i++)
+        {
+            stepsUI[i].UpdateStepUI();
         }
     }
 }
