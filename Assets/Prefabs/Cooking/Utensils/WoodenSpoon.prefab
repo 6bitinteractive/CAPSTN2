@@ -50,7 +50,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: -105.63723, y: -133.37}
+  m_Offset: {x: -8.4, y: -120.9}
   serializedVersion: 2
   m_Radius: 39.06277
 --- !u!250 &365403139133246486
@@ -104,18 +104,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3802867266956106076}
-  m_LocalRotation: {x: 0.18301274, y: 0.18301274, z: -0.6830127, w: 0.6830127}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9396926, w: 0.34202018}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 139236781383894496}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -140}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 230, y: -85}
-  m_SizeDelta: {x: 409.5, y: 417.58}
+  m_SizeDelta: {x: 116, y: 362}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3802867266956106068
 CanvasRenderer:
@@ -145,7 +145,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 69d037164d0ed8a4586f011c2c6cac45, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ff9d76101c4c1674ba3722b81ee9b271, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -250,7 +250,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -18.51007, y: -135.17993}
-      - {x: -111.207825, y: -44.084213}
-      - {x: -196.31592, y: -128.93231}
-      - {x: -101.60324, y: -211.20193}
+    - - {x: 79.542175, y: -211.4305}
+      - {x: 106.62526, y: 255.38133}
+      - {x: -68.97755, y: 254.56308}
+      - {x: -83.59877, y: -204.67963}
