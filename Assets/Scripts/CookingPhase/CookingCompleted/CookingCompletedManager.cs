@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
@@ -24,6 +25,9 @@ public class CookingCompletedManager : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioClip successSfx;
     [SerializeField] private AudioClip failSfx;
+
+    [Header("Events")]
+    public UnityEvent OnReady = new UnityEvent();
 
     private StageTracker stageTracker;
     private RatingsManager ratingsManager;
@@ -59,17 +63,18 @@ public class CookingCompletedManager : MonoBehaviour
         // Fail
         if (avg <= minRating)
         {
-            for (int i = 0, j = 0; i < dishImages.Count; i++, j++)
+            for (int i = 0; i < dishImages.Count; i++)
             {
-                dishImages[i].sprite = recipe.FailedFinalDishSequence[j];
+                dishImages[i].sprite = null;
+                dishImages[i].sprite = recipe.FailedFinalDishSequence[i];
                 audioSource.clip = failSfx;
             }
         }
         else // Success
         {
-            for (int i = 0, j = 0; i < dishImages.Count; i++, j++)
+            for (int i = 0; i < dishImages.Count; i++)
             {
-                dishImages[i].sprite = recipe.SuccessfulFinalDishSequence[j];
+                dishImages[i].sprite = recipe.SuccessfulFinalDishSequence[i];
                 audioSource.clip = successSfx;
             }
         }
@@ -80,6 +85,8 @@ public class CookingCompletedManager : MonoBehaviour
         // Play audio
         if (audioSource.clip != null)
             audioSource.Play();
+
+        OnReady.Invoke();
     }
 
     private float GetAverage(Recipe recipe)
@@ -96,3 +103,7 @@ public class CookingCompletedManager : MonoBehaviour
         return average;
     }
 }
+
+// Really weird bug: image is not displayed when setting the sprites in scripts
+// Fix: set the image to null first, and/or set the image type to "Filled"---I had to use both fixes
+// Reference: https://stackoverflow.com/a/57228049
