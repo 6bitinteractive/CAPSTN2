@@ -10,6 +10,7 @@ public class TurnOffHeatWhenCookedObjective : Objective
     [SerializeField] private Cookware cookware;
     [SerializeField] private Slider stoveControllerSlider;
     [SerializeField] private DialogueHint dialogueHint;
+    [SerializeField] private DialogueHint failHeatOffDialogue;
 
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
     [SerializeField] private ObjectiveState underState = new ObjectiveState(ObjectiveState.Status.Under);
@@ -17,11 +18,16 @@ public class TurnOffHeatWhenCookedObjective : Objective
 
     private List<IngredientStateController> ingredients = new List<IngredientStateController>();
     private StoveController stoveController;
+    private Animator stoveControllerAnimator;
+    private LidHandler lid;
+    private bool showStoveControllerHint = true;
 
     protected override void Awake()
     {
         base.Awake();
         stoveController = stoveControllerSlider.GetComponent<StoveController>();
+        stoveControllerAnimator = stoveController.GetComponent<Animator>();
+        lid = panLid.GetComponent<LidHandler>();
 
         // Setup objectives
         // Add to list
@@ -40,8 +46,9 @@ public class TurnOffHeatWhenCookedObjective : Objective
         base.InitializeObjective();
         SingletonManager.GetInstance<DialogueHintManager>().Show(dialogueHint);
         panLid.SetActive(true);
+        lid.OnCoverCookware.AddListener(TurnOnVisualHint);
         stoveControllerSlider.interactable = true;
-        stoveController.OnStoveSettingChanged.AddListener(SwicthCooking);
+        stoveController.OnStoveSettingChanged.AddListener(SwitchCooking);
 
         foreach (var item in cookware.CookableIngredients)
         {
@@ -58,10 +65,24 @@ public class TurnOffHeatWhenCookedObjective : Objective
     {
         base.FinalizeObjective();
         stoveControllerSlider.interactable = false;
-        stoveController.OnStoveSettingChanged.RemoveAllListeners();
+        stoveController.OnStoveSettingChanged.RemoveListener(SwitchCooking);
+        lid.OnCoverCookware.RemoveListener(TurnOnVisualHint);
     }
 
-    private void SwicthCooking(HeatSetting heatSetting)
+    protected override void PostFinalizeObjective()
+    {
+        base.PostFinalizeObjective();
+
+        if (SuccessConditionMet())
+            return;
+
+        // Turn off the heat
+        stoveControllerSlider.value = 0f;
+        if (failHeatOffDialogue.dialogueText != string.Empty)
+            SingletonManager.GetInstance<DialogueHintManager>().Show(failHeatOffDialogue);
+    }
+
+    private void SwitchCooking(HeatSetting heatSetting)
     {
         foreach (var item in ingredients)
         {
@@ -70,11 +91,22 @@ public class TurnOffHeatWhenCookedObjective : Objective
 
         // NOTE: Don't automatically go to next as there's a bug that automatically registers SwipeRight for the TransitionalStep
         GoToNextObjective(false);
+
+        // Stop the visual hint
+        stoveControllerAnimator.SetBool("Blinking", false);
     }
 
     protected override bool SuccessConditionMet()
     {
         return stoveController.CurrentHeatSetting == HeatSetting.Off
             && ingredients.Exists(x => x.CurrentState == IngredientState.Perfect);
+    }
+
+    private void TurnOnVisualHint()
+    {
+        if (showStoveControllerHint)
+            stoveControllerAnimator.SetBool("Blinking", true);
+
+        showStoveControllerHint = false;
     }
 }

@@ -80,7 +80,7 @@ MonoBehaviour:
   failDialogue:
     characterPortrait: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
       type: 3}
-    dialogueText: Let's change it into the correct setting.
+    dialogueText: Let me adjust the heat to high.
   perfectState:
     dialogueHint:
       characterPortrait: {fileID: 0}

@@ -10,17 +10,7 @@ PrefabInstance:
     - target: {fileID: 6851496187070122958, guid: 3747a553b1b196149bd20c5f1bde00d7,
         type: 3}
       propertyPath: m_Name
-      value: AdjustHeatObjective-Low
-      objectReference: {fileID: 0}
-    - target: {fileID: 6851496187070122956, guid: 3747a553b1b196149bd20c5f1bde00d7,
-        type: 3}
-      propertyPath: descriptionText
-      value: Adjust heat to <color="blue">low</color>.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6851496187070122956, guid: 3747a553b1b196149bd20c5f1bde00d7,
-        type: 3}
-      propertyPath: requiredHeatSetting
-      value: 1
+      value: AdjustHeatObjective-Low Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6851496187070122957, guid: 3747a553b1b196149bd20c5f1bde00d7,
         type: 3}
@@ -76,6 +66,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122956, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: descriptionText
+      value: Adjust heat to <color="blue">low</color>.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122956, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: requiredHeatSetting
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851496187070122956, guid: 3747a553b1b196149bd20c5f1bde00d7,
+        type: 3}
+      propertyPath: failDialogue.dialogueText
+      value: Let me adjust the heat to low.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3747a553b1b196149bd20c5f1bde00d7, type: 3}

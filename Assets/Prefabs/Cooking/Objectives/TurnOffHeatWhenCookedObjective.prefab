@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3aac374d164fe8468a4548a8ce4288e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startOnEnable: 1
   descriptionText: Cover with the lid. Turn off the heat once the pig is cooked.
   ObjectiveStates: []
   OnBegin:
@@ -75,10 +76,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: ObjectiveEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+  panLid: {fileID: 0}
+  cookware: {fileID: 0}
+  stoveControllerSlider: {fileID: 0}
   dialogueHint:
     characterPortrait: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
       type: 3}
     dialogueText: Cover the lid and let it cook.
+  failHeatOffDialogue:
+    characterPortrait: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+      type: 3}
+    dialogueText: Let me turn off the heat.
   perfectState:
     dialogueHint:
       characterPortrait: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
