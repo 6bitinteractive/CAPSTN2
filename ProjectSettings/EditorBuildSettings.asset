@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Dialogue/Intro.unity
     guid: 97c53954bfc4baf469cb6876f8f434fc
   - enabled: 1
-    path: Assets/Scenes/Cooking/Cooking-AligueFriedRice-Frying.unity
+    path: Assets/Scenes/Cooking/Stages/AligueFriedRice/Cooking-AligueFriedRice-Frying.unity
     guid: 86a48d08e65025f47847eebee9aa2d3e
   - enabled: 1
     path: Assets/Scenes/Dialogue/AfterTutorial.unity
@@ -39,19 +39,19 @@ EditorBuildSettings:
     path: Assets/Scenes/Cooking/Overview/CookingOverview-PorkSisig.unity
     guid: d34158b1382e2c0468f159d0a157ca68
   - enabled: 1
-    path: Assets/Scenes/Cooking/Cooking-PorkSisig-Boiling.unity
+    path: Assets/Scenes/Cooking/Stages/PorkSisig/Cooking-PorkSisig-Boiling.unity
     guid: 622a7da23d9d4e7488cc177853b24e81
   - enabled: 1
-    path: Assets/Scenes/Cooking/Cooking-PorkSisig-Grilling.unity
+    path: Assets/Scenes/Cooking/Stages/PorkSisig/Cooking-PorkSisig-Grilling.unity
     guid: 45de0cb4c0f85384491d502a67cb7d78
   - enabled: 1
-    path: Assets/Scenes/Cooking/Cooking-PorkSisig-Chopping.unity
+    path: Assets/Scenes/Cooking/Stages/PorkSisig/Cooking-PorkSisig-Chopping.unity
     guid: 80232649a00ce0f48b7e5e457bd822b6
   - enabled: 1
-    path: Assets/Scenes/Cooking/Cooking-PorkSisig-Mincing.unity
+    path: Assets/Scenes/Cooking/Stages/PorkSisig/Cooking-PorkSisig-Mincing.unity
     guid: ca586dba291eb8b4ab468bca18cad024
   - enabled: 1
-    path: Assets/Scenes/Cooking/Cooking-PorkSisig-Frying.unity
+    path: Assets/Scenes/Cooking/Stages/PorkSisig/Cooking-PorkSisig-Frying.unity
     guid: 35a2b41918a7ca24c8576bbe2e716674
   - enabled: 1
     path: Assets/Scenes/Cooking/Completed/CookingCompleted-PorkSisig.unity
@@ -66,15 +66,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Cooking/Overview/CookingOverview-LumpiangUbod.unity
     guid: d833038b0f2b97441ba66460919d5245
   - enabled: 1
-    path: Assets/Scenes/Cooking/Cooking-LumpiangUbod-Chopping.unity
+    path: Assets/Scenes/Cooking/Stages/LumpiangUbod/Cooking-LumpiangUbod-Chopping.unity
     guid: 07393297b7d1b6b4abf1f37616418197
   - enabled: 1
-    path: Assets/Scenes/Cooking/Cooking-LumpiangUbod-Frying.unity
+    path: Assets/Scenes/Cooking/Stages/LumpiangUbod/Cooking-LumpiangUbod-Frying.unity
     guid: 2fd462b43881ee94288dd7d5e21efc9b
   - enabled: 1
-    path: Assets/Scenes/Cooking/Cooking-LumpiangUbod-Wrapping.unity
+    path: Assets/Scenes/Cooking/Stages/LumpiangUbod/Cooking-LumpiangUbod-Wrapping.unity
     guid: c7d6a91144698194ca6ef4900f58035e
   - enabled: 1
-    path: Assets/Scenes/Cooking/Cooking-LumpiangUbod-Boiling.unity
+    path: Assets/Scenes/Cooking/Stages/LumpiangUbod/Cooking-LumpiangUbod-Boiling.unity
     guid: b21c948bf922f984aa13fc5d1963b0ce
   m_configObjects: {}
