@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TiltLeft
+  m_Name: TiltRight
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -132,13 +132,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: ab93ff9213adf524d8186dd2292201ff, type: 3}
+      value: {fileID: 21300000, guid: 5218ec0f67ea49f45a4c8baa025c0a2f, type: 3}
     - time: 0.33333334
-      value: {fileID: 21300000, guid: 846e905cfcdee9a4c9b87947f70ffe97, type: 3}
+      value: {fileID: 21300000, guid: 195a47bf419143a4abbaa198d7f5e3f9, type: 3}
     - time: 1.3333334
-      value: {fileID: 21300000, guid: 846e905cfcdee9a4c9b87947f70ffe97, type: 3}
+      value: {fileID: 21300000, guid: 195a47bf419143a4abbaa198d7f5e3f9, type: 3}
     - time: 1.6666666
-      value: {fileID: 21300000, guid: ab93ff9213adf524d8186dd2292201ff, type: 3}
+      value: {fileID: 21300000, guid: 5218ec0f67ea49f45a4c8baa025c0a2f, type: 3}
     attribute: m_Sprite
     path: 
     classID: 114
@@ -186,10 +186,10 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: ab93ff9213adf524d8186dd2292201ff, type: 3}
-    - {fileID: 21300000, guid: 846e905cfcdee9a4c9b87947f70ffe97, type: 3}
-    - {fileID: 21300000, guid: 846e905cfcdee9a4c9b87947f70ffe97, type: 3}
-    - {fileID: 21300000, guid: ab93ff9213adf524d8186dd2292201ff, type: 3}
+    - {fileID: 21300000, guid: 5218ec0f67ea49f45a4c8baa025c0a2f, type: 3}
+    - {fileID: 21300000, guid: 195a47bf419143a4abbaa198d7f5e3f9, type: 3}
+    - {fileID: 21300000, guid: 195a47bf419143a4abbaa198d7f5e3f9, type: 3}
+    - {fileID: 21300000, guid: 5218ec0f67ea49f45a4c8baa025c0a2f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
