@@ -69,17 +69,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5559941477794110322, guid: 18b745fc0c0c0344789acfcb8178412a,
         type: 3}
-      propertyPath: dialogueHint.characterPortrait
-      value: 
-      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
-        type: 3}
-    - target: {fileID: 5559941477794110322, guid: 18b745fc0c0c0344789acfcb8178412a,
-        type: 3}
-      propertyPath: dialogueHint.dialogueText
-      value: Tilt the phone to the <color=#000080ff>left</color>.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5559941477794110322, guid: 18b745fc0c0c0344789acfcb8178412a,
-        type: 3}
       propertyPath: requiredTiltDirection
       value: 3
       objectReference: {fileID: 0}

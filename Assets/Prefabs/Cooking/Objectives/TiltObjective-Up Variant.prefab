@@ -79,11 +79,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5559941477794110322, guid: 18b745fc0c0c0344789acfcb8178412a,
         type: 3}
-      propertyPath: dialogueHint.dialogueText
-      value: Tilt the phone <color=#000080ff>up</color>.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5559941477794110322, guid: 18b745fc0c0c0344789acfcb8178412a,
-        type: 3}
       propertyPath: requiredTiltDirection
       value: 1
       objectReference: {fileID: 0}

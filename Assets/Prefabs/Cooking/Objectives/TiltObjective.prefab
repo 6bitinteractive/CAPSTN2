@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62590b58fcaca64fb8376d47005d214, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startOnEnable: 1
   descriptionText: 
   ObjectiveStates: []
   OnBegin:
@@ -105,3 +106,4 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: TiltEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  requiredToTilt: 0.8
