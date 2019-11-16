@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TiltForward
+  m_Name: TiltRight
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 9c4b963670c97af44a1dac9bea322f82, type: 3}
+      value: {fileID: 21300000, guid: 5218ec0f67ea49f45a4c8baa025c0a2f, type: 3}
     - time: 0.2
-      value: {fileID: 21300000, guid: 272fe047fecef7249a519e392fd7eea3, type: 3}
+      value: {fileID: 21300000, guid: 195a47bf419143a4abbaa198d7f5e3f9, type: 3}
     attribute: m_Sprite
     path: 
     classID: 114
@@ -42,8 +42,8 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 9c4b963670c97af44a1dac9bea322f82, type: 3}
-    - {fileID: 21300000, guid: 272fe047fecef7249a519e392fd7eea3, type: 3}
+    - {fileID: 21300000, guid: 5218ec0f67ea49f45a4c8baa025c0a2f, type: 3}
+    - {fileID: 21300000, guid: 195a47bf419143a4abbaa198d7f5e3f9, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
