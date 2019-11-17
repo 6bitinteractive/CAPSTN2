@@ -69,7 +69,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 5412558cc7463ae49a295783fa0f9717, type: 3}
-  m_Type: 0
+  m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
@@ -91,14 +91,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentIngredientState:
   - {fileID: 514450763423554192, guid: f1493ef90e263504aa42990cd3718c99, type: 3}
-  - {fileID: 514450763423554192, guid: f1493ef90e263504aa42990cd3718c99, type: 3}
-  - {fileID: 514450763423554192, guid: eaeb23d59c514694e8df1e9d49cb0093, type: 3}
+  - {fileID: 514450763423554192, guid: b9d2872f1c0f21f45a5cfe9bf2e0c84e, type: 3}
   - {fileID: 514450763423554192, guid: eaeb23d59c514694e8df1e9d49cb0093, type: 3}
   - {fileID: 514450763423554192, guid: 97f2a54b38f538c44a67ede85c7e4195, type: 3}
+  - {fileID: 514450763423554192, guid: 10815a7d2ca316e4888e2467017bddb5, type: 3}
   - {fileID: 514450763423554192, guid: e4de8850addeb634c91b87b6d9f73889, type: 3}
   - {fileID: 514450763423554192, guid: 85e3ad5cd290c8246996d9762531804d, type: 3}
   - {fileID: 514450763423554192, guid: 2a2c79f9340c8434c8e8d2ee3e360956, type: 3}
   - {fileID: 514450763423554192, guid: 6259d32e0f9043a40869cae645b9bfe0, type: 3}
+  - {fileID: 514450763423554192, guid: 5846f589be913bf4db88629c9d139e4f, type: 3}
   maxIngredientSlices: 0
   sliceCount: 0
   isChopped: 0
