@@ -99,7 +99,6 @@ MonoBehaviour:
   - {fileID: 514450763423554192, guid: 85e3ad5cd290c8246996d9762531804d, type: 3}
   - {fileID: 514450763423554192, guid: 2a2c79f9340c8434c8e8d2ee3e360956, type: 3}
   - {fileID: 514450763423554192, guid: 6259d32e0f9043a40869cae645b9bfe0, type: 3}
-  - {fileID: 514450763423554192, guid: 5846f589be913bf4db88629c9d139e4f, type: 3}
   maxIngredientSlices: 0
   sliceCount: 0
   isChopped: 0

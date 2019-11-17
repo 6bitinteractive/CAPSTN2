@@ -81,7 +81,7 @@ public class PreheatCookwareAddIngredientObjective : Objective
         // If there are no more ingredients to add...
         if (currentIngredient >= ingredientsToBeAdded.Count)
         {
-            GoToNextObjective(true);
+            GoToNextObjective(false);
             return;
         }
 
