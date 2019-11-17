@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2045585545694283224
+--- !u!1001 &631933375749850273
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -159,7 +159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdf4c30f63d78044fa430acdf7e05015, type: 3}
---- !u!1001 &2266709045837164279
+--- !u!1001 &2045585545694283224
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -733,12 +733,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 539256456399624680, guid: 0caf71499ccff8e4c8c3737bc4414173,
+    - target: {fileID: 539256456399624686, guid: 0caf71499ccff8e4c8c3737bc4414173,
         type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: db6477a5449fa814dbfb39381c639df2,
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 539256456399624686, guid: 0caf71499ccff8e4c8c3737bc4414173,
         type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 539256456399624687, guid: 0caf71499ccff8e4c8c3737bc4414173,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -749,6 +753,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 3937096025853252689}
+    - target: {fileID: 539256456399624680, guid: 0caf71499ccff8e4c8c3737bc4414173,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: db6477a5449fa814dbfb39381c639df2,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0caf71499ccff8e4c8c3737bc4414173, type: 3}
 --- !u!1001 &8734209615689984631
