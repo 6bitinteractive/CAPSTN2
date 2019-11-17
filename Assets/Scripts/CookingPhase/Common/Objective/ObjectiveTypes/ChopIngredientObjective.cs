@@ -31,6 +31,7 @@ public class ChopIngredientObjective : Objective
     protected override void InitializeObjective()
     {
         base.InitializeObjective();
+        perfectState.OnStateReached.AddListener((x) => SliceEnd());
         ingredientToSlice.gameObject.SetActive(true);
     }
 
@@ -45,11 +46,6 @@ public class ChopIngredientObjective : Objective
     {
         base.RunObjective();
 
-        if (SuccessConditionMet())
-        {
-            GoToNextObjective(true);
-        }
-
         // Check if tap type
         if (!Tap) { return; }
 
@@ -62,6 +58,12 @@ public class ChopIngredientObjective : Objective
     public void SliceIngredient()
     {
         ingredientToSlice.OnChop();
+    }
+
+    public void SliceEnd()
+    {
+        GoToNextObjective(false);
+        ingredientToSlice.OnChopEnd();
     }
 
     protected override bool SuccessConditionMet()

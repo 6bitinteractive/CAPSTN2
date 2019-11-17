@@ -34,25 +34,24 @@ public class Choppable : MonoBehaviour
 
     public void OnChop()
     {
-        if (MaxSliceReached())
-        {
-            isChopped = true;
-            onIngredientChopEnd.Invoke();
-            swipeable.SwipeDirection = SwipeDirection.None;
-            return;
-        }
-        
-        else
-        {           
-            sliceCount++;      
-            UpdateCurrentIngredient();
-            onIngredientChop.Invoke();
-        }
+        if (MaxSliceReached()) { return; }
+
+        sliceCount++;
+        UpdateCurrentIngredient();
+        onIngredientChop.Invoke();
     }
 
     public bool MaxSliceReached()
     {
         return sliceCount >= MaxIngredientSlices - 1;
+    }
+
+    public void OnChopEnd()
+    {
+        isChopped = true;
+        onIngredientChopEnd.Invoke();
+        swipeable.SwipeDirection = SwipeDirection.None;
+        swipePrompt.gameObject.SetActive(false);
     }
 
     private void UpdateCurrentIngredient()
