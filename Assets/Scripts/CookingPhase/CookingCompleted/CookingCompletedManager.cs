@@ -45,6 +45,9 @@ public class CookingCompletedManager : MonoBehaviour
             DetermineDisplay(testRecipe);
         else
             DetermineDisplay(stageTracker.RecentCompletedRecipe);
+
+        if (stageTracker.RecentCompletedRecipe == null)
+            Debug.Log("If you're testing the Completed scene in isolation, make sure to turn on the test bool.");
     }
 
     public void LoadNextScene()
@@ -74,6 +77,7 @@ public class CookingCompletedManager : MonoBehaviour
         {
             for (int i = 0; i < dishImages.Count; i++)
             {
+                dishImages[i].sprite = null;
                 dishImages[i].sprite = recipe.SuccessfulFinalDishSequence[i];
                 audioSource.clip = successSfx;
             }
