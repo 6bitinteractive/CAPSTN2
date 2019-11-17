@@ -77,4 +77,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cooking/Completed/CookingCompleted.unity
     guid: ee93d197d0b99df4d91af211dd6f669f
+  - enabled: 1
+    path: Assets/Scenes/Dialogue/AfterLumpiangUbod.unity
+    guid: 5d7192b17d5d9c14aa59d8056e40bad3
   m_configObjects: {}
