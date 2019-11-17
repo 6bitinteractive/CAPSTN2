@@ -90,22 +90,22 @@ PrefabInstance:
     - target: {fileID: 8381006136738059659, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8381006136738059659, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8381006136738059659, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8381006136738059659, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8381006136738059659, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
@@ -135,5 +135,34 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: db6477a5449fa814dbfb39381c639df2,
         type: 3}
+    - target: {fileID: 1560177505440458375, guid: fb721ce4852bc8847aaf5634b2e13439,
+        type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 6515754616318369578}
+    - target: {fileID: 1458697067173346722, guid: fb721ce4852bc8847aaf5634b2e13439,
+        type: 3}
+      propertyPath: current
+      value: 
+      objectReference: {fileID: 21300000, guid: e49af54e800aa134d8c4d955647a1d96,
+        type: 3}
+    - target: {fileID: 1458697067173346722, guid: fb721ce4852bc8847aaf5634b2e13439,
+        type: 3}
+      propertyPath: done
+      value: 
+      objectReference: {fileID: 21300000, guid: db6477a5449fa814dbfb39381c639df2,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb721ce4852bc8847aaf5634b2e13439, type: 3}
+--- !u!114 &6515754616318369578 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2979164154615141199, guid: fb721ce4852bc8847aaf5634b2e13439,
+    type: 3}
+  m_PrefabInstance: {fileID: 8301403287323479141}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

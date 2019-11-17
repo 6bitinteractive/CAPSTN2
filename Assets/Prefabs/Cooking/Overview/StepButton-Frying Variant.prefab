@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 8381006136738059656, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
       propertyPath: m_Name
-      value: StepButton-Frying
+      value: StepButton-Frying Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8381006136738059659, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
@@ -127,6 +127,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8381006136738059661, guid: fb721ce4852bc8847aaf5634b2e13439,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 62c34afdf47d38e4eaa829d64fb8f691,
+        type: 3}
     - target: {fileID: 8381006136738059662, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
       propertyPath: Locked
@@ -143,12 +149,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 569eb71a8cd7731468f49e9e2f2563c7,
         type: 2}
-    - target: {fileID: 8381006136738059661, guid: fb721ce4852bc8847aaf5634b2e13439,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 62c34afdf47d38e4eaa829d64fb8f691,
-        type: 3}
     - target: {fileID: 8381006136738059663, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
       propertyPath: current
@@ -181,5 +181,34 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1560177505440458375, guid: fb721ce4852bc8847aaf5634b2e13439,
+        type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 3551279508090081777}
+    - target: {fileID: 1458697067173346722, guid: fb721ce4852bc8847aaf5634b2e13439,
+        type: 3}
+      propertyPath: current
+      value: 
+      objectReference: {fileID: 21300000, guid: f2b5d8daa1884184eb1268585f143879,
+        type: 3}
+    - target: {fileID: 1458697067173346722, guid: fb721ce4852bc8847aaf5634b2e13439,
+        type: 3}
+      propertyPath: done
+      value: 
+      objectReference: {fileID: 21300000, guid: 62c34afdf47d38e4eaa829d64fb8f691,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb721ce4852bc8847aaf5634b2e13439, type: 3}
+--- !u!114 &3551279508090081777 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2979164154615141199, guid: fb721ce4852bc8847aaf5634b2e13439,
+    type: 3}
+  m_PrefabInstance: {fileID: 1734083657007415998}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

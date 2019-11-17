@@ -3,17 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class CookingOverviewManager : MonoBehaviour
 {
     [SerializeField] private Recipe recipe;
     [SerializeField] private GameObject stepsPanel;
+    [SerializeField] private Image recipeName;
+    [SerializeField] private float delayIconEnter = 0.1f;
+    [SerializeField] private float delayIconFlip = 0.5f;
     [Range(1, 3)] [SerializeField] private int MinRating = 2;
 
     public UnityEvent OnAllStagesDone = new UnityEvent();
 
     private List<Step> steps = new List<Step>();
     private List<StepUI> stepsUI = new List<StepUI>();
+    private List<Animator> stepUIAnimators = new List<Animator>();
     private SceneData selectedStage;
     private SceneController sceneController;
     private RatingsManager ratingsManager;
@@ -26,6 +31,9 @@ public class CookingOverviewManager : MonoBehaviour
 
         steps.AddRange(stepsPanel.GetComponentsInChildren<Step>());
         stepsUI.AddRange(stepsPanel.GetComponentsInChildren<StepUI>());
+
+        foreach (var step in steps)
+            stepUIAnimators.Add(step.GetComponent<Animator>());
     }
 
     private void OnEnable()
@@ -48,6 +56,8 @@ public class CookingOverviewManager : MonoBehaviour
 
         // Set this as the game's current recipe
         stageTracker.CurrentRecipe = recipe;
+
+        recipeName.sprite = recipe.DishNameImage;
 
         UnlockSteps();
     }
@@ -94,10 +104,42 @@ public class CookingOverviewManager : MonoBehaviour
             }
         }
 
+        // Animate icons
+        StartCoroutine(AnimateIcons());
+    }
+
+    public void HideIcons()
+    {
+        recipeName.gameObject.SetActive(false);
+        stepsPanel.SetActive(false);
+    }
+
+    private IEnumerator AnimateIcons()
+    {
         // Update StepUI
         for (int i = 0; i < stepsUI.Count; i++)
         {
             stepsUI[i].UpdateStepUI();
         }
+
+        foreach (var stepAnimator in stepUIAnimators)
+        {
+            stepAnimator.SetTrigger("Enter");
+            yield return new WaitForSeconds(delayIconEnter);
+        }
+
+        yield return new WaitForSeconds(delayIconFlip);
+
+        // Flip the current stage
+        for (int i = 0; i < steps.Count; i++)
+        {
+            if (steps[i].Current)
+            {
+                stepsUI[i].SetAsCurrent();
+                steps[i].GetComponent<Animator>().SetTrigger("Flip");
+                yield break;
+            }
+        }
+
     }
 }

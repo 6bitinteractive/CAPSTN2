@@ -157,6 +157,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: Pop
       objectReference: {fileID: 0}
+    - target: {fileID: 1155645964136783762, guid: fdf4c30f63d78044fa430acdf7e05015,
+        type: 3}
+      propertyPath: StageScene
+      value: 
+      objectReference: {fileID: 11400000, guid: 2eb3dad1239314c46a7db3b862df6653,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fdf4c30f63d78044fa430acdf7e05015, type: 3}
 --- !u!1001 &2045585545694283224
@@ -475,6 +481,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: Pop
       objectReference: {fileID: 0}
+    - target: {fileID: 7034740738836262022, guid: 536f2b9888a7a9f429cbf0432d9cabef,
+        type: 3}
+      propertyPath: StageScene
+      value: 
+      objectReference: {fileID: 11400000, guid: 86db2e5306a573b4fb627dd98aaaf47a,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 536f2b9888a7a9f429cbf0432d9cabef, type: 3}
 --- !u!1001 &5394498018859039097
@@ -634,6 +646,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: Pop
       objectReference: {fileID: 0}
+    - target: {fileID: 5033061048387070346, guid: 67719737a2c61d34d948969276a847eb,
+        type: 3}
+      propertyPath: StageScene
+      value: 
+      objectReference: {fileID: 11400000, guid: 569eb71a8cd7731468f49e9e2f2563c7,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67719737a2c61d34d948969276a847eb, type: 3}
 --- !u!1001 &8010105519842640916
@@ -759,6 +777,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: db6477a5449fa814dbfb39381c639df2,
         type: 3}
+    - target: {fileID: 3385924015651989329, guid: 0caf71499ccff8e4c8c3737bc4414173,
+        type: 3}
+      propertyPath: StageScene
+      value: 
+      objectReference: {fileID: 11400000, guid: 36aad41bdb1d99044ba579b9c65cc92d,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0caf71499ccff8e4c8c3737bc4414173, type: 3}
 --- !u!1001 &8734209615689984631
@@ -877,6 +901,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5734624559465160721, guid: ec4b4881b0e618b4dbb5a731f663b63b,
+        type: 3}
+      propertyPath: delayIconDisplay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5734624559465160721, guid: ec4b4881b0e618b4dbb5a731f663b63b,
+        type: 3}
+      propertyPath: delayIconFlip
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 5734624558405878790, guid: ec4b4881b0e618b4dbb5a731f663b63b,
         type: 3}

@@ -53,12 +53,12 @@ public class StepUI : MonoBehaviour
             image.sprite = done;
             image.SetNativeSize();
         }
+    }
 
-        if (step.Current)
-        {
-            image.sprite = current;
-            image.SetNativeSize();
-        }
+    public void SetAsCurrent()
+    {
+        image.sprite = current;
+        image.SetNativeSize();
     }
 
     private void InvokeOnStageSelect()
