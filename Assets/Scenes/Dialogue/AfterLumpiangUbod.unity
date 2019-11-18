@@ -1224,7 +1224,18 @@ MonoBehaviour:
       it.
     onEndSentence:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_MethodName: LoadScene
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: SceneData, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Mang Romy
@@ -1235,6 +1246,44 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: Will you be heading off soon?
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: bee3ddadbf100c2479fae154c6afec6d, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: Yes, there's still so much I need to learn.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: Well, I hope you take care! Or as we say here in Negros, 'Halong!'
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 327217262}
+          m_MethodName: FadeCurrentScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
 --- !u!1 &850224554
@@ -2082,7 +2131,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.size
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2178,6 +2227,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[8].onEndSentence.m_PersistentCalls.m_Calls.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2327,18 +2381,17 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[6].sentence
-      value: ALREADY?! Let me rest... please?
+      value: Will you be heading off soon?
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[7].sentence
-      value: Oh dear, hahaha. There will be no resting until I say under my watch.
-        You best prepare yourself, your Lola did it this way.
+      value: Yes, there's still so much I need to learn.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[8].sentence
-      value: Alright! That got me pumped up, I'll make sure to make my Lola proud!
+      value: Well, I hope you take care! Or as we say here in Negros, 'Halong!'
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2433,7 +2486,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[7].name
-      value: Aling Lucita
+      value: Maricela
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2544,7 +2597,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[8].name
-      value: Maricela
+      value: Mang Romy
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2755,6 +2808,16 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueArray.Array.data[2].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[8].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FadeCurrentScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[8].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3400490635153947922, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
