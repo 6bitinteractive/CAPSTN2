@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CornstarchMixture-Bowl-ToAdd Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4888742413199503107, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: ingredientToSpawnPrefab
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4888742413935942859, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -117,21 +122,22 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4888742413199503119, guid: 2bb4639186b59484f9a9b8415506e73a,
-        type: 3}
-      propertyPath: m_Name
-      value: FoodPrepUtensil-CornstarchMixture
-      objectReference: {fileID: 0}
     - target: {fileID: 4888742413199503109, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 191c4d34684d525438bcfafa8108f9b0,
         type: 3}
-    - target: {fileID: 4888742413199503107, guid: 2bb4639186b59484f9a9b8415506e73a,
+    - target: {fileID: 1368117104050926943, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
-      propertyPath: ingredientToSpawnPrefab
+      propertyPath: m_Controller
       value: 
+      objectReference: {fileID: 22100000, guid: f3efcc58ba0763a4baa6d29b3ad4af8d,
+        type: 2}
+    - target: {fileID: 4888742413199503119, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_Name
+      value: FoodPrepUtensil-CornstarchMixture
       objectReference: {fileID: 0}
     - target: {fileID: 4888742413199503105, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
@@ -145,17 +151,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 0674f01d5a1a41e4fb1fba6f61daddbd,
         type: 3}
+    - target: {fileID: 4888742414096984894, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a2f5a93057dc264a8bf7cf97c34b8b8,
+        type: 3}
     - target: {fileID: 6013363919688943254, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 5145a2757deab694f85fadd74d201fc1,
         type: 3}
-    - target: {fileID: 1368117104050926943, guid: 2bb4639186b59484f9a9b8415506e73a,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 22100000, guid: f3efcc58ba0763a4baa6d29b3ad4af8d,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bb4639186b59484f9a9b8415506e73a, type: 3}
