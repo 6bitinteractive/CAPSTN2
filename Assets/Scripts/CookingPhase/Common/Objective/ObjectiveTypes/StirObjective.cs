@@ -10,9 +10,11 @@ public class StirObjective : Objective
     [SerializeField] private int requiredStirCount = 5;
     [SerializeField] private ProgressMeter progressMeter;
     [SerializeField] private Image waterThickenedImage;
+    [SerializeField] private KitchenUtensil spoon;
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
 
     private CircleGestureDetector circleGestureDetector;
+    private AudioSource audioSource;
     private float stirCountLimit;
     //private float minPerfectCount, maxPerfectCount;
     private int currentCount;
@@ -20,6 +22,7 @@ public class StirObjective : Objective
     protected override void Awake()
     {
         base.Awake();
+        audioSource = GetComponent<AudioSource>();
         circleGestureDetector = GetComponent<CircleGestureDetector>();
         circleGestureDetector.enabled = false;
 
@@ -46,6 +49,7 @@ public class StirObjective : Objective
         circleGestureDetector.enabled = true;
         circleGestureDetector.OnClockwiseCircleGesture.AddListener(OnStir);
         progressMeter.transform.parent.gameObject.SetActive(true);
+        spoon.gameObject.SetActive(true);
     }
 
     protected override void FinalizeObjective()
@@ -58,12 +62,15 @@ public class StirObjective : Objective
 
     protected override bool SuccessConditionMet()
     {
-        return currentCount >= requiredStirCount;
+        return currentCount == requiredStirCount;
     }
 
 
     private void OnStir()
     {
+        // Check if spoon is in the cookware
+        if (!spoon.InCookware) { return; }
+
         currentCount++;
 
         if (currentCount >= stirCountLimit)
