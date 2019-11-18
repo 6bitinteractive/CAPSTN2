@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 766778349}
   - component: {fileID: 766778350}
   m_Layer: 0
-  m_Name: Lucita
+  m_Name: Romy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -815,9 +815,9 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
+    leftSpeaker: {fileID: 21300000, guid: bee3ddadbf100c2479fae154c6afec6d, type: 3}
     rightSpeaker: {fileID: 0}
-    sentence: Ah, I'm looking for a Manong Romy. My lola sent me here.
+    sentence: Ah, I'm Maricela. I'm looking for a Manong Romy. My lola sent me here.
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
@@ -900,7 +900,18 @@ MonoBehaviour:
     sentence: Yes, sir!
     onEndSentence:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 327217262}
+          m_MethodName: FadeCurrentScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
 --- !u!1 &850224554
@@ -1488,7 +1499,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: m_Name
-      value: Lucita
+      value: Romy
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -1623,7 +1634,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -1738,7 +1749,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[2].sentence
-      value: Ah, I'm looking for a Manong Romy. My lola sent me here.
+      value: Ah, I'm Maricela. I'm looking for a Manong Romy. My lola sent me here.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2066,7 +2077,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_sprite
+      value: FadeCurrentScene
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2076,7 +2087,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Sprite, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
