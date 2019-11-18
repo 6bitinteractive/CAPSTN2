@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Image))]
 
@@ -10,6 +11,8 @@ public class ImageOnTap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     [SerializeField] private Sprite defaultSprite;
     [SerializeField] private Sprite onTapSprite;
+
+    public UnityEvent OnTap = new UnityEvent();
 
     private Image image;
 
@@ -42,6 +45,7 @@ public class ImageOnTap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private void ShowOnTap()
     {
         image.sprite = onTapSprite;
+        OnTap.Invoke();
     }
 
     private void ShowDefault()
