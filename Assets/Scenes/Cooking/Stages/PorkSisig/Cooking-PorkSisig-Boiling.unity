@@ -2293,12 +2293,12 @@ PrefabInstance:
     - target: {fileID: 6851496187070122956, guid: 3747a553b1b196149bd20c5f1bde00d7,
         type: 3}
       propertyPath: OnFail.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6851496187070122956, guid: 3747a553b1b196149bd20c5f1bde00d7,
         type: 3}
       propertyPath: perfectState.OnStateReached.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6851496187070122956, guid: 3747a553b1b196149bd20c5f1bde00d7,
         type: 3}

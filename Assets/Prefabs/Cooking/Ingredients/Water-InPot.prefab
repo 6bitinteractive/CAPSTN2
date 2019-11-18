@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d49e61c5e1351b24a9d646bbbd4f3e86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayAppearance: 5
+  delayAppearance: 3
   waterScum: []
   currentIndex: 0
 --- !u!1 &7718167362086935573

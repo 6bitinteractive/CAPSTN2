@@ -26,14 +26,22 @@ public class WaterStateController : MonoBehaviour
         animator.SetInteger("State", (int)waterState);
 
         // Play sfx if applicable
-        if (waterState == WaterState.Pouring)
+        if (waterState == WaterState.Pouring || (int)waterState >= 10)
+        {
+            audioSource.loop = false;
             audioSource.clip = sfx.PouringSfx;
+        }
         else if (waterState == WaterState.Simmering)
+        {
+            audioSource.loop = true;
             audioSource.clip = sfx.SimmeringSfx;
+        }
         else
+        {
             audioSource.clip = null;
+        }
 
-        if (audioSource.clip != null)
+        if (audioSource.clip != null && !audioSource.isPlaying)
             audioSource.Play();
     }
 
