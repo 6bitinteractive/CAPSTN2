@@ -134,7 +134,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c54d5dc44e71b0847b779f499168979c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b4a5db916f53b184a8fd03af49ea46ed, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -384,6 +384,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: 21300000, guid: 115e38c026d231e478c162e9fc6842bf, type: 3}
   onTapSprite: {fileID: 21300000, guid: a41ab2b2df520a445a5bc91c06dd5457, type: 3}
+  OnTap:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &4888742413935942856
 GameObject:
   m_ObjectHideFlags: 0
