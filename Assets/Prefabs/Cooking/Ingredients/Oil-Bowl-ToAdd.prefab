@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4888742413935942856, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_Name
-      value: Oil-Bowl
+      value: Oil-Bowl-ToAdd
       objectReference: {fileID: 0}
     - target: {fileID: 4888742413935942856, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
@@ -122,5 +122,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6931812966296004608, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b4a5db916f53b184a8fd03af49ea46ed, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bb4639186b59484f9a9b8415506e73a, type: 3}

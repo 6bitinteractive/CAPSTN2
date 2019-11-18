@@ -122,6 +122,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: FoodPrepUtensil-Water
       objectReference: {fileID: 0}
+    - target: {fileID: 4888742413199503109, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 820de8df49a5f364383ad7f91af7bfc9,
+        type: 3}
     - target: {fileID: 4888742413199503105, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: defaultSprite
@@ -134,17 +140,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 1ec913519173c40408480c148594ab48,
         type: 3}
-    - target: {fileID: 4888742413199503109, guid: 2bb4639186b59484f9a9b8415506e73a,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 820de8df49a5f364383ad7f91af7bfc9,
-        type: 3}
     - target: {fileID: 4888742414096984894, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 9715ae34464a36e46a7f9a9c114c2003,
+        type: 3}
+    - target: {fileID: 6931812966296004608, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a0e2d0ced0fa4634b989813d0fb21354, type: 3}
+    - target: {fileID: 6013363919688943254, guid: 2bb4639186b59484f9a9b8415506e73a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 59f0a517e5a12f04f96930691c28b44d,
         type: 3}
     - target: {fileID: 1368117104050926943, guid: 2bb4639186b59484f9a9b8415506e73a,
         type: 3}
@@ -152,11 +163,5 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 22100000, guid: fb294e82077dccd459e0d90341890d9e,
         type: 2}
-    - target: {fileID: 6013363919688943254, guid: 2bb4639186b59484f9a9b8415506e73a,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 59f0a517e5a12f04f96930691c28b44d,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bb4639186b59484f9a9b8415506e73a, type: 3}

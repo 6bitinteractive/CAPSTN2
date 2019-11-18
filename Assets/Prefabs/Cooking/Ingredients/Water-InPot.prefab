@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfx:
-    PouringSfx: {fileID: 8300000, guid: c3e5d3cdfd2ac964fac6f725987a74c6, type: 3}
+    PouringSfx: {fileID: 8300000, guid: 12697d6b93301a04fb9e2b809cf7f12d, type: 3}
     SimmeringSfx: {fileID: 8300000, guid: 6dc3196be11382d4d919e0f987922d4f, type: 3}
 --- !u!82 &7718167362086935562
 AudioSource:

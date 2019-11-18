@@ -39,6 +39,7 @@ public class WaterStateController : MonoBehaviour
         else
         {
             audioSource.clip = null;
+            audioSource.Stop();
         }
 
         if (audioSource.clip != null && !audioSource.isPlaying)

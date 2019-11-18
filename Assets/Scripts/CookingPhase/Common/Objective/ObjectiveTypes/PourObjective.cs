@@ -17,6 +17,7 @@ public class PourObjective : Objective
     [SerializeField] private ObjectiveState underState = new ObjectiveState(ObjectiveState.Status.Under);
     [SerializeField] private ObjectiveState overState = new ObjectiveState(ObjectiveState.Status.Over);
 
+    private AudioSource waterAudioSource;
     private float currentPourDuration;
     private Transform waterBowlTransform;
     private Quaternion defaultWaterBowlRotation;
@@ -27,6 +28,7 @@ public class PourObjective : Objective
     protected override void Awake()
     {
         base.Awake();
+        waterAudioSource = water.GetComponent<AudioSource>();
 
         // Setup objectives
         // Add to list
@@ -85,12 +87,17 @@ public class PourObjective : Objective
             {
                 waterBowlTransform.Rotate(new Vector3(0f, 0f, 10 * Time.deltaTime));
             }
+
+            if (!waterAudioSource.isPlaying)
+                waterAudioSource.Play();
         }
         else
         {
             //Waterbowl reset
             waterBowlTransform.rotation = defaultWaterBowlRotation; // Go back to default rotation
             waterBowlFlow.gameObject.SetActive(false); // Hide the water flowing animation
+
+            waterAudioSource.Stop();
         }
 
         if (currentPourDuration >= requiredPourDuration)
@@ -107,7 +114,6 @@ public class PourObjective : Objective
         // Waterbowl reset
         waterBowlTransform.rotation = defaultWaterBowlRotation; // Go back to default rotation
         waterBowlFlow.gameObject.SetActive(false); // Hide the water flowing animation
-
         waterBowl.SetTrigger("SlideOut");
     }
 
@@ -115,6 +121,7 @@ public class PourObjective : Objective
     {
         base.PostFinalizeObjective();
         SwitchToPerfectState();
+        waterAudioSource.Stop();
     }
 
     protected override bool SuccessConditionMet()
@@ -157,6 +164,7 @@ public class PourObjective : Objective
             // Switch to correct state
             currentWaterState = 14;
             water.SwitchState(currentWaterState);
+            waterAudioSource.Stop();
 
             // Give player a heads up
             DialogueHint dialogue = new DialogueHint(dialogueHint.characterPortrait, "Let me adjust the amount of water...");
