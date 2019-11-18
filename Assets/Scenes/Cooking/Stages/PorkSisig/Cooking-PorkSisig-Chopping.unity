@@ -1458,21 +1458,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PigEar
       objectReference: {fileID: 0}
-    - target: {fileID: 6462989991280359151, guid: 9c919d431e1778a47a68eb126fad8f2a,
-        type: 3}
-      propertyPath: onIngredientChop.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6462989991280359151, guid: 9c919d431e1778a47a68eb126fad8f2a,
-        type: 3}
-      propertyPath: onIngredientChop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6462989991280359151, guid: 9c919d431e1778a47a68eb126fad8f2a,
-        type: 3}
-      propertyPath: onIngredientChop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6462989991280359148, guid: 9c919d431e1778a47a68eb126fad8f2a,
         type: 3}
       propertyPath: m_LocalPosition.x
