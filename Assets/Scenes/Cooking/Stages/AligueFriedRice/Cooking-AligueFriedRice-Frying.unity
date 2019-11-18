@@ -3701,6 +3701,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1991428785953096562, guid: c7e65f9ff313d97488d0bcc0b1d6b89b,
+        type: 3}
+      propertyPath: failDialogue.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 108d0244f79c8cc498776d2670c7a0e6,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e65f9ff313d97488d0bcc0b1d6b89b, type: 3}
 --- !u!1001 &6421684126159498772
@@ -4035,6 +4041,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: CommonObjects
       objectReference: {fileID: 0}
+    - target: {fileID: 899028423381325295, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_Name
+      value: ContinueButtonPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674230504257619288, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 800c4529b9884534ea1745050b156aa6, type: 2}
     - target: {fileID: 7552385173462586586, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: OnAllObjectivesDone.m_PersistentCalls.m_Calls.Array.size
@@ -4120,11 +4136,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4674230504257619288, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 800c4529b9884534ea1745050b156aa6, type: 2}
     - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: Recipe
@@ -4546,11 +4557,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 899028423381325295, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_Name
-      value: ContinueButtonPanel
       objectReference: {fileID: 0}
     - target: {fileID: 7552385174476635716, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
