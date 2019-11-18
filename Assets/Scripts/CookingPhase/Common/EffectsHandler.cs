@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EffectsHandler : MonoBehaviour
 {
     [SerializeField] private ObjectiveManager objectiveManager;
     [SerializeField] private ParticleSystem[] particleSystems;
+
+    public UnityEvent OnPerfect = new UnityEvent();
 
     private void Start()
     {
@@ -26,6 +29,8 @@ public class EffectsHandler : MonoBehaviour
             Debug.Log("Play particle effects");
             foreach (var particleSystem in particleSystems)
                 particleSystem.Play();
+
+            OnPerfect.Invoke();
         }
     }
 }

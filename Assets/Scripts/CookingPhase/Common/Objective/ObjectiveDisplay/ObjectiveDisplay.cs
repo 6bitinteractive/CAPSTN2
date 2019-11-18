@@ -9,6 +9,8 @@ public class ObjectiveDisplay : MonoBehaviour
 {
     [SerializeField] private ObjectiveManager objectiveManager;
     [SerializeField] private Animator nextButtonPanel;
+    [SerializeField] private AudioSource nextButtonAudioSource;
+    [SerializeField] private AudioClip nextButtonClickSfx;
     [SerializeField] private GameObject objectivePanelPrefab;
     [SerializeField] private Transform objectiveListPanel;
 
@@ -43,11 +45,16 @@ public class ObjectiveDisplay : MonoBehaviour
 
     private void ClickNext(Objective objective)
     {
+        // Remove the next button's click sfx
+        nextButtonAudioSource.clip = null;
+
         // We simulate clicking the next button to automatically end objectives
         ShowNextButton(objective); // We mimic letting the button slide in to avoid issues with animation...
         nextButtonCanvasGroup.alpha = 0; // ... but hide the button
         nextButton.onClick.Invoke();
         Debug.Log("Automatically clicked Next button.");
+
+        nextButtonAudioSource.clip = nextButtonClickSfx;
     }
 
     private void ShowNextButton(Objective objective)
