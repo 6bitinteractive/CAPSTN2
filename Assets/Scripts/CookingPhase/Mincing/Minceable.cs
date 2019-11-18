@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Minceable : MonoBehaviour
 {
     [SerializeField] private RuntimeAnimatorController[] animatorControllers;
+    [SerializeField] private UnityEvent OnMince;
 
     private Animator animator;
     private int currentAnimatorController;
@@ -15,7 +17,13 @@ public class Minceable : MonoBehaviour
     }
 
    public void UpdateCurrentAnimatorController()
+   {
+       animator.runtimeAnimatorController = animatorControllers[currentAnimatorController++];
+   }
+
+    public void Mince()
     {
-        animator.runtimeAnimatorController = animatorControllers[currentAnimatorController++];
+        OnMince.Invoke();
     }
+
 }

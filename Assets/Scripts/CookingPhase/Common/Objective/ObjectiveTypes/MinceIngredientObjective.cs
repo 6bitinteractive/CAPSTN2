@@ -68,11 +68,11 @@ public class MinceIngredientObjective : Objective
 
         if (Input.GetMouseButtonDown(0))
         {
-    
             currentTaps++;
             progressBar.IncrementProgress(progressIncrementValue);
             animator.SetTrigger("Mince");
             CheckCurrentTaps();
+            minceableIngredient.Mince();
 
             if (currentTaps == 1)
             {
