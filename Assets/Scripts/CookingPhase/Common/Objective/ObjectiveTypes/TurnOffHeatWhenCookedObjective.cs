@@ -20,6 +20,7 @@ public class TurnOffHeatWhenCookedObjective : Objective
     private StoveController stoveController;
     private Animator stoveControllerAnimator;
     private LidHandler lid;
+    private Animator lidAnimator;
     private bool showStoveControllerHint = true;
 
     protected override void Awake()
@@ -28,6 +29,7 @@ public class TurnOffHeatWhenCookedObjective : Objective
         stoveController = stoveControllerSlider.GetComponent<StoveController>();
         stoveControllerAnimator = stoveController.GetComponent<Animator>();
         lid = panLid.GetComponent<LidHandler>();
+        lidAnimator = lid.GetComponent<Animator>();
 
         // Setup objectives
         // Add to list
@@ -67,6 +69,8 @@ public class TurnOffHeatWhenCookedObjective : Objective
         stoveControllerSlider.interactable = false;
         stoveController.OnStoveSettingChanged.RemoveListener(SwitchCooking);
         lid.OnCoverCookware.RemoveListener(TurnOnVisualHint);
+        lidAnimator.enabled = true;
+        lidAnimator.SetTrigger("TakeOffDelayed");
     }
 
     protected override void PostFinalizeObjective()
