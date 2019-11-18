@@ -1384,6 +1384,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1045649556}
     m_Modifications:
+    - target: {fileID: 3248387439814141725, guid: f24cae0089f30e1469fcc32d74fbdd2f,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6dc3196be11382d4d919e0f987922d4f, type: 3}
+    - target: {fileID: 3248387439814141725, guid: f24cae0089f30e1469fcc32d74fbdd2f,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1041999086142858247, guid: f24cae0089f30e1469fcc32d74fbdd2f,
         type: 3}
       propertyPath: m_Name
@@ -1427,7 +1437,7 @@ PrefabInstance:
     - target: {fileID: 1041999086142858246, guid: f24cae0089f30e1469fcc32d74fbdd2f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1041999086142858246, guid: f24cae0089f30e1469fcc32d74fbdd2f,
         type: 3}
@@ -1599,6 +1609,11 @@ PrefabInstance:
         type: 3}
       propertyPath: steamWaitTime
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041999086142858249, guid: f24cae0089f30e1469fcc32d74fbdd2f,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f24cae0089f30e1469fcc32d74fbdd2f, type: 3}
@@ -2165,7 +2180,7 @@ PrefabInstance:
     - target: {fileID: 7638942414628617470, guid: d9653e81ea4277243ab797eacef9fabc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7638942414628617470, guid: d9653e81ea4277243ab797eacef9fabc,
         type: 3}
@@ -3216,7 +3231,7 @@ PrefabInstance:
     - target: {fileID: 8688718321483380730, guid: 4fe1cc34d9dbf7a46bf9045ae4b62563,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8688718321483380730, guid: 4fe1cc34d9dbf7a46bf9045ae4b62563,
         type: 3}
@@ -4460,7 +4475,7 @@ PrefabInstance:
     - target: {fileID: 6402532839269513733, guid: 3dbd0d6bbf672714ebdbf84578a9af70,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6402532839269513733, guid: 3dbd0d6bbf672714ebdbf84578a9af70,
         type: 3}
@@ -4698,7 +4713,7 @@ PrefabInstance:
     - target: {fileID: 8302914280397859034, guid: 20b2c257a3f47504b92297a639ca77b6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8302914280397859034, guid: 20b2c257a3f47504b92297a639ca77b6,
         type: 3}
