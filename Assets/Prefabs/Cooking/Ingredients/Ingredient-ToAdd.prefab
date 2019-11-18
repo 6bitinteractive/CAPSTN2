@@ -145,6 +145,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSprite: {fileID: 0}
   onTapSprite: {fileID: 0}
+  OnTap:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!95 &2436869725126636732
 Animator:
   serializedVersion: 3
