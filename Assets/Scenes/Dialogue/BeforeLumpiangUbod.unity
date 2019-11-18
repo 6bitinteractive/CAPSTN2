@@ -797,18 +797,107 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueArray:
   - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
+    leftSpeaker: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858, type: 3}
     rightSpeaker: {fileID: 0}
-    sentence: OwO desu
+    sentence: Hmm... This looks like the right place, I think.
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-  - name: Aling Lucita
+  - name: Mang Romy
     leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
-    sentence: UwU indeedesu
+    rightSpeaker: {fileID: 21300000, guid: 5e5074a5885776a4eaac549cd9dc5d46, type: 3}
+    sentence: Maayong aga! Welcome to Romy's Eatery! Why don't you come in?
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: Ah, I'm looking for a Manong Romy. My lola sent me here.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 5e5074a5885776a4eaac549cd9dc5d46, type: 3}
+    sentence: "That's me! And you must be [Lola's name]'s apo! I knew your face looked
+      familiar.\r"
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 5e5074a5885776a4eaac549cd9dc5d46, type: 3}
+    sentence: "But still, you look so much like your Lola in her younger days. How
+      nostalgic...\r"
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 5e5074a5885776a4eaac549cd9dc5d46, type: 3}
+    sentence: "Anyway, we can talk about your lola's adventures in Negros later on.
+      For now, I suppose you'd want to learn about my famous Lumpiang Ubod recipe!\r"
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: "If that's okay with you!\r"
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 5e5074a5885776a4eaac549cd9dc5d46, type: 3}
+    sentence: Why, of course! This old man ain't getting any younger, so I'd love
+      nothing more than to pass on these recipes to younger folk like you.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 5e5074a5885776a4eaac549cd9dc5d46, type: 3}
+    sentence: "I've had my restaurant since the 1970s, you know? It makes me happy
+      to know that people these days still love eating good ol' Filipino food.\r\n"
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 5e5074a5885776a4eaac549cd9dc5d46, type: 3}
+    sentence: 'But enough about me blabbering on, let''s head inside and get cooking,
+      shall we?
+
+'
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: Yes, sir!
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
@@ -1419,7 +1508,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[4].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -1434,12 +1523,12 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[2].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.size
-      value: 2
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -1574,7 +1663,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[1].name
-      value: Aling Lucita
+      value: Mang Romy
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -1584,12 +1673,12 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[3].name
-      value: Aling Lucita
+      value: Mang Romy
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[4].name
-      value: Maricela
+      value: Mang Romy
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -1629,7 +1718,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[0].sentence
-      value: OwO desu
+      value: Hmm... This looks like the right place, I think.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -1644,12 +1733,12 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[1].sentence
-      value: UwU indeedesu
+      value: Maayong aga! Welcome to Romy's Eatery! Why don't you come in?
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[2].sentence
-      value: You know my Lola? Wow! What a really small world!
+      value: Ah, I'm looking for a Manong Romy. My lola sent me here.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -1659,20 +1748,20 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[3].sentence
-      value: Yes, she was a dear friend of mine. We used to compete who cooks the
-        better version of dish. She even helped me formulate my long-lasting recipe
-        of sisig.
+      value: "That's me! And you must be [Lola's name]'s apo! I knew your face looked
+        familiar.\r"
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[4].sentence
-      value: Wow, I didn't knew Lola did so much back in her youth. Now I'm more inspired
-        to learn and cook new dishes!
+      value: "But still, you look so much like your Lola in her younger days. How
+        nostalgic...\r"
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[5].sentence
-      value: So... I guess you are reaady for your new lesson?
+      value: "Anyway, we can talk about your lola's adventures in Negros later on.
+        For now, I suppose you'd want to learn about my famous Lumpiang Ubod recipe!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -1682,24 +1771,27 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[6].sentence
-      value: ALREADY?! Let me rest... please?
+      value: "If that's okay with you!\r"
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[7].sentence
-      value: Oh dear, hahaha. There will be no resting until I say under my watch.
-        You best prepare yourself, your Lola did it this way.
+      value: Why, of course! This old man ain't getting any younger, so I'd love nothing
+        more than to pass on these recipes to younger folk like you.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[8].sentence
-      value: Alright! That got me pumped up, I'll make sure to make my Lola proud!
+      value: "I've had my restaurant since the 1970s, you know? It makes me happy
+        to know that people these days still love eating good ol' Filipino food.\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[9].sentence
-      value: You need to learn about the food RiRi, connect with the food, the people,
-        and the culture. Go out and explore different cuisines.
+      value: 'But enough about me blabbering on, let''s head inside and get cooking,
+        shall we?
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -1714,7 +1806,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[10].sentence
-      value: You mean, travelling?
+      value: Yes, sir!
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -1783,12 +1875,12 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[5].name
-      value: Aling Lucita
+      value: Mang Romy
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[7].name
-      value: Aling Lucita
+      value: Mang Romy
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -1899,7 +1991,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[8].name
-      value: Maricela
+      value: Mang Romy
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
