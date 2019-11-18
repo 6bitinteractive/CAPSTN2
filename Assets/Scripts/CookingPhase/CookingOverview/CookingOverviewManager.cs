@@ -136,7 +136,7 @@ public class CookingOverviewManager : MonoBehaviour
             if (steps[i].Current)
             {
                 stepsUI[i].SetAsCurrent();
-                steps[i].GetComponent<Animator>().SetTrigger("Flip");
+                stepUIAnimators[i].SetTrigger("Flip");
                 yield break;
             }
         }

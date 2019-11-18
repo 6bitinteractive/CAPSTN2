@@ -6,15 +6,19 @@ using UnityEngine.Events;
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Draggable))]
+[RequireComponent(typeof(AudioSource))]
 
 public class LidHandler : MonoBehaviour
 {
+    [SerializeField] private AudioClip lidOnSfx, lidOffSfx;
+
     public bool IsCoveringCookware { get; private set; }
     public UnityEvent OnCoverCookware = new UnityEvent();
     public UnityEvent OnTakeOffCookware = new UnityEvent();
 
     private RectTransform rectTransform;
     private BoxCollider2D boxCollider;
+    private AudioSource audioSource;
     private Draggable draggable;
     private Cookware cookware;
 
@@ -22,6 +26,7 @@ public class LidHandler : MonoBehaviour
     {
         rectTransform = GetComponent<RectTransform>();
         boxCollider = GetComponent<BoxCollider2D>();
+        audioSource = GetComponent<AudioSource>();
         draggable = GetComponent<Draggable>();
     }
 
@@ -42,6 +47,8 @@ public class LidHandler : MonoBehaviour
         cookware = collision.GetComponent<Cookware>();
         IsCoveringCookware = cookware;
         OnCoverCookware.Invoke();
+        audioSource.clip = lidOffSfx;
+        audioSource.Play();
 
         Debug.Log("Lid - Covering cookware");
     }
@@ -51,6 +58,9 @@ public class LidHandler : MonoBehaviour
         cookware = null;
         IsCoveringCookware = false;
         OnTakeOffCookware.Invoke();
+        audioSource.clip = lidOnSfx;
+        audioSource.Play();
+
         Debug.Log("Lid - off");
     }
 }

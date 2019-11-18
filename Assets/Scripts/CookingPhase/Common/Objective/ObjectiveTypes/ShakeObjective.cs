@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class ShakeObjective : Objective
 {
     [Tooltip("Make sure it's not the ShakerPanel's animator.")]
@@ -14,6 +16,7 @@ public class ShakeObjective : Objective
     [SerializeField] private ObjectiveState underState = new ObjectiveState(ObjectiveState.Status.Under);
     [SerializeField] private ObjectiveState overState = new ObjectiveState(ObjectiveState.Status.Over);
 
+    private AudioSource audioSource;
     private int count;
     private bool canUseShaker = true;
     private Vector3 Tilt;
@@ -22,6 +25,7 @@ public class ShakeObjective : Objective
     protected override void Awake()
     {
         base.Awake();
+        audioSource = GetComponent<AudioSource>();
 
         // Setup objectives
         // Add to list
@@ -68,10 +72,13 @@ public class ShakeObjective : Objective
         yield return new WaitUntil(() => AnimatorUtils.IsInState(shaker, "Shake") && AnimatorUtils.IsDonePlaying(shaker, "Shake"));
         shaker.SetTrigger("Reset");
 
+        // Play sound
+        audioSource.Play();
+
         // Increase count
         count++;
         Debug.Log("Used shaker: " + count + "x.");
-        
+
         // Allow to use shaker again
         canUseShaker = true;
     }
@@ -109,7 +116,7 @@ public class ShakeObjective : Objective
     {
         Tilt = Input.acceleration;
 
-       // Debug.Log("Current Tilt: " + Tilt);
+        // Debug.Log("Current Tilt: " + Tilt);
 
         // Pulling phone rightwards
         if (Tilt.x > 0.4f)
