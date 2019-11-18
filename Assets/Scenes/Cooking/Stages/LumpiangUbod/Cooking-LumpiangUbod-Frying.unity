@@ -1284,6 +1284,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6402532839269513732, guid: 3dbd0d6bbf672714ebdbf84578a9af70,
+        type: 3}
+      propertyPath: failDialogue.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dbd0d6bbf672714ebdbf84578a9af70, type: 3}
 --- !u!1001 &1549616743
@@ -1501,25 +1507,25 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 108d0244f79c8cc498776d2670c7a0e6,
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
     - target: {fileID: 4629949566252436202, guid: 75efe86b20d989d47bb743bc7027a6b3,
         type: 3}
       propertyPath: perfectState.dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 108d0244f79c8cc498776d2670c7a0e6,
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
     - target: {fileID: 4629949566252436202, guid: 75efe86b20d989d47bb743bc7027a6b3,
         type: 3}
       propertyPath: underState.dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 108d0244f79c8cc498776d2670c7a0e6,
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
     - target: {fileID: 4629949566252436202, guid: 75efe86b20d989d47bb743bc7027a6b3,
         type: 3}
       propertyPath: overState.dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 108d0244f79c8cc498776d2670c7a0e6,
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
     - target: {fileID: 328540679576329439, guid: 75efe86b20d989d47bb743bc7027a6b3,
         type: 3}
@@ -1704,6 +1710,30 @@ PrefabInstance:
       propertyPath: durationLimit
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 4629949566252436202, guid: 75efe86b20d989d47bb743bc7027a6b3,
+        type: 3}
+      propertyPath: dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 4629949566252436202, guid: 75efe86b20d989d47bb743bc7027a6b3,
+        type: 3}
+      propertyPath: perfectState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 4629949566252436202, guid: 75efe86b20d989d47bb743bc7027a6b3,
+        type: 3}
+      propertyPath: underState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 4629949566252436202, guid: 75efe86b20d989d47bb743bc7027a6b3,
+        type: 3}
+      propertyPath: overState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
     - target: {fileID: 328540679576329439, guid: 75efe86b20d989d47bb743bc7027a6b3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2335,7 +2365,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 108d0244f79c8cc498776d2670c7a0e6,
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
     - target: {fileID: 1041999086142858249, guid: f24cae0089f30e1469fcc32d74fbdd2f,
         type: 3}
@@ -2352,6 +2382,12 @@ PrefabInstance:
       propertyPath: ingredientsToBeAdded.Array.data[1]
       value: 
       objectReference: {fileID: 6948334265194421039}
+    - target: {fileID: 1041999086142858249, guid: f24cae0089f30e1469fcc32d74fbdd2f,
+        type: 3}
+      propertyPath: perfectState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f24cae0089f30e1469fcc32d74fbdd2f, type: 3}
 --- !u!114 &1123700293593240466 stripped
@@ -3280,7 +3316,7 @@ PrefabInstance:
         type: 3}
       propertyPath: overState.dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 108d0244f79c8cc498776d2670c7a0e6,
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
     - target: {fileID: 7051262971578090797, guid: 3aca5cd199b63234781e42eea02d162c,
         type: 3}
@@ -3291,7 +3327,7 @@ PrefabInstance:
         type: 3}
       propertyPath: underState.dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 108d0244f79c8cc498776d2670c7a0e6,
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
     - target: {fileID: 7051262971578090797, guid: 3aca5cd199b63234781e42eea02d162c,
         type: 3}
@@ -3302,7 +3338,7 @@ PrefabInstance:
         type: 3}
       propertyPath: perfectState.dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 108d0244f79c8cc498776d2670c7a0e6,
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
     - target: {fileID: 7051262971578090797, guid: 3aca5cd199b63234781e42eea02d162c,
         type: 3}
@@ -3556,6 +3592,24 @@ PrefabInstance:
       propertyPath: ingredientToBeAdded
       value: 
       objectReference: {fileID: 1549616745}
+    - target: {fileID: 6736433934528504608, guid: adf5a330b2ea46a449846914f7050a32,
+        type: 3}
+      propertyPath: perfectState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 6736433934528504608, guid: adf5a330b2ea46a449846914f7050a32,
+        type: 3}
+      propertyPath: underState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 6736433934528504608, guid: adf5a330b2ea46a449846914f7050a32,
+        type: 3}
+      propertyPath: overState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adf5a330b2ea46a449846914f7050a32, type: 3}
 --- !u!114 &4644306488972383132 stripped
@@ -3957,6 +4011,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1991428785953096562, guid: c7e65f9ff313d97488d0bcc0b1d6b89b,
+        type: 3}
+      propertyPath: failDialogue.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e65f9ff313d97488d0bcc0b1d6b89b, type: 3}
 --- !u!1001 &5834227632023492204
@@ -4036,6 +4096,24 @@ PrefabInstance:
       propertyPath: ingredientToBeAdded
       value: 
       objectReference: {fileID: 436091547805437072}
+    - target: {fileID: 3543287609253307617, guid: 04efacdbe54a2054b954b697800ecbb0,
+        type: 3}
+      propertyPath: perfectState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 3543287609253307617, guid: 04efacdbe54a2054b954b697800ecbb0,
+        type: 3}
+      propertyPath: underState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 3543287609253307617, guid: 04efacdbe54a2054b954b697800ecbb0,
+        type: 3}
+      propertyPath: overState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04efacdbe54a2054b954b697800ecbb0, type: 3}
 --- !u!1001 &6421684126159498772
@@ -4706,6 +4784,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: CommonObjects
       objectReference: {fileID: 0}
+    - target: {fileID: 899028423381325295, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_Name
+      value: ContinueButtonPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674230504257619288, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 800c4529b9884534ea1745050b156aa6, type: 2}
     - target: {fileID: 7552385173462586586, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: OnAllObjectivesDone.m_PersistentCalls.m_Calls.Array.size
@@ -4791,11 +4879,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4674230504257619288, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 800c4529b9884534ea1745050b156aa6, type: 2}
     - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: Recipe
@@ -5257,11 +5340,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 899028423381325295, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_Name
-      value: ContinueButtonPanel
       objectReference: {fileID: 0}
     - target: {fileID: 7552385174476635716, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}

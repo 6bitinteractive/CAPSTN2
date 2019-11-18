@@ -227,6 +227,24 @@ PrefabInstance:
       propertyPath: OnAddIngredient.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7583822846090542861, guid: 50f51c61439f1134b874fdfaad1f9641,
+        type: 3}
+      propertyPath: perfectState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 7583822846090542861, guid: 50f51c61439f1134b874fdfaad1f9641,
+        type: 3}
+      propertyPath: underState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 7583822846090542861, guid: 50f51c61439f1134b874fdfaad1f9641,
+        type: 3}
+      propertyPath: overState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50f51c61439f1134b874fdfaad1f9641, type: 3}
 --- !u!1 &149878624
@@ -434,11 +452,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1816071180}
     m_Modifications:
-    - target: {fileID: 8230074321857791496, guid: 9577f1db279e1a344b5aff5f65988fc5,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 09f1c201215beb84299d023436e43c69, type: 3}
     - target: {fileID: 6948334265194421033, guid: 9577f1db279e1a344b5aff5f65988fc5,
         type: 3}
       propertyPath: m_Name
@@ -564,6 +577,11 @@ PrefabInstance:
       propertyPath: OnTap.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8230074321857791496, guid: 9577f1db279e1a344b5aff5f65988fc5,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 09f1c201215beb84299d023436e43c69, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9577f1db279e1a344b5aff5f65988fc5, type: 3}
 --- !u!224 &391632041 stripped
@@ -968,6 +986,24 @@ PrefabInstance:
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 619936389858251862, guid: d6e165cb6f73c4740ad8d270ab95c0a5,
+        type: 3}
+      propertyPath: perfectState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 619936389858251862, guid: d6e165cb6f73c4740ad8d270ab95c0a5,
+        type: 3}
+      propertyPath: underState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 619936389858251862, guid: d6e165cb6f73c4740ad8d270ab95c0a5,
+        type: 3}
+      propertyPath: overState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6e165cb6f73c4740ad8d270ab95c0a5, type: 3}
 --- !u!1001 &754492375
@@ -1316,6 +1352,24 @@ PrefabInstance:
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 839632092105546702, guid: 536e00ed31416a0498fca0d0ebffc614,
+        type: 3}
+      propertyPath: perfectState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 839632092105546702, guid: 536e00ed31416a0498fca0d0ebffc614,
+        type: 3}
+      propertyPath: underState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 839632092105546702, guid: 536e00ed31416a0498fca0d0ebffc614,
+        type: 3}
+      propertyPath: overState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 536e00ed31416a0498fca0d0ebffc614, type: 3}
 --- !u!1001 &771825204
@@ -1654,16 +1708,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PreheatCookwareAddIngredientObjective
       objectReference: {fileID: 0}
-    - target: {fileID: 3248387439814141725, guid: f24cae0089f30e1469fcc32d74fbdd2f,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 6dc3196be11382d4d919e0f987922d4f, type: 3}
-    - target: {fileID: 3248387439814141725, guid: f24cae0089f30e1469fcc32d74fbdd2f,
-        type: 3}
-      propertyPath: m_Volume
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1041999086142858246, guid: f24cae0089f30e1469fcc32d74fbdd2f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1753,7 +1797,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
     - target: {fileID: 1041999086142858249, guid: f24cae0089f30e1469fcc32d74fbdd2f,
         type: 3}
@@ -1879,6 +1923,22 @@ PrefabInstance:
         type: 3}
       propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041999086142858249, guid: f24cae0089f30e1469fcc32d74fbdd2f,
+        type: 3}
+      propertyPath: perfectState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 3248387439814141725, guid: f24cae0089f30e1469fcc32d74fbdd2f,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6dc3196be11382d4d919e0f987922d4f, type: 3}
+    - target: {fileID: 3248387439814141725, guid: f24cae0089f30e1469fcc32d74fbdd2f,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f24cae0089f30e1469fcc32d74fbdd2f, type: 3}
@@ -2407,6 +2467,24 @@ PrefabInstance:
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
+        type: 3}
+      propertyPath: perfectState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
+        type: 3}
+      propertyPath: underState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
+    - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
+        type: 3}
+      propertyPath: overState.dialogueHint.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
     - target: {fileID: 7638942414628617470, guid: d9653e81ea4277243ab797eacef9fabc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2681,7 +2759,7 @@ PrefabInstance:
         type: 3}
       propertyPath: perfectState.dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
     - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
         type: 3}
@@ -2702,7 +2780,7 @@ PrefabInstance:
         type: 3}
       propertyPath: underState.dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
     - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
         type: 3}
@@ -2718,13 +2796,13 @@ PrefabInstance:
         type: 3}
       propertyPath: overState.dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
     - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
         type: 3}
       propertyPath: dialogueHint.characterPortrait
       value: 
-      objectReference: {fileID: 21300000, guid: 4029ce55ff8762e4f9111ac9a679f1ca,
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
     - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
         type: 3}
@@ -3509,6 +3587,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1991428785953096562, guid: c7e65f9ff313d97488d0bcc0b1d6b89b,
+        type: 3}
+      propertyPath: failDialogue.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e65f9ff313d97488d0bcc0b1d6b89b, type: 3}
 --- !u!1001 &6304138320464546717
@@ -3880,11 +3964,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CommonObjects
       objectReference: {fileID: 0}
-    - target: {fileID: 7106569688123574568, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+    - target: {fileID: 4674230504257619288, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
-      propertyPath: m_Name
-      value: TapBottomCenterImage
-      objectReference: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 800c4529b9884534ea1745050b156aa6, type: 2}
     - target: {fileID: 7552385174291408537, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: m_RootOrder
@@ -3905,11 +3989,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4674230504257619288, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 800c4529b9884534ea1745050b156aa6, type: 2}
     - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: Recipe
@@ -4497,36 +4576,6 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 82033564809223770, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2138783189896941198, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -480
-      objectReference: {fileID: 0}
-    - target: {fileID: 3347150970560201465, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251276343256538908, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 524
-      objectReference: {fileID: 0}
-    - target: {fileID: 8251276343256538908, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7200784108475986950, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5431235628845709353, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4566,6 +4615,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82033564809223770, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138783189896941198, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -480
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251276343256538908, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 524
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251276343256538908, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3347150970560201465, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7200784108475986950, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106569688123574568, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_Name
+      value: TapBottomCenterImage
       objectReference: {fileID: 0}
     - target: {fileID: 2560898773065550480, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
@@ -4916,6 +5000,12 @@ PrefabInstance:
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6402532839269513732, guid: 3dbd0d6bbf672714ebdbf84578a9af70,
+        type: 3}
+      propertyPath: failDialogue.characterPortrait
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dbd0d6bbf672714ebdbf84578a9af70, type: 3}
 --- !u!1001 &7953305866617644798
