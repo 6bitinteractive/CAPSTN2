@@ -194,6 +194,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1867945384}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   faderCanvasGroup: {fileID: 1141876110}
@@ -1272,6 +1283,15 @@ MonoBehaviour:
     sentence: Well, I hope you take care! Or as we say here in Negros, 'Halong!'
     onEndSentence:
       m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: Well, I hope you take care! Or as we say here in Negros, 'Halong!'
+    onEndSentence:
+      m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 327217262}
           m_MethodName: FadeCurrentScene
@@ -1982,6 +2002,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1867945384 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5844868907753801848, guid: 4dc95df0d43717d43801c32a84cdce7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 551613221}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2127555750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,7 +2157,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2231,7 +2257,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[8].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
