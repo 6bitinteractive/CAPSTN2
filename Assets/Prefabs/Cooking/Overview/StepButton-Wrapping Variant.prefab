@@ -117,6 +117,23 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8381006137261360289, guid: fb721ce4852bc8847aaf5634b2e13439,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458697067173346722, guid: fb721ce4852bc8847aaf5634b2e13439,
+        type: 3}
+      propertyPath: current
+      value: 
+      objectReference: {fileID: 21300000, guid: f286704c34c9310469a11ff9d239559e,
+        type: 3}
+    - target: {fileID: 1458697067173346722, guid: fb721ce4852bc8847aaf5634b2e13439,
+        type: 3}
+      propertyPath: done
+      value: 
+      objectReference: {fileID: 21300000, guid: cd3c38d832990b64e9529b2760f0cf90,
+        type: 3}
     - target: {fileID: 8381006136738059658, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -143,11 +160,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: f286704c34c9310469a11ff9d239559e,
         type: 3}
-    - target: {fileID: 8381006137261360289, guid: fb721ce4852bc8847aaf5634b2e13439,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -10
-      objectReference: {fileID: 0}
     - target: {fileID: 8381006136738059662, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
       propertyPath: StageScene
@@ -161,24 +173,6 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: f286704c34c9310469a11ff9d239559e,
         type: 3}
     - target: {fileID: 8381006136738059663, guid: fb721ce4852bc8847aaf5634b2e13439,
-        type: 3}
-      propertyPath: done
-      value: 
-      objectReference: {fileID: 21300000, guid: cd3c38d832990b64e9529b2760f0cf90,
-        type: 3}
-    - target: {fileID: 2979164154615141199, guid: fb721ce4852bc8847aaf5634b2e13439,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: cd3c38d832990b64e9529b2760f0cf90,
-        type: 3}
-    - target: {fileID: 1458697067173346722, guid: fb721ce4852bc8847aaf5634b2e13439,
-        type: 3}
-      propertyPath: current
-      value: 
-      objectReference: {fileID: 21300000, guid: f286704c34c9310469a11ff9d239559e,
-        type: 3}
-    - target: {fileID: 1458697067173346722, guid: fb721ce4852bc8847aaf5634b2e13439,
         type: 3}
       propertyPath: done
       value: 
