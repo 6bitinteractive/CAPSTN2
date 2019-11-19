@@ -22,12 +22,17 @@ public class StepUI : MonoBehaviour
     private Image image;
     private Button button;
 
-    private void Start() // Do this at Start (instead of Awake) to make sure the step object has loaded its data (eg. rating)
+    private void Awake()
     {
         step = GetComponent<Step>();
         image = GetComponent<Image>();
         button = GetComponent<Button>();
         button.onClick.AddListener(InvokeOnStageSelect);
+    }
+
+    private void OnDestroy()
+    {
+        button.onClick.RemoveListener(InvokeOnStageSelect);
     }
 
     public void UpdateStepUI()
