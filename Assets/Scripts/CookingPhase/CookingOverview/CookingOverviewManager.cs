@@ -97,6 +97,16 @@ public class CookingOverviewManager : MonoBehaviour
             {
                 if (steps[i].Rating >= MinRating) // Is it above the required minimum rating
                 {
+                    // Double check that all stages have a rating
+                    foreach (var item in steps)
+                    {
+                        if (item.Rating == 0)
+                        {
+                            Debug.LogError("Not all stages have been played");
+                            return;
+                        }
+                    }
+
                     steps[i].Current = false; // Don't set the last stage as the current stage (i.e., will not make it's icon bigger)
                     stageTracker.RecentCompletedRecipe = recipe; // Set this as the recently completed recipe
                     OnAllStagesDone.Invoke();
@@ -140,6 +150,5 @@ public class CookingOverviewManager : MonoBehaviour
                 yield break;
             }
         }
-
     }
 }
