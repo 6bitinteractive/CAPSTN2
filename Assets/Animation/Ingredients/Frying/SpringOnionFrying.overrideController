@@ -8,4 +8,10 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: SpringOnionFrying
   m_Controller: {fileID: 9100000, guid: b7a2a4879f00456469431f864a26a875, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: f2e415780aaedab4c9e58e473a039128, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 170804b369ccb51439afb02ef1f89fcc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 64e2cc2c5281c074e9e789bff36f88f6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 84ab64a47baaf2a4db4c77ab1c86c170, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 83028397d90034a47b038e372a67043c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9ba4a9bad1bc50c46b59ad12e8da22d7, type: 2}
