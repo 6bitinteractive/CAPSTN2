@@ -749,6 +749,30 @@ PrefabInstance:
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc95df0d43717d43801c32a84cdce7d, type: 3}
+--- !u!114 &551613222 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5844868907315857386, guid: 4dc95df0d43717d43801c32a84cdce7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 551613221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &551613223 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 551613221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e669e1152223d8542afd6be1f6985247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &766778348
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +785,7 @@ GameObject:
   - component: {fileID: 766778349}
   - component: {fileID: 766778350}
   m_Layer: 0
-  m_Name: Lucita
+  m_Name: Lucita (Broken prefab?)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -780,7 +804,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2130975362}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &766778350
 MonoBehaviour:
@@ -1162,7 +1186,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c2ba296e7105dd94aa2e420bf42a37ab,
+      objectReference: {fileID: 21300000, guid: 16e54d0a71c39bc4ba95f87e283e8f6b,
         type: 3}
     - target: {fileID: 7910107324259781628, guid: 8d881d73943c26b408f02fbc5d35a684,
         type: 3}
@@ -1189,7 +1213,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnCapizEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 766778350}
+      objectReference: {fileID: 1468328578}
     - target: {fileID: 2172500411846613531, guid: 8d881d73943c26b408f02fbc5d35a684,
         type: 3}
       propertyPath: OnCapizEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1320,6 +1344,216 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141876108}
   m_CullTransparentMesh: 0
+--- !u!1 &1468328576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1468328577}
+  - component: {fileID: 1468328578}
+  m_Layer: 0
+  m_Name: Lucita
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1468328577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468328576}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2130975362}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1468328578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468328576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4178e2707550da349a1ea0e74bef7fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueArray:
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
+    sentence: (If I recall correctly this is how they say good morning..) Mayap a
+      yabak pu!
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 551613223}
+          m_MethodName: DimSprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 551613222}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Aling Lucita
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
+    sentence: Mayap a yabak pu!
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: I'm Maricela, an aspiring cook! Are you Aling Lucita?
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Aling Lucita
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
+    sentence: Yes, I am, but people around here call me Lucing.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: bee3ddadbf100c2479fae154c6afec6d, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: I was told that a lot of people sing praises about your Sisig recipe.
+      If I may ask, how did you start cooking your food?
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Aling Lucita
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
+    sentence: My grandma used to cook us Sisig as salad, but as years went by, we
+      started adding more ingredients to the dish.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Aling Lucita
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
+    sentence: Eventually, with all the changes I've made to the recipe, I realized
+      that I ended up creating an entirely new version of the dish!
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: Wow, I didn't know that!
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Aling Lucita
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
+    sentence: Well, I'm glad to share my knowledge. But, you look really familiar!
+      Are you perhaps..? Hmm, no, nevermind.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: bee3ddadbf100c2479fae154c6afec6d, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: Ah, you might've mistaken me from someone else. It's my first time here
+      in Pampanga, but I'm loving the atmosphere, the heat, and the friendly people!
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Aling Lucita
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
+    sentence: I'm glad to hear it. Is there anything else I can help you with?
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: cbca26bdabaef2d49b73efeb0a1e1663, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: This may be too much to ask, but could you help me learn how to cook
+      Sisig the proper way?
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Aling Lucita
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
+    sentence: (She reminds me of my old friend who I used to cook with from back in
+      the day. I suppose I'll give her a shot.)
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: Yes, I will! Thank you for this opportunity!
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 327217262}
+          m_MethodName: FadeCurrentScene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Aling Lucita
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
+    sentence: Alright, but I'm quite strict about the recipe, so make sure you listen
+      properly!
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1469679837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1528,6 +1762,7 @@ Transform:
   m_LocalPosition: {x: -3.944785, y: 1.2564073, z: -11.203104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1468328577}
   - {fileID: 766778349}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1542,7 +1777,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: m_Name
-      value: Lucita
+      value: Lucita (Broken prefab?)
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}

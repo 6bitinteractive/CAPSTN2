@@ -167,7 +167,7 @@ MonoBehaviour:
   OnEnterScene:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 766778350}
+      - m_Target: {fileID: 1277405458}
         m_MethodName: TriggerDialogue
         m_Mode: 1
         m_Arguments:
@@ -737,6 +737,41 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 327217262}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FadeCurrentScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5844868908323577053, guid: 4dc95df0d43717d43801c32a84cdce7d,
         type: 3}
       propertyPath: m_Color.r
@@ -759,6 +794,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc95df0d43717d43801c32a84cdce7d, type: 3}
+--- !u!114 &551613222 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 551613221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867945384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e669e1152223d8542afd6be1f6985247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &551613223 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5844868908323577053, guid: 4dc95df0d43717d43801c32a84cdce7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 551613221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &570413960
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,7 +904,7 @@ MonoBehaviour:
         m_MethodName: LoadScene
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 709d91f13871acb499759cd2e293ed51,
+          m_ObjectArgument: {fileID: 11400000, guid: b122c4c6092233f4cabba578b584e534,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: SceneData, Assembly-CSharp
           m_IntArgument: 0
@@ -1061,7 +1120,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Main Menu
+  m_text: CONTINUE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a8afbc61ea481164d9ca686b2a53a366, type: 2}
   m_sharedMaterial: {fileID: 807127005676573173, guid: a8afbc61ea481164d9ca686b2a53a366,
@@ -1131,10 +1190,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 750737711}
-    characterCount: 9
+    characterCount: 8
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -1174,7 +1233,7 @@ GameObject:
   - component: {fileID: 766778349}
   - component: {fileID: 766778350}
   m_Layer: 0
-  m_Name: Romy Inside
+  m_Name: Romy Inside (Broken prefab??)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1193,7 +1252,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2130975362}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &766778350
 MonoBehaviour:
@@ -1312,18 +1371,7 @@ MonoBehaviour:
     sentence: Well, I hope you take care! Or as we say here in Negros, 'Halong!'
     onEndSentence:
       m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 327217262}
-          m_MethodName: FadeCurrentScene
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        m_Calls: []
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
 --- !u!1 &850224554
@@ -1592,6 +1640,156 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141876108}
   m_CullTransparentMesh: 0
+--- !u!1 &1277405457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1277405459}
+  - component: {fileID: 1277405458}
+  m_Layer: 0
+  m_Name: Romy Inside
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1277405458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277405457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4178e2707550da349a1ea0e74bef7fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueArray:
+  - name: Mang Romy
+    leftSpeaker: {fileID: 21300000, guid: 1678f4fef439c69499e9dbe86ef96322, type: 3}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: I'm certainly impressed by how easily you picked up the recipe.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 551613222}
+          m_MethodName: DimSprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 551613223}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: I suppose it runs in the family though! Your lola was a wonderful cook.
+      I do miss her signature aligue fried rice.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: I'll be sure to tell her that when I come home. She'd definitely be
+      glad to hear it.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: Well, Maricela, I think you're all set. If this Lumpiang Ubod doesn't
+      make people flock to your lola's eatery, I don't know what will!
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: bee3ddadbf100c2479fae154c6afec6d, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: Thank you for taking the time to teach me, Mang Romy. I really appreciate
+      it.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: Don't mention it. I owe your lola a favor anyway, so tell her we can
+      call it even.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: Will you be heading off soon?
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: bee3ddadbf100c2479fae154c6afec6d, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: Yes, there's still so much I need to learn.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: Well, I hope you take care! Or as we say here in Negros, 'Halong!'
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: Well, I hope you take care! Or as we say here in Negros, 'Halong!'
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+--- !u!4 &1277405459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277405457}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2130975362}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1469679837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1867,7 +2065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 129, y: 59}
+  m_AnchoredPosition: {x: 2, y: 59}
   m_SizeDelta: {x: 1104.1, y: 102.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1792093715
@@ -1890,7 +2088,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: To Be Continued
+  m_text: End
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20af5dd300457db4286466415592f26b, type: 2}
   m_sharedMaterial: {fileID: -5081463769286760240, guid: 20af5dd300457db4286466415592f26b,
@@ -1926,7 +2124,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
+  m_textAlignment: 258
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -1960,10 +2158,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1792093715}
-    characterCount: 15
+    characterCount: 3
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -2123,6 +2321,7 @@ Transform:
   m_LocalPosition: {x: -3.944785, y: 1.2564073, z: -11.203104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1277405459}
   - {fileID: 766778349}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -2137,7 +2336,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: m_Name
-      value: Romy Inside
+      value: Romy Inside (Broken prefab??)
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2267,7 +2466,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[9].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}

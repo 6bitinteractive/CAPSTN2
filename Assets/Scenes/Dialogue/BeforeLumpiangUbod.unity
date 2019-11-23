@@ -749,6 +749,30 @@ PrefabInstance:
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc95df0d43717d43801c32a84cdce7d, type: 3}
+--- !u!114 &551613222 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5844868907315857386, guid: 4dc95df0d43717d43801c32a84cdce7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 551613221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &551613223 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 551613221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e669e1152223d8542afd6be1f6985247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &766778348
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +785,7 @@ GameObject:
   - component: {fileID: 766778349}
   - component: {fileID: 766778350}
   m_Layer: 0
-  m_Name: Romy
+  m_Name: Romy (Broken Prefab?)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -780,7 +804,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2130975362}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &766778350
 MonoBehaviour:
@@ -1171,7 +1195,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnCapizEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 766778350}
+      objectReference: {fileID: 1991354687}
     - target: {fileID: 2172500411846613531, guid: 8d881d73943c26b408f02fbc5d35a684,
         type: 3}
       propertyPath: OnCapizEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1420,6 +1444,198 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1991354685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1991354686}
+  - component: {fileID: 1991354687}
+  m_Layer: 0
+  m_Name: Romy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1991354686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991354685}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2130975362}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1991354687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991354685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4178e2707550da349a1ea0e74bef7fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueArray:
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858, type: 3}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: Hmm... This looks like the right place, I think.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 551613223}
+          m_MethodName: DimSprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 551613222}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: Maayong aga! Welcome to Romy's Eatery! Why don't you come in?
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: bee3ddadbf100c2479fae154c6afec6d, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: Ah, I'm Maricela. I'm looking for a 'Manong Romy'. My lola sent me here.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: "That's me! And you must be the Maricela. Your lola told me you were
+      coming, but I knew your face looked familiar.\r"
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: "But still, you look so much like your lola in her younger days. How
+      nostalgic...\r"
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: Anyway, we can talk about your lola's adventures in Negros later on.
+      Would you happen to need me for anything, hija?
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: bee3ddadbf100c2479fae154c6afec6d, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: Yes, I'd like to ask about well known dishes in the province.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: Well, you can't leave Negros without trying my famous Lumpiang Ubod
+      recipe! It's delicious, and healthy too.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: 'The ubod used to cook lumpia with is rich in fiber and protein, so
+      it makes for quite the nutritious meal, even though it was originally an appetizer.
+
+'
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: bee3ddadbf100c2479fae154c6afec6d, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: I see! If it's okay with you, can you show me how to cook it? Only if
+      it's not too much trouble!
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: Why, of course! This old man ain't getting any younger, so I'd love
+      nothing more than to pass on these recipes to younger folk like you.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: I've had this restaurant since the 1970s, you know? It makes me happy
+      to know that people these days still love eating good ol' Filipino food.
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Mang Romy
+    leftSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
+    sentence: But enough about me blabbering on, let's head inside and start cooking,
+      shall we?
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - name: Maricela
+    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
+    rightSpeaker: {fileID: 0}
+    sentence: Yes, sir!
+    onEndSentence:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
 --- !u!1 &2127555750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,6 +1731,7 @@ Transform:
   m_LocalPosition: {x: -3.944785, y: 1.2564073, z: -11.203104}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1991354686}
   - {fileID: 766778349}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1529,7 +1746,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: m_Name
-      value: Romy
+      value: Romy (Broken Prefab?)
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
