@@ -76,7 +76,7 @@ public class MinceIngredientObjective : Objective
 
             if (currentTaps == 1)
             {
-                GoToNextObjective(false); // Show next button at this point
+                GoToNextObjective(true); // Show next button at this point
             }
         }
     }
