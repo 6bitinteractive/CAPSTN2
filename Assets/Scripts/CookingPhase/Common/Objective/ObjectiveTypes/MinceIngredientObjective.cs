@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 // FIX: Hard-coded; for water only D:
@@ -16,6 +17,7 @@ public class MinceIngredientObjective : Objective
     [SerializeField] private ObjectiveState perfectState = new ObjectiveState(ObjectiveState.Status.Perfect);
     [SerializeField] private ObjectiveState underState = new ObjectiveState(ObjectiveState.Status.Under);
     [SerializeField] private ObjectiveState overState = new ObjectiveState(ObjectiveState.Status.Over);
+    [SerializeField] private UnityEvent OnFirstTap;
 
     private int fiftyPercent = 50;
     private int currentTaps;
@@ -76,7 +78,7 @@ public class MinceIngredientObjective : Objective
 
             if (currentTaps == 1)
             {
-                GoToNextObjective(true); // Show next button at this point
+                OnFirstTap.Invoke(); // Show continue button at this point
             }
         }
     }
