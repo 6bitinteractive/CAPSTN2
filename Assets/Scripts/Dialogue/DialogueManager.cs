@@ -23,6 +23,7 @@ public class DialogueManager : MonoBehaviour
     {
         dialogue = new Queue<Dialogue>();
         if (OnFullDialogueEnd == null) OnFullDialogueEnd = new UnityEvent();
+
     }
 
     public void StartDialogue(DialogueTrigger dialogueTrigger)
@@ -48,8 +49,8 @@ public class DialogueManager : MonoBehaviour
         {
             playerAdventureController.enabled = false;
         }
-
-          DisplayNextSentence();
+    
+        DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
@@ -74,8 +75,9 @@ public class DialogueManager : MonoBehaviour
         nameText.text = dialogueEntry.name;
 
         // Checks the portraits if they are null
-        CheckLeftPortrait(dialogueEntry);
-        CheckRightPortrait(dialogueEntry);
+        CheckPortraitStatus(dialogueEntry.rightSpeaker, rightSpeaker);
+        CheckPortraitStatus(dialogueEntry.leftSpeaker, leftSpeaker);
+
         dialogueText.text = dialogueEntry.sentence;
         dialogueEntry.onEndSentence.Invoke();
         yield return null;
@@ -123,34 +125,38 @@ public class DialogueManager : MonoBehaviour
 
         lastSentence.onEndSentence.Invoke();
     }
-
-        public void CheckRightPortrait(Dialogue dialogueEntry)
+   
+    public void CheckPortraitStatus(Sprite dialogueEntry, Image speaker)
     {
-
-        // If its null take the last portrait and set it as current portrait
-        if (dialogueEntry.rightSpeaker == null)
+        // If its null take the last portrait and dim it
+        if (dialogueEntry == null)
         {
-            rightSpeaker.gameObject.SetActive(false);
+            //Debug.Log(speaker.name);
+            speaker.color = new Color(0.5f, 0.5f, 0.5f);
             return;
         }
         else
         {
-            rightSpeaker.gameObject.SetActive(true);
-            rightSpeaker.sprite = dialogueEntry.rightSpeaker;
+            speaker.color = new Color(1f, 1f, 1f);
+            speaker.sprite = dialogueEntry;
         }
     }
 
-    public void CheckLeftPortrait(Dialogue dialogueEntry)
+    //*Hax Using this for dimming sprites at start of dialogue
+    public void DimSprite(Image sprite)
     {
-        if (dialogueEntry.leftSpeaker == null)
-        {
-            leftSpeaker.gameObject.SetActive(false);
-            return;
-        }
-        else
-        {
-            leftSpeaker.gameObject.SetActive(true);
-            leftSpeaker.sprite = dialogueEntry.leftSpeaker;
-        }
+        sprite.color = new Color(0.5f, 0.5f, 0.5f);
+    }
+
+    public void HideSprites()
+    {
+        leftSpeaker.gameObject.SetActive(false);
+        rightSpeaker.gameObject.SetActive(false);
+    }
+
+    public void ShowSprites()
+    {
+        leftSpeaker.gameObject.SetActive(true);
+        rightSpeaker.gameObject.SetActive(true);
     }
 }
