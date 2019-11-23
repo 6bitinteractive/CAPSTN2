@@ -726,6 +726,42 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 327217263}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: SceneData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: b122c4c6092233f4cabba578b584e534,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc95df0d43717d43801c32a84cdce7d, type: 3}
 --- !u!1 &570413960
@@ -1180,11 +1216,22 @@ MonoBehaviour:
   dialogueArray:
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
     sentence: How did I do Aling Lucita?
     onEndSentence:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_MethodName: DimSprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
@@ -1325,38 +1372,6 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: SceneData, Assembly-CSharp
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: Alright! That got me pumped up, I'll make sure to make my Lola proud!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 327217263}
-          m_MethodName: LoadScene
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: b122c4c6092233f4cabba578b584e534,
-              type: 2}
-            m_ObjectArgumentAssemblyTypeName: SceneData, Assembly-CSharp
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 548865667}
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2194,7 +2209,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2209,7 +2224,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.size
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2299,7 +2314,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[9].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2369,17 +2384,17 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: DimSprite
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: UnityEngine.UI.Image, UnityEngine.UI
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2858,6 +2873,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueArray.Array.data[9].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: dialogueArray.Array.data[9].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3400490635153947922, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}

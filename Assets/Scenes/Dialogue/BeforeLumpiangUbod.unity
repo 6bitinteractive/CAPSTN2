@@ -636,6 +636,81 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
         type: 3}
       propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.size
@@ -672,81 +747,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 38c790628cf70a84a8a8a216c1be6ef6,
         type: 2}
-    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc95df0d43717d43801c32a84cdce7d, type: 3}
 --- !u!1 &766778348
@@ -798,11 +798,22 @@ MonoBehaviour:
   dialogueArray:
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858, type: 3}
-    rightSpeaker: {fileID: 0}
+    rightSpeaker: {fileID: 21300000, guid: 8a11f6c861fc9674c9551e89787caac5, type: 3}
     sentence: Hmm... This looks like the right place, I think.
     onEndSentence:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_MethodName: DimSprite
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   - name: Mang Romy
@@ -1543,7 +1554,7 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -1723,17 +1734,17 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: DimSprite
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: UnityEngine.UI.Image, UnityEngine.UI
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
