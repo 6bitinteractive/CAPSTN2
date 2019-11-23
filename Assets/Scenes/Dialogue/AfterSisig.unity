@@ -734,7 +734,7 @@ PrefabInstance:
     - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
         type: 3}
       propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
         type: 3}
@@ -745,23 +745,22 @@ PrefabInstance:
         type: 3}
       propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 327217263}
+      objectReference: {fileID: 327217262}
     - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
         type: 3}
       propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
+      value: FadeCurrentScene
       objectReference: {fileID: 0}
     - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
         type: 3}
       propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: SceneData, Assembly-CSharp
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
         type: 3}
       propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: b122c4c6092233f4cabba578b584e534,
-        type: 2}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc95df0d43717d43801c32a84cdce7d, type: 3}
 --- !u!114 &551613222 stripped
@@ -936,7 +935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &686780841
 Transform:
   m_ObjectHideFlags: 0
