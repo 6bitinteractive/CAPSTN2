@@ -2375,7 +2375,7 @@ PrefabInstance:
     - target: {fileID: 1041999086142858249, guid: f24cae0089f30e1469fcc32d74fbdd2f,
         type: 3}
       propertyPath: descriptionText
-      value: Once steam appears, add in the onions and garlic.
+      value: Once the steam appears, add in the onions and garlic.
       objectReference: {fileID: 0}
     - target: {fileID: 1041999086142858249, guid: f24cae0089f30e1469fcc32d74fbdd2f,
         type: 3}
@@ -3300,7 +3300,7 @@ PrefabInstance:
     - target: {fileID: 7051262971578090797, guid: 3aca5cd199b63234781e42eea02d162c,
         type: 3}
       propertyPath: descriptionText
-      value: Add 2 tsp of cooking oil.
+      value: Add <color="blue">2</color> tsp of cooking oil.
       objectReference: {fileID: 0}
     - target: {fileID: 7051262971578090797, guid: 3aca5cd199b63234781e42eea02d162c,
         type: 3}
@@ -3610,6 +3610,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
+    - target: {fileID: 6736433934528504608, guid: adf5a330b2ea46a449846914f7050a32,
+        type: 3}
+      propertyPath: descriptionText
+      value: Add <color="blue">2</color> tbsp of fish sauce.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adf5a330b2ea46a449846914f7050a32, type: 3}
 --- !u!114 &4644306488972383132 stripped
@@ -4114,6 +4119,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
+    - target: {fileID: 3543287609253307617, guid: 04efacdbe54a2054b954b697800ecbb0,
+        type: 3}
+      propertyPath: descriptionText
+      value: Add <color="blue">3</color> tbsp of water.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04efacdbe54a2054b954b697800ecbb0, type: 3}
 --- !u!1001 &6421684126159498772

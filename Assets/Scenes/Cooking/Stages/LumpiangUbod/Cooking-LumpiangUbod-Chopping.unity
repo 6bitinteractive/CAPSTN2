@@ -192,7 +192,7 @@ PrefabInstance:
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
       propertyPath: descriptionText
-      value: Slice shrimp
+      value: Slice the shrimp.
       objectReference: {fileID: 0}
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
@@ -523,7 +523,7 @@ PrefabInstance:
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
       propertyPath: descriptionText
-      value: Peel shrimp
+      value: Peel the shrimp.
       objectReference: {fileID: 0}
     - target: {fileID: 2555968329235398368, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
@@ -877,7 +877,7 @@ PrefabInstance:
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
       propertyPath: descriptionText
-      value: Chop Ubod
+      value: Chop the <i>ubod</i>.
       objectReference: {fileID: 0}
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
@@ -1224,7 +1224,7 @@ PrefabInstance:
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
       propertyPath: descriptionText
-      value: Chop pork belly
+      value: Chop the pork belly.
       objectReference: {fileID: 0}
     - target: {fileID: 2555968329235398368, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
@@ -1350,7 +1350,7 @@ PrefabInstance:
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
       propertyPath: descriptionText
-      value: Slice Ubod
+      value: Slice the <i>ubod</i> (heart of palm).
       objectReference: {fileID: 0}
     - target: {fileID: 2555968329235398368, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
@@ -1744,7 +1744,7 @@ PrefabInstance:
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
       propertyPath: descriptionText
-      value: Chop carrot
+      value: Chop the carrot.
       objectReference: {fileID: 0}
     - target: {fileID: 2555968329235398368, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}

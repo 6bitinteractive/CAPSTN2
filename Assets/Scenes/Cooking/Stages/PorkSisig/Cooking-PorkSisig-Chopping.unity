@@ -165,7 +165,7 @@ PrefabInstance:
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
       propertyPath: descriptionText
-      value: Chop onion
+      value: Chop the onion.
       objectReference: {fileID: 0}
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
@@ -876,7 +876,7 @@ PrefabInstance:
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
       propertyPath: descriptionText
-      value: Chop sili
+      value: Chop the sili.
       objectReference: {fileID: 0}
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
@@ -1015,7 +1015,7 @@ PrefabInstance:
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
       propertyPath: descriptionText
-      value: Chop pig face
+      value: Chop the pig face.
       objectReference: {fileID: 0}
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
@@ -1397,7 +1397,7 @@ PrefabInstance:
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}
       propertyPath: descriptionText
-      value: Chop pig ear
+      value: Chop the pig ear.
       objectReference: {fileID: 0}
     - target: {fileID: 2555968329235398383, guid: f22f78b338b0c4849934f0baa852cb0b,
         type: 3}

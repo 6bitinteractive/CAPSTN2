@@ -625,7 +625,7 @@ PrefabInstance:
     - target: {fileID: 6951437658866597275, guid: 6033c3790bba73a489205974bccaa159,
         type: 3}
       propertyPath: dialogueHint.dialogueText
-      value: Let's put the lettuce on the wrapper.
+      value: Put the lettuce on the wrapper.
       objectReference: {fileID: 0}
     - target: {fileID: 6951437658866597275, guid: 6033c3790bba73a489205974bccaa159,
         type: 3}
@@ -2117,6 +2117,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
+    - target: {fileID: 2711276499917161142, guid: fa82c4dc3eff9864595f3456c27be0cf,
+        type: 3}
+      propertyPath: dialogueHint.dialogueText
+      value: Put in <color="blue">3</color> spoons of the filling.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa82c4dc3eff9864595f3456c27be0cf, type: 3}
 --- !u!1 &8964139364406612833 stripped

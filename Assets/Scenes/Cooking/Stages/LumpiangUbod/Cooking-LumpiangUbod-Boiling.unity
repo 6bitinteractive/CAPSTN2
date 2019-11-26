@@ -245,6 +245,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
+    - target: {fileID: 7583822846090542861, guid: 50f51c61439f1134b874fdfaad1f9641,
+        type: 3}
+      propertyPath: descriptionText
+      value: Add <color="blue">3</color> tbsp of soy sauce.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50f51c61439f1134b874fdfaad1f9641, type: 3}
 --- !u!1 &149878624
@@ -1004,6 +1009,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
+    - target: {fileID: 619936389858251862, guid: d6e165cb6f73c4740ad8d270ab95c0a5,
+        type: 3}
+      propertyPath: descriptionText
+      value: Add <color="blue">1</color> cup sugar.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6e165cb6f73c4740ad8d270ab95c0a5, type: 3}
 --- !u!1001 &754492375
@@ -1370,6 +1380,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 6b58d88e4bfbe4046b689dd9718f6b75,
         type: 3}
+    - target: {fileID: 839632092105546702, guid: 536e00ed31416a0498fca0d0ebffc614,
+        type: 3}
+      propertyPath: descriptionText
+      value: Add <color="blue">1</color> pinch of salt.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 536e00ed31416a0498fca0d0ebffc614, type: 3}
 --- !u!1001 &771825204
@@ -1781,7 +1796,7 @@ PrefabInstance:
     - target: {fileID: 1041999086142858249, guid: f24cae0089f30e1469fcc32d74fbdd2f,
         type: 3}
       propertyPath: descriptionText
-      value: Once steam appears, add Garlic and Peanuts
+      value: Once the steam appears, add the garlic and peanuts.
       objectReference: {fileID: 0}
     - target: {fileID: 1041999086142858249, guid: f24cae0089f30e1469fcc32d74fbdd2f,
         type: 3}
@@ -2355,7 +2370,7 @@ PrefabInstance:
     - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
         type: 3}
       propertyPath: descriptionText
-      value: Add 3 tbsp cornstarch mixture.
+      value: Add <color="blue">3</color> tbsp cornstarch mixture.
       objectReference: {fileID: 0}
     - target: {fileID: 3200698147691242977, guid: d9653e81ea4277243ab797eacef9fabc,
         type: 3}
@@ -2993,6 +3008,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
+        type: 3}
+      propertyPath: descriptionText
+      value: Pour enough water for boiling.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8083c22cd1341f4c8abaae8a8e6e9f1, type: 3}

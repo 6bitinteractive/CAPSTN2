@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startOnEnable: 1
-  descriptionText: Cover with the lid. Turn off the heat once the pig is cooked.
+  descriptionText: Cover with the lid. Turn off the heat once the pork is cooked.
   ObjectiveStates: []
   OnBegin:
     m_PersistentCalls:

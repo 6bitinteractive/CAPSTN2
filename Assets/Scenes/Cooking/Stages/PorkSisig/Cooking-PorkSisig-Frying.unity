@@ -279,9 +279,7 @@ PrefabInstance:
     - target: {fileID: 6951437658866597275, guid: 6033c3790bba73a489205974bccaa159,
         type: 3}
       propertyPath: descriptionText
-      value: 'Add in the pork meat, green chili, and red chili.
-
-'
+      value: Add in the pork meat, green chili, and red chili.
       objectReference: {fileID: 0}
     - target: {fileID: 6951437658866597275, guid: 6033c3790bba73a489205974bccaa159,
         type: 3}
@@ -3029,6 +3027,11 @@ PrefabInstance:
       propertyPath: ingredientToBeAdded
       value: 
       objectReference: {fileID: 270337354}
+    - target: {fileID: 7583822846090542861, guid: 50f51c61439f1134b874fdfaad1f9641,
+        type: 3}
+      propertyPath: descriptionText
+      value: Add <color="blue">3</color> tbsp of soy sauce.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50f51c61439f1134b874fdfaad1f9641, type: 3}
 --- !u!1001 &1041999086360360609
@@ -3122,7 +3125,7 @@ PrefabInstance:
     - target: {fileID: 1041999086142858249, guid: f24cae0089f30e1469fcc32d74fbdd2f,
         type: 3}
       propertyPath: descriptionText
-      value: Once steam appears, add in the onions.
+      value: Once the steam appears, add in the onions.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f24cae0089f30e1469fcc32d74fbdd2f, type: 3}
@@ -3485,6 +3488,11 @@ PrefabInstance:
       propertyPath: ingredientToBeAdded
       value: 
       objectReference: {fileID: 1327345386}
+    - target: {fileID: 2016035637963207136, guid: 15a6f11e6d1c6e748a06c4cc28be6dae,
+        type: 3}
+      propertyPath: descriptionText
+      value: Add <color="blue">3</color> tsp of cooking oil.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15a6f11e6d1c6e748a06c4cc28be6dae, type: 3}
 --- !u!1001 &5591366959726997521
@@ -3636,7 +3644,7 @@ PrefabInstance:
     - target: {fileID: 2732909510227355998, guid: 4f89b82875f72cb4ca0273c688bffc7b,
         type: 3}
       propertyPath: descriptionText
-      value: Add 2 pinches of pepper
+      value: Add <color="blue">2</color> pinches of pepper.
       objectReference: {fileID: 0}
     - target: {fileID: 2732909510227355998, guid: 4f89b82875f72cb4ca0273c688bffc7b,
         type: 3}
@@ -3998,6 +4006,11 @@ PrefabInstance:
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 839632092105546702, guid: 536e00ed31416a0498fca0d0ebffc614,
+        type: 3}
+      propertyPath: descriptionText
+      value: Add <color="blue">1</color> pinch of salt.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 536e00ed31416a0498fca0d0ebffc614, type: 3}
 --- !u!1001 &7552385174038203471
@@ -4016,6 +4029,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: CommonObjects
       objectReference: {fileID: 0}
+    - target: {fileID: 899028423381325295, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_Name
+      value: ContinueButtonPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674230504257619288, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 800c4529b9884534ea1745050b156aa6, type: 2}
     - target: {fileID: 7552385173462586586, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: OnAllObjectivesDone.m_PersistentCalls.m_Calls.Array.size
@@ -4101,11 +4124,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4674230504257619288, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 800c4529b9884534ea1745050b156aa6, type: 2}
     - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: Recipe
@@ -4567,11 +4585,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 899028423381325295, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_Name
-      value: ContinueButtonPanel
       objectReference: {fileID: 0}
     - target: {fileID: 7552385174476635716, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}

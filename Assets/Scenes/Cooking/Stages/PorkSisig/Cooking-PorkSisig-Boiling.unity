@@ -525,7 +525,7 @@ PrefabInstance:
     - target: {fileID: 6951437658866597275, guid: 6033c3790bba73a489205974bccaa159,
         type: 3}
       propertyPath: descriptionText
-      value: Add pig ear and pig face
+      value: Add the pig ear and the pig face.
       objectReference: {fileID: 0}
     - target: {fileID: 6951437658866597275, guid: 6033c3790bba73a489205974bccaa159,
         type: 3}
@@ -1130,6 +1130,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnReadyForNext.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1280906176020765815, guid: c8083c22cd1341f4c8abaae8a8e6e9f1,
+        type: 3}
+      propertyPath: descriptionText
+      value: Pour enough water for boiling.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8083c22cd1341f4c8abaae8a8e6e9f1, type: 3}
@@ -2420,6 +2425,11 @@ PrefabInstance:
       propertyPath: perfectState.OnStateReached.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6400498538117018178, guid: a82c13e3250f01541a01a4f6171f094f,
+        type: 3}
+      propertyPath: descriptionText
+      value: Wait for scum to form.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a82c13e3250f01541a01a4f6171f094f, type: 3}
 --- !u!224 &6663701928679175164 stripped
@@ -3275,6 +3285,11 @@ PrefabInstance:
       propertyPath: OnScoopEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7258991850271817006, guid: 20c83cb01b4465144ae84f5270384cfc,
+        type: 3}
+      propertyPath: descriptionText
+      value: Skim off the scum from the surface of the water.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20c83cb01b4465144ae84f5270384cfc, type: 3}
 --- !u!1001 &7362022209945906726
@@ -3434,6 +3449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2964612207677493740, guid: 4fe1cc34d9dbf7a46bf9045ae4b62563,
+        type: 3}
+      propertyPath: descriptionText
+      value: Cover the pot.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fe1cc34d9dbf7a46bf9045ae4b62563, type: 3}
