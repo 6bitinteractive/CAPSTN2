@@ -3577,11 +3577,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CommonObjects
       objectReference: {fileID: 0}
-    - target: {fileID: 7106569688123574568, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+    - target: {fileID: 4674230504257619288, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
-      propertyPath: m_Name
-      value: TapBottomCenterImage
-      objectReference: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 800c4529b9884534ea1745050b156aa6, type: 2}
     - target: {fileID: 7552385173462586586, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: OnAllObjectivesDone.m_PersistentCalls.m_Calls.Array.size
@@ -3607,11 +3607,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4674230504257619288, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 800c4529b9884534ea1745050b156aa6, type: 2}
     - target: {fileID: 1215473850045948912, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: Recipe
@@ -4004,15 +3999,15 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7106569688123574568, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_Name
+      value: TapBottomCenterImage
+      objectReference: {fileID: 0}
     - target: {fileID: 82033564809223770, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2138783189896941198, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -480
       objectReference: {fileID: 0}
     - target: {fileID: 3347150970560201465, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
@@ -4023,6 +4018,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 438861786404006512, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 501
+      objectReference: {fileID: 0}
+    - target: {fileID: 438861786404006512, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560127654334743742, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 501
+      objectReference: {fileID: 0}
+    - target: {fileID: 1560127654334743742, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 5431235628845709353, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
@@ -4078,26 +4093,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 438861786404006512, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 501
-      objectReference: {fileID: 0}
-    - target: {fileID: 438861786404006512, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1560127654334743742, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 501
-      objectReference: {fileID: 0}
-    - target: {fileID: 1560127654334743742, guid: 0f0588ae6acafbb41bed6e8405a38c38,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f0588ae6acafbb41bed6e8405a38c38, type: 3}
