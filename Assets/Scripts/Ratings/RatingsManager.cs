@@ -38,4 +38,9 @@ public class RatingsManager : MonoBehaviour
         else
             return 0;
     }
+
+    public void ResetProgress()
+    {
+        stageRatings = new Dictionary<SceneData, int>();
+    }
 }
