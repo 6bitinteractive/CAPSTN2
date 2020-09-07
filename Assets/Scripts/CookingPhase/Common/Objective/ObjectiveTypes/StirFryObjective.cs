@@ -132,7 +132,7 @@ public class StirFryObjective : Objective
     private IEnumerator EnableSpoon()
     {
         yield return new WaitUntil(() => AnimatorUtils.IsInState(spoonAnim, "SlideIn") && AnimatorUtils.IsDonePlaying(spoonAnim, "SlideIn"));
-        yield return new WaitForSeconds(1f); // Wait for a bit so that movement within the pan when the spoon slides in doesn't count as valid input/mixing
+        yield return new WaitForSeconds(0.1f); // Wait for a bit so that movement within the pan when the spoon slides in doesn't count as valid input/mixing
         spoon.enabled = true;
     }
 }

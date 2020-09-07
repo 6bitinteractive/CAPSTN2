@@ -23,21 +23,40 @@ public class DropArea : MonoBehaviour
         polygonCollider.isTrigger = true;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    item = collision.GetComponent<Draggable>();
+
+    //    if (item == null) { return; }
+
+    //    if (!item.Grabbed)
+    //    {
+    //        //Debug.Log("Item dropped in " + gameObject.name + ": " + item.name);
+    //        OnItemDroppedOnArea.Invoke(item);
+    //        item = null;
+    //    }
+    //}
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         item = collision.GetComponent<Draggable>();
+
         if (item == null) { return; }
 
-        if (!item.Grabbed)
+        if (item.Grabbed)
         {
             //Debug.Log("Item dropped in " + gameObject.name + ": " + item.name);
-            OnItemDroppedOnArea.Invoke(item);
-            item = null;
+            //OnItemDroppedOnArea.Invoke(item);
+            item.OnDropItem.AddListener(OnItemDroppedOnArea.Invoke);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        item = null;
+        if (item != null)
+        {
+            item.OnDropItem.RemoveListener(OnItemDroppedOnArea.Invoke);
+            item = null;
+        }
     }
 }

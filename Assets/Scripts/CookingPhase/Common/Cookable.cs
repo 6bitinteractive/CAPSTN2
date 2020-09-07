@@ -10,7 +10,7 @@ public class Cookable : MonoBehaviour
 {
     [Tooltip("The gameObject representing the ingredient when it's in the cookware.")]
     public GameObject IngredientInCookware;
-
+    private Vector3 initialPos;
     //[SerializeField] private bool canCoolDown;
 
     //[Range(0, 1)]
@@ -48,6 +48,11 @@ public class Cookable : MonoBehaviour
     //    }
     //}
 
+    private void OnEnable()
+    {
+        initialPos = this.transform.position;
+    }
+
     public void ShowIngredientInCookware()
     {
         if (IngredientInCookware == null) { return; }
@@ -58,5 +63,10 @@ public class Cookable : MonoBehaviour
 
         // Hide the ingredient being dragged to the cookware
         gameObject.SetActive(false);
+    }
+
+    public void Reset()
+    {
+        this.transform.position = initialPos;
     }
 }

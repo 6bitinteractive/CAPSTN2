@@ -33,6 +33,7 @@ public class FoodPrepUtensil : MonoBehaviour
     private RectTransform rectTransform;
     private Vector2 defaultPosition;
     private PolygonCollider2D polygonCollider;
+    private Draggable drag;
     private Queue<RectTransform> spawnPositions = new Queue<RectTransform>();
 
     private void Awake()
@@ -41,6 +42,7 @@ public class FoodPrepUtensil : MonoBehaviour
         polygonCollider = GetComponent<PolygonCollider2D>();
         rectTransform = GetComponent<RectTransform>();
         defaultPosition = rectTransform.anchoredPosition;
+        drag = this.GetComponent<Draggable>();
 
         foreach (var item in spawnPositionList)
             spawnPositions.Enqueue(item);
@@ -64,6 +66,9 @@ public class FoodPrepUtensil : MonoBehaviour
         rectTransform.anchoredPosition = defaultPosition;
         image.enabled = true;
         polygonCollider.enabled = true;
+
+        if (drag != null)
+            drag.enabled = true;
     }
 
     private IEnumerator AddIngredient(Collider2D collider2D)
@@ -73,6 +78,9 @@ public class FoodPrepUtensil : MonoBehaviour
 
         // Hide default image of utensil (the one that can be dragged by the player)
         image.enabled = false;
+
+        if (drag != null)
+            drag.enabled = false;
 
         // Start animation of adding in the ingredient
         if (addIngredientAnimator != null)

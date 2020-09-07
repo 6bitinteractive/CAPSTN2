@@ -14,6 +14,7 @@ public class SpoonKitchenUtensil : MonoBehaviour
 
     private KitchenUtensil kitchenUtensil;
     private AudioSource audioSource;
+    private Vector3 initialPos;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class SpoonKitchenUtensil : MonoBehaviour
     private void OnEnable()
     {
         MixDuration = 0f;
+        initialPos = this.transform.position;
     }
 
     private void Update()
@@ -49,5 +51,10 @@ public class SpoonKitchenUtensil : MonoBehaviour
             IsMixing = false;
             audioSource.Stop();
         }
+    }
+
+    public void Reset()
+    {
+        this.transform.position = initialPos;
     }
 }

@@ -80,6 +80,7 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private void OnMouseUp()
     {
         Grabbed = false;
+        resetOnNoCollision();
         OnDropItem.Invoke(this);
     }
 
@@ -92,6 +93,42 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public void OnPointerUp(PointerEventData eventData)
     {
         Grabbed = false;
+        resetOnNoCollision();
         OnDropItem.Invoke(this);
+    }
+
+    private void resetOnNoCollision()
+    {
+        List<Collider2D> collidedWith = new List<Collider2D>();
+
+        Collider2D col = this.GetComponent<Collider2D>();
+        if (col == null) return;
+        Debug.Log("Has Collider");
+        ContactFilter2D filter = new ContactFilter2D
+        {
+            useTriggers = true
+        };
+
+        Physics2D.OverlapCollider(col, filter, collidedWith);
+
+        for(int i = collidedWith.Count - 1; i >= 0; i--)
+        {
+            if (collidedWith[i].transform.IsChildOf(this.transform))
+                collidedWith.RemoveAt(i);
+        }
+
+        if (collidedWith.Count == 0)
+        {
+            Debug.Log("Not colliding with anything");
+
+            if (this.GetComponent<FoodPrepUtensil>() != null)
+                this.GetComponent<FoodPrepUtensil>().Reset();
+
+            if (this.GetComponent<Cookable>() != null)
+                this.GetComponent<Cookable>().Reset();
+
+            if (this.GetComponent<SpoonKitchenUtensil>() != null)
+                this.GetComponent<SpoonKitchenUtensil>().Reset();
+        }
     }
 }
