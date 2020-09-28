@@ -22,10 +22,32 @@ public class CircleGestureDetector : MonoBehaviour
 
     private bool IsGestureDone()
     {
-        #region Mobile Input
-#if UNITY_ANDROID || UNITY_IOS
+
+       // #region Standalone Input
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR
+        if (Input.GetMouseButtonUp(0))
+        {
+            gestureDetector.Clear();
+            gestureCount = 0;
+        }
+        else
+        {
+            if (Input.GetMouseButton(0))
+            {
+                Vector2 p = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+                if (gestureDetector.Count == 0 || (p - gestureDetector[gestureDetector.Count - 1]).magnitude > 10)
+                {
+                    Debug.Log(gestureDetector.Count);
+                    gestureDetector.Add(p);
+                }
+            }
+        }
+
+        // #region Mobile Input
+#elif UNITY_ANDROID || UNITY_IOS
         if (Input.touches.Length != 1)
         {
+            Debug.Log("test");
             gestureDetector.Clear();
             gestureCount = 0;
         }
@@ -41,27 +63,7 @@ public class CircleGestureDetector : MonoBehaviour
             }
         }
 #endif
-        #endregion
-
-        #region Standalone Input
-#if UNITY_STANDALONE_WIN
-        if (Input.GetMouseButtonUp(0))
-        {
-            gestureDetector.Clear();
-            gestureCount = 0;
-        }
-        else
-        {
-            if (Input.GetMouseButton(0))
-            {
-                Vector2 p = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-                if (gestureDetector.Count == 0 || (p - gestureDetector[gestureDetector.Count - 1]).magnitude > 10)
-                    gestureDetector.Add(p);
-            }
-        }
-
-#endif
-        #endregion
+        //#endregion
 
         if (gestureDetector.Count < 5)
             return false;

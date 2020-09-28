@@ -93,7 +93,7 @@ public class ShakeObjective : Objective
     private bool UsedShaker()
     {
         #region Standalone Input
-#if UNITY_STANDALONE_WIN
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR
         // Test
         return Input.GetMouseButtonDown(1);
 #endif

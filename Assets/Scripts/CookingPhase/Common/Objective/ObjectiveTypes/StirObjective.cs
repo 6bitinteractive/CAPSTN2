@@ -71,6 +71,14 @@ public class StirObjective : Objective
         // Check if spoon is in the cookware
         if (!spoon.InCookware) { return; }
 
+        Draggable spoonDrag = spoon.GetComponent<Draggable>();
+
+        if (spoonDrag != null)
+        {
+            if (!spoonDrag.Grabbed)
+                return;
+        }
+
         currentCount++;
 
         if (currentCount >= stirCountLimit)

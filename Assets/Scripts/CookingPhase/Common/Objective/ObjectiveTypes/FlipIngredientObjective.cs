@@ -82,7 +82,7 @@ public class FlipIngredientObjective : Objective
     private bool Flipped()
     {
         #region Standalone Input
-#if UNITY_STANDALONE_WIN
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR
 
         // Right-click to test flipping
         return Input.GetMouseButton(1);

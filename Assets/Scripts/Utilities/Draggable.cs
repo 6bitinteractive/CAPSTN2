@@ -33,7 +33,7 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private void Drag()
     {
         #region Standard Input
-#if UNITY_STANDALONE_WIN
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR
         if (!rectTransform || canvas.renderMode == RenderMode.ScreenSpaceCamera) // If this is not a UI element or rendering using Screenspace - Camera
         {
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

@@ -22,17 +22,17 @@ public class TiltDetector : MonoBehaviour
     private void Update()
     {
         #region Standalone Input
-#if UNITY_STANDALONE_WIN
-        if (Input.GetMouseButtonDown(0))
+//#if UNITY_STANDALONE_WIN || UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.A))
             OnTilt.Invoke(TiltDirection.Left);
-        else if (Input.GetMouseButtonDown(1))
+        else if (Input.GetKeyDown(KeyCode.D))
             OnTilt.Invoke(TiltDirection.Right);
-        else if (Input.GetKeyDown(KeyCode.Space))
+        else if (Input.GetKeyDown(KeyCode.W))
             OnTilt.Invoke(TiltDirection.Up);
-        else if (Input.GetKeyDown(KeyCode.Tab))
+        else if (Input.GetKeyDown(KeyCode.S))
             OnTilt.Invoke(TiltDirection.Down);
-#endif
-        #endregion
+//#endif
+        #endregionInput.GetKeyDown(KeyCode.A)
 
         #region Mobile Input
 #if UNITY_ANDROID || UNITY_IOS

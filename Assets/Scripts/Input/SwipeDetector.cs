@@ -23,7 +23,7 @@ public class SwipeDetector : MonoBehaviour
     private void Update()
     {
         #region Standalone Input
-#if UNITY_STANDALONE_WIN
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
         {
             SetStartPosition(Input.mousePosition);

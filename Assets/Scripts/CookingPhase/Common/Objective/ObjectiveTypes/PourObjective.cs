@@ -133,7 +133,7 @@ public class PourObjective : Objective
     {
 
         #region Standalone Input
-#if UNITY_STANDALONE_WIN
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR
         return Input.GetMouseButton(0);
 #endif
         #endregion
