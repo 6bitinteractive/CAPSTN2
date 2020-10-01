@@ -32,7 +32,7 @@ public class TiltDetector : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.S))
             OnTilt.Invoke(TiltDirection.Down);
 //#endif
-        #endregionInput.GetKeyDown(KeyCode.A)
+        #endregion
 
         #region Mobile Input
 #if UNITY_ANDROID || UNITY_IOS
