@@ -103,7 +103,7 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         Collider2D col = this.GetComponent<Collider2D>();
         if (col == null) return;
-        Debug.Log("Has Collider");
+
         ContactFilter2D filter = new ContactFilter2D
         {
             useTriggers = true
@@ -113,7 +113,8 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         for(int i = collidedWith.Count - 1; i >= 0; i--)
         {
-            if (collidedWith[i].transform.IsChildOf(this.transform))
+            // To remove the bug of utensils not returning to it's position when placed near the pan,added tag check for pan
+            if (collidedWith[i].transform.IsChildOf(this.transform) || collidedWith[i].tag == "Pan")
                 collidedWith.RemoveAt(i);
         }
 
