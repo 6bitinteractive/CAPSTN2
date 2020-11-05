@@ -55,17 +55,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 549525502021176260}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.73333335}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 58739585e655512499b1d5919af79875, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -75,6 +75,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!95 &5579110122133195733
 Animator:
   serializedVersion: 3
@@ -227,17 +228,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 8914878582837899965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: ff5de175fb4eed146bcc3008b16f618d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -247,6 +248,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &8914878583527212046
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,17 +303,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 8914878583527212046}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 6c5426e526195fa48877a41d322241d8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -321,6 +323,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &8914878583864332006
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +434,6 @@ MonoBehaviour:
   OnItemDroppedOnArea:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: OnItemDrop, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &8914878583864332000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,7 +462,7 @@ GameObject:
   - component: {fileID: 1805596433872670949}
   m_Layer: 19
   m_Name: PanPanel
-  m_TagString: Untagged
+  m_TagString: NoCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -578,11 +580,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8914878584657068750}
     m_Modifications:
-    - target: {fileID: 793678795076559983, guid: 2e4793b56af96074a8b60050f2597c1b,
+    - target: {fileID: 793678795076559977, guid: 2e4793b56af96074a8b60050f2597c1b,
         type: 3}
-      propertyPath: m_Name
-      value: PanLid
-      objectReference: {fileID: 0}
+      propertyPath: OnCoverCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 549525502021176260}
+    - target: {fileID: 793678795076559977, guid: 2e4793b56af96074a8b60050f2597c1b,
+        type: 3}
+      propertyPath: OnTakeOffCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 549525502021176260}
     - target: {fileID: 793678795076559982, guid: 2e4793b56af96074a8b60050f2597c1b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -688,16 +695,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 793678795076559977, guid: 2e4793b56af96074a8b60050f2597c1b,
+    - target: {fileID: 793678795076559983, guid: 2e4793b56af96074a8b60050f2597c1b,
         type: 3}
-      propertyPath: OnCoverCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 549525502021176260}
-    - target: {fileID: 793678795076559977, guid: 2e4793b56af96074a8b60050f2597c1b,
-        type: 3}
-      propertyPath: OnTakeOffCookware.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 549525502021176260}
+      propertyPath: m_Name
+      value: PanLid
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e4793b56af96074a8b60050f2597c1b, type: 3}
 --- !u!224 &1308396166429863233 stripped

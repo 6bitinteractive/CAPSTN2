@@ -3888,7 +3888,7 @@ PrefabInstance:
     - target: {fileID: 6421684125476184627, guid: c173e2a3c6f070042ba98955da2c0868,
         type: 3}
       propertyPath: m_TagString
-      value: Pan
+      value: NoCollision
       objectReference: {fileID: 0}
     - target: {fileID: 6421684125476184636, guid: c173e2a3c6f070042ba98955da2c0868,
         type: 3}

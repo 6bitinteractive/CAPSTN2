@@ -21,6 +21,7 @@ public class StepUI : MonoBehaviour
     private Step step;
     private Image image;
     private Button button;
+    private Vector2 initialSize;
 
     private void Awake()
     {
@@ -28,6 +29,7 @@ public class StepUI : MonoBehaviour
         image = GetComponent<Image>();
         button = GetComponent<Button>();
         button.onClick.AddListener(InvokeOnStageSelect);
+        initialSize = image.rectTransform.sizeDelta;
     }
 
     private void OnDestroy()
@@ -69,5 +71,28 @@ public class StepUI : MonoBehaviour
     private void InvokeOnStageSelect()
     {
         OnStageSelect.Invoke(step.StageScene);
+    }
+
+    // 11/5 Added additional functions for selection
+
+    public void SetAsShaded()
+    {
+        image.sprite = done;
+        image.rectTransform.sizeDelta = initialSize;
+    }
+
+    public void ClickButton()
+    {
+        button.onClick.Invoke();
+    }
+
+    public SceneData GetSceneData()
+    {
+        return step.StageScene;
+    }
+
+    public bool IsLocked()
+    {
+        return step.Locked;
     }
 }

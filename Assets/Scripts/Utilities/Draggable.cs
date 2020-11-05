@@ -72,18 +72,6 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         #endregion
     }
 
-    private void OnMouseDown()
-    {
-        Grabbed = true;
-    }
-
-    private void OnMouseUp()
-    {
-        Grabbed = false;
-        resetOnNoCollision();
-        OnDropItem.Invoke(this);
-    }
-
     public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("Grabbed item: " + gameObject.name);
@@ -99,9 +87,11 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     private void resetOnNoCollision()
     {
-        List<Collider2D> collidedWith = new List<Collider2D>();
-
         Collider2D col = this.GetComponent<Collider2D>();
+
+        if (col == null || col.enabled == false) return;
+
+        List<Collider2D> collidedWith = new List<Collider2D>();
         if (col == null) return;
 
         ContactFilter2D filter = new ContactFilter2D
@@ -114,7 +104,7 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         for(int i = collidedWith.Count - 1; i >= 0; i--)
         {
             // To remove the bug of utensils not returning to it's position when placed near the pan,added tag check for pan
-            if (collidedWith[i].transform.IsChildOf(this.transform) || collidedWith[i].tag == "Pan")
+            if (collidedWith[i].transform.IsChildOf(this.transform) || collidedWith[i].tag == "NoCollision")
                 collidedWith.RemoveAt(i);
         }
 

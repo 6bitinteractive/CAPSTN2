@@ -1753,6 +1753,59 @@ PrefabInstance:
       propertyPath: m_Name
       value: PorkBelly
       objectReference: {fileID: 0}
+    - target: {fileID: 1111071400125130175, guid: 57737d069e57e484cb5a2867068399ad,
+        type: 3}
+      propertyPath: currentIngredientState.Array.size
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1111071400125130175, guid: 57737d069e57e484cb5a2867068399ad,
+        type: 3}
+      propertyPath: currentIngredientState.Array.data[7]
+      value: 
+      objectReference: {fileID: 1111071400125130171, guid: 8e5282c733b08d940bcfd331bbf9567c,
+        type: 3}
+    - target: {fileID: 1111071400125130175, guid: 57737d069e57e484cb5a2867068399ad,
+        type: 3}
+      propertyPath: currentIngredientState.Array.data[8]
+      value: 
+      objectReference: {fileID: 1111071400125130171, guid: fbdc3878ba8505545abe95d05af984f3,
+        type: 3}
+    - target: {fileID: 1111071400125130175, guid: 57737d069e57e484cb5a2867068399ad,
+        type: 3}
+      propertyPath: currentIngredientState.Array.data[9]
+      value: 
+      objectReference: {fileID: 1111071400125130171, guid: 2c99b2fb1075b7c4c9b84fba300581a6,
+        type: 3}
+    - target: {fileID: 1111071400125130175, guid: 57737d069e57e484cb5a2867068399ad,
+        type: 3}
+      propertyPath: currentIngredientState.Array.data[10]
+      value: 
+      objectReference: {fileID: 1111071400125130171, guid: c40acc1c05e24f244a39889f3dba9114,
+        type: 3}
+    - target: {fileID: 1111071400125130175, guid: 57737d069e57e484cb5a2867068399ad,
+        type: 3}
+      propertyPath: currentIngredientState.Array.data[11]
+      value: 
+      objectReference: {fileID: 1111071400125130171, guid: f4d9ef41f4aca5748bb57d79af1c1f68,
+        type: 3}
+    - target: {fileID: 1111071400125130175, guid: 57737d069e57e484cb5a2867068399ad,
+        type: 3}
+      propertyPath: currentIngredientState.Array.data[12]
+      value: 
+      objectReference: {fileID: 1111071400125130171, guid: ba5f75455db2cd64b89205df270ca5d3,
+        type: 3}
+    - target: {fileID: 1111071400125130175, guid: 57737d069e57e484cb5a2867068399ad,
+        type: 3}
+      propertyPath: currentIngredientState.Array.data[13]
+      value: 
+      objectReference: {fileID: 1111071400125130171, guid: 6f673fc363db01e448f4cb70116ab6f4,
+        type: 3}
+    - target: {fileID: 1111071400125130175, guid: 57737d069e57e484cb5a2867068399ad,
+        type: 3}
+      propertyPath: currentIngredientState.Array.data[14]
+      value: 
+      objectReference: {fileID: 1111071400125130171, guid: 2cba63e02568bb1418d524c13eff130e,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57737d069e57e484cb5a2867068399ad, type: 3}
 --- !u!1001 &2555968330195277703

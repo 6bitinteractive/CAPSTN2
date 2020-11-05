@@ -462,7 +462,7 @@ GameObject:
   - component: {fileID: 6421684125476184637}
   m_Layer: 19
   m_Name: PanPanel-Frying-Sisig
-  m_TagString: Pan
+  m_TagString: NoCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

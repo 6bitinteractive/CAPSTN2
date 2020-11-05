@@ -22,16 +22,6 @@ public class ImageOnTap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         ShowDefault();
     }
 
-    private void OnMouseDown()
-    {
-        ShowOnTap();
-    }
-
-    private void OnMouseUp()
-    {
-        ShowDefault();
-    }
-
     public void OnPointerDown(PointerEventData eventData)
     {
         ShowOnTap();

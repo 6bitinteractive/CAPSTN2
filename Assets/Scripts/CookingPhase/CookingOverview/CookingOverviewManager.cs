@@ -70,7 +70,14 @@ public class CookingOverviewManager : MonoBehaviour
     private void SetSelectedStage(SceneData sceneData)
     {
         Debug.Log("Selected stage: " + sceneData.name);
+
+        // Shade the previously selected stage
+        stepsUI.Find((x) => x.GetSceneData() == selectedStage)?.SetAsShaded();
+
         selectedStage = sceneData;
+
+        // Highlight selected stage
+        stepsUI.Find((x) => x.GetSceneData() == selectedStage)?.SetAsCurrent();
     }
 
     private void UnlockSteps()
@@ -147,6 +154,8 @@ public class CookingOverviewManager : MonoBehaviour
             {
                 stepsUI[i].SetAsCurrent();
                 stepUIAnimators[i].SetTrigger("Flip");
+                yield return new WaitUntil(()=> stepUIAnimators[i].GetCurrentAnimatorStateInfo(0).normalizedTime >= .8f);
+                stepsUI[i].ClickButton();
                 yield break;
             }
         }
