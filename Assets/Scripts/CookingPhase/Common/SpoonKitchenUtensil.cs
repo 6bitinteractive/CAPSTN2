@@ -16,11 +16,14 @@ public class SpoonKitchenUtensil : MonoBehaviour
     private AudioSource audioSource;
     private Vector3 initialPos;
 
+    private IngredientDetector ingredientDetector;
+
     private void Awake()
     {
         kitchenUtensil = GetComponent<KitchenUtensil>();
         audioSource = GetComponent<AudioSource>();
         transform.hasChanged = false;
+        ingredientDetector = GetComponentInChildren<IngredientDetector>();
     }
 
     private void OnEnable()
@@ -33,7 +36,7 @@ public class SpoonKitchenUtensil : MonoBehaviour
     {
         if (!kitchenUtensil.InCookware) { return; }
 
-        if (transform.hasChanged)
+        if (transform.hasChanged && ingredientDetector.isCollidingWithIngredient)
         {
             IsMixing = true;
             MixDuration += Time.deltaTime;

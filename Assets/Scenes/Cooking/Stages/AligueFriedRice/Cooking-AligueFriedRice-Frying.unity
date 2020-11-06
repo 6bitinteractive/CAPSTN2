@@ -124,6 +124,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &66101062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8284671739836988335, guid: c173e2a3c6f070042ba98955da2c0868,
+    type: 3}
+  m_PrefabInstance: {fileID: 6421684126159498772}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &66101066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66101062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a781a6ae1952042ac79d51909fb154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollidingWithIngredient: 0
 --- !u!1 &133114699
 GameObject:
   m_ObjectHideFlags: 0
@@ -3870,6 +3889,11 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[12].y
       value: -141.13872
       objectReference: {fileID: 0}
+    - target: {fileID: 2720734851507700289, guid: c173e2a3c6f070042ba98955da2c0868,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3315257048931215986, guid: c173e2a3c6f070042ba98955da2c0868,
         type: 3}
       propertyPath: m_Enabled
@@ -4009,6 +4033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: minDistance
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7703675425583042072, guid: c173e2a3c6f070042ba98955da2c0868,
+        type: 3}
+      propertyPath: ingredientDetector
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8284671739836988335, guid: c173e2a3c6f070042ba98955da2c0868,
         type: 3}
@@ -4201,6 +4230,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 13636704686715934, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 546669158868403635, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: characterPortrait
@@ -4277,6 +4311,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Boil pig ear and pig face
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842973362757932620, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1867533012931064599, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
@@ -4827,6 +4866,11 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.060193166
       objectReference: {fileID: 0}
+    - target: {fileID: 3272779420800460296, guid: b22ab9085288d2940a494542834d69f6,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4212942426108279118, guid: b22ab9085288d2940a494542834d69f6,
         type: 3}
       propertyPath: m_Controller
@@ -4837,6 +4881,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 0.06019318
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268350647096602591, guid: b22ab9085288d2940a494542834d69f6,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4889789171157011451, guid: b22ab9085288d2940a494542834d69f6,
         type: 3}
@@ -4849,10 +4898,20 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.060193166
       objectReference: {fileID: 0}
+    - target: {fileID: 5410395217427025853, guid: b22ab9085288d2940a494542834d69f6,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6106980066447824061, guid: b22ab9085288d2940a494542834d69f6,
         type: 3}
       propertyPath: m_Mass
       value: 0.060193196
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106980066447824061, guid: b22ab9085288d2940a494542834d69f6,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6164021200459186732, guid: b22ab9085288d2940a494542834d69f6,
         type: 3}
@@ -4864,6 +4923,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 0.06019318
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152312980763091692, guid: b22ab9085288d2940a494542834d69f6,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7702152083491371634, guid: b22ab9085288d2940a494542834d69f6,
         type: 3}
@@ -4985,10 +5049,20 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 0.06510495
       objectReference: {fileID: 0}
+    - target: {fileID: 8000950928394719319, guid: b22ab9085288d2940a494542834d69f6,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8317711555711468282, guid: b22ab9085288d2940a494542834d69f6,
         type: 3}
       propertyPath: m_Mass
       value: 0.06019318
+      objectReference: {fileID: 0}
+    - target: {fileID: 8317711555711468282, guid: b22ab9085288d2940a494542834d69f6,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b22ab9085288d2940a494542834d69f6, type: 3}
