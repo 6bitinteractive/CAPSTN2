@@ -53,7 +53,7 @@ public class DropArea : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (item != null)
+        if (item != null && collision.GetComponent<Draggable>() == item)
         {
             item.OnDropItem.RemoveListener(OnItemDroppedOnArea.Invoke);
             item = null;

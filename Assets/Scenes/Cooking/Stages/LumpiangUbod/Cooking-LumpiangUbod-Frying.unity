@@ -1403,6 +1403,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 133114700}
     m_Modifications:
+    - target: {fileID: 1829931331018356679, guid: b5ad41387e5275c41a3d5f8dbc428995,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1829931331018356685, guid: b5ad41387e5275c41a3d5f8dbc428995,
         type: 3}
       propertyPath: m_Sprite
@@ -1413,6 +1418,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FishSauce-Bowl-ToAdd
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829931332425810944, guid: b5ad41387e5275c41a3d5f8dbc428995,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1829931332425810947, guid: b5ad41387e5275c41a3d5f8dbc428995,
         type: 3}
@@ -1519,7 +1529,9 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 551716877603247694, guid: b5ad41387e5275c41a3d5f8dbc428995, type: 3}
+    - {fileID: 4213955576212021308, guid: b5ad41387e5275c41a3d5f8dbc428995, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b5ad41387e5275c41a3d5f8dbc428995, type: 3}
 --- !u!224 &1549616744 stripped
 RectTransform:
@@ -1872,7 +1884,7 @@ PrefabInstance:
     - target: {fileID: 4629949566252436202, guid: 75efe86b20d989d47bb743bc7027a6b3,
         type: 3}
       propertyPath: durationLimit
-      value: 15
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4629949566252436202, guid: 75efe86b20d989d47bb743bc7027a6b3,
         type: 3}
@@ -2202,7 +2214,9 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6354725028134105317, guid: a720238061a9ce2458f698dffafe69ca, type: 3}
+    - {fileID: 7341546238274324119, guid: a720238061a9ce2458f698dffafe69ca, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a720238061a9ce2458f698dffafe69ca, type: 3}
 --- !u!114 &436091547064450907 stripped
 MonoBehaviour:
@@ -3342,7 +3356,9 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1783532901896707806, guid: deb2f72272133314a92688e960a3d17d, type: 3}
+    - {fileID: 2671351937882106028, guid: deb2f72272133314a92688e960a3d17d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deb2f72272133314a92688e960a3d17d, type: 3}
 --- !u!1001 &4050902949255094052
 PrefabInstance:
