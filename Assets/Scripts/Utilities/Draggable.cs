@@ -96,17 +96,12 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
         ContactFilter2D filter = new ContactFilter2D
         {
-            useTriggers = true
+            useTriggers = true,
+            useLayerMask = true,
+            layerMask = LayerMask.GetMask("Cookware")
         };
 
         Physics2D.OverlapCollider(col, filter, collidedWith);
-
-        for(int i = collidedWith.Count - 1; i >= 0; i--)
-        {
-            // To remove the bug of utensils not returning to it's position when placed near the pan,added tag check for pan
-            if (collidedWith[i].transform.IsChildOf(this.transform) || collidedWith[i].tag == "NoCollision")
-                collidedWith.RemoveAt(i);
-        }
 
         if (collidedWith.Count == 0)
         {
