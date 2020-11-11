@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -94,10 +94,11 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 1618509253}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -117,6 +118,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -168,6 +171,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1182400199}
+        m_TargetAssemblyTypeName: 
         m_MethodName: TriggerDialogue
         m_Mode: 1
         m_Arguments:
@@ -178,12 +182,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnFadeScene:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 686780840}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -194,8 +197,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   faderCanvasGroup: {fileID: 1141876110}
   fadeDuration: 1
 --- !u!114 &327217263
@@ -359,7 +360,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 459448513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -376,7 +377,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 459448513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
@@ -458,7 +459,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 548865667}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -475,7 +476,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 548865667}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
@@ -536,10 +537,120 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 548865671}
     m_Modifications:
-    - target: {fileID: 5844868907753801848, guid: 4dc95df0d43717d43801c32a84cdce7d,
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
         type: 3}
-      propertyPath: m_Name
-      value: Dialogue Panel
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 327217262}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FadeCurrentScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907315857387, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5844868907753801735, guid: 4dc95df0d43717d43801c32a84cdce7d,
         type: 3}
@@ -646,120 +757,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+    - target: {fileID: 5844868907753801848, guid: 4dc95df0d43717d43801c32a84cdce7d,
         type: 3}
-      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 327217262}
-    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FadeCurrentScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907728584831, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907742612873, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868907315857387, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5844868906522216556, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
+      propertyPath: m_Name
+      value: Dialogue Panel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dc95df0d43717d43801c32a84cdce7d, type: 3}
@@ -784,7 +785,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &686780840
@@ -865,6 +866,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -876,6 +879,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -954,6 +958,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
           m_MethodName: DimSprite
           m_Mode: 2
           m_Arguments:
@@ -964,8 +969,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
@@ -976,8 +979,6 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
     rightSpeaker: {fileID: 0}
@@ -986,6 +987,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
           m_MethodName: 
           m_Mode: 0
           m_Arguments:
@@ -996,8 +998,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 0
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
@@ -1007,8 +1007,6 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
     rightSpeaker: {fileID: 0}
@@ -1018,6 +1016,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
           m_MethodName: LoadScene
           m_Mode: 2
           m_Arguments:
@@ -1028,8 +1027,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
@@ -1038,6 +1035,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
           m_MethodName: LoadScene
           m_Mode: 2
           m_Arguments:
@@ -1048,8 +1046,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
     rightSpeaker: {fileID: 0}
@@ -1058,6 +1054,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
           m_MethodName: LoadScene
           m_Mode: 2
           m_Arguments:
@@ -1068,8 +1065,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
@@ -1079,6 +1074,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
           m_MethodName: LoadScene
           m_Mode: 2
           m_Arguments:
@@ -1089,8 +1085,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
     rightSpeaker: {fileID: 0}
@@ -1099,6 +1093,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
           m_MethodName: LoadScene
           m_Mode: 2
           m_Arguments:
@@ -1109,8 +1104,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
 --- !u!1 &850224554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,6 +1135,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1153,6 +1148,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1249,17 +1245,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1141876108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1269,6 +1265,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1141876112
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1329,6 +1326,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 551613222}
+          m_TargetAssemblyTypeName: 
           m_MethodName: DimSprite
           m_Mode: 2
           m_Arguments:
@@ -1339,8 +1337,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
@@ -1351,8 +1347,6 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
     rightSpeaker: {fileID: 0}
@@ -1361,6 +1355,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
           m_MethodName: 
           m_Mode: 0
           m_Arguments:
@@ -1371,8 +1366,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 0
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
@@ -1382,8 +1375,6 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
     rightSpeaker: {fileID: 0}
@@ -1393,6 +1384,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
           m_MethodName: LoadScene
           m_Mode: 2
           m_Arguments:
@@ -1403,8 +1395,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
@@ -1413,6 +1403,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
           m_MethodName: LoadScene
           m_Mode: 2
           m_Arguments:
@@ -1423,8 +1414,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
     rightSpeaker: {fileID: 0}
@@ -1433,6 +1422,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
           m_MethodName: LoadScene
           m_Mode: 2
           m_Arguments:
@@ -1443,8 +1433,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Aling Lucita
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: aae6536e562c86243953ff5ee6f807bd, type: 3}
@@ -1454,6 +1442,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
           m_MethodName: LoadScene
           m_Mode: 2
           m_Arguments:
@@ -1464,8 +1453,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
     rightSpeaker: {fileID: 0}
@@ -1474,6 +1461,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: 
           m_MethodName: LoadScene
           m_Mode: 2
           m_Arguments:
@@ -1484,8 +1472,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1293483357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1493,11 +1479,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1730629248}
     m_Modifications:
-    - target: {fileID: 8482031547421984447, guid: 0d1beb785d267b047b5f11be6b8d6e7c,
-        type: 3}
-      propertyPath: m_Name
-      value: ActEndCanvas
-      objectReference: {fileID: 0}
     - target: {fileID: 8482031547421984440, guid: 0d1beb785d267b047b5f11be6b8d6e7c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1603,6 +1584,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8482031547421984447, guid: 0d1beb785d267b047b5f11be6b8d6e7c,
+        type: 3}
+      propertyPath: m_Name
+      value: ActEndCanvas
+      objectReference: {fileID: 0}
     - target: {fileID: 8482031547712960894, guid: 0d1beb785d267b047b5f11be6b8d6e7c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1617,7 +1603,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 709d91f13871acb499759cd2e293ed51,
+      objectReference: {fileID: 11400000, guid: 9c9638e9865cf9649a1b7fefc356e249,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d1beb785d267b047b5f11be6b8d6e7c, type: 3}
@@ -1634,6 +1620,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1813122121804889669, guid: c1709e7d95bfafd4bb50a8476cb7fb7e,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ea276b7a499b2d04eaaa0838dca704a0, type: 3}
+    - target: {fileID: 1813122121804889669, guid: c1709e7d95bfafd4bb50a8476cb7fb7e,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1813122122348102869, guid: c1709e7d95bfafd4bb50a8476cb7fb7e,
         type: 3}
       propertyPath: m_Name
@@ -1694,16 +1690,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1813122121804889669, guid: c1709e7d95bfafd4bb50a8476cb7fb7e,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: ea276b7a499b2d04eaaa0838dca704a0, type: 3}
-    - target: {fileID: 1813122121804889669, guid: c1709e7d95bfafd4bb50a8476cb7fb7e,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1568034195, guid: c1709e7d95bfafd4bb50a8476cb7fb7e, type: 3}
     - {fileID: 1568034196, guid: c1709e7d95bfafd4bb50a8476cb7fb7e, type: 3}
@@ -1754,6 +1740,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1765,6 +1753,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1788,6 +1777,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!850595691 &1618509253
+LightingSettings:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Settings.lighting
+  serializedVersion: 2
+  m_GIWorkflowMode: 1
+  m_EnableBakedLightmaps: 0
+  m_EnableRealtimeLightmaps: 0
+  m_RealtimeEnvironmentLighting: 1
+  m_BounceScale: 1
+  m_AlbedoBoost: 1
+  m_IndirectOutputScale: 1
+  m_UsingShadowmask: 1
+  m_BakeBackend: 1
+  m_LightmapMaxSize: 1024
+  m_BakeResolution: 40
+  m_Padding: 2
+  m_TextureCompression: 1
+  m_AO: 0
+  m_AOMaxDistance: 1
+  m_CompAOExponent: 1
+  m_CompAOExponentDirect: 0
+  m_ExtractAO: 0
+  m_MixedBakeMode: 2
+  m_LightmapsBakeMode: 1
+  m_FilterMode: 1
+  m_LightmapParameters: {fileID: 0}
+  m_ExportTrainingData: 0
+  m_TrainingDataDestination: TrainingData
+  m_RealtimeResolution: 2
+  m_ForceWhiteAlbedo: 0
+  m_ForceUpdates: 0
+  m_FinalGather: 0
+  m_FinalGatherRayCount: 256
+  m_FinalGatherFiltering: 1
+  m_PVRCulling: 1
+  m_PVRSampling: 1
+  m_PVRDirectSampleCount: 32
+  m_PVRSampleCount: 512
+  m_PVREnvironmentSampleCount: 256
+  m_PVREnvironmentReferencePointCount: 2048
+  m_LightProbeSampleCountMultiplier: 4
+  m_PVRBounces: 2
+  m_PVRRussianRouletteStartBounce: 2
+  m_PVREnvironmentMIS: 1
+  m_PVRFilteringMode: 1
+  m_PVRDenoiserTypeDirect: 1
+  m_PVRDenoiserTypeIndirect: 1
+  m_PVRDenoiserTypeAO: 1
+  m_PVRFilterTypeDirect: 0
+  m_PVRFilterTypeIndirect: 0
+  m_PVRFilterTypeAO: 0
+  m_PVRFilteringGaussRadiusDirect: 1
+  m_PVRFilteringGaussRadiusIndirect: 5
+  m_PVRFilteringGaussRadiusAO: 2
+  m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+  m_PVRFilteringAtrousPositionSigmaIndirect: 2
+  m_PVRFilteringAtrousPositionSigmaAO: 1
 --- !u!1 &1730629247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,6 +1884,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1845,6 +1897,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1926,7 +1979,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2127555750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal
@@ -1945,7 +1998,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2127555750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
@@ -2006,16 +2059,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_Name
-      value: Lucita Inside (Broken prefab?)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[1].OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.size
@@ -2279,8 +2322,8 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[4].sentence
-      value: Wow, I didn't knew Lola did so much back in her youth. Now I'm more inspired
-        to learn and cook new dishes!
+      value: Wow, I didn't knew Lola did so much back in her youth. Now I'm more
+        inspired to learn and cook new dishes!
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2332,8 +2375,8 @@ PrefabInstance:
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: dialogueArray.Array.data[11].sentence
-      value: You are right, because there will be a time that I'll have to close my
-        shop since I am getting old.
+      value: You are right, because there will be a time that I'll have to close
+        my shop since I am getting old.
       objectReference: {fileID: 0}
     - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
@@ -2704,12 +2747,12 @@ PrefabInstance:
       propertyPath: dialogueArray.Array.data[9].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947922, guid: c92d0a65abf429e41aa96fd441f1d917,
+    - target: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: m_Name
-      value: Dialogue
+      value: Lucita Inside (Broken prefab?)
       objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947922, guid: c92d0a65abf429e41aa96fd441f1d917,
+    - target: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2769,6 +2812,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3400490635153947922, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: m_Name
+      value: Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 3400490635153947922, guid: c92d0a65abf429e41aa96fd441f1d917,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c92d0a65abf429e41aa96fd441f1d917, type: 3}
 --- !u!1001 &6185687234019796071
@@ -2778,21 +2831,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7433564058704257219, guid: 33b84ca80326ff940a6d8788778347ae,
-        type: 3}
-      propertyPath: m_Name
-      value: Player Adventure
-      objectReference: {fileID: 0}
-    - target: {fileID: 7433564058704257219, guid: 33b84ca80326ff940a6d8788778347ae,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7433564058704257219, guid: 33b84ca80326ff940a6d8788778347ae,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2090402986041007968, guid: 33b84ca80326ff940a6d8788778347ae,
         type: 3}
       propertyPath: LayerMask.m_Bits
@@ -2808,6 +2846,47 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4016285898008242089, guid: 33b84ca80326ff940a6d8788778347ae,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7433564058704257216, guid: 33b84ca80326ff940a6d8788778347ae,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7433564058704257219, guid: 33b84ca80326ff940a6d8788778347ae,
+        type: 3}
+      propertyPath: m_Name
+      value: Player Adventure
+      objectReference: {fileID: 0}
+    - target: {fileID: 7433564058704257219, guid: 33b84ca80326ff940a6d8788778347ae,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7433564058704257219, guid: 33b84ca80326ff940a6d8788778347ae,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7433564058704257222, guid: 33b84ca80326ff940a6d8788778347ae,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1999640617
+      objectReference: {fileID: 0}
+    - target: {fileID: 7433564058704257222, guid: 33b84ca80326ff940a6d8788778347ae,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7433564058704257222, guid: 33b84ca80326ff940a6d8788778347ae,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a5bb910e4f03daa4e83022e358ac8c2a,
+        type: 3}
     - target: {fileID: 7433564058704257223, guid: 33b84ca80326ff940a6d8788778347ae,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2872,32 +2951,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7433564058704257222, guid: 33b84ca80326ff940a6d8788778347ae,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1999640617
-      objectReference: {fileID: 0}
-    - target: {fileID: 7433564058704257222, guid: 33b84ca80326ff940a6d8788778347ae,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7433564058704257222, guid: 33b84ca80326ff940a6d8788778347ae,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a5bb910e4f03daa4e83022e358ac8c2a,
-        type: 3}
-    - target: {fileID: 7433564058704257216, guid: 33b84ca80326ff940a6d8788778347ae,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4016285898008242089, guid: 33b84ca80326ff940a6d8788778347ae,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8028017630431491638, guid: 33b84ca80326ff940a6d8788778347ae, type: 3}
