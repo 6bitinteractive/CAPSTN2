@@ -3258,6 +3258,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SaltShakerPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 2488773303756894251, guid: cc219b96320268e46bd9e027fb855a48,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2488773303756894252, guid: cc219b96320268e46bd9e027fb855a48,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3287,6 +3292,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488773304931568737, guid: cc219b96320268e46bd9e027fb855a48,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc219b96320268e46bd9e027fb855a48, type: 3}
@@ -3656,6 +3666,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2732909510227355998, guid: 4f89b82875f72cb4ca0273c688bffc7b,
         type: 3}
+      propertyPath: perfectState.OnStateReached.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732909510227355998, guid: 4f89b82875f72cb4ca0273c688bffc7b,
+        type: 3}
       propertyPath: descriptionText
       value: Add <color="blue">2</color> pinches of pepper.
       objectReference: {fileID: 0}
@@ -3728,6 +3743,36 @@ PrefabInstance:
     - target: {fileID: 2732909510227355998, guid: 4f89b82875f72cb4ca0273c688bffc7b,
         type: 3}
       propertyPath: OnEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732909510227355998, guid: 4f89b82875f72cb4ca0273c688bffc7b,
+        type: 3}
+      propertyPath: perfectState.OnStateReached.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732909510227355998, guid: 4f89b82875f72cb4ca0273c688bffc7b,
+        type: 3}
+      propertyPath: perfectState.OnStateReached.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732909510227355998, guid: 4f89b82875f72cb4ca0273c688bffc7b,
+        type: 3}
+      propertyPath: perfectState.OnStateReached.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732909510227355998, guid: 4f89b82875f72cb4ca0273c688bffc7b,
+        type: 3}
+      propertyPath: perfectState.OnStateReached.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.ParticleSystem, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732909510227355998, guid: 4f89b82875f72cb4ca0273c688bffc7b,
+        type: 3}
+      propertyPath: perfectState.OnStateReached.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_time
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732909510227355998, guid: 4f89b82875f72cb4ca0273c688bffc7b,
+        type: 3}
+      propertyPath: perfectState.OnStateReached.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6770958006174978344, guid: 4f89b82875f72cb4ca0273c688bffc7b,
@@ -4210,6 +4255,13 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 2369696784977108751, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_Text
+      value: 'or
+
+        [<color=#000000>A</color>]'
+      objectReference: {fileID: 0}
     - target: {fileID: 2512544865010663737, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: m_IsActive
@@ -4274,6 +4326,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3194079943303926213, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217135153445722006, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 550.00006
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710157685067312869, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 550.00006
       objectReference: {fileID: 0}
     - target: {fileID: 3831300361728688124, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
@@ -4479,6 +4546,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184756825053557873, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_EffectDistance.y
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 7552385173462586586, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}

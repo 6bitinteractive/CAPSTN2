@@ -95,7 +95,8 @@ public class ShakeObjective : Objective
         #region Standalone Input
 #if UNITY_STANDALONE_WIN || UNITY_EDITOR
         // Test
-        return Input.GetMouseButtonDown(1);
+        //return Input.GetMouseButtonDown(1);
+        return Input.GetKeyDown(KeyCode.A);
 #endif
         #endregion
 
