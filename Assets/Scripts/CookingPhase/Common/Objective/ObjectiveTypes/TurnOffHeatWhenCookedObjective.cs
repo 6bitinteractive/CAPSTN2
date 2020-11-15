@@ -80,7 +80,8 @@ public class TurnOffHeatWhenCookedObjective : Objective
         if (SuccessConditionMet())
             return;
 
-        // Turn off the heat
+        // Turn off the heat if it is not off
+        if (stoveControllerSlider.value == 0) return;
         stoveControllerSlider.value = 0f;
         if (failHeatOffDialogue.dialogueText != string.Empty)
             SingletonManager.GetInstance<DialogueHintManager>().Show(failHeatOffDialogue);

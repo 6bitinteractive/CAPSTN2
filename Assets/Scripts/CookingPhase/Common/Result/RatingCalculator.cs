@@ -60,8 +60,8 @@ public class RatingCalculator : MonoBehaviour
             rating = 2;
 
         Debug.LogFormat("Rating: {0}", rating);
-
-        ratingsManager.UpdateStageRating(stage, rating); // Store rating (persistent/session)
+        
+        ratingsManager?.UpdateStageRating(stage, rating); // Store rating (persistent/session)
         OnFinalRatingCalculated.Invoke(rating);
     }
 }

@@ -32,6 +32,7 @@ public class Timeskip : MonoBehaviour, IPointerDownHandler
 
     public void Show(Sprite sprite)
     {
+        image.raycastTarget = true;
         image.sprite = sprite;
         animator.SetTrigger("Show");
         StartCoroutine(DelayInteraction());
@@ -39,13 +40,13 @@ public class Timeskip : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        StartCoroutine(Hide());
+        if(animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
+            StartCoroutine(Hide());
     }
 
     private IEnumerator DelayInteraction()
     {
         yield return new WaitForSeconds(delay);
-        image.raycastTarget = true;
         tapPrompt.SetActive(true);
     }
 

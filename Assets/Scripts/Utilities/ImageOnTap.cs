@@ -24,11 +24,13 @@ public class ImageOnTap : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (Input.GetMouseButton(1)) return;
         ShowOnTap();
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (Input.GetMouseButton(1)) return;
         ShowDefault();
     }
 

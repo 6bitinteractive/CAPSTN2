@@ -74,12 +74,16 @@ public class Draggable : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (Input.GetMouseButton(1)) return;
+
         Debug.Log("Grabbed item: " + gameObject.name);
         Grabbed = true;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (Input.GetMouseButtonUp(1)) return;
+
         Grabbed = false;
         resetOnNoCollision();
         OnDropItem.Invoke(this);

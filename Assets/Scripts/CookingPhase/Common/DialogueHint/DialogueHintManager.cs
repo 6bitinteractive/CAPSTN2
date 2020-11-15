@@ -40,7 +40,17 @@ public class DialogueHintManager : MonoBehaviour
 
     public void Show(DialogueHint dialogueHint)
     {
-        DialogueHintDisplay display = dialogueHints[currentDialoguePanel % dialogueHints.Count];
+        int previousDialoguePanelIndex = (dialogueHints.Count + currentDialoguePanel - 1) % dialogueHints.Count;
+        DialogueHintDisplay display = dialogueHints[currentDialoguePanel % dialogueHints.Count], 
+            previousDisplay = dialogueHints[previousDialoguePanelIndex];
+
+        // If the previous display has the same text and it is still shown, don't run
+        if (previousDisplay.dialogueText.text == dialogueHint.dialogueText && previousDisplay.shown)
+            return;
+
+        // If the previous display is still shown, hide it for the new hint
+        if (previousDisplay.shown) previousDisplay.Hide();
+
         display.transform.SetAsLastSibling(); // Alyways have the current display at the "top" of the canvas, i.e. it's not covered by previous displays
         display.characterPortrait.sprite = dialogueHint.characterPortrait;
         display.dialogueText.text = dialogueHint.dialogueText;

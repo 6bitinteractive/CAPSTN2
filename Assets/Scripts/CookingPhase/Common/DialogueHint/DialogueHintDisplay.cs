@@ -12,6 +12,7 @@ public class DialogueHintDisplay : MonoBehaviour
     public TextMeshProUGUI dialogueText;
 
     private Animator animator;
+    public bool shown { get; private set; } = false;
 
     private void Awake()
     {
@@ -20,12 +21,18 @@ public class DialogueHintDisplay : MonoBehaviour
 
     public void Show(bool value = false)
     {
+        if (shown) return;
+
         animator.SetTrigger("SlideIn");
+        shown = true;
         Invoke("Hide", delay);
     }
 
-    private void Hide()
+    public void Hide()
     {
-        animator.SetTrigger("SlideOut");
+        if(shown)
+            animator.SetTrigger("SlideOut");
+
+        shown = false;
     }
 }

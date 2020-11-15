@@ -131,10 +131,9 @@ public class PourObjective : Objective
 
     private bool IsPouring()
     {
-
         #region Standalone Input
 #if UNITY_STANDALONE_WIN || UNITY_EDITOR
-        return Input.GetMouseButton(0);
+        return Input.GetKey(KeyCode.A);
 #endif
         #endregion
 

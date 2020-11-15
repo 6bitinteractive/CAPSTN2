@@ -85,7 +85,7 @@ public class FlipIngredientObjective : Objective
 #if UNITY_STANDALONE_WIN || UNITY_EDITOR
 
         // Right-click to test flipping
-        return Input.GetMouseButton(1);
+        return Input.GetKeyDown(KeyCode.S);
 #endif
         #endregion
 
