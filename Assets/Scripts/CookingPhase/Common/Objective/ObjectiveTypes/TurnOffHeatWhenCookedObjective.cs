@@ -103,8 +103,13 @@ public class TurnOffHeatWhenCookedObjective : Objective
 
     protected override bool SuccessConditionMet()
     {
-        return stoveController.CurrentHeatSetting == HeatSetting.Off
+        bool check = stoveController.CurrentHeatSetting == HeatSetting.Off
             && ingredients.Exists(x => x.CurrentState == IngredientState.Perfect);
+
+        if (lid == null)
+            return check;
+        else
+            return check && lid.IsCoveringCookware;
     }
 
     private void TurnOnVisualHint()

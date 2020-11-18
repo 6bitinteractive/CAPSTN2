@@ -90,6 +90,8 @@ public class TransitionalStepObjective : Objective
 
     private IEnumerator OnTransition(SwipeData swipeData)
     {
+        if (success) yield break;
+
         Debug.Log("Swiped: " + swipeData.Direction);
         if ((swipeData.Direction == SwipeDirection.Left
             || swipeData.Direction == SwipeDirection.LeftDown

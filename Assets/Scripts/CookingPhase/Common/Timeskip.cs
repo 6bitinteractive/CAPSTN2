@@ -8,7 +8,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 [RequireComponent(typeof(Animator))]
 
-public class Timeskip : MonoBehaviour, IPointerDownHandler
+public class Timeskip : MonoBehaviour
 {
     [SerializeField] private GameObject tapPrompt;
     [SerializeField] private float delay = 1.5f;
@@ -32,22 +32,20 @@ public class Timeskip : MonoBehaviour, IPointerDownHandler
 
     public void Show(Sprite sprite)
     {
+        StartCoroutine(ShowSeq(sprite));
+    }
+
+    private IEnumerator ShowSeq(Sprite sprite)
+    {
         image.raycastTarget = true;
         image.sprite = sprite;
         animator.SetTrigger("Show");
-        StartCoroutine(DelayInteraction());
-    }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        if(animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
-            StartCoroutine(Hide());
-    }
-
-    private IEnumerator DelayInteraction()
-    {
         yield return new WaitForSeconds(delay);
         tapPrompt.SetActive(true);
+
+        yield return new WaitUntil(()=>Input.GetMouseButtonDown(0));
+        StartCoroutine(Hide());
     }
 
     private IEnumerator Hide()

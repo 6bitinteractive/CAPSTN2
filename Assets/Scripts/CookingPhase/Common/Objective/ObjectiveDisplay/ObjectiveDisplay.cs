@@ -17,6 +17,7 @@ public class ObjectiveDisplay : MonoBehaviour
     private List<ObjectiveItemUI> objectiveItemDisplayList = new List<ObjectiveItemUI>();
     private Button nextButton;
     private CanvasGroup nextButtonCanvasGroup;
+    private Coroutine nextButtonCoroutine;
 
     private void Start()
     {
@@ -61,13 +62,17 @@ public class ObjectiveDisplay : MonoBehaviour
     {
         nextButtonCanvasGroup.alpha = 1;
         //nextButton.interactable = true;
-        StartCoroutine(AnimateNextButton(true));
+        if (nextButtonCoroutine != null)
+            StopCoroutine(nextButtonCoroutine);
+        nextButtonCoroutine = StartCoroutine(AnimateNextButton(true));
         Debug.Log("Showing Next button.");
     }
 
     private void HideNextButton(Objective objective)
     {
-        StartCoroutine(AnimateNextButton(false));
+        if (nextButtonCoroutine != null)
+            StopCoroutine(nextButtonCoroutine);
+        nextButtonCoroutine = StartCoroutine(AnimateNextButton(false));
         Debug.Log("Hid Next button");
     }
 
@@ -88,9 +93,18 @@ public class ObjectiveDisplay : MonoBehaviour
     private IEnumerator AnimateNextButton(bool slideIn)
     {
         nextButton.interactable = false;
-        string state = slideIn ? "SlideInOnTrigger" : "SlideOutOnTrigger";
-        nextButtonPanel.SetTrigger(slideIn ? "SlideIn" : "SlideOut");
-        yield return new WaitUntil(() => AnimatorUtils.IsInState(nextButtonPanel, state) && AnimatorUtils.IsDonePlaying(nextButtonPanel, state));
+        string state = "";
+        do
+        {
+            state = slideIn ? "SlideInOnTrigger" : "SlideOutOnTrigger";
+            nextButtonPanel.ResetTrigger("SlideIn");
+            nextButtonPanel.ResetTrigger("SlideOut");
+            nextButtonPanel.SetTrigger(slideIn ? "SlideIn" : "SlideOut");
+            yield return null;
+        } while (!AnimatorUtils.IsInState(nextButtonPanel, state));
+
+        yield return new WaitUntil(() => AnimatorUtils.IsDonePlaying(nextButtonPanel, state));
+        Debug.Log("Was this called?" + state);
         nextButton.interactable = true;
     }
 }

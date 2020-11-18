@@ -42,7 +42,7 @@ public class IngredientStateController : MonoBehaviour
 
         if (automaticSwitch)
         {
-            StartCooking(new StateSwitchOption(true, true));
+            StartCooking(new StateSwitchOption(true, false));
         }
     }
 
@@ -131,6 +131,7 @@ public enum IngredientState
     Raw, Undercooked, Perfect, Overcooked
 }
 
+[System.Serializable]
 public struct StateSwitchOption
 {
     public bool continuePreviousState;      // If cooking was stopped, resuming it would just proceed to the next state

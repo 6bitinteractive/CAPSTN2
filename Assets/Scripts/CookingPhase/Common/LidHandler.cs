@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(BoxCollider2D))]
@@ -32,24 +33,27 @@ public class LidHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        draggable.OnDropItem.AddListener(ClampPosition);
+        GetComponent<Image>().raycastTarget = true;
+        draggable.OnDropItem.AddListener(CoverCookware);
     }
 
-    private void ClampPosition(Draggable draggedObject)
+    private void CoverCookware(Draggable draggedObject)
     {
-        if (!IsCoveringCookware) { return; }
-
-        rectTransform.position = cookware.LidPosition.position;
+        if(IsCoveringCookware)
+        {
+            OnCoverCookware.Invoke();
+            this.GetComponent<Image>().raycastTarget = false;
+            rectTransform.position = cookware.LidPosition.position;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         cookware = collision.GetComponent<Cookware>();
+
         IsCoveringCookware = cookware;
-        OnCoverCookware.Invoke();
         audioSource.clip = lidOffSfx;
         audioSource.Play();
-
         Debug.Log("Lid - Covering cookware");
     }
 

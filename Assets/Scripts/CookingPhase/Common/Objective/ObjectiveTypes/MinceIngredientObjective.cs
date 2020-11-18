@@ -70,6 +70,12 @@ public class MinceIngredientObjective : Objective
 
         if (Input.GetMouseButtonDown(0))
         {
+            // Better if minecableIngredient has a button so tapping on the ingredient would increment the progress
+            if(minceableIngredient.GetComponent<Button>())
+            {
+                if (UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject != minceableIngredient.gameObject) return;
+            }
+
             currentTaps++;
             progressBar.IncrementProgress(progressIncrementValue);
             animator.SetTrigger("Mince");

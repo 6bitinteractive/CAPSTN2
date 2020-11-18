@@ -1562,6 +1562,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5500087769085908741}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1658358329939049780 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8145375295093973565, guid: 699a12fd04b9ff648b8fd7774d24b530,
+    type: 3}
+  m_PrefabInstance: {fileID: 5500087769085908741}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658358329939049778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368c7a668498ec7468d9877fca9e5598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1658358330370199450
 GameObject:
   m_ObjectHideFlags: 0
@@ -2457,6 +2469,11 @@ PrefabInstance:
       propertyPath: OnCookUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8145375295659348117}
+    - target: {fileID: 8145375295093973565, guid: 699a12fd04b9ff648b8fd7774d24b530,
+        type: 3}
+      propertyPath: automaticSwitch
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8729824043125544174, guid: 699a12fd04b9ff648b8fd7774d24b530,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2598,7 +2615,7 @@ PrefabInstance:
     - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
         type: 3}
       propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
         type: 3}
@@ -2733,6 +2750,41 @@ PrefabInstance:
         type: 3}
       propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1658358329939049780}
+    - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: IngredientStateController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_IsCooking
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6250241224868219171, guid: 53003d1568d38d146b217c6438b2c2ba,
         type: 3}
@@ -4141,7 +4193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 368c7a668498ec7468d9877fca9e5598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  automaticSwitch: 1
+  automaticSwitch: 0
   delayBeforeSwitch: 10
   OnSwitchState:
     m_PersistentCalls:
