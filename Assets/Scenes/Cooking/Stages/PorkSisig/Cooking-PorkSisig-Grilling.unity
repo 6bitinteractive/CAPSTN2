@@ -508,6 +508,11 @@ PrefabInstance:
       propertyPath: OnCookUpdate.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6610183123305551908, guid: 795f3c5c7f56ee542a96c40b638f3b76,
+        type: 3}
+      propertyPath: automaticSwitch
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 795f3c5c7f56ee542a96c40b638f3b76, type: 3}
 --- !u!1001 &611130655
@@ -777,6 +782,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 520599538}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &829039825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6610183123305551908, guid: 795f3c5c7f56ee542a96c40b638f3b76,
+    type: 3}
+  m_PrefabInstance: {fileID: 520599538}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829039822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368c7a668498ec7468d9877fca9e5598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &985179458 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 899028423381325295, guid: 0f0588ae6acafbb41bed6e8405a38c38,
@@ -870,7 +887,7 @@ PrefabInstance:
     - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
         type: 3}
       propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
         type: 3}
@@ -975,6 +992,41 @@ PrefabInstance:
         type: 3}
       propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 829039825}
+    - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: IngredientStateController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_IsCooking
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250241224868219170, guid: 53003d1568d38d146b217c6438b2c2ba,
+        type: 3}
+      propertyPath: OnBegin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6250241224868219171, guid: 53003d1568d38d146b217c6438b2c2ba,
         type: 3}

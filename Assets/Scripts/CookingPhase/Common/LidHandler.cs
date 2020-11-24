@@ -39,10 +39,14 @@ public class LidHandler : MonoBehaviour
 
     private void CoverCookware(Draggable draggedObject)
     {
-        if(IsCoveringCookware)
+        IsCoveringCookware = cookware;
+
+        if (IsCoveringCookware)
         {
             OnCoverCookware.Invoke();
             this.GetComponent<Image>().raycastTarget = false;
+            audioSource.clip = lidOffSfx;
+            audioSource.Play();
             rectTransform.position = cookware.LidPosition.position;
         }
     }
@@ -51,20 +55,20 @@ public class LidHandler : MonoBehaviour
     {
         cookware = collision.GetComponent<Cookware>();
 
-        IsCoveringCookware = cookware;
-        audioSource.clip = lidOffSfx;
-        audioSource.Play();
         Debug.Log("Lid - Covering cookware");
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        cookware = null;
-        IsCoveringCookware = false;
-        OnTakeOffCookware.Invoke();
-        audioSource.clip = lidOnSfx;
-        audioSource.Play();
+        if (IsCoveringCookware)
+        {
+            cookware = null;
+            IsCoveringCookware = false;
+            OnTakeOffCookware.Invoke();
+            audioSource.clip = lidOnSfx;
+            audioSource.Play();
 
-        Debug.Log("Lid - off");
+            Debug.Log("Lid - off");
+        }
     }
 }

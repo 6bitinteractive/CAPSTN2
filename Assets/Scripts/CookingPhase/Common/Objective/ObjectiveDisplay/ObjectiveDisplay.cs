@@ -104,7 +104,6 @@ public class ObjectiveDisplay : MonoBehaviour
         } while (!AnimatorUtils.IsInState(nextButtonPanel, state));
 
         yield return new WaitUntil(() => AnimatorUtils.IsDonePlaying(nextButtonPanel, state));
-        Debug.Log("Was this called?" + state);
         nextButton.interactable = true;
     }
 }

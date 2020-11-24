@@ -42,7 +42,7 @@ public class IngredientStateController : MonoBehaviour
 
         if (automaticSwitch)
         {
-            StartCooking(new StateSwitchOption(true, false));
+            StartCooking(new StateSwitchOption(true, true));
         }
     }
 
