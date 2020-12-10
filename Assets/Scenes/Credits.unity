@@ -1101,8 +1101,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1413}
-  m_SizeDelta: {x: 960, y: 631.5064}
+  m_AnchoredPosition: {x: 0, y: -1532.7}
+  m_SizeDelta: {x: 960, y: 870.95306}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &526589439
 MonoBehaviour:
@@ -1146,7 +1146,15 @@ MonoBehaviour:
 
     Sophie the Cat
 
-    Miguel Viejon'
+    Miguel Viejon
+
+    Stray Kids
+
+    Twice
+
+    ITZY
+
+    NCT2020'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a8afbc61ea481164d9ca686b2a53a366, type: 2}
   m_sharedMaterial: {fileID: 807127005676573173, guid: a8afbc61ea481164d9ca686b2a53a366,
@@ -1258,7 +1266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1931}
+  m_AnchoredPosition: {x: 0, y: -2166}
   m_SizeDelta: {x: 960, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &553994001
@@ -1393,7 +1401,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1819.2}
+  m_AnchoredPosition: {x: 0, y: -2054.1997}
   m_SizeDelta: {x: 960, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &566929283
@@ -1613,10 +1621,10 @@ RectTransform:
   m_Father: {fileID: 1199216043}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -793, y: 464.1}
-  m_SizeDelta: {x: 205.95593, y: 85.81497}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 150, y: -80}
+  m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &685259949
 MonoBehaviour:
@@ -1866,7 +1874,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1988}
+  m_AnchoredPosition: {x: 0, y: -2222.9998}
   m_SizeDelta: {x: 960, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &717030793
@@ -2001,7 +2009,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2165.1}
+  m_AnchoredPosition: {x: 0, y: -2400.0999}
   m_SizeDelta: {x: 960, y: 107.86136}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &739680751
@@ -2543,7 +2551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1880.9998}
+  m_AnchoredPosition: {x: 0, y: -2115.9995}
   m_SizeDelta: {x: 960, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1042817215
@@ -2705,8 +2713,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: -1073}
-  m_SizeDelta: {x: 960, y: 1079.6365}
+  m_AnchoredPosition: {x: 0, y: -1073}
+  m_SizeDelta: {x: 960, y: 1535.6365}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1073529952
 Animator:
@@ -3747,7 +3755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2038.0001}
+  m_AnchoredPosition: {x: 0, y: -2273}
   m_SizeDelta: {x: 960, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1740655294
@@ -4289,7 +4297,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 2.12}
+  m_AnchoredPosition: {x: 0, y: 2.119995}
   m_SizeDelta: {x: 0, y: -4.236206}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1958452700
@@ -4634,7 +4642,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1769.1998}
+  m_AnchoredPosition: {x: 0, y: -2004.1997}
   m_SizeDelta: {x: 960, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2129503087
