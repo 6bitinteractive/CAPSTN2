@@ -4003,7 +4003,7 @@ GameObject:
   - component: {fileID: 1941695866}
   - component: {fileID: 1941695865}
   m_Layer: 5
-  m_Name: TechnicalDirectorText
+  m_Name: TechnicalConsultantText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4048,7 +4048,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Technical Director
+  m_text: Technical Consultant
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 20af5dd300457db4286466415592f26b, type: 2}
   m_sharedMaterial: {fileID: -5081463769286760240, guid: 20af5dd300457db4286466415592f26b,
