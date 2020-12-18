@@ -3214,6 +3214,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PepperShakerPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 4909137117523074170, guid: 70d170b1624ce2048b8dd46e13e6da4e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4909137117523074173, guid: 70d170b1624ce2048b8dd46e13e6da4e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3667,7 +3672,7 @@ PrefabInstance:
     - target: {fileID: 2732909510227355998, guid: 4f89b82875f72cb4ca0273c688bffc7b,
         type: 3}
       propertyPath: perfectState.OnStateReached.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2732909510227355998, guid: 4f89b82875f72cb4ca0273c688bffc7b,
         type: 3}
@@ -4138,6 +4143,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 13636704686715934, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 546669158868403635, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}
       propertyPath: characterPortrait
@@ -4214,6 +4224,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Boil pig ear and pig face
+      objectReference: {fileID: 0}
+    - target: {fileID: 1842973362757932620, guid: 0f0588ae6acafbb41bed6e8405a38c38,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1867533012931064599, guid: 0f0588ae6acafbb41bed6e8405a38c38,
         type: 3}

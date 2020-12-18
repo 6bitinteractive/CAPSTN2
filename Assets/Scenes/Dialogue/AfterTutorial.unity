@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -94,10 +94,12 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 28d66c0b58cf2d043a86cebb441b3d60,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -117,6 +119,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -168,6 +172,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1267779960}
+        m_TargetAssemblyTypeName: 
         m_MethodName: TriggerDialogue
         m_Mode: 1
         m_Arguments:
@@ -178,13 +183,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   OnFadeScene:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   faderCanvasGroup: {fileID: 1141876110}
   fadeDuration: 1
 --- !u!114 &327217263
@@ -342,7 +343,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 459448513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -359,7 +360,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 459448513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
@@ -441,7 +442,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 548865667}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
@@ -458,7 +459,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 548865667}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
@@ -512,282 +513,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &766778348
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
-    type: 3}
-  m_PrefabInstance: {fileID: 3400490634532923282}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 766778349}
-  - component: {fileID: 766778350}
-  m_Layer: 0
-  m_Name: Lola Inside (Broken prefab?)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &766778349
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3400490633785556095, guid: c92d0a65abf429e41aa96fd441f1d917,
-    type: 3}
-  m_PrefabInstance: {fileID: 3400490634532923282}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766778348}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2130975362}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &766778350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-    type: 3}
-  m_PrefabInstance: {fileID: 3400490634532923282}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 766778348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4178e2707550da349a1ea0e74bef7fd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueArray:
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
-    sentence: Lola here you go, my own version of Fried Rice!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: DimSprite
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
-    sentence: "Hmm, you\u2019re quite there but there\u2019s something missing in
-      your dish."
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: "Hmm, I\u2019m pretty sure I\u2019ve used the ingredients well And based
-      it on our own recipe."
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: What did I do wrong, Lola?
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
-    sentence: "It\u2019s not that your food tastes bad RiRi, what I meant was, your
-      connection to the dish."
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
-    sentence: You followed the recipe which is not a bad thing, but I need to feel
-      your uniqueness.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: Here, I'll show you.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 850224555}
-          m_MethodName: set_sprite
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 21300000, guid: d314181cbc2664c4eb7c5872dc160f38,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_MethodName: HideSprites
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: Wow, it tastes... so good!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: "So\u2026 how do I do that?"
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 0}
-    sentence: You need to learn about the food RiRi, connect with the food, the people,
-      and the culture. Go out and explore different cuisines.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: You mean, travelling?
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 850224555}
-          m_MethodName: set_sprite
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 21300000, guid: ecbba6720638c1740840d02c89072c29,
-              type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 0}
-          m_MethodName: ShowSprites
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
-    sentence: You are right, because there will be a time that I'll have to close
-      my shop since I am getting old.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
-    sentence: And I hope when the time comes, you are ready to take over me as the
-      new chef of the eatery.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: "Travelling sounds fun! Cooking with other people, learning new things,
-      and exploring the Philippines? I\u2019m all in for that."
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: "\u2026But are you sure you\u2019ll be alright Lola?"
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
-    sentence: I'm fine RiRi. I just need a day's rest and I'll be up and okay like
-      nothing happened.
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Lola
-    leftSpeaker: {fileID: 0}
-    rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
-    sentence: "Don\u2019t worry about me dear, I\u2019ll be able to manage on my own,
-      I\u2019ll rest so you can show me your learnings when you come back!"
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - name: Maricela
-    leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
-    rightSpeaker: {fileID: 0}
-    sentence: I will Lola! See you later!
-    onEndSentence:
-      m_PersistentCalls:
-        m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
 --- !u!1 &850224554
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,6 +544,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -830,6 +557,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -932,17 +660,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1141876108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -952,6 +680,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1141876112
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1012,6 +741,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 5844868907975112648}
+          m_TargetAssemblyTypeName: 
           m_MethodName: DimSprite
           m_Mode: 2
           m_Arguments:
@@ -1022,8 +752,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Lola
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
@@ -1032,18 +760,14 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
     rightSpeaker: {fileID: 0}
-    sentence: "Hmm, I\u2019m pretty sure I\u2019ve used the ingredients well And based
-      it on our own recipe."
+    sentence: "Hmm, I\u2019m pretty sure I\u2019ve used the ingredients well And
+      based it on our own recipe."
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: a0173cb1e57d7be4d932321c49df2858, type: 3}
     rightSpeaker: {fileID: 0}
@@ -1051,8 +775,6 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Lola
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
@@ -1061,8 +783,6 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Lola
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
@@ -1071,8 +791,6 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Lola
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
@@ -1081,6 +799,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 850224555}
+          m_TargetAssemblyTypeName: 
           m_MethodName: set_sprite
           m_Mode: 2
           m_Arguments:
@@ -1093,6 +812,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 5844868907975112648}
+          m_TargetAssemblyTypeName: 
           m_MethodName: HideSprites
           m_Mode: 1
           m_Arguments:
@@ -1103,8 +823,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
@@ -1112,8 +830,6 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
@@ -1121,8 +837,6 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Lola
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 0}
@@ -1131,8 +845,6 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
     rightSpeaker: {fileID: 0}
@@ -1141,6 +853,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 850224555}
+          m_TargetAssemblyTypeName: 
           m_MethodName: set_sprite
           m_Mode: 2
           m_Arguments:
@@ -1153,6 +866,7 @@ MonoBehaviour:
             m_BoolArgument: 1
           m_CallState: 2
         - m_Target: {fileID: 5844868907975112648}
+          m_TargetAssemblyTypeName: 
           m_MethodName: ShowSprites
           m_Mode: 1
           m_Arguments:
@@ -1163,8 +877,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Lola
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
@@ -1173,8 +885,6 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Lola
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
@@ -1183,8 +893,6 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
     rightSpeaker: {fileID: 0}
@@ -1193,8 +901,6 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: b7c917fbb0019504ab68f7e710a7e0d7, type: 3}
     rightSpeaker: {fileID: 0}
@@ -1202,8 +908,6 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Lola
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
@@ -1212,18 +916,14 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Lola
     leftSpeaker: {fileID: 0}
     rightSpeaker: {fileID: 21300000, guid: 081a9ba77efb3864fb621239fce3fd1b, type: 3}
-    sentence: "Don\u2019t worry about me dear, I\u2019ll be able to manage on my own,
-      I\u2019ll rest so you can show me your learnings when you come back!"
+    sentence: "Don\u2019t worry about me dear, I\u2019ll be able to manage on my
+      own, I\u2019ll rest so you can show me your learnings when you come back!"
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
   - name: Maricela
     leftSpeaker: {fileID: 21300000, guid: f35164b922b83174884622d7ca06a617, type: 3}
     rightSpeaker: {fileID: 0}
@@ -1231,8 +931,6 @@ MonoBehaviour:
     onEndSentence:
       m_PersistentCalls:
         m_Calls: []
-      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1469679837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1240,6 +938,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1813122121804889669, guid: c1709e7d95bfafd4bb50a8476cb7fb7e,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ea276b7a499b2d04eaaa0838dca704a0, type: 3}
+    - target: {fileID: 1813122121804889669, guid: c1709e7d95bfafd4bb50a8476cb7fb7e,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1813122122348102869, guid: c1709e7d95bfafd4bb50a8476cb7fb7e,
         type: 3}
       propertyPath: m_Name
@@ -1299,16 +1007,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1813122121804889669, guid: c1709e7d95bfafd4bb50a8476cb7fb7e,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: ea276b7a499b2d04eaaa0838dca704a0, type: 3}
-    - target: {fileID: 1813122121804889669, guid: c1709e7d95bfafd4bb50a8476cb7fb7e,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1568034195, guid: c1709e7d95bfafd4bb50a8476cb7fb7e, type: 3}
@@ -1373,7 +1071,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2127555750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal
@@ -1392,7 +1090,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2127555750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
@@ -1415,9 +1113,8 @@ Transform:
 --- !u!1 &2130975360
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3400490635153947922, guid: c92d0a65abf429e41aa96fd441f1d917,
-    type: 3}
-  m_PrefabInstance: {fileID: 3400490634532923282}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -1432,9 +1129,8 @@ GameObject:
 --- !u!4 &2130975362
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-    type: 3}
-  m_PrefabInstance: {fileID: 3400490634532923282}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130975360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1442,764 +1138,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1267779959}
-  - {fileID: 766778349}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &3400490634532923282
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_Name
-      value: Lola Inside (Broken prefab?)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556094, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[4].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[3].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[2].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.size
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[15].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[16].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[17].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[18].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[19].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[20].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[21].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[22].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[24].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[23].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[25].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[26].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[27].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[28].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[29].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[6].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[7].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[9].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EndDialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_flipX
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[4].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[4].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[4].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: SceneData, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].name
-      value: Lola
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[2].name
-      value: Maricela
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[3].name
-      value: Maricela
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[4].name
-      value: Lola
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[0].name
-      value: Maricela
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DimSprite
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.UI.Image, UnityEngine.UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[0].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[3].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_flipX
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[3].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[0].sentence
-      value: Lola here you go, my own version of Fried Rice!
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[1].sentence
-      value: "Hmm, you\u2019re quite there but there\u2019s something missing in your
-        dish."
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[2].sentence
-      value: "Hmm, I\u2019m pretty sure I\u2019ve used the ingredients well And based
-        it on our own recipe."
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[3].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[3].sentence
-      value: What did I do wrong, Lola?
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[4].sentence
-      value: "It\u2019s not that your food tastes bad RiRi, what I meant was, your
-        connection to the dish."
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[5].sentence
-      value: You followed the recipe which is not a bad thing, but I need to feel
-        your uniqueness.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[6].name
-      value: Lola
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[6].sentence
-      value: Here, I'll show you.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[7].sentence
-      value: Wow, it tastes... so good!
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[8].sentence
-      value: "So\u2026 how do I do that?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[9].sentence
-      value: You need to learn about the food RiRi, connect with the food, the people,
-        and the culture. Go out and explore different cuisines.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[9].name
-      value: Lola
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[10].name
-      value: Maricela
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[10].sentence
-      value: You mean, travelling?
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[11].sentence
-      value: You are right, because there will be a time that I'll have to close my
-        shop since I am getting old.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[11].name
-      value: Lola
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[12].sentence
-      value: And I hope when the time comes, you are ready to take over me as the
-        new chef of the eatery.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[13].name
-      value: Maricela
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[13].sentence
-      value: "Travelling sounds fun! Cooking with other people, learning new things,
-        and exploring the Philippines? I\u2019m all in for that."
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[14].sentence
-      value: "\u2026But are you sure you\u2019ll be alright Lola?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[15].name
-      value: Lola
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[15].sentence
-      value: I'm fine RiRi. I just need a day's rest and I'll be up and okay like
-        nothing happened.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[15].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[15].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: SceneData, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[15].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: TriggerDialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[15].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[5].name
-      value: Lola
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[7].name
-      value: Maricela
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[12].name
-      value: Lola
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[16].name
-      value: Maricela
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[16].sentence
-      value: "Don\u2019t worry about me dear, I\u2019ll be able to manage on my own,
-        I\u2019ll rest so you can show me your learnings when you come back!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[17].sentence
-      value: Hahahaha... That's my Ri Ri.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[18].name
-      value: Maricela
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[18].sentence
-      value: I told you to stop calling me that.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[19].name
-      value: Lola
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[19].sentence
-      value: You will always be my sweet little Ri Ri no matter how much you've grown.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[20].sentence
-      value: '*Sigh* Alright Lola... I''ll be off now!'
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[21].sentence
-      value: I love you Lola!
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[22].sentence
-      value: I love you too. Take care my sweet Ri Ri.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[23].name
-      value: Lola
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[23].sentence
-      value: I also left some lunch in your backpack.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[24].name
-      value: Lola
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[24].sentence
-      value: It's your favorite!
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[25].sentence
-      value: Adobo!?!?
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[26].sentence
-      value: You guessed it!
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[27].sentence
-      value: Yay!
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[28].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[28].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[28].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: SceneData, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[8].name
-      value: Maricela
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[14].name
-      value: Maricela
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[17].name
-      value: Maricela
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[20].name
-      value: Ri Ri
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[25].name
-      value: Maricela
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[21].name
-      value: Maricela
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[26].name
-      value: Lola
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[28].sentence
-      value: (... I have to follow Lola's footsteps)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[15].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[6].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_sprite
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[6].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[6].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Sprite, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[7].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_sprite
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[7].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[7].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Sprite, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_sprite
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Sprite, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[6].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: HideSprites
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[6].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[6].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ShowSprites
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[6].onEndSentence.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[6].onEndSentence.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[6].onEndSentence.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[10].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[2].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[2].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[2].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490633785556092, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: dialogueArray.Array.data[2].onEndSentence.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947922, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_Name
-      value: Dialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947922, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.944785
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.2564073
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -11.203104
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3400490635153947920, guid: c92d0a65abf429e41aa96fd441f1d917,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c92d0a65abf429e41aa96fd441f1d917, type: 3}
 --- !u!1001 &5844868907975112647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2207,11 +1148,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 548865671}
     m_Modifications:
-    - target: {fileID: 5844868907753801848, guid: 4dc95df0d43717d43801c32a84cdce7d,
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
         type: 3}
-      propertyPath: m_Name
-      value: Dialogue Panel
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 327217263}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: SceneData, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+        type: 3}
+      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: b122c4c6092233f4cabba578b584e534,
+        type: 2}
     - target: {fileID: 5844868907753801735, guid: 4dc95df0d43717d43801c32a84cdce7d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2317,42 +1289,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
+    - target: {fileID: 5844868907753801848, guid: 4dc95df0d43717d43801c32a84cdce7d,
         type: 3}
-      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      propertyPath: m_Name
+      value: Dialogue Panel
       objectReference: {fileID: 0}
-    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 327217263}
-    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: SceneData, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4033020484576534321, guid: 4dc95df0d43717d43801c32a84cdce7d,
-        type: 3}
-      propertyPath: OnFullDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 11400000, guid: b122c4c6092233f4cabba578b584e534,
-        type: 2}
     - target: {fileID: 5844868907765273612, guid: 4dc95df0d43717d43801c32a84cdce7d,
         type: 3}
       propertyPath: m_IsActive
@@ -2381,6 +1322,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
